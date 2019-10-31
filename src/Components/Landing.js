@@ -8,30 +8,28 @@ class Landing extends Component {
   // the css grid rules to a parent div and then inside it, map() the component?
   
   render() {
-
+console.log("in database!");
     return (
-      <div class='database'>
+      <div className='database'>
 
-          <div><img className="artworkImage" src="images/963_06.jpg" alt=""></img></div>
-          <div><img className="artworkImage" src="images/963_11.jpg" alt=""></img></div>
-          <div><img className="artworkImage" src="images/964_19.tif" alt=""></img></div>
-          <div><img className="artworkImage" src="images/965_07.jpg" alt=""></img></div>
-          <div><img className="artworkImage" src="images/965_26.tif" alt=""></img></div>
-          <div><img className="artworkImage" src="images/967_04.jpg" alt=""></img></div>
-          <div><img className="artworkImage" src="images/970_01.tif" alt=""></img></div>
-          <div><img className="artworkImage" src="images/972_07.jpg" alt=""></img></div>
-          <div><img className="artworkImage" src="images/973_04.tif" alt=""></img></div>
-          <div><img className="artworkImage" src="images/974_21.tif" alt=""></img></div>
-          <div><img className="artworkImage" src="images/983_14.tif" alt=""></img></div>
-          <div><img className="artworkImage" src="images/984_19.jpg" alt=""></img></div>
-          <div><img className="artworkImage" src="images/985_119.tif" alt=""></img></div>
-          <div><img className="artworkImage" src="images/985_123.jpg" alt=""></img></div>
-          <div><img className="artworkImage" src="images/986_13.tif" alt=""></img></div>
-          <div><img className="artworkImage" src="images/988_06.jpg" alt=""></img></div>
-          <div><img className="artworkImage" src="images/989_03.tif" alt=""></img></div>
-          <div><img className="artworkImage" src="images/998_04.tif" alt=""></img></div>
-          <div><img className="artworkImage" src="images/994_15.tif" alt=""></img></div>
-          <div><img className="artworkImage" src="images/996_10.tif" alt=""></img></div>
+
+          <div><img className="artworkImage" src={require(".././images/963_06.jpg")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/963_11.jpg")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/964_19.tif")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/965_07.jpg")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/965_26.tif")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/967_04.jpg")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/970_01.tif")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/972_07.jpg")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/973_04.tif")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/974_21.tif")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/983_14.tif")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/984_19.jpg")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/985_119.tif")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/985_123.jpg")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/986_13.tif")} alt=""></img></div>
+          <div><img className="artworkImage" src={require(".././images/988_06.jpg")} alt=""></img></div>
+
 
 
           <p className='subject'>landscape with moon</p>
