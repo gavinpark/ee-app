@@ -1,0 +1,25 @@
+/* ALL CSS LIVES HERE... */
+
+.database{
+    display: grid;
+    /* border: 2px solid red; */
+    grid-template-columns: repeat(5, 1fr); 
+    grid-auto-rows: 200px;
+    min-height:100px; 
+  } 
+ 
+
+ .artworkImage {
+     display:grid;
+     border:1px solid red;
+    /* img{
+        width:100%;
+    } */
+}
+
+
+.subject{
+    color: red;
+    
+
+}
