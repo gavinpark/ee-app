@@ -7,7 +7,7 @@ import MainInterface from './Components/MainInterface.js';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="border">
         <BrowserRouter>
           <div>
             <Route path="/" component={Landing} exact />
