@@ -10,12 +10,41 @@
   margin: -2px -2px -2px -2px;
   overflow: scroll;
 }
-
 .databaseLanding > div {
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
-
 }
+
+.databaseInfo {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-auto-rows: 7.5vh;
+  grid-auto-flow: dense;
+  margin-top: -2px;
+  margin: -2px -2px -2px -2px;
+  overflow: scroll;
+}
+
+.databaseInfo > div {
+  border: 2px solid red;
+  margin: -1px -1px -1px -1px;
+}
+
+.artistBlock{
+  grid-column-start: 8;
+  grid-row: 3;
+  grid-column-end: span 2;
+}
+.budge{
+  grid-column-start: 8;
+  grid-row-start: 1;
+}
+
+.dataHeader{
+  grid-column-start: 8;
+  grid-column-end: span 2;
+}
+
 .description {
   overflow: scroll;
   color: red;
@@ -23,9 +52,7 @@
   text-align: left;
   padding: 12px;
   font-size: 14px;
-
 }
-
 
 img {
   display: block;
@@ -45,6 +72,7 @@ img {
   border: 2px solid red;
   margin: -2px -2px -2px -2px;
 }
+
 .databasePanel {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -63,15 +91,12 @@ img {
 .databasePanel > div {
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
-
 }
 
 .twoTags{
   grid-column-end: span 2;
   grid-row-end: span 2;
   font-size: 24px;
-
-
 }
 
 .threeTags {
@@ -92,7 +117,8 @@ img {
 }
 
 .collectionObject{
-  background: chocolate;
+  width: 300px;
+  background: violet;
 }
 
 

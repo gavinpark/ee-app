@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import '../App.css';
 
+
+
 class UserSelection extends Component {
   render() {
 
     return (
-      <div>
+      <div className="collectionObject">
+          <img src={require(".././images/983_14(450).jpg")} alt=""></img>
           <p>UserSelection</p>
-          <img className="collectionObject" src=".././images/low res/964_08(450).jpg"></img>
           
       </div>
     );
