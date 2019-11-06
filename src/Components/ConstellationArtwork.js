@@ -7,6 +7,8 @@ class UserSelection extends Component {
     return (
       <div>
           <p>UserSelection</p>
+          <img className="collectionObject" src=".././images/low res/964_08(450).jpg"></img>
+          
       </div>
     );
 

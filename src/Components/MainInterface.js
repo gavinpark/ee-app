@@ -9,11 +9,9 @@ class MainInterface extends Component {
         return (
             <div>
                 <div className="constellationPanel">
-                    <ConstellationPanel />
+                    <ConstellationPanel/>
                 </div>
                 <div>
-                    
-                    
                     <DatabasePanel />
                 </div>
             </div>
