@@ -6,12 +6,17 @@ let Data = [
     isCopyright: true,
     Artist: "Bobak, Bruno",
     Title: "The Graces",
+    Date: "1964",
     AccessionNumber: "979.22",
     AccessionDate: "1968/01",
-    Date: "1964",
-    Description: "painting",
     Credit: "Purchase / achat, 1968",
-    References: "-See review(s) in Artist’s File"
+    Medium: "oil",
+    Description: "painting",
+    Subject: "figurative, three females embracing",
+    keywords: "Canadian Group of Painters, Figuration-nude, Allegorical",
+    References: "-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File",
+    birthYear: "1923 (28 décembre)",
+    deathYear: "",
 
   },
   {

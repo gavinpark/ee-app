@@ -11,12 +11,11 @@ class MainInterface extends Component {
                 <div className="constellationPanel">
                     <ConstellationPanel/>
                 </div>
-                <div>
+                <div className="DatabasePanel">
                     <DatabasePanel />
                 </div>
             </div>
         );
-
     }
 }
 

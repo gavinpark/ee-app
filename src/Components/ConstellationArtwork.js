@@ -8,7 +8,7 @@ class UserSelection extends Component {
 
     return (
       <div className="collectionObject">
-          <img src={require(".././images/983_14(450).jpg")} alt=""></img>
+          <img src={require(".././images/low res/979_22(450).jpg")} alt=""></img>
           <p>UserSelection</p>
           
       </div>

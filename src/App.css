@@ -4,11 +4,13 @@
 .databaseLanding {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
-  grid-auto-rows: 15vh;
+  grid-template-rows: repeat(9, 1fr);
   grid-auto-flow: dense;
   margin-top: -2px;
   margin: -2px -2px -2px -2px;
   overflow: scroll;
+  width: 100vw;
+  height: 100vh;
 }
 .databaseLanding > div {
   border: 2px solid red;
@@ -18,11 +20,14 @@
 .databaseInfo {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
-  grid-auto-rows: 7.5vh;
+  grid-template-rows: repeat(9, 1fr);
   grid-auto-flow: dense;
   margin-top: -2px;
   margin: -2px -2px -2px -2px;
   overflow: scroll;
+  height: 100vh;
+  width: 100vw;
+  
 }
 
 .databaseInfo > div {
@@ -30,19 +35,60 @@
   margin: -1px -1px -1px -1px;
 }
 
-.artistBlock{
+.infoImage {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 8;
+  background: blanchedalmond;
+  border: 2px solid red;
+  margin: -2px -2px -2px -2px;
+  overflow: hidden;
+}
+
+/* .artistBlock{
   grid-column-start: 8;
   grid-row: 3;
   grid-column-end: span 2;
-}
-.budge{
-  grid-column-start: 8;
-  grid-row-start: 1;
-}
+} */
 
 .dataHeader{
-  grid-column-start: 8;
   grid-column-end: span 2;
+  grid-column-start: 8;
+  border: 2px solid red;
+  margin: -1px -1px -1px -1px;
+  color: red;
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+  overflow: scroll;
+}
+.artworkTable{
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-start: 8;
+  grid-column-end: 14;
+  grid-row-start: 3;
+  grid-row-end: 14;
+  overflow: scroll; 
+}
+
+.artworkTable > div {
+  border: 2px solid red;
+  margin: -1px -1px -1px -1px;
+}
+.dataField{
+  grid-column-start: 10;
+  grid-column-end: span 4;
+  color: red;
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
 }
 
 .description {
@@ -57,7 +103,7 @@
 img {
   display: block;
   object-fit: cover;
-  align-items: top;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
@@ -74,16 +120,18 @@ img {
 }
 
 .databasePanel {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: 15vh;
-  grid-auto-flow: dense;
-  right: 0;
   position: fixed;
+  right: 0;
   width: 33.33%;
   height: 100vh;
   margin-top: -2px;
   overflow: scroll;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 11.111%;
+  grid-auto-flow: dense;
+  
   font-family: Helvetica, sans-serif;
   color: red;
 }
@@ -96,7 +144,7 @@ img {
 .twoTags{
   grid-column-end: span 2;
   grid-row-end: span 2;
-  font-size: 24px;
+  /* font-size: 24px; */
 }
 
 .threeTags {
@@ -120,7 +168,6 @@ img {
   width: 300px;
   background: violet;
 }
-
 
 
 
