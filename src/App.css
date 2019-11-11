@@ -1,10 +1,9 @@
 /* ALL CSS LIVES HERE... */
-
     
 .databaseLanding {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
-  grid-template-rows: repeat(9, 1fr);
+  grid-auto-rows: 11.11%;
   grid-auto-flow: dense;
   margin-top: -2px;
   margin: -2px -2px -2px -2px;
@@ -15,6 +14,13 @@
 .databaseLanding > div {
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
+}
+
+.artworkImage{
+  object-fit: cover;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .databaseInfo {
@@ -125,6 +131,7 @@ img {
   width: 33.33%;
   height: 100vh;
   margin-top: -2px;
+  margin: -2px -2px -2px -2px;
   overflow: scroll;
 
   display: grid;
@@ -144,7 +151,6 @@ img {
 .twoTags{
   grid-column-end: span 2;
   grid-row-end: span 2;
-  /* font-size: 24px; */
 }
 
 .threeTags {
@@ -169,5 +175,7 @@ img {
   background: violet;
 }
 
-
+.testDiv{
+  background: blueviolet;
+}
 
