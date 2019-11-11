@@ -9,32 +9,60 @@ class DatabasePanel extends Component {
     return (
       <div className="databasePanel">
 
-{Data.map((artwork, i) => {
-    if (artwork.isCopyright === true){
-      return(
-        <div>
-          <img key={i} className="artworkImage" src={artwork.imageSource} alt=""></img>
-        </div>
-      )
-    } 
-    if (artwork.isCopyright === false){
-      return(
-        <div className='description'>{artwork.imageDesc}</div>
-      )
-    }
-    if (artwork.isCopyright === true && artwork.twoTags === true)  {
-      return(
-        <div className="twoTags" ><img src={artwork.imageSource} alt=""></img> </div>
-      )
-    }
-    // if (artwork.twoTags === true){
-    //   return (
-    //     <div className='twoTags'>{artwork.imageDesc}</div>
-    //   )
-    // }
-  })
-}
+        {Data.map((artwork, i) => {
+          if (artwork.isCopyright === true) {
+            return (
+              <div>
+                <img key={i} className="artworkImage" src={artwork.imageSource} alt=""></img>
+              </div>
+            )
+          }
+          if (artwork.isCopyright === false) {
+            return (
+              <div className='description'>{artwork.imageDesc}</div>
+            )
+          }
+          if (artwork.isCopyright === true && artwork.twoTags === true) {
+            return (
+              <div className="twoTags" ><img src={artwork.imageSource} alt=""></img> </div>
+            )
+          }
 
+          // if (artwork.twoTags === true){
+          //   return (
+          //     <div className='twoTags'>{artwork.imageDesc}</div>
+          //   )
+          // }
+        })
+        }
+        <div></div>
+        <div className="essayButton">Systems of classification</div>        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div className="essayButton">database & Narrative</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div className="essayButton">Credits</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     );
 

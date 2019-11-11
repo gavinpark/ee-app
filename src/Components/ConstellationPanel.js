@@ -8,9 +8,7 @@ class ConstellationPanel extends Component {
 
     return (
       <div className="constellationPanel">
-        <Link to="artwork-info-panel">
         <div><ConstellationArtwork/></div>
-        </Link>
       </div>
     );
 
