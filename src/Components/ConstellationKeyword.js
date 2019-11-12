@@ -23,8 +23,9 @@ class ConstellationKeyword extends Component {
     // }
     render() {
         return (
-            <Rnd>
-                
+            <Rnd
+                enableResizing={null}
+                >
                 <div className="keyword">{Data[0].Keyword01}</div>
             </Rnd>
         );
