@@ -22,11 +22,11 @@ class DatabasePanel extends Component {
               <div className='description'>{artwork.imageDesc}</div>
             )
           }
-          if (artwork.isCopyright === true && artwork.twoTags === true) {
-            return (
-              <div className="twoTags" ><img src={artwork.imageSource} alt=""></img> </div>
-            )
-          }
+          // if (artwork.isCopyright === true && artwork.twoTags === true) {
+          //   return (
+          //     <div className="twoTags" ><img src={artwork.imageSource} alt=""></img> </div>
+          //   )
+          // }
 
           // if (artwork.twoTags === true){
           //   return (
@@ -36,7 +36,7 @@ class DatabasePanel extends Component {
         })
         }
         <div></div>
-        <div className="essayButton">Systems of classification</div>        <div></div>
+        <Link to="/EssayWindow"> <div className="essayButton">Essay Segment 01</div> </Link>
         <div></div>
         <div></div>
         <div></div>
@@ -44,14 +44,15 @@ class DatabasePanel extends Component {
         <div></div>
         <div></div>
         <div></div>
-        <div className="essayButton">database & Narrative</div>
+        <div></div>
+        <div className="essayButton">Essay Segment 03</div>
         <div></div>
         <div></div>
         <div></div>
         <div></div>
         <div></div>
         <div></div>
-        <div className="essayButton">Credits</div>
+        <div className="essayButton">Essay Segment 07</div>
         <div></div>
         <div></div>
         <div></div>
