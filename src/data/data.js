@@ -17,6 +17,7 @@ let Data = [
     References: "-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File-See review(s) in Artist’s File",
     birthYear: "1923 (28 décembre)",
     deathYear: "",
+    Keyword01: "figurative",
 
   },
   {

@@ -7,9 +7,11 @@ class MainInterface extends Component {
     render() {
 
         return (
-            <div>
+
+            <div className="mainContainer">
+                
                 <div className="constellationPanel">
-                    <ConstellationPanel/>
+                    <ConstellationPanel />
                 </div>
                 <div className="DatabasePanel">
                     <DatabasePanel />

@@ -9,6 +9,10 @@ class App extends Component {
   render() {
     return (
       <div className="border">
+        <div className="left"></div>
+                <div className="right"></div>
+                <div className="top"></div>
+                <div className="bottom"></div>
         <BrowserRouter>
           <div>
             <Route path="/" component={Landing} exact />
