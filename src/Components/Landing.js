@@ -16,6 +16,21 @@ class Landing extends Component {
 
         {Data.map((artwork, i) => {
             if (artwork.isCopyright === true){
+              if (artwork.twoTags == true){
+                return(
+                  <div className="twoTags" ><img className ="artworkImage" src={artwork.imageSource} alt=""></img> </div>
+                )
+              }
+              if (artwork.threeTags == true){
+                return(
+                  <div className="threeTags" ><img className ="artworkImage" src={artwork.imageSource} alt=""></img> </div>
+                )
+              }
+              if (artwork.fourOrMoreTags == true){
+                return(
+                  <div className="fourTags" ><img className ="artworkImage" src={artwork.imageSource} alt=""></img> </div>
+                )
+              }
               return(
                 <div>
                   <img key={i} className="artworkImage" src={artwork.imageSource} alt=""></img>
@@ -27,19 +42,8 @@ class Landing extends Component {
                 <div className='description'>{artwork.imageDesc}</div>
               )
             }
-            if (artwork.isCopyright === true && artwork.twoTags === true)  {
-              return(
-                <div className="twoTags" ><img src={artwork.imageSource} alt=""></img> </div>
-              )
-            }
-            // if (artwork.twoTags === true){
-            //   return (
-            //     <div className='twoTags'>{artwork.imageDesc}</div>
-            //   )
-            // }
           })
         }
-      {/* </div> */}
         <div></div>
         <div></div>
         <div></div>

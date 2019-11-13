@@ -24,7 +24,7 @@ let Data = [
     key: 2,
     imageSource: require(".././images/963_11.jpg"),
     imageDesc: "reclining figure",
-    isCopyright: false,
+    isCopyright: true,
     twoTags: true,
   },
   {
@@ -77,7 +77,7 @@ let Data = [
   },
   {
     key: 11,
-    imageSource: require(".././images/963_11.jpg"),
+    imageSource: require(".././images/989_03.jpg"),
     imageDesc: "wooded area with rock intrusion in foreground, lake in middle ground and mountains in background",
     twoTags: true, 
     isCopyright: true,
@@ -120,9 +120,10 @@ let Data = [
   },
   {
     key: 18,
-    imageSource: require(".././images/963_11.jpg"),
+    imageSource: require(".././images/988_06.jpg"),
     imageDesc: "winter forest landscape",
-    isCopyright: false,
+    isCopyright: true,
+    fourOrMoreTags: true,
   },
   {
     key: 19,
@@ -167,12 +168,18 @@ let Data = [
     isCopyright: false,
   },
   {
-    key: 25,
+    key: 26,
     imageSource: require(".././images/963_11.jpg"),
     imageDesc: "",
     isCopyright: false,
   },
-  
+  {
+    key: 27,
+    imageSource: require(".././images/996_10.jpg"),
+    imageDesc: "",
+    isCopyright: true,
+    threeTags: true,
+  },
 ]
 
 export default Data;

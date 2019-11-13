@@ -255,7 +255,7 @@
   height: 310px;
   bottom: 0;
   top: 70px;
-  /* overflow-y: auto;  */
+  overflow-y: hidden; 
   /* overflow-x: hidden; */
 }
 
