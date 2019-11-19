@@ -2,7 +2,6 @@ export default function reducer(state = {
   isFrench: false,
   isCreditsOpen: false,
   isWelcomeOpen: false,
-  isLandingPage: true,
   selectedWorks: [], //string[],
   selectedKeywords: [], //string[]
   relatedWorks: [], // string[]
@@ -27,11 +26,6 @@ export default function reducer(state = {
       return {
         ...state,
         isWelcomeOpen: !state.isWelcomeOpen,
-      };
-    case 'CLOSE_LANDING_PAGE':
-      return {
-        ...state,
-        isLandingPage: false,
       };
     case 'TOGGLE_DETAIL_PANEL':
       return {
@@ -68,12 +62,6 @@ export const toggleCredits = () => {
 export const toggleWelcome = () => {
   return {
     type: 'TOGGLE_WELCOME',
-  };
-};
-
-export const closeLandingPage = () => {
-  return {
-    type: 'CLOSE_LANDING_PAGE',
   };
 };
 
