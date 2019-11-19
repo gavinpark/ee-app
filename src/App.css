@@ -1,25 +1,311 @@
 /* ALL CSS LIVES HERE... */
-
-.database{
-    display: grid;
-    /* border: 2px solid red; */
-    grid-template-columns: repeat(5, 1fr); 
-    grid-auto-rows: 200px;
-    min-height:100px; 
-  } 
  
+/*GENERAL STYLING*/
 
- .artworkImage {
-     display:grid;
-     border:1px solid red;
-    /* img{
-        width:100%;
-    } */
+.artworkImage{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-items: center;
 }
 
+.description {
+  overflow: scroll;
+  color: red;
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  padding: 12px;
+  font-size: 16px;
+  /* overflow-y: auto; */
+}
 
-.subject{
-    color: red;
-    
+.keyword {
+  color: black;
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.essayButton{
+  overflow: scroll;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.twoTags{
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+
+.threeTags {
+  grid-column-end: span 3;
+  grid-row-end: span 3;
+}
+
+.fourTags {
+  grid-column-end: span 4;
+  grid-row-end: span 4;
+}
+
+.span2Row{
+  grid-row-end: span 2;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{
+  display: none;
+}
+/* LANDING PAGE */
+
+.databaseLanding {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-auto-rows: 11.11%;
+  grid-auto-flow: dense;
+
+  margin-top: -2px;
+  margin: -2px -2px -2px -2px;
+  width: 100vw;
+  height: 100vh; 
+  overflow: scroll;
+}
+.databaseLanding > div {
+  border: 2px solid red;
+  margin: -1px -1px -1px -1px;
+}
+
+/* MAIN INTERFACE */
+
+.constellationPanel {
+  display: inline-block;
+  left: 0;
+  position: fixed;
+  width: 66.66%;
+  height: 100vh;
+  background: transparent;
+  overflow: visible;
+  
 
 }
+
+.databasePanel {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 11.11%;
+  grid-auto-flow: dense;
+  
+  border: 1px solid red;
+  margin-right: -2px;
+  margin-top: -2px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 33.33%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+
+  background: white;
+}
+.databasePanel > div {
+  border: 2px solid red;
+  margin: -1px -1px -1px -1px;
+}
+
+.essayButton {
+  color: white !important;
+}
+.essayButton:hover {
+  background-color: red;
+}
+
+.collectionObject{
+  position: relative;
+  left: 200px;
+  top: 100px;
+  width: 300px;
+  background: white;
+}
+
+.objectMoreButton{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.objectExitButton{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* INFO PANEL */
+
+.infoExitButton{
+  grid-column: 15;
+  grid-row: 1;
+  grid-row-end: span 2;
+}
+
+.databaseInfo {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-auto-rows: 5.56%;
+  grid-auto-flow: dense;
+
+  margin-top: -2px;
+  margin-right: -2px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100vw;
+}
+.databaseInfo > div {
+  border: 2px solid red;
+  margin: -1px -1px -1px -1px;
+}
+
+.infoPanelImage {
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 17;
+  border: 2px solid red;
+  margin: -2px -2px -2px -2px;
+  overflow: scroll;
+}
+
+.dataHeader{
+  grid-column-end: span 2;
+  grid-column-start: 8;
+  border: 2px solid red;
+  margin: -1px -1px -1px -1px;
+  color: red;
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+  overflow: scroll;
+}
+
+.dataField{
+  grid-column-start: 10;
+  grid-column-end: span 4;
+  color: red;
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+  overflow: scroll;
+}
+
+.dataHeaderReferences{
+  grid-column-end: span 2;
+  grid-column-start: 8;
+  grid-row-end: span 2;
+  border: 2px solid red;
+  margin: -1px -1px -1px -1px;
+  color: red;
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+  overflow: scroll;
+}
+
+.dataFieldReferences{
+  grid-column-start: 10;
+  grid-column-end: span 4;
+  grid-row-end: span 4;
+  color: red;
+  font-family: Helvetica, sans-serif;
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+  overflow: scroll;
+}
+
+/* ESSAY WINDOW */
+
+.essayContainer{
+  position: relative;
+  left: 175px;
+  border: 2px solid red;
+  background: white;
+}
+.essayHeader{
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  border: 2px solid red;
+  margin: -2px;
+
+}
+.essayBody{
+  position: absolute;
+  width: 100%;
+  height: 310px;
+  bottom: 0;
+  top: 70px;
+  /* overflow-y: auto;  */
+  /* overflow-x: hidden; */
+}
+
+/* BODY BORDER  */
+.top, .bottom, .left, .right {
+	background: red;
+  position: fixed;
+  z-index: 1000000;
+	}
+	.left, .right {
+		top: 0; bottom: 0;
+		width: 2px;
+		}
+		.left { left: 0; }
+		.right { right: 0; }
+		
+	.top, .bottom {
+		left: 0; right: 0;
+		height: 2px;
+		}
+		.top { top: 0; }
+		.bottom { bottom: 0; }
+
+
+/* TESTS */
+
+/* .testDiv{
+  background: blueviolet;
+  grid-row-end: span 2;
+}
+
+.artistBlock{
+  grid-column-start: 8;
+  grid-row: 3;
+  grid-column-end: span 2;
+}
+
+.artworkTable{
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-column-start: 8;
+  grid-column-end: 14;
+  grid-row-start: 3;
+  grid-row-end: 14;
+  overflow: scroll; 
+}
+
+.artworkTable > div {
+  border: 2px solid red;
+  margin: -1px -1px -1px -1px;
+} */

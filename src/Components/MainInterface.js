@@ -7,16 +7,16 @@ class MainInterface extends Component {
     render() {
 
         return (
-            <div>
-                <div>
+
+            <div className="mainContainer">
+                <div className="constellationPanel">
                     <ConstellationPanel />
                 </div>
-                <div>
+                <div className="DatabasePanel">
                     <DatabasePanel />
                 </div>
             </div>
         );
-
     }
 }
 
