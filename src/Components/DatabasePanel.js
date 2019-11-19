@@ -44,13 +44,13 @@ class DatabasePanel extends Component {
         <div className="essayButton">Essay Segment 01</div>
         <div></div>
         <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
         <div className="essayButton">Essay Segment 03</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
         <div></div>
         <div></div>
         <div></div>
@@ -69,10 +69,23 @@ class DatabasePanel extends Component {
         <div></div>
         <div></div>
         <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     );
-
   }
-}
 
+  
+}
 export default DatabasePanel;
+
+
+// }$(function () {
+//   var DatabasePanel = $("#shuffle");
+//   var divs = DatabasePanel.children();
+//   while (divs.length) {
+//       DatabasePanel.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+//   }
+// });

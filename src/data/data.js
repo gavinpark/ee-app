@@ -45,6 +45,12 @@ let Data = [
     imageDesc: "abstraction, metal? objects arrange haphazardly",
     isCopyright: true,
   },
+ { key: 27,
+  imageSource: require(".././images/973_04.jpg"),
+  imageDesc: "",
+  isCopyright: false,
+  threeTags: true,
+},
   {
     key: 6,
     imageSource: require(".././images/low res/973_10(450).jpg"),
