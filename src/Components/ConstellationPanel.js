@@ -1,22 +1,35 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import ConstellationArtwork from './ConstellationArtwork';
-import EssayWindow from './EssayWindow';
+import WelcomeWindow from './WelcomeWindow';
 import ConstellationKeyword from './ConstellationKeyword';
 import '../App.css';
+import { toggleWelcome } from '../redux/modules/ui';
 
 class ConstellationPanel extends Component {
-  render() {
+  // constructor(props) {
+  //   super(props);
+  // }
 
+  render() {
+    // https://reactjs.org/docs/conditional-rendering.html
+    // search for &&
     return (
       <div className="constellationPanel">
-        <div><EssayWindow /></div>
+        {this.props.isWelcomeOpen && <div><WelcomeWindow toggleWelcome={this.props.toggleWelcome} /></div>}
         <div><ConstellationArtwork /></div>
         <div><ConstellationKeyword /></div>
       </div>
     );
-
   }
 }
 
-export default ConstellationPanel;
+const mapStateToProps = (state) => {
+  return {
+    isWelcomeOpen: state._ui.isWelcomeOpen,
+  };
+};
+
+export default connect(mapStateToProps, {
+  toggleWelcome,
+})(ConstellationPanel);
