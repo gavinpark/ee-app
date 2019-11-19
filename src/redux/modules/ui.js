@@ -33,6 +33,21 @@ export default function reducer(state = {
         ...state,
         isLandingPage: false,
       };
+    case 'TOGGLE_DETAIL_PANEL':
+      return {
+        ...state,
+        isDetailPanelOpen: !state.isDetailPanelOpen,
+      };
+    case 'CLOSE_COPYRIGHT_WINDOW':
+      return {
+        ...state,
+        haveCopyrightWindowsBeenViewed: true,
+      };
+    case 'INCREASE_HIGHEST_Z_INDEX':
+      return {
+        ...state,
+        highestZIndex: state.highestZIndex + 1,
+      };
     default:
       return state;
   }
@@ -41,5 +56,41 @@ export default function reducer(state = {
 export const toggleLanguage = () => {
   return {
     type: 'TOGGLE_LANGUAGE',
+  };
+};
+
+export const toggleCredits = () => {
+  return {
+    type: 'TOGGLE_CREDITS',
+  };
+};
+
+export const toggleWelcome = () => {
+  return {
+    type: 'TOGGLE_WELCOME',
+  };
+};
+
+export const closeLandingPage = () => {
+  return {
+    type: 'CLOSE_LANDING_PAGE',
+  };
+};
+
+export const toggleDetailPanel = () => {
+  return {
+    type: 'TOGGLE_DETAIL_PANEL',
+  };
+};
+
+export const closeCopyrightWindow = () => {
+  return {
+    type: 'CLOSE_COPYRIGHT_WINDOW',
+  };
+};
+
+export const increaseHighestZIndex = () => {
+  return {
+    type: 'INCREASE_HIGHEST_Z_INDEX',
   };
 };
