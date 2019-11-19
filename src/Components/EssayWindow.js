@@ -23,12 +23,12 @@ class EssayWindow extends Component {
                 enableResizing={null}
                 // style={{overflow: "scroll"}}
             >
-                <div className="essayHeader">
-                    <div className="description">{EssayData[0].essayHeader}</div>
+                <div className="essayHeaderBox">
+                    <div className="essayHeader">{EssayData[0].essayHeader}</div>
                 </div>
                 <img className="objectExitButton" src={require(".././images/buttons/exit_Button.svg")} alt=""></img>
-                <div className="essayBody">
-                    <div className="description">{EssayData[0].essayText}</div>
+                <div className="essayBodyBox">
+                    <div className="essayBody">{EssayData[0].essayText}</div>
                 </div>
             </Rnd>
 

@@ -40,8 +40,8 @@ class DatabasePanel extends Component {
             }
         })
         }
-        <div></div>
         <div className="essayButton">Essay Segment 01</div>
+        <div></div>
         <div></div>
         <div></div>
         <div className="essayButton">Essay Segment 03</div>
