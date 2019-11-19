@@ -1,5 +1,13 @@
 /* ALL CSS LIVES HERE... */
  
+@font-face {
+  font-family:'Avara';
+  src: url('./fonts/Avara-Bold_web.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /*GENERAL STYLING*/
 
 .artworkImage{
@@ -15,7 +23,7 @@
 .description {
   overflow: scroll;
   color: red;
-  font-family: Helvetica, sans-serif;
+  font-family: neue-haas-grotesk-text, sans-serif;
   padding: 12px 8px 12px 8px;
   font-size: 12px;
   text-align: center;
@@ -255,10 +263,11 @@
 }
 .essayHeader{
   color: red;
-  font-family: Helvetica, sans-serif;
+  font-family: Avara, sans-serif;
   text-align: left;
   padding: 12px;
-  font-size: 20px;
+  font-size: 24px;
+  /* text-transform: uppercase; */
 }
 
 .essayBodyBox{
@@ -271,10 +280,10 @@
 }
 .essayBody {
   color: red;
-  font-family: Helvetica, sans-serif;
+  font-family: neue-haas-grotesk-text, sans-serif;
   text-align: left;
   padding: 12px;
-  font-size: 20px;
+  font-size: 24px;
   overflow: scroll;
 }
 
