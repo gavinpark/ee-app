@@ -5,9 +5,7 @@ import DatabasePanel from './DatabasePanel';
 
 class MainInterface extends Component {
     render() {
-
         return (
-
             <div className="mainContainer">
                 <div className="constellationPanel">
                     <ConstellationPanel />

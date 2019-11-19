@@ -1,7 +1,12 @@
+import * as allItems from './all_items.json';
+
+import * as allWords from './all_words.json';
+
 export default function reducer(state = {
+  // this is all the states
   isFrench: false,
   isCreditsOpen: false,
-  isWelcomeOpen: false,
+  isWelcomeOpen: true,
   selectedWorks: [], //string[],
   selectedKeywords: [], //string[]
   relatedWorks: [], // string[]
@@ -46,6 +51,8 @@ export default function reducer(state = {
       return state;
   }
 }
+
+// below are all the actions
 
 export const toggleLanguage = () => {
   return {
