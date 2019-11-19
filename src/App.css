@@ -244,6 +244,13 @@
   font-size: 14px;
   overflow: scroll;
 }
+.copyrightButton{
+  color: red;
+  font-size: 40px;
+  grid-column-start: 14;
+  grid-row-end: span 2;
+  grid-row-start: 15;
+}
 
 /* ESSAY WINDOW */
 

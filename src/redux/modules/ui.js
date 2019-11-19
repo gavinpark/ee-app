@@ -7,6 +7,7 @@ export default function reducer(state = {
   isFrench: false,
   isCreditsOpen: false,
   isWelcomeOpen: true,
+  isCopyrightOpen: true,
   selectedWorks: [], //string[],
   selectedKeywords: [], //string[]
   relatedWorks: [], // string[]
@@ -32,6 +33,11 @@ export default function reducer(state = {
         ...state,
         isWelcomeOpen: !state.isWelcomeOpen,
       };
+    case 'TOGGLE_COPYRIGHT':
+      return{
+        ...state,
+        isCopyrightOpen: !state.isCopyrightOpen,
+      }
     case 'TOGGLE_DETAIL_PANEL':
       return {
         ...state,
@@ -71,7 +77,11 @@ export const toggleWelcome = () => {
     type: 'TOGGLE_WELCOME',
   };
 };
-
+export const toggleCopyright = () => {
+  return {
+    type: 'TOGGLE_COPYRIGHT',
+  };
+};
 export const toggleDetailPanel = () => {
   return {
     type: 'TOGGLE_DETAIL_PANEL',

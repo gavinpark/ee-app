@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Data from '.././data/data.js';
 import '../App.css';
+import {toggleCopyright} from '../redux/modules/ui';
+import CopyrightWindow from './CopyrightWindow.js';
 
 class ArtworkInfoPanel extends Component {
   render() {
@@ -30,8 +33,8 @@ class ArtworkInfoPanel extends Component {
             <td>{Data[0].Date}</td>
           </tr>
         </table> */}
-
-        <div className="span2Row"></div>
+        {this.props.isCopyrightOpen && <div><CopyrightWindow toggleCopyright={this.props.toggleCopyright} /></div>}
+        <div className="copyrightButton" onClick={this.props.toggleCopyright}> C </div>
         <div className="span2Row"></div>
         <div className="span2Row"></div>
         <div className="span2Row"></div>
@@ -118,5 +121,14 @@ class ArtworkInfoPanel extends Component {
 
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    // haveCopyrightWindowsBeenViewed: state._ui.haveCopyrightWindowsBeenViewed,
+    isCopyrightOpen: state._ui.isCopyrightOpen
+  };
+};
 
-export default ArtworkInfoPanel;
+export default connect(mapStateToProps, {
+  // closeCopyrightWindow,
+  toggleCopyright
+})(ArtworkInfoPanel);
