@@ -26,7 +26,10 @@
   font-family: neue-haas-grotesk-text, sans-serif;
   padding: 12px 8px 12px 8px;
   font-size: 12px;
-  text-align: center;
+  text-align: left;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .keyword {
