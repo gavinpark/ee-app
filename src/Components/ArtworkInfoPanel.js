@@ -33,7 +33,7 @@ class ArtworkInfoPanel extends Component {
             <td>{Data[0].Date}</td>
           </tr>
         </table> */}
-        {this.props.isCopyrightOpen && <div><CopyrightWindow toggleCopyright={this.props.toggleCopyright} /></div>}
+        {this.props.isCopyrightOpen && <CopyrightWindow toggleCopyright={this.props.toggleCopyright} />}
         <div className="copyrightButton" onClick={this.props.toggleCopyright}> C </div>
         <div className="span2Row"></div>
         <div className="span2Row"></div>
@@ -41,7 +41,7 @@ class ArtworkInfoPanel extends Component {
         <div className="span2Row"></div>
         <div className="span2Row"></div>
         <div className="span2Row"></div>
-        <div className="span2Row"></div>
+        
         
           <div className="infoExitButton">
             <Link to="main"><img  src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img></Link>
