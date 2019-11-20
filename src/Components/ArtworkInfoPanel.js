@@ -8,6 +8,10 @@ import CopyrightWindow from './CopyrightWindow.js';
 
 class ArtworkInfoPanel extends Component {
   render() {
+    // here is how you would get the
+    // data for the 'current active work'
+    // (don't forget to pass the correct props into this component)
+    // const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex]];
 
     return (
       <div className="databaseInfo">

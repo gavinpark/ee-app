@@ -7,9 +7,12 @@ import '../App.css';
 import { toggleWelcome } from '../redux/modules/ui';
 
 class ConstellationPanel extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
+
+  renderConstellationArtworks() {
+    return this.props.selectedWorks.map((work) => {
+      return <div><ConstellationArtwork access_num={work} activeWorkIndex={this.props.activeWorkIndex} /></div>
+    });
+  }
 
   render() {
     // https://reactjs.org/docs/conditional-rendering.html
@@ -17,7 +20,7 @@ class ConstellationPanel extends Component {
     return (
       <div className="constellationPanel">
         {this.props.isWelcomeOpen && <div><WelcomeWindow toggleWelcome={this.props.toggleWelcome} /></div>}
-        <div><ConstellationArtwork /></div>
+        {this.renderConstellationArtworks()}
         <div><ConstellationKeyword /></div>
       </div>
     );
@@ -27,6 +30,9 @@ class ConstellationPanel extends Component {
 const mapStateToProps = (state) => {
   return {
     isWelcomeOpen: state._ui.isWelcomeOpen,
+    activeWorkIndex: state._ui.activeWorkIndex,
+    selectedWorks: state._ui.selectedWorks,
+    selectedKeywords: state._ui.selectedKeywords,
   };
 };
 

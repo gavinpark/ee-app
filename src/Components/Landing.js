@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 import Data from '.././data/data.js';
 import '../App.css';
 
-
 class Landing extends Component {
+
   // Here, we want to map a single element/component (Collection Object?) 
   // but also have it behave like a css grid. So it might make sense to apply 
   // the css grid rules to a parent div and then inside it, map() the component?
   render() {
-    console.log("in database!");
     return (
 
       <div className='databaseLanding'>
