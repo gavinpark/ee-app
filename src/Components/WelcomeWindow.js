@@ -8,9 +8,7 @@ import { Rnd } from "react-rnd";
 
 class WelcomeWindow extends Component {
     render() {
-        // const style = {
-        //     overflowY: "auto"
-        // }
+
         return (
             <Rnd
                 className="essayContainer"

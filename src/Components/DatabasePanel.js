@@ -18,47 +18,20 @@ class DatabasePanel extends Component {
           const artworkData = window.allWorks[artwork.access_num];
           return <DatabaseItem artworkData={artworkData} artwork={artwork}></DatabaseItem>
         })}
-        <div></div>
+        
         <div className="essayButton">Essay Segment 01</div>
-        <div></div>
-        <div></div>
-        <div></div>
+      
         <div className="essayButton">Essay Segment 03</div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+   
         <div className="essayButton">Essay Segment 07</div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      
       </div>
     );
   }
 
   
 }
-export default DatabasePanel;
+// export default DatabasePanel;
 
 
 const mapStateToProps = (state) => {

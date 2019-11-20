@@ -28,7 +28,7 @@ class DatabaseItem extends Component {
         }
   
         return (
-          <div className='description'>{artworkData.description}</div>
+          <div className='description'>{artworkData.subject}</div>
         )
     }
 }

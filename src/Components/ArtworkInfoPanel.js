@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Data from '.././data/data.js';
 import '../App.css';
 import {toggleCopyright} from '../redux/modules/ui';
 import CopyrightWindow from './CopyrightWindow.js';
 
 class ArtworkInfoPanel extends Component {
   render() {
+    
     // here is how you would get the
     // data for the 'current active work'
     // (don't forget to pass the correct props into this component)
     // const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex]];
+    const artworkData = window.artworks[this.props.selectedWorks[this.props.activeWorkIndex]];
 
     return (
       <div className="databaseInfo">
@@ -19,24 +20,7 @@ class ArtworkInfoPanel extends Component {
           <img className="artworkImage" src={require(".././images/979_22.jpg")} alt=""></img>
         </div>
 
-        {/* want table to span 6 columns; table can take on the same role as "artwork table aka it has a scroll"*/}
-        {/* want tr (table row) to span the same 6 columns */}
-        {/* want th (header) to span 2 columns */}
-        {/* data to span 4 columns */}
-        {/* <table className>
-          <tr>
-            <th>Artist</th>
-            <td>{Data[0].Artist}</td>
-          </tr>
-          <tr>
-            <th>Title</th>
-            <td>{Data[0].Title}</td>
-          </tr>
-          <tr>
-            <th>Date of production</th>
-            <td>{Data[0].Date}</td>
-          </tr>
-        </table> */}
+       
         {this.props.isCopyrightOpen && <CopyrightWindow toggleCopyright={this.props.toggleCopyright} />}
         <div className="copyrightButton" onClick={this.props.toggleCopyright}> C </div>
         <div className="span2Row"></div>
@@ -48,33 +32,33 @@ class ArtworkInfoPanel extends Component {
         
         
           <div className="infoExitButton">
-            <Link to="main"><img  src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img></Link>
+            <img src={require(".././images/buttons/info_Exit_Button.svg")} alt="" onClick={this.props.toggleDetailPanel}></img>
             </div>
       
       
 
           <div className="dataHeader">Artist</div>
-          <div className="dataField">{Data[0].Artist}</div>
+          <div className="dataField">{artworkData.artist}</div>
           <div className="dataHeader">Title</div>
-          <div className="dataField">{Data[0].Title}</div>
+          <div className="dataField">{artworkData.title}</div>
           <div className="dataHeader">Date of production</div>
-          <div className="dataField">{Data[0].Date}</div>
+          <div className="dataField">{artworkData.date}</div>
           <div className="dataHeader">Accession Number</div>
-          <div className="dataField">{Data[0].AccessionNumber}</div>
+          <div className="dataField">{artworkData.access_num}</div>
           <div className="dataHeader">Accession Date</div>
-          <div className="dataField">{Data[0].AccessionDate}</div>
+          <div className="dataField">{artworkData.access_date}</div>
           <div className="dataHeader">Credit</div>
-          <div className="dataField">{Data[0].Credit}</div>
+          <div className="dataField">{artworkData.credit}</div>
           <div className="dataHeader">Medium</div>
-          <div className="dataField">{Data[0].Medium}</div>
+          <div className="dataField">{artworkData.medium}</div>
           <div className="dataHeader">Description</div>
-          <div className="dataField">{Data[0].Description}</div>
+          <div className="dataField">{artworkData.description}</div>
           <div className="dataHeader">Keywords</div>
-          <div className="dataField">{Data[0].keywords}</div>
+          <div className="dataField">{artworkData.keywords}</div>
           <div className="dataHeader">Subject</div>
-          <div className="dataField">{Data[0].Subject}</div>
-          <div className="dataHeaderReferences">References</div>
-          <div className="dataFieldReferences">{Data[0].References}</div>
+          <div className="dataField">{artworkData.subject}</div>
+          <div className="dataHeader">References</div>
+          <div className="dataField">{artworkData.references}</div>
         
         
         <div className="span2Row"></div>
