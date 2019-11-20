@@ -1,6 +1,9 @@
-import * as allItems from './all_items.json';
+import allWorks from './all_items.json';
 
-import * as allWords from './all_words.json';
+import allWords from './all_words.json';
+
+window.allWorks = allWorks;
+window.allWords = allWords;
 
 export default function reducer(state = {
   // this is all the states
@@ -8,9 +11,10 @@ export default function reducer(state = {
   isCreditsOpen: false,
   isWelcomeOpen: true,
   selectedWorks: [], //string[],
-  selectedKeywords: [], //string[]
-  relatedWorks: [], // string[]
-  activeWork: 0, // (index in selectedWorks array)
+  selectedKeywords: {}, // { [keyword]: { worksInConstellationWithKeyword: [] } }
+  relatedWorks: [], // { similarityScore: number, access_num: string }[]
+  activeWorkIndex: 0, // (index in selectedWorks array)
+  activeKeywords: [], // TODO: DO WE NEED THIS?
   isDetailPanelOpen: false,
   essayWindows: [], //string[]
   haveCopyrightWindowsBeenViewed: false,
@@ -47,6 +51,17 @@ export default function reducer(state = {
         ...state,
         highestZIndex: state.highestZIndex + 1,
       };
+    case 'SELECT_NEW_ARTWORK':
+
+        const newLastIndexInArtworksArr = state.selectedWorks.length;
+        const newSelectedKeywords = mergeSelectedKeywords(action.selectedKey, state.selectedKeywords);
+        return {
+          ...state,
+          activeWorkIndex: newLastIndexInArtworksArr,
+          selectedKeywords: newSelectedKeywords,
+          relatedWorks: action.relatedArtworks,
+          selectedWorks: [...state.selectedWorks, action.selectedKey]
+        }
     default:
       return state;
   }
@@ -89,3 +104,56 @@ export const increaseHighestZIndex = () => {
     type: 'INCREASE_HIGHEST_Z_INDEX',
   };
 };
+
+export const findRandomArtWork = () => {
+  const keys = Object.keys(allWorks);
+  const selectedKey = keys[Math.floor(Math.random() * keys.length)];
+  const relatedArtworks = findRelatedWork(selectedKey);
+  return {
+    type: 'SELECT_NEW_ARTWORK',
+    selectedKey,
+    relatedArtworks,
+  };
+}
+
+export const removeArtwork = () => {
+  // TODO: loop over all keywords to ensure that this is not the last artwork
+}
+
+// helper functions
+
+const findRelatedWork = (accessNum) => {
+  // TODO: DONT SHOW WORKS THAT ARE ALREADY IN CONSTELLATION
+  const keyWordsInSelectedWork = allWorks[accessNum].final_words;
+
+  const allRelatedWorks = keyWordsInSelectedWork.reduce((obj, word) => {
+    const worksWithRelatedWord = allWords[word];
+    worksWithRelatedWord.forEach((work) => {
+      if (obj[work] || work === accessNum) {
+        return;
+      }
+      const keywordsInRelatedWork = allWorks[work].final_words;
+      const similarityScore = keywordsInRelatedWork.filter(value => keyWordsInSelectedWork.includes(value)).length;
+      obj[work] = {
+        access_num: work,
+        similarityScore,
+      }
+    });
+    return obj;
+  }, {});
+
+  return Object.values(allRelatedWorks);
+}
+
+const mergeSelectedKeywords = (accessNum, existingSelectedKeywords) => {
+  const keyWordsInSelectedWork = allWorks[accessNum].final_words;
+  keyWordsInSelectedWork.forEach((word) => {
+    if (!existingSelectedKeywords[word]) {
+      existingSelectedKeywords[word] = { worksInConstellationWithKeyword: [] }
+    }
+    if (!existingSelectedKeywords[word].worksInConstellationWithKeyword.includes(accessNum)) {
+      existingSelectedKeywords[word].worksInConstellationWithKeyword.push(accessNum);
+    }
+  });
+  return existingSelectedKeywords;
+}

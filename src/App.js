@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Landing from './Components/Landing.js';
 import './App.css';
 import MainInterface from './Components/MainInterface.js';
 import ArtworkInfoPanel from './Components/ArtworkInfoPanel.js';
+import { findRandomArtWork } from './redux/modules/ui';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.findRandomArtWork();
+  }
   render() {
     return (
       <div>
@@ -27,4 +32,6 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(null, {
+  findRandomArtWork,
+})(App);
