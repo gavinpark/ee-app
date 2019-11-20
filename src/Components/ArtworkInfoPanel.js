@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import '../App.css';
-import {toggleCopyright} from '../redux/modules/ui';
+import {toggleCopyright, toggleDetailPanel} from '../redux/modules/ui';
 import CopyrightWindow from './CopyrightWindow.js';
 
 class ArtworkInfoPanel extends Component {
   render() {
-    
     // here is how you would get the
     // data for the 'current active work'
     // (don't forget to pass the correct props into this component)
     // const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex]];
-    const artworkData = window.artworks[this.props.selectedWorks[this.props.activeWorkIndex]];
-
+    const artworkData = window.allworks[this.props.selectedWorks[this.props.activeWorkIndex]];
     return (
       <div className="databaseInfo">
         <div className="infoPanelImage">
@@ -112,11 +109,15 @@ class ArtworkInfoPanel extends Component {
 const mapStateToProps = (state) => {
   return {
     // haveCopyrightWindowsBeenViewed: state._ui.haveCopyrightWindowsBeenViewed,
-    isCopyrightOpen: state._ui.isCopyrightOpen
+    isCopyrightOpen: state._ui.isCopyrightOpen,
+    isDetailPanelOpen: state._ui.isDetailPanelOpen,
+    activeWorkIndex: state._ui.activeWorkIndex,
+    selectedWorks: state._ui.selectedWorks,
   };
 };
 
 export default connect(mapStateToProps, {
   // closeCopyrightWindow,
-  toggleCopyright
+  toggleCopyright,
+  toggleDetailPanel
 })(ArtworkInfoPanel);

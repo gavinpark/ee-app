@@ -7,7 +7,6 @@ import '../App.css';
 import { toggleWelcome } from '../redux/modules/ui';
 
 class ConstellationPanel extends Component {
-
   renderConstellationArtworks() {
     return this.props.selectedWorks.map((work) => {
       return <div><ConstellationArtwork access_num={work} activeWorkIndex={this.props.activeWorkIndex} /></div>
