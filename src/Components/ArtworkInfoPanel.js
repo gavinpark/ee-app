@@ -21,7 +21,7 @@ class ArtworkInfoPanel extends Component {
 
        
         {this.props.isCopyrightOpen && <CopyrightWindow toggleCopyright={this.props.toggleCopyright} />}
-        <div className="copyrightButton" onClick={this.props.toggleCopyright}> © </div>
+        <div className="copyrightButton" onClick={this.props.toggleCopyright}><p>©</p></div>
         <div className="span2Row"></div>
         <div className="span2Row"></div>
         <div className="span2Row"></div>
