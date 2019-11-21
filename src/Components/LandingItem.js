@@ -28,7 +28,7 @@ class LandingItem extends Component {
         }
   
         return (
-          <div className='description'>{artworkData.subject}</div>
+            <div className='description'>{artworkData.subject}</div>
         )
     }
 }

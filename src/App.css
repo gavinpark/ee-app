@@ -21,29 +21,31 @@
 }
 
 .description {
-  overflow: scroll;
+  
   color: red;
-  font-family: neue-haas-grotesk-text, sans-serif;
-  padding: 12px 8px 12px 8px;
-  font-size: 12px;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  padding: 8px 6px 8px 6px;
+  font-size: 11pt;
+  line-height: 12pt;
   text-align: left;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+  overflow: scroll;
 }
 
 .keyword {
   color: black;
-  font-family: Helvetica, sans-serif;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: left;
   padding: 12px;
-  font-size: 16px;
+  font-size: 16pt;
 }
 
 .essayButton{
   overflow: scroll;
   color: white;
-  font-family: Helvetica, sans-serif;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: left;
   padding: 12px;
   font-size: 16px;
@@ -100,8 +102,6 @@
   height: 100vh;
   background: transparent;
   overflow: scroll;
-  
-
 }
 
 .databasePanel {
@@ -119,7 +119,6 @@
   height: 100vh;
   position: fixed;
   right: 0;
-
   background: white;
 }
 .databasePanel > div {
@@ -132,19 +131,18 @@
   font-size: 12px;
   text-align: center;
   padding: 12px 6px 12px 6px;
-  
 }
 .essayButton:hover {
   background-color: red;
 }
 
-.collectionObject{
+/* .collectionObject{
   position: relative;
   left: 200px;
   top: 100px;
   width: 300px;
   background: white;
-}
+} */
 
 .objectMoreButton{
   width: 50px;
@@ -164,10 +162,17 @@
 
 /* INFO PANEL */
 
-.infoExitButton{
+.infoExitBox{
   grid-column: 15;
   grid-row: 1;
   grid-row-end: span 2;
+  position: relative;
+}
+.infoExitSvg{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  margin: 25% 25% 25% 25%;
 }
 
 .databaseInfo {
@@ -204,10 +209,10 @@
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
   color: red;
-  font-family: Helvetica, sans-serif;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: left;
   padding: 12px;
-  font-size: 14px;
+  font-size: 20px;
   overflow: scroll;
 }
 
@@ -215,10 +220,10 @@
   grid-column-start: 10;
   grid-column-end: span 4;
   color: red;
-  font-family: Helvetica, sans-serif;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: left;
   padding: 12px;
-  font-size: 14px;
+  font-size: 20px;
   overflow: scroll;
 }
 
@@ -226,13 +231,15 @@
   grid-column-end: span 2;
   grid-column-start: 8;
   grid-row-end: span 2;
+
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
+
   color: red;
-  font-family: Helvetica, sans-serif;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  font-size: 16pt;
   text-align: left;
   padding: 12px;
-  font-size: 14px;
   overflow: scroll;
 }
 
@@ -240,16 +247,17 @@
   grid-column-start: 10;
   grid-column-end: span 4;
   grid-row-end: span 4;
+
   color: red;
-  font-family: neue-haas-grotesk-text, sans-serif;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  font-size: 16pt;
   text-align: left;
   padding: 12px;
-  font-size: 14px;
   overflow: scroll;
 }
 .copyrightButton{
   color: red;
-  font-family: neue-haas-grotesk-text, sans-serif;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   font-size: 40px;
   grid-column-start: 14;
   grid-row-end: span 2;
@@ -272,15 +280,14 @@
   width: 100%;
   border: 2px solid red;
   margin: -2px;
-  
 }
 .essayHeader{
   color: red;
   font-family: Avara, sans-serif;
+  font-size: 20pt;
   text-align: left;
   padding: 12px;
-  font-size: 24px;
-  /* text-transform: uppercase; */
+  
 }
 
 .essayBodyBox{
@@ -289,14 +296,15 @@
   height: 310px;
   bottom: 0;
   top: 70px;
-  overflow: hidden;
+  overflow: scroll;
 }
 .essayBody {
   color: red;
-  font-family: neue-haas-grotesk-text, sans-serif;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
   text-align: left;
   padding: 12px;
-  font-size: 24px;
   overflow: scroll;
 }
 
@@ -334,19 +342,4 @@
   grid-column-end: span 2;
 }
 
-.artworkTable{
-
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  grid-column-start: 8;
-  grid-column-end: 14;
-  grid-row-start: 3;
-  grid-row-end: 14;
-  overflow: scroll; 
-}
-
-.artworkTable > div {
-  border: 2px solid red;
-  margin: -1px -1px -1px -1px;
 } */

@@ -30,8 +30,8 @@ class ArtworkInfoPanel extends Component {
         <div className="span2Row"></div>
         
         
-          <div className="infoExitButton">
-          <Link to="main"><img src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img></Link>
+          <div className="infoExitBox">
+          <Link to="main"><img className="infoExitSvg" src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img></Link>
             </div>
       
     

@@ -21,8 +21,8 @@ class CopyrightWindow extends Component {
                 enableResizing={null}
                 // style={{overflow: "scroll"}}
             >
-                <div className="essayHeader">
-                    <div className="description">{EssayData[0].essayHeader}</div>
+                <div className="essayHeaderBox">
+                    <div className="essayHeader">{EssayData[2].essayHeader}</div>
                 </div>
                 <img
                   className="objectExitButton"
@@ -30,8 +30,8 @@ class CopyrightWindow extends Component {
                   alt=""
                   onClick={this.props.toggleCopyright}
                 ></img>
-                <div className="essayBody">
-                    <div className="description">{EssayData[0].essayText}</div>
+                <div className="essayBodyBox">
+                    <div className="essayBody">{EssayData[2].essayText}</div>
                 </div>
             </Rnd>
 

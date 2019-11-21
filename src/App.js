@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Landing from './Components/Landing.js';
 import './App.css';
+import './small.css';
+import './large.css';
 import MainInterface from './Components/MainInterface.js';
 import ArtworkInfoPanel from './Components/ArtworkInfoPanel.js';
 import { findRandomArtWork } from './redux/modules/ui';
