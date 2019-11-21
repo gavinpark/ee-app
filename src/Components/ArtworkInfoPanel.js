@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import '../App.css';
 import {toggleCopyright, toggleDetailPanel} from '../redux/modules/ui';
 import CopyrightWindow from './CopyrightWindow.js';
+import { Link } from 'react-router-dom';
 
 class ArtworkInfoPanel extends Component {
   render() {
@@ -10,7 +11,8 @@ class ArtworkInfoPanel extends Component {
     // data for the 'current active work'
     // (don't forget to pass the correct props into this component)
     // const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex]];
-    const artworkData = window.allworks[this.props.selectedWorks[this.props.activeWorkIndex]];
+    const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex]]
+    console.log("artwork data:", artworkData);
     return (
       <div className="databaseInfo">
         <div className="infoPanelImage">
@@ -19,7 +21,7 @@ class ArtworkInfoPanel extends Component {
 
        
         {this.props.isCopyrightOpen && <CopyrightWindow toggleCopyright={this.props.toggleCopyright} />}
-        <div className="copyrightButton" onClick={this.props.toggleCopyright}> C </div>
+        <div className="copyrightButton" onClick={this.props.toggleCopyright}> © </div>
         <div className="span2Row"></div>
         <div className="span2Row"></div>
         <div className="span2Row"></div>
@@ -29,11 +31,10 @@ class ArtworkInfoPanel extends Component {
         
         
           <div className="infoExitButton">
-            <img src={require(".././images/buttons/info_Exit_Button.svg")} alt="" onClick={this.props.toggleDetailPanel}></img>
+          <Link to="main"><img src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img></Link>
             </div>
       
-      
-
+    
           <div className="dataHeader">Artist</div>
           <div className="dataField">{artworkData.artist}</div>
           <div className="dataHeader">Title</div>
@@ -54,8 +55,8 @@ class ArtworkInfoPanel extends Component {
           <div className="dataField">{artworkData.keywords}</div>
           <div className="dataHeader">Subject</div>
           <div className="dataField">{artworkData.subject}</div>
-          <div className="dataHeader">References</div>
-          <div className="dataField">{artworkData.references}</div>
+          <div className="dataHeaderReferences">References</div>
+          <div className="dataFieldReferences">{artworkData.references}</div>
         
         
         <div className="span2Row"></div>
