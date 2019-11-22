@@ -160,9 +160,8 @@
   text-align: center;
   color: red;
   font-size: 16pt;
-  display: flex;
-  justify-content: center;
-  align-items:center;
+  line-height: 50px;
+  vertical-align: middle;
 }
 
 .objectFRButton{
@@ -219,59 +218,40 @@
   overflow: scroll;
 }
 
+.dataHeader, .dataField, .dataHeaderReferences, .dataFieldReferences {
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  font-size: 20px;
+  overflow: scroll;
+  text-align: left;
+  line-height: 20px;
+  color: red;
+  padding: 12px;
+}
+
 .dataHeader{
   grid-column-end: span 2;
   grid-column-start: 8;
-  border: 2px solid red;
-  margin: -1px -1px -1px -1px;
-  color: red;
-  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  text-align: left;
-  padding: 12px;
-  font-size: 20px;
-  overflow: scroll;
 }
 
 .dataField{
   grid-column-start: 10;
   grid-column-end: span 4;
-  color: red;
-  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  text-align: left;
-  padding: 12px;
-  font-size: 20px;
-  overflow: scroll;
 }
 
 .dataHeaderReferences{
   grid-column-end: span 2;
   grid-column-start: 8;
   grid-row-end: span 2;
-
-  border: 2px solid red;
-  margin: -1px -1px -1px -1px;
-
-  color: red;
-  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  font-size: 16pt;
-  text-align: left;
-  padding: 12px;
-  overflow: scroll;
 }
 
 .dataFieldReferences{
   grid-column-start: 10;
   grid-column-end: span 4;
   grid-row-end: span 4;
-
-  color: red;
-  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  font-size: 16pt;
-  text-align: left;
-  padding: 12px;
-  overflow: scroll;
 }
+
 .copyrightButton{
+  /* TODO CENTER COPYRIGHT SYMBOL */
   color: red;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   font-size: 40px;
@@ -298,12 +278,14 @@
   margin: -2px;
 }
 .essayHeader{
+  height: 50px;
   color: red;
   font-family: Avara, sans-serif;
-  font-size: 20pt;
+  font-size: 16pt;
   text-align: left;
-  padding: 12px;
-  
+  padding-left: 12px;
+  line-height: 50px;
+  vertical-align: middle;
 }
 
 .essayBodyBox{
@@ -314,6 +296,7 @@
   top: 70px;
   overflow: hidden;
 }
+
 .essayBody {
   color: red;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
@@ -343,19 +326,3 @@
 		}
 		.top { top: 0; }
 		.bottom { bottom: 0; }
-
-
-/* TESTS */
-
-/* .testDiv{
-  background: blueviolet;
-  grid-row-end: span 2;
-}
-
-.artistBlock{
-  grid-column-start: 8;
-  grid-row: 3;
-  grid-column-end: span 2;
-}
-
-} */
