@@ -7,7 +7,6 @@
   font-style: normal;
 }
 
-
 /*GENERAL STYLING*/
 
 .artworkImage{
@@ -135,13 +134,6 @@
   margin: -1px -1px -1px -1px;
 }
 
-.essayButton {
-  color: white !important;
-  font-size: 12px;
-  text-align: center;
-  padding: 12px 6px 12px 6px;
-  
-}
 .essayButton:hover {
   background-color: red;
 }
