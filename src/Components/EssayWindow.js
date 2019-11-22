@@ -4,7 +4,7 @@ import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
 
-
+// TODO be able to remember language state when opening multiple windows
 
 class EssayWindow extends Component {
     render() {

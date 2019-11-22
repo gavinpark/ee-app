@@ -136,14 +136,6 @@
   background-color: red;
 }
 
-/* .collectionObject{
-  position: relative;
-  left: 200px;
-  top: 100px;
-  width: 300px;
-  background: white;
-} */
-
 .objectMoreButton{
   width: 50px;
   height: 50px;
@@ -158,6 +150,30 @@
   position: absolute;
   top: 0;
   right: 0;
+}
+.objectENButton, .objectFRButton{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  text-align: center;
+  color: red;
+  font-size: 16pt;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.objectFRButton{
+  right: 50px;
+}
+
+.objectENButton{
+  right: 100px;
+}
+.greyOut{
+  opacity: 20%;
 }
 
 /* INFO PANEL */
@@ -296,7 +312,7 @@
   height: 310px;
   bottom: 0;
   top: 70px;
-  overflow: scroll;
+  overflow: hidden;
 }
 .essayBody {
   color: red;
