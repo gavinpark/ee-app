@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleLanguage } from '../redux/modules/ui';
+import { toggleLanguage, toggleCopyright} from '../redux/modules/ui';
 
 
 
@@ -25,7 +25,7 @@ class CopyrightWindow extends Component {
                         className="objectExitButton"
                         src={require(".././images/buttons/exit_Button.svg")}
                         alt=""
-                        onClick={this.props.toggleWelcome}
+                        onClick={this.props.toggleCopyright}
                     ></img>
                     <div className="essayBodyBox">
                         <div className="essayBody">{EssayData[0].essayText}</div>
@@ -85,5 +85,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-    toggleLanguage,
+    toggleLanguage, toggleCopyright,
 })(CopyrightWindow);
