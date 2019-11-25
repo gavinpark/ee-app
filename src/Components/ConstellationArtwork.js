@@ -6,7 +6,30 @@ import '../App.css';
 import { toggleDetailPanel } from '../redux/modules/ui';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
+
+// get random values for x/y coordinates of Rnd
+
+
 class ConstellationArtwork extends Component {
+  getRandomXPosition(){
+    var min = 0;
+    var x = document.getElementsByClassName('constellationPanel')[0].offsetHeight;
+    var randomX = Math.floor(Math.random() * (x - min)) + min;
+    console.log('max height ', x);
+    console.log('random x ', randomX);
+
+    return randomX;
+  }
+  getRandomYPosition(){
+    var min = 0;
+    var y = document.getElementsByClassName('constellationPanel')[0].offsetWidth;
+    var randomY = Math.floor(Math.random() * (y - min)) + min;
+    console.log('max width ', y);
+    console.log('random y ', randomY);
+
+    return randomY;
+  }
+
   renderArtworkInfoPanel() {
     return <div>
       <ArtworkInfoPanel artworkData={this.props.artworkData}/>
@@ -15,14 +38,13 @@ class ConstellationArtwork extends Component {
   render() {
 
     const artworkData = window.allWorks[this.props.access_num];
-    console.log('artworkData: ');
-    console.log(artworkData);
+    console.log('artworkData: ', artworkData);
     return (
       <Rnd
         className="collectionObject"
         default={{
-          x: 0,
-          y: 0,
+          x: this.getRandomXPosition(),
+          y: this.getRandomYPosition(),
           width: 300,
         }}
         lockAspectRatio={true}

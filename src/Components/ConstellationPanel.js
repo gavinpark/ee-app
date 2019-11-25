@@ -12,7 +12,6 @@ class ConstellationPanel extends Component {
       return <div><ConstellationArtwork access_num={work} activeWorkIndex={this.props.activeWorkIndex} /></div>
     });
   }
-
   render() {
     // https://reactjs.org/docs/conditional-rendering.html
     // search for &&
@@ -25,7 +24,6 @@ class ConstellationPanel extends Component {
     );
   }
 }
-
 const mapStateToProps = (state) => {
   return {
     isWelcomeOpen: state._ui.isWelcomeOpen,
