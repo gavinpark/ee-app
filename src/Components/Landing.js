@@ -5,6 +5,9 @@ import { connect } from 'react-redux';
 import LandingItem from './LandingItem';
 import '../App.css';
 
+// TODO - something needs to see how many spaces rows/cells are empty, take that number and create 'x' amount of empty spaces based on how many, then randomly scatter them within the array being returned. 
+// window is 135 cells
+// alternative would be to just have a background colour? fill the empty space with red? lets think about this...
 
 const emptiesArray = new Array(135);
 const empties = emptiesArray.fill('', 0, 135);
