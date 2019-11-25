@@ -160,7 +160,7 @@
   text-align: center;
   color: red;
   font-size: 16pt;
-  line-height: 50px;
+  line-height: 52px;
   vertical-align: middle;
 }
 
@@ -247,7 +247,7 @@
 .dataFieldReferences{
   grid-column-start: 10;
   grid-column-end: span 4;
-  grid-row-end: span 4;
+  grid-row-end: span 2;
 }
 
 .copyrightButton{
@@ -259,6 +259,7 @@
   grid-row-end: span 2;
   grid-row-start: 15;
   text-align: center;
+  line-height: 11.11vh;
   vertical-align: middle;
 }
 
@@ -284,7 +285,7 @@
   font-size: 16pt;
   text-align: left;
   padding-left: 12px;
-  line-height: 50px;
+  line-height: 55px;
   vertical-align: middle;
 }
 

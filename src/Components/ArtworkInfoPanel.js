@@ -97,6 +97,10 @@ class ArtworkInfoPanel extends Component {
         <div className="span2Row"></div>
         <div className="span2Row"></div>
         <div className="span2Row"></div>
+        <div className="span2Row"></div>
+        <div className="span2Row"></div>
+        <div className="span2Row"></div>
+        <div className="span2Row"></div>
 
    
 

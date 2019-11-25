@@ -46,7 +46,7 @@ class CopyrightWindow extends Component {
                     className="objectExitButton"
                     src={require(".././images/buttons/exit_Button.svg")}
                     alt=""
-                    onClick={this.props.toggleWelcome}
+                    onClick={this.props.toggleCopyright}
                 ></img>
                 <div className="essayBodyBox">
                     <div className="essayBody">{EssayData[0].essayTextFR}</div>
