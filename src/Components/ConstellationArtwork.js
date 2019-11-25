@@ -13,7 +13,6 @@ class ConstellationArtwork extends Component {
     </div>
   }
   render() {
-
     const artworkData = window.allWorks[this.props.access_num];
     console.log('artworkData: ');
     console.log(artworkData);
@@ -28,7 +27,7 @@ class ConstellationArtwork extends Component {
         lockAspectRatio={true}
         minWidth={100}
       >
-        <img draggable="false" className="artworkImage" src={require(".././images/low res/979_22(450).jpg")} alt=""></img>
+        <img draggable="false" className="artworkImage" src={require(".././images/979_22.jpg")} alt=""></img>
         {this.props.isDetailPanelOpen && this.renderArtworkInfoPanel()}
         <Link to="artwork-info-panel"><img
           className="objectMoreButton"
@@ -38,11 +37,10 @@ class ConstellationArtwork extends Component {
         ></img></Link>
         <img className="objectExitButton" src={require(".././images/buttons/exit_Button.svg")} alt=""></img>
       </Rnd>
-
     );
-
   }
 }
+
 const mapStateToProps = (state) => {
   return {
     isDetailPanelOpen: state._ui.isDetailPanelOpen
