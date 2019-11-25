@@ -11,6 +11,8 @@ import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 // RETURNS ERROR WHEN YOU CLICK INTO ARTWORKINFOPANEL AND EXIT OUT (SOMETHING TO DO WITH GETELEMENTBYCLASSNAME)
 
+// TODO: ADD RANDOMIZE POSITION FEAT ON ESSAY/WELCOME BOXES AS WELL
+
 class ConstellationArtwork extends Component {
   getRandomXPosition(){
     var min = 0;
