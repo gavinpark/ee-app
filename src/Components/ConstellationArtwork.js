@@ -9,6 +9,7 @@ import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 // get random values for x/y coordinates of Rnd
 
+// RETURNS ERROR WHEN YOU CLICK INTO ARTWORKINFOPANEL AND EXIT OUT (SOMETHING TO DO WITH GETELEMENTBYCLASSNAME)
 
 class ConstellationArtwork extends Component {
   getRandomXPosition(){
