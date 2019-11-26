@@ -70,6 +70,17 @@
   grid-row-end: span 2;
 }
 
+.infoPanelDivDesktop{
+  grid-row-end: span 2;
+}
+.infoPanelDivDesktop2, .infoPanelDivTablet, .infoPanelDivMobile{
+  display: none;
+  grid-row-end: span 2;
+}
+
+
+
+
 /* SCROLLBAR */
 ::-webkit-scrollbar{
   display: none;
