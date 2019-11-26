@@ -28,6 +28,20 @@ class ArtworkInfoPanel extends Component {
         <div className="infoPanelDivDesktop"></div>
         <div className="infoPanelDivDesktop"></div>
         <div className="infoPanelDivDesktop"></div>
+
+        <div className="infoPanelDivDesktop2"></div>
+        <div className="infoPanelDivDesktop2"></div>
+        <div className="infoPanelDivDesktop2"></div>
+        <div className="infoPanelDivDesktop2"></div>
+
+        <div className="infoPanelDivMobile"></div>
+        <div className="infoPanelDivMobile"></div>
+        <div className="infoPanelDivMobile"></div>
+        <div className="infoPanelDivMobile"></div>
+        <div className="infoPanelDivMobile"></div>
+        <div className="infoPanelDivMobile"></div>
+        <div className="infoPanelDivMobile"></div>
+       
         
         
           <div className="infoExitBox">
@@ -102,10 +116,7 @@ class ArtworkInfoPanel extends Component {
         <div className="infoPanelDivDesktop"></div>
         <div className="infoPanelDivDesktop"></div>
 
-        <div className="infoPanelDivDesktop2"></div>
-        <div className="infoPanelDivDesktop2"></div>
-        <div className="infoPanelDivDesktop2"></div>
-        <div className="infoPanelDivDesktop2"></div>
+        
         <div className="infoPanelDivDesktop2"></div>
         <div className="infoPanelDivDesktop2"></div>
         <div className="infoPanelDivDesktop2"></div>
@@ -134,7 +145,10 @@ class ArtworkInfoPanel extends Component {
         <div className="infoPanelDivTablet"></div>
         <div className="infoPanelDivTablet"></div>
    
-
+        <div className="infoPanelDivMobile"></div>
+        <div className="infoPanelDivMobile"></div>
+        <div className="infoPanelDivMobile"></div>
+        <div className="infoPanelDivMobile"></div>
 
 
       </div>
