@@ -20,29 +20,31 @@
 }
 
 .description {
-  overflow: scroll;
+  
   color: red;
-  font-family: neue-haas-grotesk-text, sans-serif;
-  padding: 12px 8px 12px 8px;
-  font-size: 12px;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  padding: 8px 6px 8px 6px;
+  font-size: 11pt;
+  line-height: 12pt;
   text-align: left;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+  overflow: scroll;
 }
 
 .keyword {
   color: black;
-  font-family: Helvetica, sans-serif;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: left;
   padding: 12px;
-  font-size: 16px;
+  font-size: 16pt;
 }
 
 .essayButton{
   overflow: scroll;
   color: white;
-  font-family: Helvetica, sans-serif;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: left;
   padding: 12px;
   font-size: 16px;
@@ -66,6 +68,17 @@
 .span2Row{
   grid-row-end: span 2;
 }
+
+.infoPanelDivDesktop{
+  grid-row-end: span 2;
+}
+.infoPanelDivDesktop2, .infoPanelDivTablet, .infoPanelDivMobile{
+  display: none;
+  grid-row-end: span 2;
+}
+
+
+
 
 /* SCROLLBAR */
 ::-webkit-scrollbar{
@@ -107,7 +120,6 @@
   height: 100vh;
   background: transparent;
   overflow: scroll;
-  
 }
 
 .databasePanel {
@@ -125,7 +137,6 @@
   height: 100vh;
   position: fixed;
   right: 0;
-
   background: white;
 }
 .databasePanel > div {
@@ -133,16 +144,14 @@
   margin: -1px -1px -1px -1px;
 }
 
+.essayButton {
+  color: white !important;
+  font-size: 12px;
+  text-align: center;
+  padding: 12px 6px 12px 6px;
+}
 .essayButton:hover {
   background-color: red;
-}
-
-.collectionObject{
-  position: relative;
-  left: 200px;
-  top: 100px;
-  width: 300px;
-  background: white;
 }
 
 .objectMoreButton{
@@ -160,6 +169,29 @@
   top: 0;
   right: 0;
 }
+.objectENButton, .objectFRButton{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  text-align: center;
+  color: red;
+  font-size: 16pt;
+  line-height: 52px;
+  vertical-align: middle;
+}
+
+.objectFRButton{
+  right: 50px;
+}
+
+.objectENButton{
+  right: 100px;
+}
+.greyOut{
+  opacity: 20%;
+}
 
 /* INFO PANEL */
 .swiper-container{
@@ -167,10 +199,17 @@
   z-index: 0 !important;
 }
 
-.infoExitButton{
+.infoExitBox{
   grid-column: 15;
   grid-row: 1;
   grid-row-end: span 2;
+  position: relative;
+}
+.infoExitSvg{
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  margin: 25% 25% 25% 25%;
 }
 .infoExitButton img{
   height: 100%;
@@ -207,63 +246,47 @@
   overflow: scroll;
 }
 
+.dataHeader, .dataField, .dataHeaderReferences, .dataFieldReferences {
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  font-size: 20px;
+  overflow: scroll;
+  text-align: left;
+  line-height: 20px;
+  color: red;
+  padding: 12px;
+}
+
 .dataHeader{
   grid-column-end: span 2;
   grid-column-start: 8;
-  border: 2px solid red;
-  margin: -1px -1px -1px -1px;
-  color: red;
-  font-family: Helvetica, sans-serif;
-  text-align: left;
-  padding: 12px;
-  font-size: 14px;
-  overflow: scroll;
 }
 
 .dataField{
   grid-column-start: 10;
   grid-column-end: span 4;
-  color: red;
-  font-family: Helvetica, sans-serif;
-  text-align: left;
-  padding: 12px;
-  font-size: 14px;
-  overflow: scroll;
 }
 
 .dataHeaderReferences{
   grid-column-end: span 2;
   grid-column-start: 8;
   grid-row-end: span 2;
-  border: 2px solid red;
-  margin: -1px -1px -1px -1px;
-  color: red;
-  font-family: Helvetica, sans-serif;
-  text-align: left;
-  padding: 12px;
-  font-size: 14px;
-  overflow: scroll;
 }
 
 .dataFieldReferences{
   grid-column-start: 10;
   grid-column-end: span 4;
-  grid-row-end: span 4;
-  color: red;
-  font-family: neue-haas-grotesk-text, sans-serif;
-  text-align: left;
-  padding: 12px;
-  font-size: 14px;
-  overflow: scroll;
+  grid-row-end: span 2;
 }
+
 .copyrightButton{
   color: red;
-  font-family: neue-haas-grotesk-text, sans-serif;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   font-size: 40px;
   grid-column-start: 14;
   grid-row-end: span 2;
   grid-row-start: 15;
   text-align: center;
+  line-height: 11.11vh;
   vertical-align: middle;
   display: flex;
   justify-content: center;
@@ -284,15 +307,16 @@
   width: 100%;
   border: 2px solid red;
   margin: -2px;
-  
 }
 .essayHeader{
+  height: 50px;
   color: red;
   font-family: Avara, sans-serif;
+  font-size: 16pt;
   text-align: left;
-  padding: 12px;
-  font-size: 24px;
-  /* text-transform: uppercase; */
+  padding-left: 12px;
+  line-height: 55px;
+  vertical-align: middle;
 }
 
 .essayBodyBox{
@@ -303,12 +327,14 @@
   top: 70px;
   overflow: hidden;
 }
+
 .essayBody {
   color: red;
-  font-family: neue-haas-grotesk-text, sans-serif;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
   text-align: left;
   padding: 12px;
-  font-size: 24px;
   overflow: scroll;
 }
 
@@ -331,34 +357,3 @@
 		}
 		.top { top: 0; }
 		.bottom { bottom: 0; }
-
-
-/* TESTS */
-
-/* .testDiv{
-  background: blueviolet;
-  grid-row-end: span 2;
-}
-
-.artistBlock{
-  grid-column-start: 8;
-  grid-row: 3;
-  grid-column-end: span 2;
-}
-
-.artworkTable{
-
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  grid-column-start: 8;
-  grid-column-end: 14;
-  grid-row-start: 3;
-  grid-row-end: 14;
-  overflow: scroll; 
-}
-
-.artworkTable > div {
-  border: 2px solid red;
-  margin: -1px -1px -1px -1px;
-} */

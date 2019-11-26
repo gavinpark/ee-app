@@ -1,0 +1,167 @@
+
+@media (min-width: 900px) and (max-width: 1200px) {
+        .databaseLanding, .databaseInfo{
+          grid-template-columns: repeat(9, 1fr);
+        }
+        .databasePanel {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .infoPanelImage{
+          grid-column-start: 1;
+          grid-column-end: 5;
+          grid-row-start: 1;
+        }
+        .dataHeader, .dataHeaderReferences {
+          grid-column-start: 5;
+        }
+        
+        .dataField, .dataFieldReferences {
+          grid-column-start: 7;
+          grid-column-end: span 3;
+        }
+        .dataHeaderReferences, .dataFieldReferences {
+          grid-row-end: span 2;
+        }
+        .infoPanelDivDesktop{
+          display: none;
+        }
+        .infoPanelDivDesktop2 {
+          display: block;
+        }
+        .threeTags, .fourTags{
+          grid-column-end: span 3;
+          grid-row-end: span 3;
+        }
+        .copyrightButton{
+          grid-column-start: 9;
+        }  
+        .infoExitBox {
+          grid-column: 9;
+        }
+       
+    }
+
+@media (min-width: 600px) and (max-width: 900px) {
+        .databaseLanding {
+          grid-template-columns: repeat(6, 1fr);
+          grid-auto-rows: 16.66%;
+        }
+        .databasePanel {
+            height: 33.33%;
+            width: 100%;
+            bottom: 0;
+            grid-template-columns: repeat(6, 16.66%);
+            grid-template-rows: repeat(3, 33.33%);
+            grid-auto-columns: 16.66%;
+            grid-auto-flow: column;
+            overflow: scroll;
+        }
+        .databaseInfo {
+          grid-template-columns: repeat(6,1fr);
+        }
+        .constellationPanel {
+          width: 100%;
+          height: 66.66%;
+        }
+        .dataHeader, .dataHeaderReferences {
+          grid-column-start: 2;
+        }
+        .dataField, .dataFieldReferences {
+          grid-column-start: 4;
+          grid-column-end: span 3;
+        }
+        .dataHeaderReferences, .dataFieldReferences {
+          grid-row-end: span 2;
+        }
+        .infoPanelDivDesktop{
+          display: none;
+        }
+        .infoPanelDivTablet{
+          display: block;
+        }
+        .infoPanelImage {
+          grid-column-start: 1;
+          grid-column-end: span 4;
+          grid-row-start: 1;
+          grid-row-end: span 8;
+        }
+        .copyrightButton{
+          grid-column-start: 1;
+        }  
+        .twoTags{
+          grid-column-end: span 2;
+          grid-row-end: span 2;
+        }
+     
+        .threeTags, .fourTags{
+          grid-column-end: span 3;
+          grid-row-end: span 3;
+        }
+        .infoExitBox {
+          grid-column: 6;
+        }
+    }
+
+@media (min-width: 0px) and (max-width: 600px) {
+        .databaseInfo {
+          grid-template-columns: repeat(6,1fr);
+        }
+  
+        .databaseLanding {
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: 16.66%;
+        }
+
+        .databasePanel {
+          height: 33.33%;
+          width: 100%;
+          bottom: 0;
+          grid-template-columns: repeat(3, 33.33%);
+          grid-template-rows: repeat(2, 50%);
+          grid-auto-columns: 33.33%;
+          grid-auto-flow: column;
+          overflow: scroll;
+      }
+      .constellationPanel {
+        width: 100%;
+        height: 66.66%;
+      }
+      .dataHeader, .dataHeaderReferences {
+        grid-column-start: 2;
+      }
+      .dataField, .dataFieldReferences {
+        grid-column-start: 4;
+        grid-column-end: span 3;
+      }
+      .dataHeaderReferences, .dataFieldReferences {
+        grid-row-end: span 2;
+      }
+      .infoPanelDivDesktop{
+        display: none;
+      }
+      .infoPanelDivMobile{
+        display: block;
+      }
+      .infoPanelImage {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        grid-row-start: 1;
+        grid-row-end: span 8;
+      }
+      .copyrightButton{
+        grid-column-start: 1;
+      }  
+      .twoTags{
+        grid-column-end: span 1;
+        grid-row-end: span 1;
+      }
+   
+      .threeTags, .fourTags{
+        grid-column-end: span 2;
+        grid-row-end: span 2;
+      }
+      .infoExitBox {
+        grid-column: 6;
+      }
+        
+    }

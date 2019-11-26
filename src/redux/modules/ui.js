@@ -7,9 +7,10 @@ window.allWords = allWords;
 
 export default function reducer(state = {
   // this is all the states
-  isFrench: false,
+  isFrench: true,
   isCreditsOpen: false,
   isWelcomeOpen: true,
+  isLandingOpen: true,
   isCopyrightOpen: true,
   selectedWorks: [], //string[],
   selectedKeywords: {}, // { [keyword]: { worksInConstellationWithKeyword: [] } }
@@ -51,6 +52,18 @@ export default function reducer(state = {
       return {
         ...state,
         haveCopyrightWindowsBeenViewed: true,
+      };
+    case 'OPEN_MAIN_PAGE':
+      return {
+        ...state,
+        isLandingOpen: false,
+      };
+    case 'REMOVE_INITIAL_ARTWORK':
+      return {
+        ...state,
+        selectedWorks: [],
+        selectedKeywords: {},
+        activeWorkIndex: 0,
       };
     case 'INCREASE_HIGHEST_Z_INDEX':
       return {
@@ -124,6 +137,28 @@ export const findRandomArtWork = () => {
     selectedKey,
     relatedArtworks,
   };
+}
+
+export const addWorkToConstellation = (selectedKey) => {
+  const relatedArtworks = findRelatedWork(selectedKey);
+  return {
+    type: 'SELECT_NEW_ARTWORK',
+    selectedKey: selectedKey,
+    relatedArtworks,
+  }
+}
+
+export const openMainPage = () => {
+  return {
+    type: 'OPEN_MAIN_PAGE',
+  }
+}
+
+// this is just for moving from landing page to constellation page
+export const removeInitialArtwork = () => {
+  return {
+    type: 'REMOVE_INITIAL_ARTWORK',
+  }
 }
 
 export const removeArtwork = () => {

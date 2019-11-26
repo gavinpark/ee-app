@@ -3,6 +3,8 @@ import '../App.css';
 import ConstellationPanel from './ConstellationPanel';
 import DatabasePanel from './DatabasePanel';
 
+// TODO: add redux function for artworkinforpanelopen true/false; pass props to component
+
 class MainInterface extends Component {
     render() {
         return (
@@ -13,6 +15,7 @@ class MainInterface extends Component {
                 <div className="DatabasePanel">
                     <DatabasePanel />
                 </div>
+                {/* {this.props.artWorkInfoPanelOpen && <ArtworkInfoPanel >} */}
             </div>
         );
     }
