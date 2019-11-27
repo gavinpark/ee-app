@@ -46,7 +46,7 @@ export default function reducer(state = {
     case 'TOGGLE_DETAIL_PANEL':
       return {
         ...state,
-        isDetailPanelOpen: !state.isDetailPanelOpen,
+        isDetailPanelOpen: !state.isDetailPanelOpen
       };
     case 'CLOSE_COPYRIGHT_WINDOW':
       return {
@@ -56,7 +56,7 @@ export default function reducer(state = {
     case 'OPEN_MAIN_PAGE':
       return {
         ...state,
-        isLandingOpen: false,
+        isLandingOpen: false
       };
     case 'REMOVE_INITIAL_ARTWORK':
       return {
@@ -221,3 +221,5 @@ const mergeSelectedKeywords = (accessNum, existingSelectedKeywords) => {
   });
   return existingSelectedKeywords;
 }
+
+// TODO: create action openArtworkInfoPanel which takes the access_num as an argument

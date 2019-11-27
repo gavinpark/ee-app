@@ -204,12 +204,15 @@
   grid-row: 1;
   grid-row-end: span 2;
   position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 .infoExitSvg{
   position: absolute;
   width: 50%;
   height: 50%;
-  margin: 25% 25% 25% 25%;
+  /* margin: 25% 25% 25% 25%; */
 }
 .infoExitButton img{
   height: 100%;

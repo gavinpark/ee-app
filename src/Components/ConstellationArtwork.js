@@ -6,7 +6,6 @@ import '../App.css';
 import { toggleDetailPanel } from '../redux/modules/ui';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
-
 // TODO: ADD RANDOMIZE POSITION FEAT ON ESSAY/WELCOME BOXES AS WELL
 
 // TODO: ADD BOUNDS TO RND 
@@ -47,11 +46,14 @@ class ConstellationArtwork extends Component {
       randomY,
     });
   }
-
   renderArtworkInfoPanel() {
     return <div>
       <ArtworkInfoPanel artworkData={this.props.artworkData}/>
     </div>
+  }
+  openArtworkInfoPanel(access_num){
+    console.log('in artwork info panel');
+    this.props.toggleDetailPanel(access_num);
   }
   render() {
     const artworkData = window.allWorks[this.props.access_num];
@@ -69,13 +71,12 @@ class ConstellationArtwork extends Component {
         minWidth={100}
       >
         <img draggable="false" className="artworkImage" src={require(".././images/979_22.jpg")} alt=""></img>
-        {this.props.isDetailPanelOpen && this.renderArtworkInfoPanel()}
-        <Link to="artwork-info-panel"><img
+       <img
           className="objectMoreButton"
           src={require(".././images/buttons/more_Button.svg")}
           alt=""
-          // onClick={this.props.toggleDetailPanel}
-        ></img></Link>
+          onClick={() => {this.openArtworkInfoPanel(artworkData.access_num)}}
+        ></img>
         <img className="objectExitButton" src={require(".././images/buttons/exit_Button.svg")} alt=""></img>
       </Rnd>
     );

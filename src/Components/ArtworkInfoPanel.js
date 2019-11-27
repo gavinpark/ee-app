@@ -48,7 +48,7 @@ class ArtworkInfoPanel extends Component {
         
         
           <div className="infoExitBox">
-          <Link to="main"><img className="infoExitSvg" src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img></Link>
+          <img className="infoExitSvg" onClick={this.props.toggleDetailPanel} src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img>
             </div>
       
     

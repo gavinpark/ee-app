@@ -28,8 +28,10 @@ class App extends Component {
         <BrowserRouter>
           <div>
             { this.props.isLandingOpen && <Landing />}
+            { this.props.isDetailPanelOpen && <ArtworkInfoPanel/>}
           </div>
           { !this.props.isLandingOpen && <MainInterface />}
+      
         </BrowserRouter>
       </div>
     )
@@ -42,6 +44,7 @@ class App extends Component {
 const mapStateToProps = (state) => {
   return {
     isLandingOpen: state._ui.isLandingOpen,
+    isDetailPanelOpen: state._ui.isDetailPanelOpen
   };
 };
 
