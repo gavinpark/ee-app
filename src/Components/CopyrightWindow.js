@@ -14,7 +14,7 @@ class CopyrightWindow extends Component {
             return (
                 <div>
                     <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[0].essayHeader}</div>
+                        <div className="essayHeader">{EssayData[1].essayHeader}</div>
                     </div>
                     <div>
                         <div className="objectENButton">EN</div>
