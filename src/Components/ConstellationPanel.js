@@ -12,6 +12,11 @@ class ConstellationPanel extends Component {
       return <div><ConstellationArtwork access_num={work} activeWorkIndex={this.props.activeWorkIndex} /></div>
     });
   }
+  renderConstellationKeywords(){
+    return this.props.selectedWorks.map((work) => {
+      return <div><ConstellationKeyword access_num={work} keywords={this.props.keywords} activeWorkIndex={this.props.activeWorkIndex}/></div>
+    })
+  }
   render() {
     // https://reactjs.org/docs/conditional-rendering.html
     // search for &&
@@ -19,7 +24,7 @@ class ConstellationPanel extends Component {
       <div className="constellationPanel">
         {this.props.isWelcomeOpen && <div><WelcomeWindow toggleWelcome={this.props.toggleWelcome} /></div>}
         {this.renderConstellationArtworks()}
-        <div><ConstellationKeyword /></div>
+        {this.renderConstellationKeywords()}
       </div>
     );
   }
