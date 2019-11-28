@@ -66,6 +66,7 @@ class ConstellationArtwork extends Component {
           x: this.state.randomX,
           y: this.state.randomY,
           width: 300,
+          bound: '.constellationPanel'
         }}
         lockAspectRatio={true}
         minWidth={100}
