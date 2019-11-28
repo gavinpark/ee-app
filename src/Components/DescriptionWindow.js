@@ -62,7 +62,7 @@ class DescriptionWindow extends Component {
                 default={{
                     x: this.state.randomX,
                     y: this.state.randomY,
-                    width: 300,
+                    width: 200,
                 }}
             ><div className="descriptionText">{subject}</div>
                  <div className="descriptionHeaderBox">

@@ -40,8 +40,8 @@ class ConstellationKeyword extends Component {
         var min = 0;
         var x = document.getElementsByClassName('constellationPanel')[0].offsetHeight;
         var randomX = Math.floor(Math.random() * (x - min)) + min;
-        console.log('max height ', x);
-        console.log('random x ', randomX);
+        console.log('max height - keyword ', x);
+        console.log('random x - keyword', randomX);
     
         // return randomX;
         this.setState({
@@ -52,8 +52,8 @@ class ConstellationKeyword extends Component {
         var min = 0;
         var y = document.getElementsByClassName('constellationPanel')[0].offsetWidth;
         var randomY = Math.floor(Math.random() * (y - min)) + min;
-        console.log('max width ', y);
-        console.log('random y ', randomY);
+        console.log('max width - keyword', y);
+        console.log('random y - keyword', randomY);
     
         // return randomY;
         this.setState({
@@ -62,12 +62,14 @@ class ConstellationKeyword extends Component {
       }
     render() {
         const artworkData = window.allWorks[this.props.access_num];
-        const keyword = artworkData.keywords.split(",");
-        console.log(keyword);
+        // const keyword = artworkData.keywords.split(",");
+        const keywords = artworkData.final_words;
+        // console.log(keywords);
 
         return this.state.randomX > -1 && this.state.randomY > -1 &&(
             <div>
-                {keyword.map(word => {
+                {keywords.map(word => {
+                  console.log(word)
                     return (
                         <Rnd
                             enableResizing={null}

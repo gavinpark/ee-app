@@ -325,10 +325,10 @@
 .essayBodyBox{
   position: absolute;
   width: 100%;
-  height: 310px;
+  height: 410px;
   bottom: 0;
   top: 70px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .essayBody {
@@ -341,20 +341,50 @@
   overflow: scroll;
 }
 
+.essayFootnoteBox {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background: white;
+  bottom: 0;
+  text-align: bottom;
+  background: linear-gradient(to top,rgb(255, 255, 255) 60%,rgba(57,194,218,0));}
+
+.footnoteEnd {
+  color: red;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  font-size: 9pt;
+  font-weight: 400;
+  text-align: left;
+  padding: 12px 12px 12px 12px;
+  overflow: scroll;
+  line-height: 120px;
+  vertical-align: bottom;
+}
+
+.downloadBox {
+  position: absolute;
+  background: blue;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  line-height: 200px;
+  vertical-align: middle;
+}
+
 /* DESCRIPTION WINDOW */
 
 .descriptionWindow{
   /* border: 2px solid red; */
   background: white;
   position: relative;
-  
 }
 .descriptionHeaderBox{
   position: absolute;
   height: 50px;
   width: 100%;
   margin: -2px;
-  
 }
 .descriptionText{
   position: absolute;

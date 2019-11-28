@@ -50,7 +50,7 @@ class EssayWindow extends Component {
                     ></img>
                     <div className="essayBodyBox">
                         <div className="essayBody">{EssayData[0].essayTextFR}</div>
-                    </div>
+                  
                 </div>
         )
     }
