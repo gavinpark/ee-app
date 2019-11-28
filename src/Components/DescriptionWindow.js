@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from "react-rnd";
+import { toggleDetailPanel } from '../redux/modules/ui';
+import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 class DescriptionWindow extends Component {
     constructor(props) {
@@ -40,33 +42,56 @@ class DescriptionWindow extends Component {
             randomY,
         });
     }
+    openArtworkInfoPanel(access_num){
+        console.log('in artwork info panel');
+        this.props.toggleDetailPanel(access_num);
+      }
 
     // artworkData.subject
     render() {
         const artworkData = window.allWorks[this.props.access_num];
-        console.log ('artworkdata !!!!!!!', artworkData.subject);
+
         const subject = artworkData.subject;
+        console.log('artworkdata !!!!!!!', artworkData.subject);
         // const subject = window.allWorks[this.props.access_num].subject;
         return this.state.randomX > -1 && this.state.randomY > -1 && (
-            <div>
-                {subject.map(text => {
-                    return (
-                        <Rnd
-                            enableResizing={null}
-                            default={{
-                                x: this.state.randomX,
-                                y: this.state.randomY,
-                            }}
-                        >
-                            <div className="descriptionWindow" key={text}> {text} </div>
-                        </Rnd>
-                    )
-                })
-                }
-            </div>
 
+
+            <Rnd className="descriptionWindow"
+                enableResizing={null}
+                default={{
+                    x: this.state.randomX,
+                    y: this.state.randomY,
+                    width: 300,
+                }}
+            ><div className="descriptionText">{subject}</div>
+                 <div className="descriptionHeaderBox">
+                    <img
+                        className="objectMoreButton"
+                        src={require(".././images/buttons/more_Button.svg")}
+                        alt=""
+                        onClick={() => {this.openArtworkInfoPanel(artworkData.access_num)}}
+                    ></img>
+                    <img className="objectExitButton"
+                        src={require(".././images/buttons/exit_Button.svg")}
+                        alt=""
+                    ></img></div>
+                
+            </Rnd>
         )
+
     }
+
+
 }
 
-export default DescriptionWindow;
+
+const mapStateToProps = (state) => {
+    return {
+      isDetailPanelOpen: state._ui.isDetailPanelOpen
+    };
+  };
+  
+  export default connect(mapStateToProps, {
+    toggleDetailPanel,
+  })(DescriptionWindow);

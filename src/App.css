@@ -344,8 +344,29 @@
 /* DESCRIPTION WINDOW */
 
 .descriptionWindow{
-  border: 2px solid red;
+  /* border: 2px solid red; */
   background: white;
+  position: relative;
+  
+}
+.descriptionHeaderBox{
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  margin: -2px;
+  
+}
+.descriptionText{
+  position: absolute;
+  background: white;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  border: 2px solid red;
+  color:  red;
+  font-size: 16pt;
+  font-weight: 400;
+  text-align: left;
+  padding: 50px 12px 12px 12px;
+
 }
 
 /* BODY BORDER  */

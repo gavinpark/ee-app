@@ -32,8 +32,7 @@ class ConstellationPanel extends Component {
         {this.props.isWelcomeOpen && <div><WelcomeWindow toggleWelcome={this.props.toggleWelcome} /></div>}
         {this.renderConstellationArtworks()}
         {this.renderConstellationKeywords()}
-        <div className="descriptionWindow"> 
-      <DescriptionWindow/> </div>
+
       </div>
       
       
