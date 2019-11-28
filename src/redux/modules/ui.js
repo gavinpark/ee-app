@@ -39,7 +39,7 @@ export default function reducer(state = {
         isWelcomeOpen: !state.isWelcomeOpen,
       };
     case 'TOGGLE_COPYRIGHT':
-      return{
+      return {
         ...state,
         isCopyrightOpen: !state.isCopyrightOpen,
       }
@@ -58,6 +58,14 @@ export default function reducer(state = {
         ...state,
         isLandingOpen: false
       };
+    case 'REMOVE_SELECTED_ARTWORK':
+        const lastArtworkinArray = state.selectedWorks.pop();
+        const resetArray = state.selectedWorks
+      return {
+        ...state,
+        isArtworkOpen: false
+
+      };
     case 'REMOVE_INITIAL_ARTWORK':
       return {
         ...state,
@@ -72,15 +80,15 @@ export default function reducer(state = {
       };
     case 'SELECT_NEW_ARTWORK':
 
-        const newLastIndexInArtworksArr = state.selectedWorks.length;
-        const newSelectedKeywords = mergeSelectedKeywords(action.selectedKey, state.selectedKeywords);
-        return {
-          ...state,
-          activeWorkIndex: newLastIndexInArtworksArr,
-          selectedKeywords: newSelectedKeywords,
-          relatedWorks: action.relatedArtworks,
-          selectedWorks: [...state.selectedWorks, action.selectedKey]
-        }
+      const newLastIndexInArtworksArr = state.selectedWorks.length;
+      const newSelectedKeywords = mergeSelectedKeywords(action.selectedKey, state.selectedKeywords);
+      return {
+        ...state,
+        activeWorkIndex: newLastIndexInArtworksArr,
+        selectedKeywords: newSelectedKeywords,
+        relatedWorks: action.relatedArtworks,
+        selectedWorks: [...state.selectedWorks, action.selectedKey]
+      }
     default:
       return state;
   }
@@ -188,25 +196,25 @@ const findRelatedWork = (accessNum) => {
   }, {});
   const shuffle = (array) => {
     var currentIndex = array.length, temporaryValue, randomIndex;
-  
+
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-  
+
       // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
-  
+
       // And swap it with the current element.
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-  
+
     return array;
   }
   var arrayOfWorks = Object.values(allRelatedWorks);
   arrayOfWorks = shuffle(arrayOfWorks);
-  return arrayOfWorks; 
+  return arrayOfWorks;
 }
 
 const mergeSelectedKeywords = (accessNum, existingSelectedKeywords) => {

@@ -82,13 +82,11 @@ class ConstellationArtwork extends Component {
     );
   }
 }
-
 const mapStateToProps = (state) => {
   return {
     isDetailPanelOpen: state._ui.isDetailPanelOpen
   };
 };
-
 export default connect(mapStateToProps, {
   toggleDetailPanel,
 })(ConstellationArtwork);

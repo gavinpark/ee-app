@@ -10,14 +10,14 @@ class MainInterface extends Component {
     render() {
         return (
             <div className="mainContainer">
-                
+                {this.props.artWorkInfoPanelOpen && <ArtworkInfoPanel />}
                 <div className="constellationPanel">
                     <ConstellationPanel />
                 </div>
                 <div className="DatabasePanel">
                     <DatabasePanel />
                 </div>
-                {this.props.artWorkInfoPanelOpen && <ArtworkInfoPanel />}
+                
             </div>
         );
     }
