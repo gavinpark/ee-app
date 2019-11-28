@@ -341,6 +341,13 @@
   overflow: scroll;
 }
 
+/* DESCRIPTION WINDOW */
+
+.descriptionWindow{
+  border: 2px solid red;
+  background: white;
+}
+
 /* BODY BORDER  */
 .top, .bottom, .left, .right {
 	background: red;
