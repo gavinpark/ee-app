@@ -42,10 +42,10 @@ class DescriptionWindow extends Component {
             randomY,
         });
     }
-    openArtworkInfoPanel(access_num){
+    openArtworkInfoPanel(access_num) {
         console.log('in artwork info panel');
         this.props.toggleDetailPanel(access_num);
-      }
+    }
 
     // artworkData.subject
     render() {
@@ -63,20 +63,25 @@ class DescriptionWindow extends Component {
                     x: this.state.randomX,
                     y: this.state.randomY,
                     width: 200,
+
+
                 }}
-            ><div className="descriptionText">{subject}</div>
-                 <div className="descriptionHeaderBox">
+            >
+
+                <div className="descriptionText">{subject}</div>
+
+                <div className="descriptionHeaderBox">
                     <img
                         className="objectMoreButton"
                         src={require(".././images/buttons/more_Button.svg")}
                         alt=""
-                        onClick={() => {this.openArtworkInfoPanel(artworkData.access_num)}}
+                        onClick={() => { this.openArtworkInfoPanel(artworkData.access_num) }}
                     ></img>
                     <img className="objectExitButton"
                         src={require(".././images/buttons/exit_Button.svg")}
                         alt=""
                     ></img></div>
-                
+
             </Rnd>
         )
 
@@ -88,10 +93,10 @@ class DescriptionWindow extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      isDetailPanelOpen: state._ui.isDetailPanelOpen
+        isDetailPanelOpen: state._ui.isDetailPanelOpen
     };
-  };
-  
-  export default connect(mapStateToProps, {
+};
+
+export default connect(mapStateToProps, {
     toggleDetailPanel,
-  })(DescriptionWindow);
+})(DescriptionWindow);

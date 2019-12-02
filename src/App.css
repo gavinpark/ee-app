@@ -379,12 +379,18 @@
   /* border: 2px solid red; */
   background: white;
   position: relative;
+  min-width: 200px;
+
+ 
+  
 }
 .descriptionHeaderBox{
   position: absolute;
   height: 50px;
-  width: 100%;
   margin: -2px;
+  width: 228px;
+  
+  
 }
 .descriptionText{
   position: absolute;
@@ -396,6 +402,8 @@
   font-weight: 400;
   text-align: left;
   padding: 50px 12px 12px 12px;
+  width: 200px;
+  
 
 }
 
