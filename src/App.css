@@ -230,7 +230,7 @@
   margin-top: -2px;
   margin-right: -2px;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   height: 100vh;
   width: 100vw;
 }
@@ -294,6 +294,55 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+table{
+  display: grid;
+  grid-column-start: 8;
+  grid-column-end: 14;
+  grid-row-start: 3;
+  grid-row-end: 19;
+  
+  /* TODO - PLAY WITH ROW MINMAX TO FIT  */
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(12, minmax(6.25%, auto));
+  
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}
+
+
+tr{
+ grid-column-end: span 6; 
+ display: grid;
+ grid-template-columns: repeat(6, 1fr);
+ grid-auto-rows: min-content;
+
+ 
+}
+th{
+  grid-column-end: span 2;
+}
+td{
+  grid-column-end: span 4;
+}
+th, td {
+
+  /* padding: .595vh; */
+  padding: 12px;
+  text-align: left;
+  border: 2px solid red;
+  margin: -1px -1px -1px -1px;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  color: red;
+  border-spacing: none;
+ 
+  
+
+  
 }
 
 /* ESSAY WINDOW */

@@ -18,9 +18,49 @@ class ArtworkInfoPanel extends Component {
     return (
       <div className="databaseInfo">
 
-        
+
         <ArtworkSwiper />
-        
+
+        <table>
+
+          <th>Artist</th>
+          <td>{artworkData.artist}</td>
+
+          <th>Title</th>
+          <td>{artworkData.title}</td>
+
+          <th>Date of Production</th>
+          <td>{artworkData.date}</td>
+
+          <th>Accession Number </th>
+          <td>{artworkData.access_num}</td>
+
+          <th>Accession Date</th>
+          <td>{artworkData.access_date}</td>
+
+          <th>Dimensions</th>
+          <td>{artworkData.length}</td>
+
+          <th>Credit</th>
+          <td>{artworkData.credit}</td>
+
+          <th>Medium</th>
+          <td>{artworkData.medium}</td>
+
+          <th>Description</th>
+          <td>{artworkData.description}</td>
+
+          <th>Keywords</th>
+          <td>{artworkData.keywords}</td>
+
+          <th>Subject</th>
+          <td>{artworkData.subject}</td>
+
+          <th>References</th>
+          <td>{artworkData.references}</td>
+
+
+        </table>
 
 
         {this.props.isCopyrightOpen && <CopyrightWindow toggleCopyright={this.props.toggleCopyright} />}
@@ -31,6 +71,12 @@ class ArtworkInfoPanel extends Component {
         <div className="infoPanelDivDesktop"></div>
         <div className="infoPanelDivDesktop"></div>
         <div className="infoPanelDivDesktop"></div>
+        <div className="infoPanelDivDesktop"></div>
+        <div className="infoPanelDivDesktop"></div>
+        <div className="infoPanelDivDesktop"></div>
+        <div className="infoPanelDivDesktop"></div>
+        <div className="infoPanelDivDesktop"></div>
+        <div className="infoPanelDivDesktop"></div>
 
         <div className="infoPanelDivDesktop2"></div>
         <div className="infoPanelDivDesktop2"></div>
@@ -44,15 +90,15 @@ class ArtworkInfoPanel extends Component {
         <div className="infoPanelDivMobile"></div>
         <div className="infoPanelDivMobile"></div>
         <div className="infoPanelDivMobile"></div>
-       
-        
-        
-          <div className="infoExitBox">
+
+
+
+        <div className="infoExitBox">
           <img className="infoExitSvg" onClick={this.props.toggleDetailPanel} src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img>
-            </div>
-      
-    
-          <div className="dataHeader">Artist</div>
+        </div>
+
+
+        {/* <div className="dataHeader">Artist</div>
           <div className="dataField">{artworkData.artist}</div>
           <div className="dataHeader">Title</div>
           <div className="dataField">{artworkData.title}</div>
@@ -73,9 +119,9 @@ class ArtworkInfoPanel extends Component {
           <div className="dataHeader">Subject</div>
           <div className="dataField">{artworkData.subject}</div>
           <div className="dataHeaderReferences">References</div>
-          <div className="dataFieldReferences">{artworkData.references}</div>
-        
-        
+          <div className="dataFieldReferences">{artworkData.references}</div> */}
+
+
         <div className="infoPanelDivDesktop"></div>
         <div className="infoPanelDivDesktop"></div>
         <div className="infoPanelDivDesktop"></div>
@@ -119,7 +165,7 @@ class ArtworkInfoPanel extends Component {
         <div className="infoPanelDivDesktop"></div>
         <div className="infoPanelDivDesktop"></div>
 
-        
+
         <div className="infoPanelDivDesktop2"></div>
         <div className="infoPanelDivDesktop2"></div>
         <div className="infoPanelDivDesktop2"></div>
@@ -147,7 +193,7 @@ class ArtworkInfoPanel extends Component {
         <div className="infoPanelDivTablet"></div>
         <div className="infoPanelDivTablet"></div>
         <div className="infoPanelDivTablet"></div>
-   
+
         <div className="infoPanelDivMobile"></div>
         <div className="infoPanelDivMobile"></div>
         <div className="infoPanelDivMobile"></div>
