@@ -31,28 +31,36 @@ class WelcomeWindow extends Component {
                     <div className="essayBodyBox">
                         <div className="essayBody">{EssayData[0].essayText}</div>
                     </div>
+                    <div className="essayFootnoteBox">
+                        <div className="footnoteEnd">{EssayData[0].footnote}</div>
+                    </div>
                 </div>
             )
-        }return(
+        } return (
             <div>
-                    <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[0].essayHeaderFR}</div>
-                    </div>
-                    <div>
-                        <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
-                        <div className="objectFRButton">FR</div>
-                    </div>
-
-                    <img
-                        className="objectExitButton"
-                        src={require(".././images/buttons/exit_Button.svg")}
-                        alt=""
-                        onClick={this.props.toggleWelcome}
-                    ></img>
-                    <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[0].essayTextFR}</div>
-                    </div>
+                <div className="essayHeaderBox">
+                    <div className="essayHeader">{EssayData[0].essayHeaderFR}</div>
                 </div>
+                <div>
+                    <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
+                    <div className="objectFRButton">FR</div>
+                </div>
+
+                <img
+                    className="objectExitButton"
+                    src={require(".././images/buttons/exit_Button.svg")}
+                    alt=""
+                    onClick={this.props.toggleWelcome}
+                ></img>
+                <div className="essayBodyBox">
+                    <div className="essayBody">{EssayData[0].essayTextFR}</div>
+                   
+                </div>
+                <div className="downloadBox">Download Full Text</div>
+                <div className="essayFootnoteBox">
+                        <div className="footnoteEnd">{EssayData[0].footnoteFR}</div>
+                    </div>
+            </div>
         )
     }
 
@@ -64,7 +72,7 @@ class WelcomeWindow extends Component {
                     x: 0,
                     y: 0,
                     width: 500,
-                    height: 400
+                    height: 500
                 }}
                 enableResizing={null}
             // style={{overflow: "scroll"}}
