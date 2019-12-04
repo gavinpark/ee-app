@@ -52,6 +52,7 @@ class EssayWindow extends Component {
                         <div className="essayBody">{EssayData[0].essayTextFR}</div>
                   
                 </div>
+            </div>
         )
     }
     render() {
