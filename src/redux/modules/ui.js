@@ -12,6 +12,7 @@ export default function reducer(state = {
   isWelcomeOpen: true,
   isLandingOpen: true,
   isCopyrightOpen: true,
+  isEssayOpen: true,
   selectedWorks: [], //string[],
   selectedKeywords: {}, // { [keyword]: { worksInConstellationWithKeyword: [] } }
   relatedWorks: [], // { similarityScore: number, access_num: string }[]
@@ -42,6 +43,11 @@ export default function reducer(state = {
       return{
         ...state,
         isCopyrightOpen: !state.isCopyrightOpen,
+      }
+    case 'TOGGLE_ESSAY':
+      return{
+        ...state,
+        isEssayOpen: !state.isEssayOpen,
       }
     case 'TOGGLE_DETAIL_PANEL':
       return {
@@ -108,6 +114,11 @@ export const toggleWelcome = () => {
 export const toggleCopyright = () => {
   return {
     type: 'TOGGLE_COPYRIGHT',
+  };
+};
+export const toggleEssaySegment = () => {
+  return {
+    type: 'TOGGLE_ESSAY',
   };
 };
 export const toggleDetailPanel = () => {

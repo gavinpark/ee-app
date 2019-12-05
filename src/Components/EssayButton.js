@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import '../App.css';
-// import EssayData from '.././data/EssayData.js';
-
-
 
 class EssayButton extends Component {
   
@@ -10,7 +7,7 @@ class EssayButton extends Component {
   
         return (
           <div className='essayButton'
-          
+          onClick={this.props.toggleEssaySegment}
           >{this.props.essay.essayHeader}</div>
         )
     }

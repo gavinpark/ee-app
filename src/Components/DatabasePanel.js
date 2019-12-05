@@ -5,7 +5,7 @@ import EssayData from '.././data/EssayData.js';
 import DatabaseItem from './DatabaseItem';
 import EssayButton from './EssayButton';
 import '../App.css';
-import { addWorkToConstellation, shuffle } from '../redux/modules/ui';
+import { addWorkToConstellation, shuffle, toggleEssaySegment } from '../redux/modules/ui';
 
 // new fieldnames are 
 // access_num,access_date,artist,title,date,keywords,subject,color,medium,description,object_name,technique,have_rights,rights_holder,credit,object_rights,birthdate,deathdate,note,link,references,source,status,acquisition_mode
@@ -63,5 +63,5 @@ const mapStateToProps = (state) => {
 
 // TODO: add action to actually select a new artwork
 export default connect(mapStateToProps, {
-  addWorkToConstellation,
+  addWorkToConstellation, toggleEssaySegment,
 })(DatabasePanel);

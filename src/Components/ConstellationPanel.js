@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ConstellationArtwork from './ConstellationArtwork';
 import WelcomeWindow from './WelcomeWindow';
+import EssayWindow from './EssayWindow';
 import DescriptionWindow from './DescriptionWindow';
 import ConstellationKeyword from './ConstellationKeyword';
 import '../App.css';
-import { toggleWelcome } from '../redux/modules/ui';
+import { toggleWelcome, toggleEssaySegment } from '../redux/modules/ui';
 
 class ConstellationPanel extends Component {
   renderConstellationArtworks() {
@@ -30,18 +31,17 @@ class ConstellationPanel extends Component {
     return (
       <div className="constellationPanel">
         {this.props.isWelcomeOpen && <div><WelcomeWindow toggleWelcome={this.props.toggleWelcome} /></div>}
+        {this.props.isEssayOpen && <div><EssayWindow toggleEssaySegment={this.props.toggleEssaySegment} /></div>}
         {this.renderConstellationArtworks()}
         {this.renderConstellationKeywords()}
-
       </div>
-      
-      
     );
   }
 }
 const mapStateToProps = (state) => {
   return {
     isWelcomeOpen: state._ui.isWelcomeOpen,
+    isEssayOpen: state._ui.isEssayOpen,
     activeWorkIndex: state._ui.activeWorkIndex,
     selectedWorks: state._ui.selectedWorks,
     selectedKeywords: state._ui.selectedKeywords,
@@ -50,4 +50,5 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
   toggleWelcome,
+  toggleEssaySegment,
 })(ConstellationPanel);
