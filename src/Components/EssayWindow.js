@@ -4,11 +4,59 @@ import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleLanguage } from '../redux/modules/ui';
+import { toggleLanguage, increaseHighestZIndex } from '../redux/modules/ui';
 
 // TODO be able to remember language state when opening multiple windows
 
 class EssayWindow extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            randomX: -1,
+            randomY: -1,
+            zIndex: 1,
+        }
+    }
+
+    componentDidMount() {
+        this.getRandomXPosition();
+        this.getRandomYPosition();
+        // this.movezIndexToTop();
+    }
+
+    bringItemToHighestZIndex = () => {
+        const nextHighestZindex = this.props.highestZIndex + 1;
+        this.setState({
+            zIndex: nextHighestZindex,
+        })
+        this.props.increaseHighestZIndex();
+    }
+
+    getRandomXPosition() {
+        var min = 0;
+        var x = document.getElementsByClassName('constellationPanel')[0].offsetHeight - 300;
+        var randomX = Math.floor(Math.random() * (x - min)) + min;
+        console.log('max height ', x);
+        console.log('random x ', randomX);
+
+        // return randomX;
+        this.setState({
+            randomX,
+        });
+    }
+
+    getRandomYPosition() {
+        var min = 0;
+        var y = document.getElementsByClassName('constellationPanel')[0].offsetWidth - 300;
+        var randomY = Math.floor(Math.random() * (y - min)) + min;
+        console.log('max width ', y);
+        console.log('random y ', randomY);
+
+        // return randomY;
+        this.setState({
+            randomY,
+        });
+    }
     getLanguage() {
         if (this.props.isFrench) {
             return (
@@ -32,46 +80,47 @@ class EssayWindow extends Component {
                     </div>
                 </div>
             )
-        }return(
+        } return (
             <div>
-                    <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[0].essayHeaderFR}</div>
-                    </div>
-                    <div>
-                        <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
-                        <div className="objectFRButton">FR</div>
-                    </div>
+                <div className="essayHeaderBox">
+                    <div className="essayHeader">{EssayData[0].essayHeaderFR}</div>
+                </div>
+                <div>
+                    <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
+                    <div className="objectFRButton">FR</div>
+                </div>
 
-                    <img
-                        className="objectExitButton"
-                        src={require(".././images/buttons/exit_Button.svg")}
-                        alt=""
-                        onClick={this.props.toggleWelcome}
-                    ></img>
-                    <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[0].essayTextFR}</div>
-                  
+                <img
+                    className="objectExitButton"
+                    src={require(".././images/buttons/exit_Button.svg")}
+                    alt=""
+                    onClick={this.props.toggleWelcome}
+                ></img>
+                <div className="essayBodyBox">
+                    <div className="essayBody">{EssayData[0].essayTextFR}</div>
+
                 </div>
             </div>
         )
     }
     render() {
-        return(
+        return (
             <Rnd
                 className="essayContainer"
+                style={{ zIndex: this.state.zIndex }}
                 default={{
-                    x: 0,
-                    y: 0,
+                    x: this.state.randomX,
+                    y: this.state.randomY,
                     width: 500,
                     height: 400
                 }}
                 enableResizing={null}
-                // style={{overflow: "scroll"}}
+            // style={{overflow: "scroll"}}
             >
 
-            <div>
-                {this.getLanguage()}
-            </div>
+                <div onClick={this.bringItemToHighestZIndex}>
+                    {this.getLanguage()}
+                </div>
             </Rnd>
 
         );
@@ -81,9 +130,10 @@ class EssayWindow extends Component {
 const mapStateToProps = (state) => {
     return {
         isFrench: state._ui.isFrench
+        highestZIndex: state._ui.highestZIndex
     };
 };
 
 export default connect(mapStateToProps, {
-    toggleLanguage,
+    toggleLanguage, increaseHighestZIndex
 })(EssayWindow);

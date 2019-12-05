@@ -61,8 +61,8 @@ class CopyrightWindow extends Component {
             <Rnd
                 className="essayContainer"
                 default={{
-                    x: 0,
-                    y: 0,
+                    x: 150,
+                    y: 150,
                     width: 500,
                     height: 400
                 }}

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleDetailPanel } from '../redux/modules/ui';
+import { toggleDetailPanel, increaseHighestZIndex } from '../redux/modules/ui';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 class DescriptionWindow extends Component {
@@ -12,11 +12,20 @@ class DescriptionWindow extends Component {
         this.state = {
             randomX: -1,
             randomY: -1,
+            zIndex: 1,
         }
     }
     componentDidMount() {
         this.getRandomXPosition();
         this.getRandomYPosition();
+        // this.movezIndexToTop();
+    }
+    bringItemToHighestZIndex = () => {
+        const nextHighestZindex = this.props.highestZIndex + 1;
+        this.setState({
+            zIndex: nextHighestZindex,
+        })
+        this.props.increaseHighestZIndex();
     }
     getRandomXPosition() {
         var min = 0;
@@ -58,6 +67,8 @@ class DescriptionWindow extends Component {
 
 
             <Rnd className="descriptionWindow"
+                onClick={this.bringItemToHighestZIndex}
+                style={{ zIndex: this.state.zIndex }}
                 enableResizing={null}
                 default={{
                     x: this.state.randomX,
@@ -93,10 +104,11 @@ class DescriptionWindow extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        isDetailPanelOpen: state._ui.isDetailPanelOpen
+        isDetailPanelOpen: state._ui.isDetailPanelOpen,
+        highestZIndex: state._ui.highestZIndex
     };
 };
 
 export default connect(mapStateToProps, {
-    toggleDetailPanel,
+    toggleDetailPanel, increaseHighestZIndex
 })(DescriptionWindow);

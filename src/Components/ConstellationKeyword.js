@@ -1,39 +1,34 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from 'react-rnd';
+import { increaseHighestZIndex } from '../redux/modules/ui';
 
 class ConstellationKeyword extends Component {
     // getSeparateKeywords(){
     //     const keyword = artworkData.keywords.split(" ");
     //     return keyword
     // }
-    // constructor(props) {
-    //     this.state = {
-    //         zIndex: 0,
-    //     }
 
-    //     componentDidMount = () => {
-    //         this.findZIndex();
-    //     }
-
-    //     findZIndex = () => {
-    //         // call this on the click handler for the RnD component too?
-    //         // https://github.com/bokuweb/react-rnd
-    //         this.setState({
-    //             zIndex: this.props.highestZIndex + 1,
-    //         });
-    //     }
-    // }
     constructor(props) {
         super(props);
         this.state = {
           randomX: null,
           randomY: null,
+          zIndex: 1,
         }
       }
       componentDidMount() {
         this.getRandomXPosition();
         this.getRandomYPosition();
+        // this.movezIndexToTop();
+      }
+      bringItemToHighestZIndex = () => {
+        const nextHighestZindex = this.props.highestZIndex + 1;
+        this.setState({
+          zIndex: nextHighestZindex,
+        })
+        this.props.increaseHighestZIndex();
       }
       getRandomXPosition(){
         var min = 0;
@@ -64,15 +59,23 @@ class ConstellationKeyword extends Component {
         return (
             <Rnd
                 enableResizing={null}
+                style={{ zIndex: this.state.zIndex }}
                 position={{
                     x: this.state.randomX,
                     y: this.state.randomY,
                 }}
             >
-                <div className="keyword" key={word}>{word}</div>
+                <div className="keyword" key={word} onClick={this.bringItemToHighestZIndex}>{word}</div>
             </Rnd>
         )
     }
 }
+const mapStateToProps = (state) => {
+  return {
+      highestZIndex: state._ui.highestZIndex,
+  };
+};
 
-export default ConstellationKeyword;
+export default connect(mapStateToProps, {
+  increaseHighestZIndex
+})(ConstellationKeyword);

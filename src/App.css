@@ -339,9 +339,6 @@ th, td {
   font-size: 1.1rem;
   color: red;
   border-spacing: none;
- 
-  
-
   
 }
 
@@ -352,6 +349,7 @@ th, td {
   left: 175px;
   border: 2px solid red;
   background: white;
+  z-index: 2;
 }
 .essayHeaderBox{
   position: absolute;
