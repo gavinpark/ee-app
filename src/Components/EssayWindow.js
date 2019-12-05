@@ -65,7 +65,7 @@ class EssayWindow extends Component {
                         <div className="essayHeader">{EssayData[0].essayHeader}</div>
                     </div>
                     <div>
-                        <div className="objectENButton" >EN</div>
+                        <div className="objectENButton">EN</div>
                         <div className="objectFRButton greyOut" onClick={this.props.toggleLanguage}>FR</div>
                     </div>
 
@@ -129,7 +129,7 @@ class EssayWindow extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        isFrench: state._ui.isFrench
+        isFrench: state._ui.isFrench,
         highestZIndex: state._ui.highestZIndex
     };
 };
