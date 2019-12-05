@@ -9,8 +9,6 @@ import { toggleWelcome } from '../redux/modules/ui';
 
 class ConstellationPanel extends Component {
   renderConstellationArtworks() {
-    
-   
     return this.props.selectedWorks.map((work) => {
       console.log("hello", window.allWorks[work]);
       if (window.allWorks[work].have_rights === 'Oui'){
@@ -19,11 +17,13 @@ class ConstellationPanel extends Component {
       return(<div><DescriptionWindow access_num={work} have_rights={this.props.have_rights} subject={this.props.subject} activeWorkIndex={this.props.activeWorkIndex}/></div>)
     });
   }
+
   renderConstellationKeywords(){
-    return this.props.selectedWorks.map((work) => {
-      return <div><ConstellationKeyword access_num={work} keywords={this.props.keywords} activeWorkIndex={this.props.activeWorkIndex}/></div>
+    return Object.keys(this.props.selectedKeywords).map((keyword) => {
+      return <div><ConstellationKeyword keyword={keyword} /></div>
     })
   }
+
   render() {
     // https://reactjs.org/docs/conditional-rendering.html
     // search for &&

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Rnd } from "react-rnd";
 import '../App.css';
-import { toggleDetailPanel } from '../redux/modules/ui';
+import { toggleDetailPanel, increaseHighestZIndex } from '../redux/modules/ui';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 // TODO: ADD RANDOMIZE POSITION FEAT ON ESSAY/WELCOME BOXES AS WELL
@@ -16,13 +15,25 @@ class ConstellationArtwork extends Component {
     this.state = {
       randomX: -1,
       randomY: -1,
+      zIndex: 1,
     }
   }
+
   componentDidMount() {
     this.getRandomXPosition();
     this.getRandomYPosition();
+    // this.movezIndexToTop();
   }
-  getRandomXPosition(){
+
+  bringItemToHighestZIndex = () => {
+    const nextHighestZindex = this.props.highestZIndex + 1;
+    this.setState({
+      zIndex: nextHighestZindex,
+    })
+    this.props.increaseHighestZIndex();
+  }
+
+  getRandomXPosition() {
     var min = 0;
     var x = document.getElementsByClassName('constellationPanel')[0].offsetHeight - 300;
     var randomX = Math.floor(Math.random() * (x - min)) + min;
@@ -34,6 +45,7 @@ class ConstellationArtwork extends Component {
       randomX,
     });
   }
+
   getRandomYPosition(){
     var min = 0;
     var y = document.getElementsByClassName('constellationPanel')[0].offsetWidth - 300;
@@ -46,18 +58,21 @@ class ConstellationArtwork extends Component {
       randomY,
     });
   }
+
   renderArtworkInfoPanel() {
     return <div>
       <ArtworkInfoPanel artworkData={this.props.artworkData}/>
     </div>
   }
+
   openArtworkInfoPanel(access_num){
     console.log('in artwork info panel');
     this.props.toggleDetailPanel(access_num);
   }
+
   render() {
     const artworkData = window.allWorks[this.props.access_num];
-    console.log('artworkData: ', artworkData);
+    // console.log('artworkData: ', artworkData);
     // return (
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
@@ -67,17 +82,20 @@ class ConstellationArtwork extends Component {
           y: this.state.randomY,
           width: 300,
         }}
+        style={{ zIndex: this.state.zIndex }}
         lockAspectRatio={true}
         minWidth={100}
       >
-        <img draggable="false" className="artworkImage" src={require(".././images/979_22.jpg")} alt=""></img>
-       <img
-          className="objectMoreButton"
-          src={require(".././images/buttons/more_Button.svg")}
-          alt=""
-          onClick={() => {this.openArtworkInfoPanel(artworkData.access_num)}}
-        ></img>
-        <img className="objectExitButton" src={require(".././images/buttons/exit_Button.svg")} alt=""></img>
+        <div onClick={this.bringItemToHighestZIndex}>
+          <img draggable="false" className="artworkImage" src={require(".././images/979_22.jpg")} alt=""></img>
+          <img
+              className="objectMoreButton"
+              src={require(".././images/buttons/more_Button.svg")}
+              alt=""
+              onClick={() => {this.openArtworkInfoPanel(artworkData.access_num)}}
+          ></img>
+          <img className="objectExitButton" src={require(".././images/buttons/exit_Button.svg")} alt=""></img>
+        </div>
       </Rnd>
     );
   }
@@ -85,10 +103,11 @@ class ConstellationArtwork extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    isDetailPanelOpen: state._ui.isDetailPanelOpen
+    isDetailPanelOpen: state._ui.isDetailPanelOpen,
+    highestZIndex: state._ui.highestZIndex,
   };
 };
 
 export default connect(mapStateToProps, {
-  toggleDetailPanel,
+  toggleDetailPanel, increaseHighestZIndex
 })(ConstellationArtwork);

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Data from '.././data/data.js';
 import '../App.css';
 import { Rnd } from 'react-rnd';
 
@@ -28,8 +27,8 @@ class ConstellationKeyword extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          randomX: -1,
-          randomY: -1,
+          randomX: null,
+          randomY: null,
         }
       }
       componentDidMount() {
@@ -61,31 +60,18 @@ class ConstellationKeyword extends Component {
         });
       }
     render() {
-        const artworkData = window.allWorks[this.props.access_num];
-        // const keyword = artworkData.keywords.split(",");
-        const keywords = artworkData.final_words;
-        // console.log(keywords);
-
-        return this.state.randomX > -1 && this.state.randomY > -1 &&(
-            <div>
-                {keywords.map(word => {
-                  console.log(word)
-                    return (
-                        <Rnd
-                            enableResizing={null}
-                            default={{
-                                x: this.state.randomX,
-                                y: this.state.randomY,
-                            }}
-                        >
-                            <div className="keyword" key={word}>{word}</div>
-                        </Rnd>
-                    )
-                })
-                }
-            </div>
+      const word = this.props.keyword;
+        return (
+            <Rnd
+                enableResizing={null}
+                position={{
+                    x: this.state.randomX,
+                    y: this.state.randomY,
+                }}
+            >
+                <div className="keyword" key={word}>{word}</div>
+            </Rnd>
         )
-
     }
 }
 
