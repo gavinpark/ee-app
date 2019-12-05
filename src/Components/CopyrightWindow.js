@@ -14,7 +14,7 @@ class CopyrightWindow extends Component {
             return (
                 <div>
                     <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[0].essayHeader}</div>
+                        <div className="essayHeader">{EssayData[3].essayHeader}</div>
                     </div>
                     <div>
                         <div className="objectENButton">EN</div>
@@ -28,14 +28,14 @@ class CopyrightWindow extends Component {
                         onClick={this.props.toggleCopyright}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[0].essayText}</div>
+                        <div className="essayBody">{EssayData[3].essayText}</div>
                     </div>
                 </div>
             )
         } return (
             <div>
                 <div className="essayHeaderBox">
-                    <div className="essayHeader">{EssayData[0].essayHeaderFR}</div>
+                    <div className="essayHeader">{EssayData[3].essayHeaderFR}</div>
                 </div>
                 <div>
                     <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
@@ -49,7 +49,7 @@ class CopyrightWindow extends Component {
                     onClick={this.props.toggleCopyright}
                 ></img>
                 <div className="essayBodyBox">
-                    <div className="essayBody">{EssayData[0].essayTextFR}</div>
+                    <div className="essayBody">{EssayData[3].essayTextFR}</div>
                 </div>
             </div>
         )

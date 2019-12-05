@@ -303,6 +303,7 @@
   left: 175px;
   border: 2px solid red;
   background: white;
+ 
 }
 .essayHeaderBox{
   position: absolute;
@@ -325,8 +326,7 @@
 .essayBodyBox{
   position: absolute;
   width: 100%;
-  height: 410px;
-  bottom: 0;
+  bottom: 20px;
   top: 70px;
   overflow: scroll;
 }
@@ -334,7 +334,7 @@
 .essayBody {
   color: red;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  font-size: 16pt;
+  font-size: 1.4rem;
   font-weight: 400;
   text-align: left;
   padding: 12px;
@@ -344,7 +344,7 @@
 .essayFootnoteBox {
   position: absolute;
   width: 100%;
-  height: 100px;
+  height: auto;
   background: white;
   bottom: 0;
   text-align: bottom;
@@ -356,21 +356,26 @@
   font-size: 9pt;
   font-weight: 400;
   text-align: left;
-  padding: 12px 12px 12px 12px;
+  padding: 48px 12px 12px 12px;
   overflow: scroll;
-  line-height: 120px;
   vertical-align: bottom;
 }
 
 .downloadBox {
   position: absolute;
-  background: blue;
   width: 100%;
   position: absolute;
-  bottom: 0;
-  height: 200px;
-  line-height: 200px;
+  height: 100px;
+  line-height: 100px;
+  padding-bottom: 50px;
   vertical-align: middle;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  color: red;
+  font-size: 16pt;
+  text-decoration: underline;
+  text-underline-position: under;
+  font-weight: 400;
+  text-align: center;
 }
 
 /* DESCRIPTION WINDOW */
