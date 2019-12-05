@@ -39,8 +39,8 @@ class DatabasePanel extends Component {
           }
           if (obj.type === 'essay'){
             const essay = obj.data;
-            const EssayData = EssayData[1]
-            return <EssayButton EssayData={EssayData} essay={essay} {...this.props}/>
+
+            return <EssayButton ???????/>
           }
         })}
 
