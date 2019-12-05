@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import Data from '.././data/data.js';
-import EssayData from '.././EssayData.js';
+import EssayData from '.././data/EssayData.js';
 import DatabaseItem from './DatabaseItem';
 import EssayButton from './EssayButton';
 import '../App.css';
@@ -18,10 +18,11 @@ class DatabasePanel extends Component {
         data: work
       }
     });
-    const essayArray = this.EssayData.map((essay) => {
+
+    const essayArray = EssayData.map((essay) => {
       return {
         type: 'essay',
-        data: essay
+        data: essay,
       }
     });
     // const essayArray = [];
@@ -39,17 +40,11 @@ class DatabasePanel extends Component {
           }
           if (obj.type === 'essay'){
             const essay = obj.data;
-
-            return <EssayButton ???????/>
+           
+            console.log ('essay',essay);
+            return <EssayButton essay={essay} {...this.props}> </EssayButton>
           }
         })}
-
-
-        {/* <div className="essayButton">Essay Segment 01</div>
-
-        <div className="essayButton">Essay Segment 03</div>
-
-        <div className="essayButton">Essay Segment 07</div> */}
 
       </div>
     );
