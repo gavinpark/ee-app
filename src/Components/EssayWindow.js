@@ -98,7 +98,6 @@ class EssayWindow extends Component {
                 ></img>
                 <div className="essayBodyBox">
                     <div className="essayBody">{EssayData[0].essayTextFR}</div>
-
                 </div>
             </div>
         )
@@ -117,7 +116,6 @@ class EssayWindow extends Component {
                 enableResizing={null}
             // style={{overflow: "scroll"}}
             >
-
                 <div onClick={this.bringItemToHighestZIndex}>
                     {this.getLanguage()}
                 </div>

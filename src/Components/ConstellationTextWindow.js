@@ -8,18 +8,13 @@ import { toggleLanguage, increaseHighestZIndex } from '../redux/modules/ui';
 
 // TODO be able to remember language state when opening multiple windows
 
-
-class WelcomeWindow extends Component {
+class ConstellationTextWindow extends Component {
     constructor(props) {
         super(props);
         this.state = {
             zIndex: 1,
         }
     }
-    componentDidMount() {
-        // this.movezIndexToTop();
-    }
-
     bringItemToHighestZIndex = () => {
         const nextHighestZindex = this.props.highestZIndex + 1;
         this.setState({
@@ -32,7 +27,7 @@ class WelcomeWindow extends Component {
             return (
                 <div>
                     <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[0].essayHeader}</div>
+                        <div className="essayHeader">{EssayData[2].essayHeader}</div>
                     </div>
                     <div>
                         <div className="objectENButton">EN</div>
@@ -46,17 +41,14 @@ class WelcomeWindow extends Component {
                         onClick={this.props.toggleWelcome}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[0].essayText}</div>
-                    </div>
-                    <div className="essayFootnoteBox">
-                        <div className="footnoteEnd">{EssayData[0].footnote}</div>
+                        <div className="essayBody">{EssayData[2].essayText}</div>
                     </div>
                 </div>
             )
         } return (
             <div>
                 <div className="essayHeaderBox">
-                    <div className="essayHeader">{EssayData[0].essayHeaderFR}</div>
+                    <div className="essayHeader">{EssayData[2].essayHeaderFR}</div>
                 </div>
                 <div>
                     <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
@@ -70,27 +62,20 @@ class WelcomeWindow extends Component {
                     onClick={this.props.toggleWelcome}
                 ></img>
                 <div className="essayBodyBox">
-                    <div className="essayBody">{EssayData[0].essayTextFR}</div>
-
-                </div>
-                <div className="downloadBox">Download Full Text</div>
-                <div className="essayFootnoteBox">
-                    <div className="footnoteEnd">{EssayData[0].footnoteFR}</div>
+                    <div className="essayBody">{EssayData[2].essayTextFR}</div>
                 </div>
             </div>
         )
     }
-
     render() {
         return (
             <Rnd
                 className="essayContainer"
-                style={{ zIndex: this.state.zIndex }}
                 default={{
-                    x: 100,
-                    y: 100,
+                    x: 300,
+                    y: 350,
                     width: 500,
-                    height: 500
+                    height: 400
                 }}
                 enableResizing={null}
             // style={{overflow: "scroll"}}
@@ -106,10 +91,10 @@ class WelcomeWindow extends Component {
 const mapStateToProps = (state) => {
     return {
         isFrench: state._ui.isFrench,
-        highestZIndex: state._ui.highestZIndex,
+        highestZIndex: state._ui.highestZIndex
     };
 };
 
 export default connect(mapStateToProps, {
     toggleLanguage, increaseHighestZIndex
-})(WelcomeWindow);
+})(ConstellationTextWindow);
