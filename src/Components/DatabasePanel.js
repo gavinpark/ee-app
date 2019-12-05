@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import Data from '.././data/data.js';
+import EssayData from '.././EssayData.js';
 import DatabaseItem from './DatabaseItem';
 import EssayButton from './EssayButton';
 import '../App.css';
@@ -17,17 +18,18 @@ class DatabasePanel extends Component {
         data: work
       }
     });
-    // const essayArray = [{
-    //   type: 'essay',
-    //   data: {},
-    // }];
-    const essayArray = [];
+    const essayArray = this.EssayData.map((essay) => {
+      return {
+        type: 'essay',
+        data: essay
+      }
+    });
+    // const essayArray = [];
 
     const finalArray = shuffle([...databaseItemsArray, ...essayArray]);
 
     return (
       <div className="databasePanel">
-
 
         {finalArray.map((obj) => {
           if (obj.type === 'work') {
@@ -35,7 +37,11 @@ class DatabasePanel extends Component {
             const artworkData = window.allWorks[artwork.access_num];
             return <DatabaseItem artworkData={artworkData} artwork={artwork} {...this.props}></DatabaseItem>
           }
-          return <EssayButton data={obj.data} />
+          if (obj.type === 'essay'){
+            const essay = obj.data;
+            const EssayData = EssayData[1]
+            return <EssayButton EssayData={EssayData} essay={essay} {...this.props}/>
+          }
         })}
 
 
