@@ -19,10 +19,9 @@ class ConstellationArtwork extends Component {
     }
   }
 
-  componentDidMount() {
+  componentDidMount() { 
     this.getRandomXPosition();
     this.getRandomYPosition();
-    // this.movezIndexToTop();
   }
 
   bringItemToHighestZIndex = () => {
@@ -37,8 +36,6 @@ class ConstellationArtwork extends Component {
     var min = 0;
     var x = document.getElementsByClassName('constellationPanel')[0].offsetHeight - 300;
     var randomX = Math.floor(Math.random() * (x - min)) + min;
-    console.log('max height ', x);
-    console.log('random x ', randomX);
 
     // return randomX;
     this.setState({
@@ -50,8 +47,6 @@ class ConstellationArtwork extends Component {
     var min = 0;
     var y = document.getElementsByClassName('constellationPanel')[0].offsetWidth - 300;
     var randomY = Math.floor(Math.random() * (y - min)) + min;
-    console.log('max width ', y);
-    console.log('random y ', randomY);
 
     // return randomY;
     this.setState({
@@ -70,10 +65,12 @@ class ConstellationArtwork extends Component {
     this.props.toggleDetailPanel(access_num);
   }
 
+  // getArtworkVariableWidth(similarity_score){
+  //   if (this.props.similarity_score ===)
+  // }
   render() {
     const artworkData = window.allWorks[this.props.access_num];
-    // console.log('artworkData: ', artworkData);
-    // return (
+    console.log('related works',this.props.relatedWorks);
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
         className="collectionObject"

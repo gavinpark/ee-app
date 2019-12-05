@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 
 class DatabaseItem extends Component {
-
-  // addWorkFromPanel = (accessNum) => {
-  //   console.log('gggggg')
-  //   this.props.addWorkToConstellation(accessNum);
-  // }
+  
   render() {
     const { artworkData, artwork } = this.props;
       if (artworkData.have_rights === 'Oui') {

@@ -4,7 +4,6 @@ import '../App.css';
 class LandingItem extends Component {
 
   enterMainPage = (accessNum) => {
-    console.log('ffff')
     this.props.removeInitialArtwork();
     this.props.addWorkToConstellation(accessNum);
     this.props.openMainPage();

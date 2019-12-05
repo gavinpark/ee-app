@@ -31,8 +31,7 @@ class DescriptionWindow extends Component {
         var min = 0;
         var x = document.getElementsByClassName('constellationPanel')[0].offsetHeight;
         var randomX = Math.floor(Math.random() * (x - min)) + min;
-        console.log('max height ', x);
-        console.log('random x ', randomX);
+        
 
         // return randomX;
         this.setState({
@@ -43,8 +42,7 @@ class DescriptionWindow extends Component {
         var min = 0;
         var y = document.getElementsByClassName('constellationPanel')[0].offsetWidth;
         var randomY = Math.floor(Math.random() * (y - min)) + min;
-        console.log('max width ', y);
-        console.log('random y ', randomY);
+       
 
         // return randomY;
         this.setState({
@@ -61,7 +59,6 @@ class DescriptionWindow extends Component {
         const artworkData = window.allWorks[this.props.access_num];
 
         const subject = artworkData.subject;
-        console.log('artworkdata !!!!!!!', artworkData.subject);
         // const subject = window.allWorks[this.props.access_num].subject;
         return this.state.randomX > -1 && this.state.randomY > -1 && (
 

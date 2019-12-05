@@ -36,8 +36,7 @@ class EssayWindow extends Component {
         var min = 0;
         var x = document.getElementsByClassName('constellationPanel')[0].offsetHeight - 300;
         var randomX = Math.floor(Math.random() * (x - min)) + min;
-        console.log('max height ', x);
-        console.log('random x ', randomX);
+
 
         // return randomX;
         this.setState({
@@ -49,8 +48,7 @@ class EssayWindow extends Component {
         var min = 0;
         var y = document.getElementsByClassName('constellationPanel')[0].offsetWidth - 300;
         var randomY = Math.floor(Math.random() * (y - min)) + min;
-        console.log('max width ', y);
-        console.log('random y ', randomY);
+
 
         // return randomY;
         this.setState({
