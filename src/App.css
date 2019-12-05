@@ -133,10 +133,10 @@
   margin-top: -2px;
   overflow-x: hidden;
   overflow-y: scroll;
-  width: 33.33%;
+  /* width: 33.33%;
   height: 100vh;
   position: fixed;
-  right: 0;
+  right: 0; */
   background: white;
 }
 .databasePanel > div {

@@ -3,6 +3,7 @@ import '../App.css';
 import ConstellationPanel from './ConstellationPanel';
 import DatabasePanel from './DatabasePanel';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
+import Marquee from '.././lib/Marquee.js';
 
 // TODO: add redux function for artworkinforpanelopen true/false; pass props to component
 

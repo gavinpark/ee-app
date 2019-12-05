@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import DatabaseItem from './DatabaseItem';
 import '../App.css';
 import { addWorkToConstellation } from '../redux/modules/ui';
+import Marquee from '.././lib/Marquee.js'
+
 
 // new fieldnames are 
 // access_num,access_date,artist,title,date,keywords,subject,color,medium,description,object_name,technique,have_rights,rights_holder,credit,object_rights,birthdate,deathdate,note,link,references,source,status,acquisition_mode
@@ -11,21 +13,28 @@ import { addWorkToConstellation } from '../redux/modules/ui';
 class DatabasePanel extends Component {
   render() {
     return (
+      <Marquee>
+        <div className="databasePanel">
 
-      <div className="databasePanel">
+          {this.props.relatedWorks.map((artwork, i) => {
+            const artworkData = window.allWorks[artwork.access_num];
+            return <DatabaseItem artworkData={artworkData} artwork={artwork} {...this.props}></DatabaseItem>
+          })}
+        </div>
+      </Marquee>
 
-        {this.props.relatedWorks.map((artwork, i) => {
-          const artworkData = window.allWorks[artwork.access_num];
-          return <DatabaseItem artworkData={artworkData} artwork={artwork} {...this.props}></DatabaseItem>
-        })}
 
-        <div className="essayButton">Essay Segment 01</div>
 
-        <div className="essayButton">Essay Segment 03</div>
 
-        <div className="essayButton">Essay Segment 07</div>
+      //  <div className="essayButton">Essay Segment 01</div>
 
-      </div>
+      //  <div className="essayButton">Essay Segment 03</div>
+
+      //  <div className="essayButton">Essay Segment 07</div>
+
+
+
+
     );
   }
 
