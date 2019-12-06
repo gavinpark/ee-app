@@ -21,14 +21,19 @@ class ConstellationPanel extends Component {
       this.setState({
         constBoxVisibile: true
       })
-    }, 15000)
+    }, 5000)
   }
   renderConstellationArtworks() {
     return this.props.selectedWorks.map((work) => {
-      if (window.allWorks[work].have_rights === 'Oui') {
-        return (<div><ConstellationArtwork access_num={work} have_rights={this.props.have_rights} activeWorkIndex={this.props.activeWorkIndex} /></div>)
+      if (window.allWorks[work.accessNum].have_rights === 'Oui') {
+        return (<div><ConstellationArtwork
+          access_num={work.accessNum}
+          have_rights={this.props.have_rights}
+          activeWorkIndex={this.props.activeWorkIndex}
+          similarityScore={work.similarityScore}
+          /></div>)
       }
-      return (<div><DescriptionWindow access_num={work} have_rights={this.props.have_rights} subject={this.props.subject} activeWorkIndex={this.props.activeWorkIndex} /></div>)
+      return (<div><DescriptionWindow access_num={work.accessNum} have_rights={this.props.have_rights} subject={this.props.subject} activeWorkIndex={this.props.activeWorkIndex} /></div>)
     });
   }
 
@@ -61,6 +66,7 @@ class ConstellationPanel extends Component {
 }
 const mapStateToProps = (state) => {
   return {
+    relatedWorks: state._ui.relatedWorks,
     isWelcomeOpen: state._ui.isWelcomeOpen,
     activeWorkIndex: state._ui.activeWorkIndex,
     selectedWorks: state._ui.selectedWorks,

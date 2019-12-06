@@ -85,7 +85,10 @@ export default function reducer(state = {
         activeWorkIndex: newLastIndexInArtworksArr,
         selectedKeywords: newSelectedKeywords,
         relatedWorks: action.relatedArtworks,
-        selectedWorks: [...state.selectedWorks, action.selectedKey]
+        selectedWorks: [...state.selectedWorks, {
+          accessNum: action.selectedKey,
+          similarityScore: action.similarityScore || 1,
+        }]
       }
     default:
       return state;
@@ -150,12 +153,13 @@ export const findRandomArtWork = () => {
   };
 }
 
-export const addWorkToConstellation = (selectedKey) => {
+export const addWorkToConstellation = (selectedKey, similarityScore) => {
   const relatedArtworks = findRelatedWork(selectedKey);
   return {
     type: 'SELECT_NEW_ARTWORK',
     selectedKey: selectedKey,
     relatedArtworks,
+    similarityScore
   }
 }
 

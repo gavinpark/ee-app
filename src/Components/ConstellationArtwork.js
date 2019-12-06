@@ -65,19 +65,27 @@ class ConstellationArtwork extends Component {
     this.props.toggleDetailPanel(access_num);
   }
 
-  // getArtworkVariableWidth(similarity_score){
-  //   if (this.props.similarity_score ===)
-  // }
-  render() {
+  getArtworkVariableWidth(){
+    
+    if ( this.props.similarityScore <= 2){
+      return (100)
+    }
+    if ( this.props.similarityScore === 3){
+      return (200)
+    }
+    if ( this.props.similarityScore >= 4){
+      return (300)
+    }
+  }
+  render() {  
     const artworkData = window.allWorks[this.props.access_num];
-    console.log('related works',this.props.relatedWorks);
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
         className="collectionObject"
         default={{
           x: this.state.randomX,
           y: this.state.randomY,
-          width: 300,
+          width: this.getArtworkVariableWidth(),
         }}
         style={{ zIndex: this.state.zIndex }}
         lockAspectRatio={true}
@@ -100,6 +108,7 @@ class ConstellationArtwork extends Component {
 
 const mapStateToProps = (state) => {
   return {
+    relatedWorks: state._ui.relatedWorks,
     isDetailPanelOpen: state._ui.isDetailPanelOpen,
     highestZIndex: state._ui.highestZIndex,
   };
