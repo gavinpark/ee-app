@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Rnd } from "react-rnd";
 import '../App.css';
-import { toggleDetailPanel, increaseHighestZIndex } from '../redux/modules/ui';
+import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation } from '../redux/modules/ui';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 // TODO: ADD RANDOMIZE POSITION FEAT ON ESSAY/WELCOME BOXES AS WELL
@@ -94,7 +94,12 @@ class ConstellationArtwork extends Component {
               alt=""
               onClick={() => {this.openArtworkInfoPanel(artworkData.access_num)}}
           ></img>
-          <img className="objectExitButton" src={require(".././images/buttons/exit_Button.svg")} alt=""></img>
+          <img
+            className="objectExitButton"
+            src={require(".././images/buttons/exit_Button.svg")}
+            alt=""
+            onClick={() => { this.props.removeWorkFromConstellation(artworkData.access_num) }}
+          ></img>
         </div>
       </Rnd>
     );
@@ -109,5 +114,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-  toggleDetailPanel, increaseHighestZIndex
+  toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation
 })(ConstellationArtwork);

@@ -81,6 +81,23 @@ export default function reducer(state = {
           relatedWorks: action.relatedArtworks,
           selectedWorks: [...state.selectedWorks, action.selectedKey]
         }
+    case 'REMOVE_ARTWORK':
+        const { removedAccessNum } = action;
+        const indexOfRemovedAccessNum = state.selectedWorks.findIndex((work) => {
+          return work === removedAccessNum;
+        });
+        state.selectedWorks.splice(indexOfRemovedAccessNum, 1);
+        const newLastIndexInArtworksArrAfterRemove = state.selectedWorks.length - 1;
+        const newSelectedKeywordsAfterRemove = findNewSelectedKeywordsAfterRemove(state.selectedKeywords, removedAccessNum);
+        const relatedArtworks = findRelatedWork(state.selectedWorks[state.selectedWorks.length - 1]);
+
+        return {
+          ...state,
+          relatedWorks: relatedArtworks,
+          activeWorkIndex: newLastIndexInArtworksArrAfterRemove,
+          selectedKeywords: newSelectedKeywordsAfterRemove,
+          selectedWorks: state.selectedWorks
+        }
     default:
       return state;
   }
@@ -148,6 +165,13 @@ export const addWorkToConstellation = (selectedKey) => {
   }
 }
 
+export const removeWorkFromConstellation = (accessNum) => {
+  return {
+    type: 'REMOVE_ARTWORK',
+    removedAccessNum: accessNum,
+  }
+}
+
 export const openMainPage = () => {
   return {
     type: 'OPEN_MAIN_PAGE',
@@ -159,10 +183,6 @@ export const removeInitialArtwork = () => {
   return {
     type: 'REMOVE_INITIAL_ARTWORK',
   }
-}
-
-export const removeArtwork = () => {
-  // TODO: loop over all keywords to ensure that this is not the last artwork
 }
 
 // helper functions
@@ -209,6 +229,27 @@ const findRelatedWork = (accessNum) => {
   var arrayOfWorks = Object.values(allRelatedWorks);
   arrayOfWorks = shuffle(arrayOfWorks);
   return arrayOfWorks; 
+}
+
+const findNewSelectedKeywordsAfterRemove = (existingSelectedKeywords, removedAccessNum) => {
+  const newSelectedKeywords = existingSelectedKeywords;
+  const allKeywords = Object.keys(existingSelectedKeywords);
+  const allArtworksPerKeyword = Object.values(existingSelectedKeywords);
+  allArtworksPerKeyword.forEach((item, i) => {
+    const indexOfRemovedAccessNum = item.worksInConstellationWithKeyword.findIndex((accessNum) => {
+      return accessNum === removedAccessNum;
+    });
+    if (indexOfRemovedAccessNum < 0) {
+      return;
+    }
+    const theKeyword = allKeywords[i];
+    newSelectedKeywords[theKeyword].worksInConstellationWithKeyword.splice(indexOfRemovedAccessNum, 1);
+    if (newSelectedKeywords[theKeyword].worksInConstellationWithKeyword.length === 0) {
+      delete newSelectedKeywords[theKeyword];
+    }
+  });
+
+  return newSelectedKeywords;
 }
 
 const mergeSelectedKeywords = (accessNum, existingSelectedKeywords) => {

@@ -9,7 +9,8 @@
 
 /*GENERAL STYLING*/
 
-.artworkImage{
+.artworkImage {
+  background-color: red;
   display: block;
   margin-left: auto;
   margin-right: auto;
