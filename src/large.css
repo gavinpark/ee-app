@@ -153,16 +153,6 @@
         width: 100%;
         height: 66.66%;
       }
-      .dataHeader, .dataHeaderReferences {
-        grid-column-start: 2;
-      }
-      .dataField, .dataFieldReferences {
-        grid-column-start: 4;
-        grid-column-end: span 3;
-      }
-      .dataHeaderReferences, .dataFieldReferences {
-        grid-row-end: span 2;
-      }
 
       table{
         grid-column-start: 1;
