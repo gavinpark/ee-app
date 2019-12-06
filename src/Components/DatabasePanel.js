@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-// import Data from '.././data/data.js';
 import DatabaseItem from './DatabaseItem';
 import EssayButton from './EssayButton';
 import '../App.css';
@@ -38,21 +37,12 @@ class DatabasePanel extends Component {
           return <EssayButton data={obj.data} />
         })}
 
-
-        {/* <div className="essayButton">Essay Segment 01</div>
-
-        <div className="essayButton">Essay Segment 03</div>
-
-        <div className="essayButton">Essay Segment 07</div> */}
-
       </div>
     );
   }
 
 
 }
-// export default DatabasePanel;
-
 
 const mapStateToProps = (state) => {
   return {
@@ -60,7 +50,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-// TODO: add action to actually select a new artwork
 export default connect(mapStateToProps, {
   addWorkToConstellation,
 })(DatabasePanel);

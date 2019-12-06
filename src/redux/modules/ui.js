@@ -18,6 +18,7 @@ export default function reducer(state = {
   relatedWorks: [], // { similarityScore: number, access_num: string }[]
   activeWorkIndex: 0, // (index in selectedWorks array)
   activeKeywords: [], // TODO: DO WE NEED THIS?
+  hoveredKeyword: null,
   isDetailPanelOpen: false,
   essayWindows: [], //string[]
   haveCopyrightWindowsBeenViewed: false,
@@ -98,10 +99,21 @@ export default function reducer(state = {
         if (indexOfRemovedAccessNum === 0) {
           return state;
         };
-        state.selectedWorks.splice(indexOfRemovedAccessNum, 1);
-        const newLastIndexInArtworksArrAfterRemove = state.selectedWorks.length - 1;
+        state.selectedWorks[indexOfRemovedAccessNum] = {
+          isRemoved: true,
+        }
+
+        let newLastIndexInArtworksArrAfterRemove = state.selectedWorks.length - 1;
+        let foundLastIndex = false;
+        while (foundLastIndex === false) {
+          if (state.selectedWorks[newLastIndexInArtworksArrAfterRemove].isRemoved) {
+            newLastIndexInArtworksArrAfterRemove -= 1;
+          } else {
+            foundLastIndex = true;
+          }
+        }
         const newSelectedKeywordsAfterRemove = findNewSelectedKeywordsAfterRemove(state.selectedKeywords, removedAccessNum);
-        const relatedArtworks = findRelatedWork(state.selectedWorks[state.selectedWorks.length - 1].accessNum);
+        const relatedArtworks = findRelatedWork(state.selectedWorks[newLastIndexInArtworksArrAfterRemove].accessNum);
 
         return {
           ...state,
@@ -110,6 +122,52 @@ export default function reducer(state = {
           selectedKeywords: newSelectedKeywordsAfterRemove,
           selectedWorks: state.selectedWorks
         }
+    case 'ON_HOVER_KEYWORD':
+      const newSelectedWorks = state.selectedWorks.map((work) => {
+        const isKeyworded = state.selectedKeywords[action.keyword].worksInConstellationWithKeyword.includes(work.accessNum);
+        if (isKeyworded) {
+          return {
+            ...work,
+            isRelatedToHoveredKeyword: true,
+          };
+        }
+        return work;
+      });
+
+      return {
+        ...state,
+        selectedWorks: newSelectedWorks,
+        hoveredKeyword: action.keyword,
+      }
+    case 'OFF_HOVER_KEYWORD':
+      const offHoveredSelectedWorks = state.selectedWorks.map((work) => {
+        return {
+          ...work,
+            isRelatedToHoveredKeyword: false, 
+        }
+      });
+      return {
+        ...state,
+        selectedWorks: offHoveredSelectedWorks,
+        hoveredKeyword: null,
+      }
+    case 'ON_HOVER_ARTWORK':
+      Object.keys(state.selectedKeywords).forEach((keyword) => {
+        const keywordObj = state.selectedKeywords[keyword];
+        const isRelated = keywordObj.worksInConstellationWithKeyword.includes(action.artwork);
+        if (isRelated) {
+          keywordObj.isRelatedToHoveredArtwork = true;
+        }
+      });
+      console.log('!!!!!!!!!!!!!!!!!!')
+      console.log(state.selectedKeywords)
+      return state;
+    case 'OFF_HOVER_ARTWORK':
+      Object.keys(state.selectedKeywords).forEach((keyword) => {
+        const keywordObj = state.selectedKeywords[keyword];
+        keywordObj.isRelatedToHoveredArtwork = false;
+      });
+      return state;
     default:
       return state;
   }
@@ -283,4 +341,28 @@ const mergeSelectedKeywords = (accessNum, existingSelectedKeywords) => {
   return existingSelectedKeywords;
 }
 
-// TODO: create action openArtworkInfoPanel which takes the access_num as an argument
+export const onHoverKeyword = (keyword) => {
+  return {
+    type: 'ON_HOVER_KEYWORD',
+    keyword,
+  }
+}
+
+export const offHoverKeyword = () => {
+  return {
+    type: 'OFF_HOVER_KEYWORD',
+  }
+}
+
+export const onHoverArtwork = (artwork) => {
+  return {
+    type: 'ON_HOVER_ARTWORK',
+    artwork,
+  }
+}
+
+export const offHoverArtwork = () => {
+  return {
+    type: 'OFF_HOVER_ARTWORK',
+  }
+}

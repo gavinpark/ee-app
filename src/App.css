@@ -474,3 +474,12 @@ th, td {
 		}
 		.top { top: 0; }
 		.bottom { bottom: 0; }
+
+
+.isRelatedToHoveredKeyword {
+  box-shadow: 10px 10px;
+}
+
+.isRelatedToHoveredArtworkClass {
+  box-shadow: 10px 10px;
+}

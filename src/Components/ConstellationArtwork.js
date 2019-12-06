@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Rnd } from "react-rnd";
 import '../App.css';
-import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation } from '../redux/modules/ui';
+import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork } from '../redux/modules/ui';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 // TODO: ADD RANDOMIZE POSITION FEAT ON ESSAY/WELCOME BOXES AS WELL
@@ -77,8 +77,18 @@ class ConstellationArtwork extends Component {
       return (300)
     }
   }
+
+  handleMouseOver = () => {
+    this.props.onHoverArtwork(this.props.access_num);
+  }
+
+  handleMouseOff = () => {
+    this.props.offHoverArtwork();
+  }
+
   render() {  
     const artworkData = window.allWorks[this.props.access_num];
+    const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : '';
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
         className="collectionObject"
@@ -91,7 +101,12 @@ class ConstellationArtwork extends Component {
         lockAspectRatio={true}
         minWidth={100}
       >
-        <div onClick={this.bringItemToHighestZIndex}>
+        <div
+          onClick={this.bringItemToHighestZIndex}
+          className={isRelatedToHoveredKeywordClass}
+          onMouseOver={this.handleMouseOver}
+          onMouseOut={this.handleMouseOff}
+        >
           <img draggable="false" className="artworkImage" src={require(".././images/979_22.jpg")} alt=""></img>
           <img
               className="objectMoreButton"
@@ -120,5 +135,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-  toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation
+  toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork
 })(ConstellationArtwork);

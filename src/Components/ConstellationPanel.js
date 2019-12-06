@@ -25,12 +25,16 @@ class ConstellationPanel extends Component {
   }
   renderConstellationArtworks() {
     return this.props.selectedWorks.map((work) => {
+      if (work.isRemoved) {
+        return null;
+      }
       if (window.allWorks[work.accessNum].have_rights === 'Oui') {
         return (<div><ConstellationArtwork
           access_num={work.accessNum}
           have_rights={this.props.have_rights}
           activeWorkIndex={this.props.activeWorkIndex}
           similarityScore={work.similarityScore}
+          isRelatedToHoveredKeyword={work.isRelatedToHoveredKeyword}
           /></div>)
       }
       return (<div><DescriptionWindow access_num={work.accessNum} have_rights={this.props.have_rights} subject={this.props.subject} activeWorkIndex={this.props.activeWorkIndex} /></div>)
@@ -38,8 +42,13 @@ class ConstellationPanel extends Component {
   }
 
   renderConstellationKeywords() {
+    console.log('%%%%%%%%%%%%%%%%')
+    console.log(this.props.selectedKeywords)
     return Object.keys(this.props.selectedKeywords).map((keyword) => {
-      return <div><ConstellationKeyword keyword={keyword} /></div>
+      return <div><ConstellationKeyword
+        keyword={keyword}
+        isRelatedToHoveredArtwork={this.props.selectedKeywords[keyword].isRelatedToHoveredArtwork}
+      /></div>
     })
   }
   renderConstellationTextWindow() {
