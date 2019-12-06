@@ -19,10 +19,9 @@ class ConstellationArtwork extends Component {
     }
   }
 
-  componentDidMount() {
+  componentDidMount() { 
     this.getRandomXPosition();
     this.getRandomYPosition();
-    // this.movezIndexToTop();
   }
 
   bringItemToHighestZIndex = () => {
@@ -37,8 +36,6 @@ class ConstellationArtwork extends Component {
     var min = 0;
     var x = document.getElementsByClassName('constellationPanel')[0].offsetHeight - 300;
     var randomX = Math.floor(Math.random() * (x - min)) + min;
-    console.log('max height ', x);
-    console.log('random x ', randomX);
 
     // return randomX;
     this.setState({
@@ -50,8 +47,6 @@ class ConstellationArtwork extends Component {
     var min = 0;
     var y = document.getElementsByClassName('constellationPanel')[0].offsetWidth - 300;
     var randomY = Math.floor(Math.random() * (y - min)) + min;
-    console.log('max width ', y);
-    console.log('random y ', randomY);
 
     // return randomY;
     this.setState({
@@ -70,17 +65,27 @@ class ConstellationArtwork extends Component {
     this.props.toggleDetailPanel(access_num);
   }
 
-  render() {
+  getArtworkVariableWidth(){
+    
+    if ( this.props.similarityScore <= 2){
+      return (100)
+    }
+    if ( this.props.similarityScore === 3){
+      return (200)
+    }
+    if ( this.props.similarityScore >= 4){
+      return (300)
+    }
+  }
+  render() {  
     const artworkData = window.allWorks[this.props.access_num];
-    // console.log('artworkData: ', artworkData);
-    // return (
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
         className="collectionObject"
         default={{
           x: this.state.randomX,
           y: this.state.randomY,
-          width: 300,
+          width: this.getArtworkVariableWidth(),
         }}
         style={{ zIndex: this.state.zIndex }}
         lockAspectRatio={true}
@@ -108,6 +113,7 @@ class ConstellationArtwork extends Component {
 
 const mapStateToProps = (state) => {
   return {
+    relatedWorks: state._ui.relatedWorks,
     isDetailPanelOpen: state._ui.isDetailPanelOpen,
     highestZIndex: state._ui.highestZIndex,
   };

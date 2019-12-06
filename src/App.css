@@ -87,7 +87,7 @@
 }
 
 /* FLOATING BOXES/BOX SHADOW? */
-/* .collectionObject, .essayContainer{
+/* .collectionObject, .essayContainer, .descriptionText{
   -webkit-box-shadow: 8px 8px 18px -2px rgba(133,133,133,1);
   -moz-box-shadow: 8px 8px 18px -2px rgba(133,133,133,1);
   box-shadow: 8px 8px 18px -2px rgba(133,133,133,1);
@@ -340,9 +340,6 @@ th, td {
   font-size: 1.1rem;
   color: red;
   border-spacing: none;
- 
-  
-
   
 }
 
@@ -353,6 +350,7 @@ th, td {
   left: 175px;
   border: 2px solid red;
   background: white;
+  z-index: 2;
 }
 .essayHeaderBox{
   position: absolute;

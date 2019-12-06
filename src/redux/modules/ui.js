@@ -12,7 +12,8 @@ export default function reducer(state = {
   isWelcomeOpen: true,
   isLandingOpen: true,
   isCopyrightOpen: true,
-  selectedWorks: [], //string[],
+  isConstellationTextOpen: true,
+  selectedWorks: [], //{ accessNum, similarityScore }[],
   selectedKeywords: {}, // { [keyword]: { worksInConstellationWithKeyword: [] } }
   relatedWorks: [], // { similarityScore: number, access_num: string }[]
   activeWorkIndex: 0, // (index in selectedWorks array)
@@ -39,9 +40,14 @@ export default function reducer(state = {
         isWelcomeOpen: !state.isWelcomeOpen,
       };
     case 'TOGGLE_COPYRIGHT':
-      return{
+      return {
         ...state,
         isCopyrightOpen: !state.isCopyrightOpen,
+      }
+    case 'TOGGLE_CONSTELLATION_TEXT':
+      return {
+        ...state,
+        isConstellationTextOpen: !state.isConstellationTextOpen,
       }
     case 'TOGGLE_DETAIL_PANEL':
       return {
@@ -79,17 +85,23 @@ export default function reducer(state = {
           activeWorkIndex: newLastIndexInArtworksArr,
           selectedKeywords: newSelectedKeywords,
           relatedWorks: action.relatedArtworks,
-          selectedWorks: [...state.selectedWorks, action.selectedKey]
+          selectedWorks: [...state.selectedWorks, {
+            accessNum: action.selectedKey,
+            similarityScore: action.similarityScore || 1,
+          }]
         }
     case 'REMOVE_ARTWORK':
         const { removedAccessNum } = action;
         const indexOfRemovedAccessNum = state.selectedWorks.findIndex((work) => {
-          return work === removedAccessNum;
+          return work.accessNum === removedAccessNum;
         });
+        if (indexOfRemovedAccessNum === 0) {
+          return state;
+        };
         state.selectedWorks.splice(indexOfRemovedAccessNum, 1);
         const newLastIndexInArtworksArrAfterRemove = state.selectedWorks.length - 1;
         const newSelectedKeywordsAfterRemove = findNewSelectedKeywordsAfterRemove(state.selectedKeywords, removedAccessNum);
-        const relatedArtworks = findRelatedWork(state.selectedWorks[state.selectedWorks.length - 1]);
+        const relatedArtworks = findRelatedWork(state.selectedWorks[state.selectedWorks.length - 1].accessNum);
 
         return {
           ...state,
@@ -127,6 +139,11 @@ export const toggleCopyright = () => {
     type: 'TOGGLE_COPYRIGHT',
   };
 };
+export const toggleConstellationText = () => {
+  return {
+    type: 'TOGGLE_CONSTELLATION_TEXT',
+  };
+};
 export const toggleDetailPanel = () => {
   return {
     type: 'TOGGLE_DETAIL_PANEL',
@@ -156,12 +173,13 @@ export const findRandomArtWork = () => {
   };
 }
 
-export const addWorkToConstellation = (selectedKey) => {
+export const addWorkToConstellation = (selectedKey, similarityScore) => {
   const relatedArtworks = findRelatedWork(selectedKey);
   return {
     type: 'SELECT_NEW_ARTWORK',
     selectedKey: selectedKey,
     relatedArtworks,
+    similarityScore
   }
 }
 
@@ -225,10 +243,10 @@ const findRelatedWork = (accessNum) => {
     });
     return obj;
   }, {});
-  
+
   var arrayOfWorks = Object.values(allRelatedWorks);
   arrayOfWorks = shuffle(arrayOfWorks);
-  return arrayOfWorks; 
+  return arrayOfWorks;
 }
 
 const findNewSelectedKeywordsAfterRemove = (existingSelectedKeywords, removedAccessNum) => {

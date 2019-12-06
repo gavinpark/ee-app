@@ -4,17 +4,30 @@ import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleLanguage, toggleCopyright} from '../redux/modules/ui';
+import { toggleLanguage, toggleConstellationText, increaseHighestZIndex } from '../redux/modules/ui';
 
+// TODO be able to remember language state when opening multiple windows
 
-
-class CopyrightWindow extends Component {
+class ConstellationTextWindow extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            zIndex: 1,
+        }
+    }
+    bringItemToHighestZIndex = () => {
+        const nextHighestZindex = this.props.highestZIndex + 1;
+        this.setState({
+            zIndex: nextHighestZindex,
+        })
+        this.props.increaseHighestZIndex();
+    }
     getLanguage() {
         if (this.props.isFrench) {
             return (
                 <div>
                     <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[1].essayHeader}</div>
+                        <div className="essayHeader">{EssayData[2].essayHeader}</div>
                     </div>
                     <div>
                         <div className="objectENButton">EN</div>
@@ -25,17 +38,17 @@ class CopyrightWindow extends Component {
                         className="objectExitButton"
                         src={require(".././images/buttons/exit_Button.svg")}
                         alt=""
-                        onClick={this.props.toggleCopyright}
+                        onClick={this.props.toggleConstellationText}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[0].essayText}</div>
+                        <div className="essayBody">{EssayData[2].essayText}</div>
                     </div>
                 </div>
             )
         } return (
             <div>
                 <div className="essayHeaderBox">
-                    <div className="essayHeader">{EssayData[0].essayHeaderFR}</div>
+                    <div className="essayHeader">{EssayData[2].essayHeaderFR}</div>
                 </div>
                 <div>
                     <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
@@ -46,44 +59,43 @@ class CopyrightWindow extends Component {
                     className="objectExitButton"
                     src={require(".././images/buttons/exit_Button.svg")}
                     alt=""
-                    onClick={this.props.toggleCopyright}
+                    onClick={this.props.toggleConstellationText}
                 ></img>
                 <div className="essayBodyBox">
-                    <div className="essayBody">{EssayData[0].essayTextFR}</div>
+                    <div className="essayBody">{EssayData[2].essayTextFR}</div>
                 </div>
             </div>
         )
     }
-
     render() {
-
         return (
             <Rnd
                 className="essayContainer"
                 default={{
-                    x: 150,
-                    y: 150,
+                    x: 300,
+                    y: 350,
                     width: 500,
                     height: 400
                 }}
                 enableResizing={null}
             // style={{overflow: "scroll"}}
             >
-             <div>
-                 {this.getLanguage()}
-             </div>
+                <div onClick={this.bringItemToHighestZIndex}>
+                    {this.getLanguage()}
+                </div>
             </Rnd>
-
         );
 
     }
 }
 const mapStateToProps = (state) => {
     return {
-        isFrench: state._ui.isFrench
+        isFrench: state._ui.isFrench,
+        highestZIndex: state._ui.highestZIndex,
+        isConstellationTextOpen: state._ui.isConstellationTextOpen
     };
 };
 
 export default connect(mapStateToProps, {
-    toggleLanguage, toggleCopyright,
-})(CopyrightWindow);
+    toggleLanguage, increaseHighestZIndex, toggleConstellationText
+})(ConstellationTextWindow);

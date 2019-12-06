@@ -4,12 +4,29 @@ import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleLanguage } from '../redux/modules/ui';
+import { toggleLanguage, increaseHighestZIndex } from '../redux/modules/ui';
 
 // TODO be able to remember language state when opening multiple windows
 
 
 class WelcomeWindow extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            zIndex: 1,
+        }
+    }
+    componentDidMount() {
+        // this.movezIndexToTop();
+    }
+
+    bringItemToHighestZIndex = () => {
+        const nextHighestZindex = this.props.highestZIndex + 1;
+        this.setState({
+            zIndex: nextHighestZindex,
+        })
+        this.props.increaseHighestZIndex();
+    }
     getLanguage() {
         if (this.props.isFrench) {
             return (
@@ -18,7 +35,7 @@ class WelcomeWindow extends Component {
                         <div className="essayHeader">{EssayData[0].essayHeader}</div>
                     </div>
                     <div>
-                        <div className="objectENButton" >EN</div>
+                        <div className="objectENButton">EN</div>
                         <div className="objectFRButton greyOut" onClick={this.props.toggleLanguage}>FR</div>
                     </div>
 
@@ -54,12 +71,12 @@ class WelcomeWindow extends Component {
                 ></img>
                 <div className="essayBodyBox">
                     <div className="essayBody">{EssayData[0].essayTextFR}</div>
-                   
+
                 </div>
                 <div className="downloadBox">Download Full Text</div>
                 <div className="essayFootnoteBox">
-                        <div className="footnoteEnd">{EssayData[0].footnoteFR}</div>
-                    </div>
+                    <div className="footnoteEnd">{EssayData[0].footnoteFR}</div>
+                </div>
             </div>
         )
     }
@@ -68,16 +85,17 @@ class WelcomeWindow extends Component {
         return (
             <Rnd
                 className="essayContainer"
+                style={{ zIndex: this.state.zIndex }}
                 default={{
-                    x: 0,
-                    y: 0,
+                    x: 100,
+                    y: 100,
                     width: 500,
                     height: 500
                 }}
                 enableResizing={null}
             // style={{overflow: "scroll"}}
             >
-                <div>
+                <div onClick={this.bringItemToHighestZIndex}>
                     {this.getLanguage()}
                 </div>
             </Rnd>
@@ -87,10 +105,11 @@ class WelcomeWindow extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        isFrench: state._ui.isFrench
+        isFrench: state._ui.isFrench,
+        highestZIndex: state._ui.highestZIndex,
     };
 };
 
 export default connect(mapStateToProps, {
-    toggleLanguage,
+    toggleLanguage, increaseHighestZIndex
 })(WelcomeWindow);

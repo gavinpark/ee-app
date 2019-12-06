@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleDetailPanel } from '../redux/modules/ui';
+import { toggleDetailPanel, increaseHighestZIndex } from '../redux/modules/ui';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 class DescriptionWindow extends Component {
@@ -12,18 +12,26 @@ class DescriptionWindow extends Component {
         this.state = {
             randomX: -1,
             randomY: -1,
+            zIndex: 1,
         }
     }
     componentDidMount() {
         this.getRandomXPosition();
         this.getRandomYPosition();
+        // this.movezIndexToTop();
+    }
+    bringItemToHighestZIndex = () => {
+        const nextHighestZindex = this.props.highestZIndex + 1;
+        this.setState({
+            zIndex: nextHighestZindex,
+        })
+        this.props.increaseHighestZIndex();
     }
     getRandomXPosition() {
         var min = 0;
         var x = document.getElementsByClassName('constellationPanel')[0].offsetHeight;
         var randomX = Math.floor(Math.random() * (x - min)) + min;
-        console.log('max height ', x);
-        console.log('random x ', randomX);
+        
 
         // return randomX;
         this.setState({
@@ -34,8 +42,7 @@ class DescriptionWindow extends Component {
         var min = 0;
         var y = document.getElementsByClassName('constellationPanel')[0].offsetWidth;
         var randomY = Math.floor(Math.random() * (y - min)) + min;
-        console.log('max width ', y);
-        console.log('random y ', randomY);
+       
 
         // return randomY;
         this.setState({
@@ -52,12 +59,13 @@ class DescriptionWindow extends Component {
         const artworkData = window.allWorks[this.props.access_num];
 
         const subject = artworkData.subject;
-        console.log('artworkdata !!!!!!!', artworkData.subject);
         // const subject = window.allWorks[this.props.access_num].subject;
         return this.state.randomX > -1 && this.state.randomY > -1 && (
 
 
             <Rnd className="descriptionWindow"
+                onClick={this.bringItemToHighestZIndex}
+                style={{ zIndex: this.state.zIndex }}
                 enableResizing={null}
                 default={{
                     x: this.state.randomX,
@@ -93,10 +101,11 @@ class DescriptionWindow extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        isDetailPanelOpen: state._ui.isDetailPanelOpen
+        isDetailPanelOpen: state._ui.isDetailPanelOpen,
+        highestZIndex: state._ui.highestZIndex
     };
 };
 
 export default connect(mapStateToProps, {
-    toggleDetailPanel,
+    toggleDetailPanel, increaseHighestZIndex
 })(DescriptionWindow);
