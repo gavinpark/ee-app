@@ -6,7 +6,7 @@ import DescriptionWindow from './DescriptionWindow';
 import ConstellationKeyword from './ConstellationKeyword';
 import ConstellationTextWindow from './ConstellationTextWindow';
 import '../App.css';
-import { toggleWelcome } from '../redux/modules/ui';
+import { toggleWelcome, toggleConstellationText } from '../redux/modules/ui';
 
 class ConstellationPanel extends Component {
   constructor(props) {
@@ -40,7 +40,7 @@ class ConstellationPanel extends Component {
   renderConstellationTextWindow() {
     if (this.state.constBoxVisibile === true) {
       return (
-        <div><ConstellationTextWindow /></div>
+        <div><ConstellationTextWindow toggleConstellationText={this.props.toggleConstellationText}/></div>
       )
     }
   }
@@ -52,7 +52,7 @@ class ConstellationPanel extends Component {
         {this.props.isWelcomeOpen && <div><WelcomeWindow toggleWelcome={this.props.toggleWelcome} /></div>}
         {this.renderConstellationArtworks()}
         {this.renderConstellationKeywords()}
-        {this.renderConstellationTextWindow()}
+        {this.props.isConstellationTextOpen && this.renderConstellationTextWindow()}
       </div>
 
 
@@ -65,9 +65,10 @@ const mapStateToProps = (state) => {
     activeWorkIndex: state._ui.activeWorkIndex,
     selectedWorks: state._ui.selectedWorks,
     selectedKeywords: state._ui.selectedKeywords,
+    isConstellationTextOpen: state._ui.isConstellationTextOpen
   };
 };
 
 export default connect(mapStateToProps, {
-  toggleWelcome,
+  toggleWelcome, toggleConstellationText
 })(ConstellationPanel);

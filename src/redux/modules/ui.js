@@ -12,6 +12,7 @@ export default function reducer(state = {
   isWelcomeOpen: true,
   isLandingOpen: true,
   isCopyrightOpen: true,
+  isConstellationTextOpen: true,
   selectedWorks: [], //string[],
   selectedKeywords: {}, // { [keyword]: { worksInConstellationWithKeyword: [] } }
   relatedWorks: [], // { similarityScore: number, access_num: string }[]
@@ -39,9 +40,14 @@ export default function reducer(state = {
         isWelcomeOpen: !state.isWelcomeOpen,
       };
     case 'TOGGLE_COPYRIGHT':
-      return{
+      return {
         ...state,
         isCopyrightOpen: !state.isCopyrightOpen,
+      }
+    case 'TOGGLE_CONSTELLATION_TEXT':
+      return {
+        ...state,
+        isConstellationTextOpen: !state.isConstellationTextOpen,
       }
     case 'TOGGLE_DETAIL_PANEL':
       return {
@@ -72,15 +78,15 @@ export default function reducer(state = {
       };
     case 'SELECT_NEW_ARTWORK':
 
-        const newLastIndexInArtworksArr = state.selectedWorks.length;
-        const newSelectedKeywords = mergeSelectedKeywords(action.selectedKey, state.selectedKeywords);
-        return {
-          ...state,
-          activeWorkIndex: newLastIndexInArtworksArr,
-          selectedKeywords: newSelectedKeywords,
-          relatedWorks: action.relatedArtworks,
-          selectedWorks: [...state.selectedWorks, action.selectedKey]
-        }
+      const newLastIndexInArtworksArr = state.selectedWorks.length;
+      const newSelectedKeywords = mergeSelectedKeywords(action.selectedKey, state.selectedKeywords);
+      return {
+        ...state,
+        activeWorkIndex: newLastIndexInArtworksArr,
+        selectedKeywords: newSelectedKeywords,
+        relatedWorks: action.relatedArtworks,
+        selectedWorks: [...state.selectedWorks, action.selectedKey]
+      }
     default:
       return state;
   }
@@ -108,6 +114,11 @@ export const toggleWelcome = () => {
 export const toggleCopyright = () => {
   return {
     type: 'TOGGLE_COPYRIGHT',
+  };
+};
+export const toggleConstellationText = () => {
+  return {
+    type: 'TOGGLE_CONSTELLATION_TEXT',
   };
 };
 export const toggleDetailPanel = () => {
@@ -205,10 +216,10 @@ const findRelatedWork = (accessNum) => {
     });
     return obj;
   }, {});
-  
+
   var arrayOfWorks = Object.values(allRelatedWorks);
   arrayOfWorks = shuffle(arrayOfWorks);
-  return arrayOfWorks; 
+  return arrayOfWorks;
 }
 
 const mergeSelectedKeywords = (accessNum, existingSelectedKeywords) => {

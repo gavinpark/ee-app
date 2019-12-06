@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleLanguage, increaseHighestZIndex } from '../redux/modules/ui';
+import { toggleLanguage, toggleConstellationText, increaseHighestZIndex } from '../redux/modules/ui';
 
 // TODO be able to remember language state when opening multiple windows
 
@@ -38,7 +38,7 @@ class ConstellationTextWindow extends Component {
                         className="objectExitButton"
                         src={require(".././images/buttons/exit_Button.svg")}
                         alt=""
-                        onClick={this.props.toggleWelcome}
+                        onClick={this.props.toggleConstellationText}
                     ></img>
                     <div className="essayBodyBox">
                         <div className="essayBody">{EssayData[2].essayText}</div>
@@ -59,7 +59,7 @@ class ConstellationTextWindow extends Component {
                     className="objectExitButton"
                     src={require(".././images/buttons/exit_Button.svg")}
                     alt=""
-                    onClick={this.props.toggleWelcome}
+                    onClick={this.props.toggleConstellationText}
                 ></img>
                 <div className="essayBodyBox">
                     <div className="essayBody">{EssayData[2].essayTextFR}</div>
@@ -91,10 +91,11 @@ class ConstellationTextWindow extends Component {
 const mapStateToProps = (state) => {
     return {
         isFrench: state._ui.isFrench,
-        highestZIndex: state._ui.highestZIndex
+        highestZIndex: state._ui.highestZIndex,
+        isConstellationTextOpen: state._ui.isConstellationTextOpen
     };
 };
 
 export default connect(mapStateToProps, {
-    toggleLanguage, increaseHighestZIndex
+    toggleLanguage, increaseHighestZIndex, toggleConstellationText
 })(ConstellationTextWindow);
