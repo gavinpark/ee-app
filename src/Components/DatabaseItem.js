@@ -15,27 +15,27 @@ class DatabaseItem extends Component {
           return (
               <div className={`${isRelatedToHoveredKeywordClassName} twoTags`} 
               onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-              ><img className="artworkImage" src={artworkData.imageSource} alt=""></img> </div>
+              ><img className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img> </div>
           )
         }
         if (artwork.similarityScore === 3){
           return(
             <div className={`${isRelatedToHoveredKeywordClassName} threeTags`} 
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-            ><img className ="artworkImage" src={artworkData.imageSource} alt=""></img> </div>
+            ><img className ="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img> </div>
           )
         }
         if (artwork.similarityScore >= 4){
           return(
             <div className="fourTags"
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-            ><img className ={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={artworkData.imageSource} alt=""></img> </div>
+            ><img className ={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img> </div>
           )
         }
           return(
             <div
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-            ><img key={artworkData.access_num, artwork.similarityScore} className={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={artworkData.imageSource} alt=""></img>
+            ><img key={artworkData.access_num, artwork.similarityScore} className={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img>
             </div>
           )
         }
