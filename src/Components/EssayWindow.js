@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-// import EssayData from '.././data/EssayData.js';
+import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
 import { toggleLanguage, toggleEssaySegment } from '../redux/modules/ui';
@@ -9,12 +9,15 @@ import { toggleLanguage, toggleEssaySegment } from '../redux/modules/ui';
 // TODO be able to remember language state when opening multiple windows
 
 class EssayWindow extends Component {
+
     getLanguage() {
-        if (this.props.isFrench) {
+        if (this.props.isFrench) { 
+            console.log('Essay information', this.props.essay)
+            console.log('is this getting the header?', this.props.essayHeader)
             return (
                 <div>
                     <div className="essayHeaderBox">
-                        <div className="essayHeader">{this.props.essay.essayHeader}</div>
+                        <div className="essayHeader">{this.props.essayHeader}</div>
                     </div>
                     <div>
                         <div className="objectENButton">EN</div>
@@ -28,14 +31,14 @@ class EssayWindow extends Component {
                         onClick={this.props.toggleEssaySegment}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{this.props.essay.essayText}</div>
+                        <div className="essayBody">{this.props.essay}</div>
                     </div>
                 </div>
             )
         } return (
             <div>
                 <div className="essayHeaderBox">
-                    <div className="essayHeader">{this.props.essay.essayHeaderFR}</div>
+                    <div className="essayHeader">{this.props.essay}</div>
                 </div>
                 <div>
                     <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
@@ -49,7 +52,7 @@ class EssayWindow extends Component {
                     onClick={this.props.toggleEssaySegment}
                 ></img>
                 <div className="essayBodyBox">
-                    <div className="essayBody">{this.props.essay.essayTextFR}</div>
+                    <div className="essayBody">{this.props.essay}</div>
 
                 </div>
             </div>
