@@ -177,7 +177,7 @@
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: center;
   color: red;
-  font-size: 16pt;
+  font-size: 1.06rem;
   line-height: 52px;
   vertical-align: middle;
 }
@@ -316,7 +316,7 @@
   height: 50px;
   color: red;
   font-family: Avara, sans-serif;
-  font-size: 16pt;
+  font-size: 1.06rem;
   text-align: left;
   padding-left: 12px;
   line-height: 55px;
@@ -334,7 +334,7 @@
 .essayBody {
   color: red;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.06rem;
   font-weight: 400;
   text-align: left;
   padding: 12px;
@@ -371,7 +371,7 @@
   vertical-align: middle;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   color: red;
-  font-size: 16pt;
+  font-size: 1.06rem;
   text-decoration: underline;
   text-underline-position: under;
   font-weight: 400;
