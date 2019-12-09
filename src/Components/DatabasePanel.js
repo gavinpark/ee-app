@@ -21,7 +21,6 @@ class DatabasePanel extends Component {
     //   data: {},
     // }];
     const essayArray = [];
-
     const finalArray = shuffle([...databaseItemsArray, ...essayArray]);
 
     return (

@@ -3,9 +3,9 @@ import '../App.css';
 
 class LandingItem extends Component {
 
-  enterMainPage = (accessNum) => {
+  enterMainPage = (accessNum, similarityScore) => {
     this.props.removeInitialArtwork();
-    this.props.addWorkToConstellation(accessNum);
+    this.props.addWorkToConstellation(accessNum, similarityScore);
     this.props.openMainPage();
   }
 
@@ -16,7 +16,7 @@ class LandingItem extends Component {
         return (
           <div
             className="twoTags"
-            onClick={() => {this.enterMainPage(artworkData.access_num)}}
+            onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
            ><img className="artworkImage" src={artworkData.imageSource} alt=""></img></div>
         )
       }
@@ -24,7 +24,7 @@ class LandingItem extends Component {
         return (
           <div
             className="threeTags"
-            onClick={() => {this.enterMainPage(artworkData.access_num)}}
+            onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
           ><img className="artworkImage" src={artworkData.imageSource} alt=""></img> </div>
         )
       }
@@ -32,13 +32,13 @@ class LandingItem extends Component {
         return (
           <div
             className="fourTags"
-            onClick={() => {this.enterMainPage(artworkData.access_num)}}
+            onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
           ><img className="artworkImage" src={artworkData.imageSource} alt=""></img> </div>
         )
       }
       return (
         <div
-          onClick={() => {this.enterMainPage(artworkData.access_num)}}
+          onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
         >
           <img key={artworkData.access_num} className="artworkImage" src={artworkData.imageSource} alt=""></img>
         </div>
