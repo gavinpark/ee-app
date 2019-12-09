@@ -10,6 +10,16 @@ import { toggleLanguage } from '../redux/modules/ui';
 
 
 class WelcomeWindow extends Component {
+
+
+    
+    getFootnotes(){
+        const notes = EssayData[0].footnote;
+        notes.map((note) => {
+            console.log ('note',note);
+                return <div className="footnoteEnd">{note}</div>
+            })
+    }
     getLanguage() {
         if (this.props.isFrench) {
             return (
@@ -33,7 +43,7 @@ class WelcomeWindow extends Component {
                         <div className="downloadBox">View Full Text</div>
                     </div>
                     <div className="essayFootnoteBox">
-                        <div className="footnoteEnd">{EssayData[0].footnote}</div>
+                        {this.getFootnotes()}
                     </div>
                 </div>
             )
@@ -55,12 +65,12 @@ class WelcomeWindow extends Component {
                 ></img>
                 <div className="essayBodyBox">
                     <div className="essayBody">{EssayData[0].essayTextFR}</div>
-                   
+
                 </div>
-                
+
                 <div className="essayFootnoteBox">
-                        <div className="footnoteEnd">{EssayData[0].footnoteFR}</div>
-                    </div>
+                    {this.getFootnotes()}
+                </div>
             </div>
         )
     }
