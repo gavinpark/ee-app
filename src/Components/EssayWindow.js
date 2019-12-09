@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import EssayData from '.././data/EssayData.js';
+// import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
 import { toggleLanguage, toggleEssaySegment } from '../redux/modules/ui';
@@ -14,7 +14,7 @@ class EssayWindow extends Component {
             return (
                 <div>
                     <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[0].essayHeader}</div>
+                        <div className="essayHeader">{this.props.essay.essayHeader}</div>
                     </div>
                     <div>
                         <div className="objectENButton">EN</div>
@@ -28,14 +28,14 @@ class EssayWindow extends Component {
                         onClick={this.props.toggleEssaySegment}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[0].essayText}</div>
+                        <div className="essayBody">{this.props.essay.essayText}</div>
                     </div>
                 </div>
             )
         } return (
             <div>
                 <div className="essayHeaderBox">
-                    <div className="essayHeader">{EssayData[0].essayHeaderFR}</div>
+                    <div className="essayHeader">{this.props.essay.essayHeaderFR}</div>
                 </div>
                 <div>
                     <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
@@ -49,7 +49,7 @@ class EssayWindow extends Component {
                     onClick={this.props.toggleEssaySegment}
                 ></img>
                 <div className="essayBodyBox">
-                    <div className="essayBody">{EssayData[0].essayTextFR}</div>
+                    <div className="essayBody">{this.props.essay.essayTextFR}</div>
 
                 </div>
             </div>
