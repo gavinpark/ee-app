@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from 'react-rnd';
-import { increaseHighestZIndex } from '../redux/modules/ui';
+import { increaseHighestZIndex, onHoverKeyword, offHoverKeyword } from '../redux/modules/ui';
 
 class ConstellationKeyword extends Component {
-    // getSeparateKeywords(){
-    //     const keyword = artworkData.keywords.split(" ");
-    //     return keyword
-    // }
 
     constructor(props) {
         super(props);
@@ -23,6 +19,15 @@ class ConstellationKeyword extends Component {
         this.getRandomYPosition();
         // this.movezIndexToTop();
       }
+
+      handleMouseOver = () => {
+        this.props.onHoverKeyword(this.props.keyword)
+      }
+
+      handleMouseOff = () => {
+        this.props.offHoverKeyword()
+      }
+
       bringItemToHighestZIndex = () => {
         const nextHighestZindex = this.props.highestZIndex + 1;
         this.setState({
@@ -54,6 +59,8 @@ class ConstellationKeyword extends Component {
       }
     render() {
       const word = this.props.keyword;
+      console.log(this.props.isRelatedToHoveredArtwork)
+      const isRelatedToHoveredArtworkClass = this.props.isRelatedToHoveredArtwork ? 'isRelatedToHoveredArtwork' : '';
         return (
             <Rnd
                 enableResizing={null}
@@ -63,7 +70,13 @@ class ConstellationKeyword extends Component {
                     y: this.state.randomY,
                 }}
             >
-                <div className="keyword" key={word} onClick={this.bringItemToHighestZIndex}>{word}</div>
+                <div
+                  className={`${isRelatedToHoveredArtworkClass} keyword`}
+                  key={word}
+                  onClick={this.bringItemToHighestZIndex}
+                  onMouseOver={this.handleMouseOver}
+                  onMouseOut={this.handleMouseOff}
+                >{word}</div>
             </Rnd>
         )
     }
@@ -75,5 +88,7 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-  increaseHighestZIndex
+  increaseHighestZIndex,
+  onHoverKeyword,
+  offHoverKeyword,
 })(ConstellationKeyword);

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import '../App.css';
 
 class DatabaseItem extends Component {
@@ -7,17 +8,19 @@ class DatabaseItem extends Component {
   }
   render() {
     const { artworkData, artwork } = this.props;
+    const isRelatedToHoveredKeyword = window.allWorks[artworkData.access_num].final_words.includes(this.props.hoveredKeyword);
+    const isRelatedToHoveredKeywordClassName = isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : '';
       if (artworkData.have_rights === 'Oui') {
         if (artwork.similarityScore === 2) {
           return (
-              <div className="twoTags" 
+              <div className={`${isRelatedToHoveredKeywordClassName} twoTags`} 
               onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
               ><img className="artworkImage" src={artworkData.imageSource} alt=""></img> </div>
           )
         }
         if (artwork.similarityScore === 3){
           return(
-            <div className="threeTags" 
+            <div className={`${isRelatedToHoveredKeywordClassName} threeTags`} 
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
             ><img className ="artworkImage" src={artworkData.imageSource} alt=""></img> </div>
           )
@@ -26,23 +29,29 @@ class DatabaseItem extends Component {
           return(
             <div className="fourTags"
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-            ><img className ="artworkImage" src={artworkData.imageSource} alt=""></img> </div>
+            ><img className ={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={artworkData.imageSource} alt=""></img> </div>
           )
         }
           return(
             <div
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-            ><img key={artworkData.access_num, artwork.similarityScore} className="artworkImage" src={artworkData.imageSource} alt=""></img>
+            ><img key={artworkData.access_num, artwork.similarityScore} className={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={artworkData.imageSource} alt=""></img>
             </div>
           )
         }
   
         return (
-          <div className='description'
+          <div className={`${isRelatedToHoveredKeywordClassName} description`}
           onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
           >{artworkData.subject}</div>
         )
     }
 }
 
-export default DatabaseItem;
+const mapStateToProps = (state) => {
+  return {
+    hoveredKeyword: state._ui.hoveredKeyword,
+  };
+};
+
+export default connect(mapStateToProps)(DatabaseItem);
