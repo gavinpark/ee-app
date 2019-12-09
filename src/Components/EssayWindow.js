@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-// import EssayData from '.././data/EssayData.js';
+import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
 import { toggleLanguage, toggleEssaySegment } from '../redux/modules/ui';
@@ -14,7 +14,7 @@ class EssayWindow extends Component {
             return (
                 <div>
                     <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[].essayHeader}</div>
+                        <div className="essayHeader">{EssayData[0].essayHeader}</div>
                     </div>
                     <div>
                         <div className="objectENButton">EN</div>
