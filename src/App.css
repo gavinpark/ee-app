@@ -351,6 +351,7 @@ th, td {
   border: 2px solid red;
   background: white;
   z-index: 2;
+  overflow: scroll;
 }
 .essayHeaderBox{
   position: absolute;

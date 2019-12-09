@@ -71,6 +71,7 @@ class ConstellationTextWindow extends Component {
         return (
             <Rnd
                 className="essayContainer"
+                style={{ zIndex: this.state.zIndex }}
                 default={{
                     x: 300,
                     y: 350,
