@@ -10,7 +10,6 @@
 /*GENERAL STYLING*/
 
 .artworkImage {
-  background-color: red;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -209,19 +208,18 @@
   justify-content: center;
   align-items: center;
 }
+
 .infoExitSvg{
   position: absolute;
   width: 50%;
   height: 50%;
-  /* margin: 25% 25% 25% 25%; */
 }
+
 .infoExitButton img{
   height: 100%;
   width: 100%;
 }
-/* .copyrightButton p{
-  margin: 29.33%;
-} */
+
 .databaseInfo {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
@@ -241,13 +239,24 @@
 }
 
 .infoPanelImage {
-  grid-column-start: 2;
+  grid-column-start: 1;
   grid-column-end: 8;
   grid-row-start: 1;
-  grid-row-end: 17;
+  grid-row-end: 19;
   border: 2px solid red;
   margin: -2px -2px -2px -2px;
   overflow: scroll;
+  padding: 5%;
+}
+
+.infoPanelArtwork{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  align-items: center;
 }
 
 .copyrightButton{
@@ -267,13 +276,9 @@
 
 table{
   display: grid;
-  grid-column-start: 8;
-  grid-column-end: 14;
-  grid-row-start: 3;
-  grid-row-end: 19;
-
+  grid-area: 3 / 8 / 19 / 14;
   grid-template-columns: repeat(6, 1fr);  
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-rows: repeat(16, 1fr);
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -282,7 +287,8 @@ tr{
  grid-column-end: span 6; 
  display: grid;
  grid-template-columns: repeat(6, 1fr);
- grid-template-rows: repeat(12, minmax(6.25%, auto));
+ grid-area: auto;
+
 }
 
 th{

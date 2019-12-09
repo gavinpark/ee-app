@@ -10,7 +10,7 @@ class ArtworkSwiper extends Component {
         return (
             <div className="infoPanelImage">
                 <Swiper>
-                    <img className="artworkImage" src={require(".././images/979_22.jpg")} alt=""></img>
+                    <img className="infoPanelArtwork" src={require(".././images/979_22.jpg")} alt=""></img>
                     <div>Slide 2</div>
                     <div>Slide 3</div>
                 </Swiper>

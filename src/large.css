@@ -11,17 +11,7 @@
           grid-column-end: 5;
           grid-row-start: 1;
         }
-        .dataHeader, .dataHeaderReferences {
-          grid-column-start: 5;
-        }
-        
-        .dataField, .dataFieldReferences {
-          grid-column-start: 7;
-          grid-column-end: span 3;
-        }
-        .dataHeaderReferences, .dataFieldReferences {
-          grid-row-end: span 2;
-        }
+
         .infoPanelDivDesktop{
           display: none;
         }
@@ -33,8 +23,8 @@
           grid-row-end: span 3;
         }
         .copyrightButton{
-          grid-column-start: 4;
-          grid-row-start: 9;
+          grid-column-start: 5;
+          grid-row-start: 1;
         }  
         .infoExitBox {
           grid-column: 9;
@@ -82,16 +72,6 @@
           width: 100%;
           height: 66.66%;
         }
-        /* .dataHeader, .dataHeaderReferences {
-          grid-column-start: 2;
-        }
-        .dataField, .dataFieldReferences {
-          grid-column-start: 4;
-          grid-column-end: span 3;
-        }
-        .dataHeaderReferences, .dataFieldReferences {
-          grid-row-end: span 2;
-        } */
 
         table{
           grid-column-start: 2;
