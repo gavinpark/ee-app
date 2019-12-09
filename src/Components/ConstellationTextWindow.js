@@ -70,6 +70,7 @@ class ConstellationTextWindow extends Component {
     render() {
         return (
             <Rnd
+                style={{ zIndex: this.state.zIndex }}
                 className="essayContainer"
                 default={{
                     x: 300,
@@ -78,7 +79,6 @@ class ConstellationTextWindow extends Component {
                     height: 400
                 }}
                 enableResizing={null}
-            // style={{overflow: "scroll"}}
             >
                 <div onClick={this.bringItemToHighestZIndex}>
                     {this.getLanguage()}
