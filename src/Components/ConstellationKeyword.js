@@ -13,8 +13,8 @@ class ConstellationKeyword extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          randomX: null,
-          randomY: null,
+          randomX: -1,
+          randomY: -1,
           zIndex: 1,
         }
       }
