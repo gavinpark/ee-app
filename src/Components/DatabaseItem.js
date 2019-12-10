@@ -39,12 +39,28 @@ class DatabaseItem extends Component {
           )
         }
   
+        if (artwork.similarityScore ===2){
         return (
-          <div className='description'
+          <div className='description twoTags'
           onClick={() => {this.props.addWorkToConstellation(artworkData.access_num)}}
           >{artworkData.subject}</div>
         )
+      }
+      if (artwork.similarityScore >=3){
+        return (
+          <div className='description threeTags'
+          onClick={() => {this.props.addWorkToConstellation(artworkData.access_num)}}
+          >{artworkData.subject}</div>
+        )
+      }
+     
+      return (
+        <div className='description'
+        onClick={() => {this.props.addWorkToConstellation(artworkData.access_num)}}
+        >{artworkData.subject}</div>
+      )
     }
+    
 }
 
 export default DatabaseItem;
