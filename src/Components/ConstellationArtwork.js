@@ -67,14 +67,17 @@ class ConstellationArtwork extends Component {
 
   getArtworkVariableWidth(){
     
-    if ( this.props.similarityScore <= 2){
-      return (100)
-    }
-    if ( this.props.similarityScore === 3){
+    if ( this.props.similarityScore <= 1){
       return (200)
     }
-    if ( this.props.similarityScore >= 4){
+    if ( this.props.similarityScore === 2){
       return (300)
+    }
+    if ( this.props.similarityScore === 3){
+      return (350)
+    }
+    if ( this.props.similarityScore >= 4){
+      return (400)
     }
   }
 
@@ -107,12 +110,12 @@ class ConstellationArtwork extends Component {
           onMouseOver={this.handleMouseOver}
           onMouseOut={this.handleMouseOff}
         >
-          <img draggable="false" className="artworkImage" src={require(".././images/979_22.jpg")} alt=""></img>
+          <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img>
           <img
               className="objectMoreButton"
               src={require(".././images/buttons/more_Button.svg")}
               alt=""
-              onClick={() => {this.openArtworkInfoPanel(artworkData.access_num)}}
+              onClick={() => {this.openArtworkInfoPanel(artworkData.access_num, artworkData.link)}}
           ></img>
           <img
             className="objectExitButton"

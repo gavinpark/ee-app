@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import '../App.css';
 
 class DatabaseItem extends Component {
-  addWorkToConstellation = (access_num, similarityScore) => {
-    this.props.addWorkToConstellation(access_num, similarityScore);
+  addWorkToConstellation = (access_num, similarityScore, link) => {
+    this.props.addWorkToConstellation(access_num, similarityScore, link);
   }
   render() {
     const { artworkData, artwork } = this.props;
