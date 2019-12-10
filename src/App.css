@@ -277,8 +277,8 @@
 table{
   display: grid;
   grid-area: 3 / 8 / 19 / 14;
-  grid-template-columns: repeat(6, 1fr);  
-  grid-template-rows: repeat(16, 1fr);
+  grid-template-columns: repeat(6, 1fr); 
+  grid-template-rows: repeat(16, 5.56vh); 
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -287,8 +287,6 @@ tr{
  grid-column-end: span 6; 
  display: grid;
  grid-template-columns: repeat(6, 1fr);
- grid-area: auto;
-
 }
 
 th{
@@ -301,7 +299,6 @@ td{
 
 th, td {
 
-  /* padding: .595vh; */
   padding: 6px 12px 6px 12px;
   text-align: left;
   border: 2px solid red;
@@ -310,7 +307,6 @@ th, td {
   font-size: 1rem;
   color: red;
   border-spacing: none;
- 
 }
 
 /* ESSAY WINDOW */

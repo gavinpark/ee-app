@@ -39,7 +39,10 @@ class ArtworkInfoPanel extends Component {
           <td>{artworkData.access_date}</td>
 
           <th>Dimensions</th>
-          <td>{artworkData.length}</td>
+          <td>{artworkData.length}cm</td>
+
+          <th>Status</th>
+          <td>{artworkData.status}</td>
 
           <th>Credit</th>
           <td>{artworkData.credit}</td>
