@@ -1,3 +1,5 @@
+import * as _ from 'lodash';
+
 import allWorks from './all_items.json';
 
 import allWords from './all_words.json';
@@ -12,6 +14,7 @@ export default function reducer(state = {
   isWelcomeOpen: true,
   isLandingOpen: true,
   isCopyrightOpen: true,
+  openedArtwork: null,
   isConstellationTextOpen: true,
   selectedWorks: [], //{ accessNum, similarityScore }[],
   selectedKeywords: {}, // { [keyword]: { worksInConstellationWithKeyword: [] } }
@@ -53,7 +56,8 @@ export default function reducer(state = {
     case 'TOGGLE_DETAIL_PANEL':
       return {
         ...state,
-        isDetailPanelOpen: !state.isDetailPanelOpen
+        isDetailPanelOpen: !state.isDetailPanelOpen,
+        openedArtwork: action.access_num,
       };
     case 'CLOSE_COPYRIGHT_WINDOW':
       return {
@@ -152,22 +156,28 @@ export default function reducer(state = {
         hoveredKeyword: null,
       }
     case 'ON_HOVER_ARTWORK':
-      Object.keys(state.selectedKeywords).forEach((keyword) => {
-        const keywordObj = state.selectedKeywords[keyword];
+      const newState = _.cloneDeep(state.selectedKeywords);
+      Object.keys(newState).forEach((keyword) => {
+        const keywordObj = newState[keyword];
         const isRelated = keywordObj.worksInConstellationWithKeyword.includes(action.artwork);
         if (isRelated) {
           keywordObj.isRelatedToHoveredArtwork = true;
         }
       });
-      console.log('!!!!!!!!!!!!!!!!!!')
-      console.log(state.selectedKeywords)
-      return state;
+      return {
+        ...state,
+        selectedKeywords: newState,
+      };
     case 'OFF_HOVER_ARTWORK':
-      Object.keys(state.selectedKeywords).forEach((keyword) => {
-        const keywordObj = state.selectedKeywords[keyword];
+      const newOffHoverState = _.cloneDeep(state.selectedKeywords);
+      Object.keys(newOffHoverState).forEach((keyword) => {
+        const keywordObj = newOffHoverState[keyword];
         keywordObj.isRelatedToHoveredArtwork = false;
       });
-      return state;
+      return {
+        ...state,
+        selectedKeywords: newOffHoverState,
+      };
     default:
       return state;
   }
@@ -202,9 +212,10 @@ export const toggleConstellationText = () => {
     type: 'TOGGLE_CONSTELLATION_TEXT',
   };
 };
-export const toggleDetailPanel = () => {
+export const toggleDetailPanel = (access_num) => {
   return {
     type: 'TOGGLE_DETAIL_PANEL',
+    access_num,
   };
 };
 
@@ -355,6 +366,7 @@ export const offHoverKeyword = () => {
 }
 
 export const onHoverArtwork = (artwork) => {
+  console.log('!!!')
   return {
     type: 'ON_HOVER_ARTWORK',
     artwork,
@@ -362,6 +374,7 @@ export const onHoverArtwork = (artwork) => {
 }
 
 export const offHoverArtwork = () => {
+  console.log('???')
   return {
     type: 'OFF_HOVER_ARTWORK',
   }
