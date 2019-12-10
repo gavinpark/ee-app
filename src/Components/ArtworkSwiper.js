@@ -10,7 +10,7 @@ class ArtworkSwiper extends Component {
         return (
             <div className="infoPanelImage">
                 <Swiper>
-                    <img className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + this.props.link} alt=""></img>
+                    <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + this.props.link} alt=""></img>
                     <div>Slide 2</div>
                     <div>Slide 3</div>
                 </Swiper>

@@ -17,7 +17,7 @@ class LandingItem extends Component {
           <div
             className="twoTags"
             onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
-           ><img className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img></div>
+           ><img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img></div>
         )
       }
       if (artwork.similarityScore === 3) {
@@ -25,7 +25,7 @@ class LandingItem extends Component {
           <div
             className="threeTags"
             onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
-          ><img className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img> </div>
+          ><img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img> </div>
         )
       }
       if (artwork.similarityScore >= 4) {
@@ -33,14 +33,14 @@ class LandingItem extends Component {
           <div
             className="fourTags"
             onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
-          ><img className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img> </div>
+          ><img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img> </div>
         )
       }
       return (
         <div
           onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
         >
-          <img key={artworkData.access_num} className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img>
+          <img draggable="false" key={artworkData.access_num} className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img>
         </div>
       )
     }
