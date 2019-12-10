@@ -59,7 +59,7 @@ class ConstellationKeyword extends Component {
       }
     render() {
       const word = this.props.keyword;
-      console.log(this.props.isRelatedToHoveredArtwork)
+      // console.log(this.props.isRelatedToHoveredArtwork)
       const isRelatedToHoveredArtworkClass = this.props.isRelatedToHoveredArtwork ? 'isRelatedToHoveredArtwork' : '';
         return (
             <Rnd

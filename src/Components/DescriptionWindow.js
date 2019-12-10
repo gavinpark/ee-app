@@ -50,7 +50,6 @@ class DescriptionWindow extends Component {
         });
     }
     openArtworkInfoPanel(access_num) {
-        console.log('in artwork info panel');
         this.props.toggleDetailPanel(access_num);
     }
 

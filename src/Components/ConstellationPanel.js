@@ -17,7 +17,6 @@ class ConstellationPanel extends Component {
   }
   componentDidMount() {
     setTimeout(() => {
-      console.log('got text!');
       this.setState({
         constBoxVisibile: true
       })

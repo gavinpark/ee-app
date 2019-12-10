@@ -8,10 +8,11 @@ class ArtworkSwiper extends Component {
     getSwiper() {
         if (this.props.link.length >= 2) {
             {
-                Object.keys(this.props.link.map((image) => {
-                    return <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + { image }} alt=""></img>
+                this.props.link.map((image) => {
+                    console.log('images', image);
+                    return <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + image } alt=""></img>
                 })
-                )}
+            }
         } else {
             return (
                 <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + this.props.link[0]} alt=""></img>

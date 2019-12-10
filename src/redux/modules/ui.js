@@ -159,8 +159,8 @@ export default function reducer(state = {
           keywordObj.isRelatedToHoveredArtwork = true;
         }
       });
-      console.log('!!!!!!!!!!!!!!!!!!')
-      console.log(state.selectedKeywords)
+      // console.log('!!!!!!!!!!!!!!!!!!')
+      // console.log(state.selectedKeywords)
       return state;
     case 'OFF_HOVER_ARTWORK':
       Object.keys(state.selectedKeywords).forEach((keyword) => {
