@@ -58,7 +58,8 @@ class ConstellationKeyword extends Component {
             <Rnd
                 enableResizing={null}
                 style={{ zIndex: this.state.zIndex }}
-                default={{
+                default={
+                  position{
                     x: this.state.randomX,
                     y: this.state.randomY,
                 }}
