@@ -5,9 +5,6 @@ import '../App.css';
 import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork } from '../redux/modules/ui';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
-// TODO: ADD RANDOMIZE POSITION FEAT ON ESSAY/WELCOME BOXES AS WELL
-
-// TODO: ADD BOUNDS TO RND 
 
 class ConstellationArtwork extends Component {
   constructor(props) {
