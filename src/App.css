@@ -239,10 +239,7 @@
 }
 
 .infoPanelImage {
-  grid-column-start: 1;
-  grid-column-end: 8;
-  grid-row-start: 1;
-  grid-row-end: 19;
+  grid-area: 3 / 2 / 17 / 8;
   border: 2px solid red;
   margin: -2px -2px -2px -2px;
   overflow: scroll;
@@ -263,9 +260,7 @@
   color: red;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   font-size: 40px;
-  grid-column-start: 14;
-  grid-row-end: span 2;
-  grid-row-start: 15;
+  grid-area: 1 / 14 / 3 / 15;
   text-align: center;
   line-height: 11.11vh;
   vertical-align: middle;
@@ -276,7 +271,7 @@
 
 table{
   display: grid;
-  grid-area: 3 / 8 / 19 / 14;
+  grid-area: 3 / 8 / 17 / 14;
   grid-template-columns: repeat(6, 1fr); 
   grid-template-rows: repeat(16, 5.56vh); 
   overflow-x: hidden;
@@ -291,12 +286,23 @@ tr{
 
 th{
   grid-column-end: span 2;
+  grid-column-start: 1;
 }
 
 td{
   grid-column-end: span 4;
 }
 
+.span2-row{
+grid-row-end: span 2;
+}
+.span3-row{
+  grid-row-end: span 3;
+}
+.span4-row{
+  grid-row-end: span 4;
+  overflow: scroll;
+}
 th, td {
 
   padding: 6px 12px 6px 12px;
