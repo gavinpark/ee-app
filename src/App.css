@@ -236,8 +236,8 @@
   overflow-y: hidden;
   height: 100vh;
   width: 100vw;
-  
 }
+
 .databaseInfo > div {
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
