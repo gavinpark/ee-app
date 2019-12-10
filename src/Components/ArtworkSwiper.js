@@ -5,18 +5,28 @@ import '../App.css';
 
 
 class ArtworkSwiper extends Component {
+    getSwiper() {
+        if (this.props.link.length >= 2) {
+            {
+                this.props.link.map((image) => {
+                    return <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + { image }} alt=""></img>
+                })
+            }
+        } else {
+            return (
+                <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + this.props.link[0]} alt=""></img>
+            )
+        }
+    }
     render() {
-// TODO: PASS PARAMS AND MAP INTO SWIPER
+        // TODO: PASS PARAMS AND MAP INTO SWIPER
         return (
             <div className="infoPanelImage">
-                <Swiper>
-                    <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + this.props.link} alt=""></img>
-                    <div>Slide 2</div>
-                    <div>Slide 3</div>
-                </Swiper>
+                 <Swiper>
+                    {this.getSwiper()}
+                 </Swiper>
             </div>
         );
-
     }
 }
 

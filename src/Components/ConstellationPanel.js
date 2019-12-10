@@ -42,8 +42,6 @@ class ConstellationPanel extends Component {
   }
 
   renderConstellationKeywords() {
-    console.log('%%%%%%%%%%%%%%%%')
-    console.log(this.props.selectedKeywords)
     return Object.keys(this.props.selectedKeywords).map((keyword) => {
       return <div><ConstellationKeyword
         keyword={keyword}

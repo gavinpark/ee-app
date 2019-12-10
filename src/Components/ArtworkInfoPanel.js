@@ -19,7 +19,7 @@ class ArtworkInfoPanel extends Component {
       <div className="databaseInfo">
 
 
-        <ArtworkSwiper link={artworkData.link}/>
+        <ArtworkSwiper link={artworkData.link} {...this.prop}/>
 
         <table>
 
