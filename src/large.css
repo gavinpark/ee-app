@@ -15,36 +15,41 @@
         .infoPanelDivDesktop{
           display: none;
         }
+
         .infoPanelDivDesktop2 {
           display: block;
         }
+
         .threeTags, .fourTags{
           grid-column-end: span 3;
           grid-row-end: span 3;
         }
+
         .copyrightButton{
           grid-column-start: 5;
           grid-row-start: 1;
         }  
+
         .infoExitBox {
           grid-column: 9;
         }
+
         table{
-          grid-column-start: 5;
-          grid-column-end: 10;
-          grid-row-start: 3;
-          grid-row-end: 19;
+          grid-area: 3 / 5 / 19 / 10;
 
           grid-template-columns: repeat(5, 1fr);
           grid-template-rows: repeat(12, minmax(1fr, auto));
         }
+
         tr{
           grid-column-end: span 5; 
           grid-template-columns: repeat(5, 1fr);
          }
+
         th{
           grid-column-end: span 2;
         }
+
         td{
           grid-column-end: span 3;
         }
@@ -74,10 +79,7 @@
         }
 
         table{
-          grid-column-start: 2;
-          grid-column-end: 7;
-          grid-row-start: 9;
-          grid-row-end: 13;
+          grid-area: 9 / 2 / 19 / 7;
         }
 
         .infoPanelDivDesktop{
@@ -135,10 +137,11 @@
       }
 
       table{
-        grid-column-start: 1;
-        grid-column-end: 7;
-        grid-row-start: 10;
-        grid-row-end: 13;
+        grid-area: 10 / 1 / 19 / 7;
+      }
+
+      th, td{
+        font-size: .76rem;
       }
 
       .infoPanelDivDesktop{
@@ -156,7 +159,7 @@
         grid-row-end: span 9;
       }
       .copyrightButton{
-        grid-column-start: 1;
+        grid-area: 4 / 5 / 7 / 7;
       }  
       .twoTags{
         grid-column-end: span 1;
