@@ -308,6 +308,9 @@ th, td {
   color: red;
   border-spacing: none;
 }
+.infoPanelFiller{
+  grid-area: 1 / 1 / 9 / 10;
+}
 
 /* ESSAY WINDOW */
 

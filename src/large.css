@@ -12,13 +12,13 @@
           grid-row-start: 1;
         }
 
-        .infoPanelDivDesktop{
+        /* .infoPanelDivDesktop{
           display: none;
         }
 
         .infoPanelDivDesktop2 {
           display: block;
-        }
+        } */
 
         .threeTags, .fourTags{
           grid-column-end: span 3;
@@ -80,14 +80,14 @@
 
         table{
           grid-area: 9 / 2 / 19 / 7;
+          grid-template-columns: repeat(5, 1fr);
         }
 
-        .infoPanelDivDesktop{
-          display: none;
+        td{
+          grid-column-end: span 3;
+
         }
-        .infoPanelDivTablet{
-          display: block;
-        }
+
         .infoPanelImage {
           grid-column-start: 1;
           grid-column-end: span 4;
@@ -141,14 +141,10 @@
       }
 
       th, td{
-        font-size: .76rem;
+        font-size: .9rem;
       }
 
       .infoPanelDivDesktop{
-        display: none;
-      }
-      .infoPanelDivMobile{
-        display: block;
         grid-row-end: span 3;
         grid-column-end: span 2;
       }
