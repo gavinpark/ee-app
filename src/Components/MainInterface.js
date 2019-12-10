@@ -17,7 +17,7 @@ class MainInterface extends Component {
                 <div >
                     <DatabasePanel />
                 </div>
-                {this.props.artWorkInfoPanelOpen && <ArtworkInfoPanel />}
+                {this.props.isDetailPanelOpen && <ArtworkInfoPanel />}
             </div>
         );
     }
