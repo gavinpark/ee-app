@@ -85,15 +85,16 @@ export default function reducer(state = {
 
         const newLastIndexInArtworksArr = state.selectedWorks.length;
         const newSelectedKeywords = mergeSelectedKeywords(action.selectedKey, state.selectedKeywords);
+        const newSelectedArtworksAfterSelect = [...state.selectedWorks, {
+          accessNum: action.selectedKey,
+          similarityScore: action.similarityScore || 1,
+        }];
         return {
           ...state,
           activeWorkIndex: newLastIndexInArtworksArr,
           selectedKeywords: newSelectedKeywords,
-          relatedWorks: action.relatedArtworks,
-          selectedWorks: [...state.selectedWorks, {
-            accessNum: action.selectedKey,
-            similarityScore: action.similarityScore || 1,
-          }]
+          relatedWorks: filterRelatedWorksToRemoveAlreadyInConstellation(newSelectedArtworksAfterSelect, action.relatedArtworks),
+          selectedWorks: newSelectedArtworksAfterSelect
         }
     case 'REMOVE_ARTWORK':
         const { removedAccessNum } = action;
@@ -117,7 +118,7 @@ export default function reducer(state = {
           }
         }
         const newSelectedKeywordsAfterRemove = findNewSelectedKeywordsAfterRemove(state.selectedKeywords, removedAccessNum);
-        const relatedArtworks = findRelatedWork(state.selectedWorks[newLastIndexInArtworksArrAfterRemove].accessNum);
+        const relatedArtworks = filterRelatedWorksToRemoveAlreadyInConstellation(state.selectedWorks, findRelatedWork(state.selectedWorks[newLastIndexInArtworksArrAfterRemove].accessNum));
 
         return {
           ...state,
@@ -294,7 +295,6 @@ export const shuffle = (array) => {
 }
 
 const findRelatedWork = (accessNum) => {
-  // TODO: DONT SHOW WORKS THAT ARE ALREADY IN CONSTELLATION
   const keyWordsInSelectedWork = allWorks[accessNum].final_words;
 
   const allRelatedWorks = keyWordsInSelectedWork.reduce((obj, word) => {
@@ -316,6 +316,18 @@ const findRelatedWork = (accessNum) => {
   var arrayOfWorks = Object.values(allRelatedWorks);
   arrayOfWorks = shuffle(arrayOfWorks);
   return arrayOfWorks;
+}
+
+const filterRelatedWorksToRemoveAlreadyInConstellation = (selectedWorks, relatedWorks) => {
+  return relatedWorks.filter((related) => {
+    const isIn = selectedWorks.reduce((selected) => {
+      if (selected === related) {
+        return true
+      }
+      return false
+    }, false)
+    return !isIn;
+  });
 }
 
 const findNewSelectedKeywordsAfterRemove = (existingSelectedKeywords, removedAccessNum) => {
