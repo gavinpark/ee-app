@@ -12,7 +12,6 @@ import { toggleLanguage } from '../redux/modules/ui';
 class WelcomeWindow extends Component {
 
 
-    
     getFootnotes(){
         const notes = EssayData[0].footnote;
         notes.map((note) => {
