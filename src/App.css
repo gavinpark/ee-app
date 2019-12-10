@@ -139,6 +139,7 @@
   position: fixed;
   right: 0;
   background: white;
+  justify-items: unset;
 }
 .databasePanel > div {
   border: 2px solid red;
