@@ -26,10 +26,8 @@ class App extends Component {
         <div className="top"></div>
         <div className="bottom"></div>
         <BrowserRouter>
-          <div>
             { this.props.isLandingOpen && <Landing />}
             { this.props.isDetailPanelOpen && <ArtworkInfoPanel/>}
-          </div>
           { !this.props.isLandingOpen && <MainInterface />}
       
         </BrowserRouter>

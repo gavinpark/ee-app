@@ -86,6 +86,10 @@ class ConstellationArtwork extends Component {
     this.props.offHoverArtwork();
   }
 
+  removeWork = (access_num) => {
+    this.props.removeWorkFromConstellation(access_num);
+  }
+
   render() {  
     const artworkData = window.allWorks[this.props.access_num];
     const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : '';
@@ -118,7 +122,7 @@ class ConstellationArtwork extends Component {
             className="objectExitButton"
             src={require(".././images/buttons/exit_Button.svg")}
             alt=""
-            onClick={() => { this.props.removeWorkFromConstellation(artworkData.access_num) }}
+            onClick={() => { this.removeWork(artworkData.access_num) }}
           ></img>
         </div>
       </Rnd>

@@ -101,22 +101,44 @@ export default function reducer(state = {
         const indexOfRemovedAccessNum = state.selectedWorks.findIndex((work) => {
           return work.accessNum === removedAccessNum;
         });
-        if (indexOfRemovedAccessNum === 0) {
-          return state;
-        };
         state.selectedWorks[indexOfRemovedAccessNum] = {
           isRemoved: true,
         }
 
         let newLastIndexInArtworksArrAfterRemove = state.selectedWorks.length - 1;
         let foundLastIndex = false;
+        let isLastOneRemoved = false;
         while (foundLastIndex === false) {
           if (state.selectedWorks[newLastIndexInArtworksArrAfterRemove].isRemoved) {
+            if (newLastIndexInArtworksArrAfterRemove === 0) {
+              foundLastIndex = true;
+              isLastOneRemoved = true;
+            }
             newLastIndexInArtworksArrAfterRemove -= 1;
           } else {
             foundLastIndex = true;
           }
         }
+
+        if (isLastOneRemoved) {
+          const {
+            selectedKey,
+            relatedArtworks,
+          } = findRandomWorkHelper();
+          const newSelectedKeywords = mergeSelectedKeywords(selectedKey, {});
+          return {
+            ...state, 
+            activeWorkIndex: 0,
+            selectedKeywords: newSelectedKeywords,
+            relatedWorks: relatedArtworks,
+            selectedWorks: [{
+              accessNum: selectedKey,
+              similarityScore: 1,
+            }],  
+            isLandingOpen: true,
+          }
+        }
+
         const newSelectedKeywordsAfterRemove = findNewSelectedKeywordsAfterRemove(state.selectedKeywords, removedAccessNum);
         const relatedArtworks = filterRelatedWorksToRemoveAlreadyInConstellation(state.selectedWorks, findRelatedWork(state.selectedWorks[newLastIndexInArtworksArrAfterRemove].accessNum));
 
@@ -232,10 +254,21 @@ export const increaseHighestZIndex = () => {
   };
 };
 
-export const findRandomArtWork = () => {
+function findRandomWorkHelper() {
   const keys = Object.keys(allWorks);
   const selectedKey = keys[Math.floor(Math.random() * keys.length)];
   const relatedArtworks = findRelatedWork(selectedKey);
+  return {
+    selectedKey,
+    relatedArtworks,
+  }
+}
+
+export const findRandomArtWork = () => {
+  const {
+    selectedKey,
+    relatedArtworks,
+  } = findRandomWorkHelper();
   return {
     type: 'SELECT_NEW_ARTWORK',
     selectedKey,
