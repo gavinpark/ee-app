@@ -237,10 +237,10 @@ export const closeEssaySegment = (index) => {
   };
 };
 
-export const toggleDetailPanel = () => {
+export const toggleDetailPanel = (access_num) => {
   return {
     type: 'TOGGLE_DETAIL_PANEL',
-    // access_num,
+    access_num,
   };
 };
 

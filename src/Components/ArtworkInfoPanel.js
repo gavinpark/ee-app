@@ -122,8 +122,7 @@ class ArtworkInfoPanel extends Component {
     }
     else {
       return(
-        <div></div>
-      )
+      "")
     } 
   }
 
@@ -133,20 +132,18 @@ render() {
   // (don't forget to pass the correct props into this component)
   // const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex]];
   const artworkData = window.allWorks[this.props.openedArtwork];
+  
   const emptiesArray = new Array(135);
   const empties = emptiesArray.fill('', 0, 135);
   const emptyGrid = empties.map((empty) => { return <div className='infoPanelDivDesktop'>{empty}</div> });
 
   return (
     <div className="databaseInfo">
-
-
-        <ArtworkSwiper link={artworkData.link} {...this.props}/>
-
-
-      {emptyGrid}
+      {/* <ArtworkSwiper link={artworkData.link} {...this.props}/> */}
       {this.hasRights(artworkData)}
 
+      {emptyGrid}
+      
       <table>
 
         <th>Artist</th>

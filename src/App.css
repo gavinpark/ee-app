@@ -43,7 +43,7 @@
 .essayButton{
   overflow: scroll;
   color: white;
-  background-color: blue;
+  background-color: rgb(255, 204, 204);
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: left;
   padding: 12px;
