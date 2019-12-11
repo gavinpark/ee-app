@@ -7,20 +7,23 @@ class DatabaseItem extends Component {
     this.props.addWorkToConstellation(access_num, similarityScore, link);
   }
   render() {
+    <div id="overlay"></div>
+
     const { artworkData, artwork } = this.props;
     const isRelatedToHoveredKeyword = window.allWorks[artworkData.access_num].final_words.includes(this.props.hoveredKeyword);
-    const isRelatedToHoveredKeywordClassName = isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : '';
+    const isRelatedToHoveredKeywordClassName = isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : 'isNOTrelatedToHoveredKeyword';
+    const isRelatedToHoveredKeywordID = isRelatedToHoveredKeyword ? '' : 'overlay';
       if (artworkData.have_rights === 'Oui') {
         if (artwork.similarityScore === 2) {
           return (
-              <div className={`${isRelatedToHoveredKeywordClassName} twoTags`} 
+              <div id={`${isRelatedToHoveredKeywordID}`} className={`${isRelatedToHoveredKeywordClassName} twoTags`} 
               onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
               ><img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
           )
         }
         if (artwork.similarityScore === 3){
           return(
-            <div className={`${isRelatedToHoveredKeywordClassName} threeTags`} 
+            <div id={`${isRelatedToHoveredKeywordID}`} className={`${isRelatedToHoveredKeywordClassName} threeTags`} 
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
             ><img draggable="false" className ="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
           )
