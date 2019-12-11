@@ -9,6 +9,8 @@ import { toggleLanguage, closeEssaySegment, increaseHighestZIndex  } from '../re
 // TODO be able to remember language state when opening multiple windows
 
 class EssayWindow extends Component {
+
+ 
     constructor(props) {
         super(props);
         this.state = {
@@ -76,14 +78,18 @@ class EssayWindow extends Component {
                         onClick={() => {this.props.closeEssaySegment(this.props.index)} }
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{this.props.essay}</div>
+                        <div className="essayBody">{this.props.essayText}</div>
                     </div>
+                    <div className="essayFootnoteBox">
+                        <div className="footnoteEnd">
+                    {this.props.footnote}
+                </div></div>
                 </div>
             )
         } return (
             <div>
                 <div className="essayHeaderBox">
-                    <div className="essayHeader">{this.props.essay}</div>
+                    <div className="essayHeader">{this.props.essayHeaderFR}</div>
                 </div>
                 <div>
                     <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
@@ -97,14 +103,15 @@ class EssayWindow extends Component {
                     onClick={() => {this.props.closeEssaySegment(this.props.index)} }
                 ></img>
                 <div className="essayBodyBox">
-                    <div className="essayBody">{this.props.essay}</div>
-
+                    <div className="essayBody">{this.props.essayTextFR}</div>
+                </div>
+                <div className="essayFootnoteBox">
+                    {this.props.footnoteFR}
                 </div>
             </div>
         )
     }
     render() {
-        console.log(' rendering essay window' + this.props.index);
         if (this.props.displayed === false) {
             return null;
         }
