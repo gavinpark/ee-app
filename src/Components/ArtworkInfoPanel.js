@@ -141,7 +141,7 @@ render() {
     <div className="databaseInfo">
 
 
-        <ArtworkSwiper link={artworkData.link} {...this.prop}/>
+        <ArtworkSwiper link={artworkData.link} {...this.props}/>
 
 
       {emptyGrid}

@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ConstellationArtwork from './ConstellationArtwork';
 import WelcomeWindow from './WelcomeWindow';
+import EssayWindow from './EssayWindow';
 import DescriptionWindow from './DescriptionWindow';
 import ConstellationKeyword from './ConstellationKeyword';
-import ConstellationTextWindow from './ConstellationTextWindow';
 import '../App.css';
-import { toggleWelcome, toggleConstellationText } from '../redux/modules/ui';
+import { toggleWelcome, closeEssaySegment } from '../redux/modules/ui';
 
 class ConstellationPanel extends Component {
   constructor(props) {
@@ -48,25 +48,23 @@ class ConstellationPanel extends Component {
       /></div>
     })
   }
-  renderConstellationTextWindow() {
-    if (this.state.constBoxVisibile === true) {
-      return (
-        <div><ConstellationTextWindow toggleConstellationText={this.props.toggleConstellationText}/></div>
-      )
-    }
+
+  renderEssayWindows() {
+    return this.props.essayWindows.map((essay, index) => {
+      return <EssayWindow {...essay} closeEssaySegment={this.props.closeEssaySegment} index={index} />
+    })
   }
+
   render() {
     // https://reactjs.org/docs/conditional-rendering.html
     // search for &&
     return (
       <div className="constellationPanel">
         {this.props.isWelcomeOpen && <div><WelcomeWindow toggleWelcome={this.props.toggleWelcome} /></div>}
+        {this.renderEssayWindows()}
         {this.renderConstellationArtworks()}
         {this.renderConstellationKeywords()}
-        {this.props.isConstellationTextOpen && this.renderConstellationTextWindow()}
       </div>
-
-
     );
   }
 }
@@ -74,13 +72,15 @@ const mapStateToProps = (state) => {
   return {
     relatedWorks: state._ui.relatedWorks,
     isWelcomeOpen: state._ui.isWelcomeOpen,
+    isEssayOpen: state._ui.isEssayOpen,
     activeWorkIndex: state._ui.activeWorkIndex,
     selectedWorks: state._ui.selectedWorks,
     selectedKeywords: state._ui.selectedKeywords,
-    isConstellationTextOpen: state._ui.isConstellationTextOpen
+    essayWindows: state._ui.essayWindows,
   };
 };
 
 export default connect(mapStateToProps, {
-  toggleWelcome, toggleConstellationText
+  toggleWelcome,
+  closeEssaySegment 
 })(ConstellationPanel);

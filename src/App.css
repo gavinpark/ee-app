@@ -25,7 +25,6 @@
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   padding: 8px 6px 8px 6px;
   font-size: 11pt;
-  line-height: 12pt;
   text-align: left;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -44,6 +43,7 @@
 .essayButton{
   overflow: scroll;
   color: white;
+  background-color: blue;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: left;
   padding: 12px;
@@ -53,11 +53,13 @@
 .twoTags{
   grid-column-end: span 2;
   grid-row-end: span 2;
+  font-size: 1.4rem;
 }
 
 .threeTags {
   grid-column-end: span 3;
   grid-row-end: span 3;
+  font-size: 2rem;
 }
 
 .fourTags {
@@ -138,6 +140,7 @@
   position: fixed;
   right: 0;
   background: white;
+  justify-items: unset;
 }
 .databasePanel > div {
   border: 2px solid red;
@@ -233,6 +236,7 @@
   height: 100vh;
   width: 100vw;
 }
+
 .databaseInfo > div {
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
@@ -356,7 +360,7 @@ th, td {
 .essayBodyBox{
   position: absolute;
   width: 100%;
-  height: 410px;
+  height: 310px;
   bottom: 0;
   top: 70px;
   overflow: scroll;

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleLanguage, toggleCopyright} from '../redux/modules/ui';
+import { toggleLanguage, toggleCopyright } from '../redux/modules/ui';
 
 
 
@@ -69,9 +69,9 @@ class CopyrightWindow extends Component {
                 enableResizing={null}
             // style={{overflow: "scroll"}}
             >
-             <div>
-                 {this.getLanguage()}
-             </div>
+                <div>
+                    {this.getLanguage()}
+                </div>
             </Rnd>
 
         );

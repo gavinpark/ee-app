@@ -4,6 +4,8 @@ import allWorks from './all_items.json';
 
 import allWords from './all_words.json';
 
+import EssayData from '../../data/EssayData';
+
 window.allWorks = allWorks;
 window.allWords = allWords;
 
@@ -23,7 +25,12 @@ export default function reducer(state = {
   activeKeywords: [], // TODO: DO WE NEED THIS?
   hoveredKeyword: null,
   isDetailPanelOpen: false,
-  essayWindows: [], //string[]
+  essayWindows: EssayData.map((essay) => {
+    return {
+      ...essay,
+      displayed: false,
+    }
+  }),
   haveCopyrightWindowsBeenViewed: false,
   highestZIndex: 1,
 }, action = {}) {
@@ -48,11 +55,18 @@ export default function reducer(state = {
         ...state,
         isCopyrightOpen: !state.isCopyrightOpen,
       }
-    case 'TOGGLE_CONSTELLATION_TEXT':
+    case 'OPEN_ESSAY':
+        const newOpenState = _.cloneDeep(state);
+        newOpenState.essayWindows[action.index].displayed = true;
       return {
-        ...state,
-        isConstellationTextOpen: !state.isConstellationTextOpen,
-      }
+        ...newOpenState,
+      };
+    case 'CLOSE_ESSAY':
+        const newStateAfterEssayClose = _.cloneDeep(state);
+        newStateAfterEssayClose.essayWindows[action.index].displayed = false;
+      return {
+        ...newStateAfterEssayClose,
+      };
     case 'TOGGLE_DETAIL_PANEL':
       return {
         ...state,
@@ -208,15 +222,25 @@ export const toggleCopyright = () => {
     type: 'TOGGLE_COPYRIGHT',
   };
 };
-export const toggleConstellationText = () => {
+
+export const openEssaySegment = (index) => {
   return {
-    type: 'TOGGLE_CONSTELLATION_TEXT',
+    type: 'OPEN_ESSAY',
+    index,
   };
 };
-export const toggleDetailPanel = (access_num) => {
+
+export const closeEssaySegment = (index) => {
+  return {
+    type: 'CLOSE_ESSAY',
+    index,
+  };
+};
+
+export const toggleDetailPanel = () => {
   return {
     type: 'TOGGLE_DETAIL_PANEL',
-    access_num,
+    // access_num,
   };
 };
 

@@ -39,8 +39,6 @@ class ConstellationKeyword extends Component {
         var min = 0;
         var x = document.getElementsByClassName('constellationPanel')[0].offsetHeight;
         var randomX = Math.floor(Math.random() * (x - min)) + min;
-       
-    
         // return randomX;
         this.setState({
           randomX,
@@ -50,8 +48,6 @@ class ConstellationKeyword extends Component {
         var min = 0;
         var y = document.getElementsByClassName('constellationPanel')[0].offsetWidth;
         var randomY = Math.floor(Math.random() * (y - min)) + min;
-       
-    
         // return randomY;
         this.setState({
           randomY,
