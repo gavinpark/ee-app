@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleDetailPanel, increaseHighestZIndex } from '../redux/modules/ui';
+import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation } from '../redux/modules/ui';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 class DescriptionWindow extends Component {
@@ -49,6 +49,9 @@ class DescriptionWindow extends Component {
     openArtworkInfoPanel(access_num) {
         this.props.toggleDetailPanel(access_num);
     }
+    removeWork = (access_num) => {
+        this.props.removeWorkFromConstellation(access_num);
+      } 
 
     // artworkData.subject
     render() {
@@ -84,6 +87,7 @@ class DescriptionWindow extends Component {
                     <img className="objectExitButton"
                         src={require(".././images/buttons/exit_Button.svg")}
                         alt=""
+                        onClick={() => { this.removeWork(artworkData.access_num) }}
                     ></img></div>
 
             </Rnd>
@@ -103,5 +107,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-    toggleDetailPanel, increaseHighestZIndex
+    toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation,
 })(DescriptionWindow);
