@@ -1,0 +1,27 @@
+
+
+you can check out how i'm adding 
+the classes in constellation and keyword
+
+like appending className
+
+you wont be able to do it with just css
+
+because there will be 3 distinct states
+
+1. nothing is hovered (default)
+
+2. something is hovered and it is 
+related (highlight)
+
+3. something is hovered and it is not 
+related (greyed out)
+
+
+so i have a ternary right now
+you'll need to add a 'isKeywordHovered' 
+and 'isArtworkHovered' to the redux state
+and toggle that on and off on the mouseOver 
+and mouseOut redux actions and then change 
+the ternary to a nested ternary or an if 
+else else if

@@ -478,9 +478,14 @@ th, td {
 
 
 .isRelatedToHoveredKeyword {
-  box-shadow: 10px 10px;
+  opacity: 100%;
 }
-
 .isRelatedToHoveredArtwork {
-  box-shadow: 10px 10px;
+  opacity: 100%;
+}
+.isNOTrelatedToHoveredKeyword{
+  background-color: rgba(0,0,0,0.5);
+}
+.isNOTrelatedToHoveredArtwork{
+  background-color: rgba(0,0,0,0.5);
 }
