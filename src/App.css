@@ -10,7 +10,6 @@
 /*GENERAL STYLING*/
 
 .artworkImage {
-  /* background-color: red; */
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -209,19 +208,18 @@
   justify-content: center;
   align-items: center;
 }
+
 .infoExitSvg{
   position: absolute;
   width: 50%;
   height: 50%;
-  /* margin: 25% 25% 25% 25%; */
 }
+
 .infoExitButton img{
   height: 100%;
   width: 100%;
 }
-/* .copyrightButton p{
-  margin: 29.33%;
-} */
+
 .databaseInfo {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
@@ -241,54 +239,28 @@
 }
 
 .infoPanelImage {
-  grid-column-start: 2;
-  grid-column-end: 8;
-  grid-row-start: 1;
-  grid-row-end: 17;
+  grid-area: 3 / 2 / 17 / 8;
   border: 2px solid red;
   margin: -2px -2px -2px -2px;
   overflow: scroll;
+  padding: 5%;
 }
 
-.dataHeader, .dataField, .dataHeaderReferences, .dataFieldReferences {
-  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  font-size: 20px;
-  overflow: scroll;
-  text-align: left;
-  line-height: 20px;
-  color: red;
-  padding: 12px;
-}
-
-.dataHeader{
-  grid-column-end: span 2;
-  grid-column-start: 8;
-}
-
-.dataField{
-  grid-column-start: 10;
-  grid-column-end: span 4;
-}
-
-.dataHeaderReferences{
-  grid-column-end: span 2;
-  grid-column-start: 8;
-  grid-row-end: span 2;
-}
-
-.dataFieldReferences{
-  grid-column-start: 10;
-  grid-column-end: span 4;
-  grid-row-end: span 2;
+.infoPanelArtwork{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  align-items: center;
 }
 
 .copyrightButton{
   color: red;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   font-size: 40px;
-  grid-column-start: 14;
-  grid-row-end: span 2;
-  grid-row-start: 15;
+  grid-area: 1 / 14 / 3 / 15;
   text-align: center;
   line-height: 11.11vh;
   vertical-align: middle;
@@ -299,48 +271,51 @@
 
 table{
   display: grid;
-  grid-column-start: 8;
-  grid-column-end: 14;
-  grid-row-start: 3;
-  grid-row-end: 19;
-  
-  /* TODO - PLAY WITH ROW MINMAX TO FIT  */
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(12, minmax(6.25%, auto));
-  
-
+  grid-area: 3 / 8 / 17 / 14;
+  grid-template-columns: repeat(6, 1fr); 
+  grid-template-rows: repeat(16, 5.56vh); 
   overflow-x: hidden;
   overflow-y: scroll;
-
 }
-
 
 tr{
  grid-column-end: span 6; 
  display: grid;
  grid-template-columns: repeat(6, 1fr);
- grid-auto-rows: min-content;
-
- 
 }
+
 th{
   grid-column-end: span 2;
+  grid-column-start: 1;
 }
+
 td{
   grid-column-end: span 4;
 }
+
+.span2-row{
+grid-row-end: span 2;
+}
+.span3-row{
+  grid-row-end: span 3;
+}
+.span4-row{
+  grid-row-end: span 4;
+  overflow: scroll;
+}
 th, td {
 
-  /* padding: .595vh; */
-  padding: 12px;
+  padding: 6px 12px 6px 12px;
   text-align: left;
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: red;
   border-spacing: none;
-  
+}
+.infoPanelFiller{
+  grid-area: 1 / 1 / 9 / 10;
 }
 
 /* ESSAY WINDOW */
