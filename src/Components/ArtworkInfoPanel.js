@@ -81,6 +81,41 @@ class ArtworkInfoPanel extends Component {
     }
   }
 
+  determineHeight(artworkData){
+    if(artworkData.height === "") {
+      return ("")
+    }
+    else{
+      return(artworkData.height + "cm")
+    }
+  }
+  determineLength(artworkData){
+    if(artworkData.length === "") {
+      return ("")
+    }
+    else{
+      return('\xa0' + "x" + '\xa0' + artworkData.length + "cm")
+    }
+  }
+
+  determineWidth(artworkData){
+    if(artworkData.width === "") {
+      return ("")
+    }
+    else{
+      return('\xa0' + "x" + '\xa0' + artworkData.width + "cm")
+    }
+  }
+
+  determineDepth(artworkData){
+    if(artworkData.depth === "") {
+      return ("")
+    }
+    else{
+      return('\xa0' + "x" + '\xa0' + artworkData.depth + "cm")
+    }
+  }
+
   hasRights(artworkData) {
     if (artworkData.have_rights === "Oui") {
       return (<ArtworkSwiper link={artworkData.link} {...this.props}/>)
@@ -127,7 +162,7 @@ render() {
         <td>{artworkData.access_date}</td>
 
         <th>Dimensions</th>
-        <td>{artworkData.length}cm</td>
+        <td>{this.determineHeight(artworkData)}{this.determineLength(artworkData)}{this.determineWidth(artworkData)}{this.determineDepth(artworkData)}</td>
 
         <th>Status</th>
         <td>{artworkData.status}</td>
