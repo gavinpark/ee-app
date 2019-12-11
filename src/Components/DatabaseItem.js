@@ -7,12 +7,9 @@ class DatabaseItem extends Component {
     this.props.addWorkToConstellation(access_num, similarityScore, link);
   }
   render() {
-    // <div id="overlay"></div>
-
     const { artworkData, artwork } = this.props;
     const isRelatedToHoveredKeyword = window.allWorks[artworkData.access_num].final_words.includes(this.props.hoveredKeyword);
-    const isRelatedToHoveredKeywordClassName = isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : 'isNOTrelatedToHoveredKeyword';
-    // const isRelatedToHoveredKeywordID = isRelatedToHoveredKeyword ? '' : 'overlay';
+    const isRelatedToHoveredKeywordClassName = isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : '';
       if (artworkData.have_rights === 'Oui') {
         if (artwork.similarityScore === 2) {
           return (
