@@ -244,9 +244,16 @@
   margin: -2px -2px -2px -2px;
   overflow: scroll;
   padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infoPanelImage .artworkImage{
+  /* height:auto; */
+  object-fit: contain;
 }
 
-.infoPanelArtwork{
+/* .infoPanelArtwork{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -254,7 +261,7 @@
   height: 100%;
   object-fit: contain;
   align-items: center;
-}
+} */
 
 .copyrightButton{
   color: red;

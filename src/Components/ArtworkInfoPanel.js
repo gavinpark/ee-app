@@ -15,7 +15,7 @@ class ArtworkInfoPanel extends Component {
     if((artworkData.title.length > 201) && (artworkData.title.length < 300)){
       return ("span3-row")
     }
-    if((artworkData.title.length > 100) && (artworkData.title.length < 200)){
+    if((artworkData.title.length > 80) && (artworkData.title.length < 200)){
       return("span2-row")
     }
     else{
@@ -30,7 +30,7 @@ class ArtworkInfoPanel extends Component {
     if((artworkData.credit.length > 201) && (artworkData.credit.length < 300)){
       return ("span3-row")
     }
-    if((artworkData.credit.length > 100) && (artworkData.credit.length < 200)){
+    if((artworkData.credit.length > 80) && (artworkData.credit.length < 200)){
       return("span2-row")
     }
     else{
@@ -45,7 +45,7 @@ class ArtworkInfoPanel extends Component {
     if((artworkData.keywords.length > 201) && (artworkData.keywords.length < 300)){
       return ("span3-row")
     }
-    if((artworkData.keywords.length > 100) && (artworkData.keywords.length < 200)){
+    if((artworkData.keywords.length > 80) && (artworkData.keywords.length < 200)){
       return("span2-row")
     }
     else{
@@ -59,7 +59,7 @@ class ArtworkInfoPanel extends Component {
     if((artworkData.subject.length > 201) && (artworkData.subject.length < 300)){
       return ("span3-row")
     }
-    if((artworkData.subject.length > 100) && (artworkData.subject.length < 200)){
+    if((artworkData.subject.length > 80) && (artworkData.subject.length < 200)){
       return("span2-row")
     }
     else{
@@ -73,7 +73,7 @@ class ArtworkInfoPanel extends Component {
     if((artworkData.references.length > 201) && (artworkData.references.length < 300)){
       return ("span3-row")
     }
-    if((artworkData.references.length > 100) && (artworkData.references.length < 200)){
+    if((artworkData.references.length > 80) && (artworkData.references.length < 200)){
       return("span2-row")
     }
     else{
@@ -168,7 +168,7 @@ render() {
         <td>{artworkData.status}</td>
 
         <th className={this.determineCreditRowSize(artworkData)}>Credit</th>
-        <td className={this.determineCreditRowSize(artworkData)}>{artworkData.credit}</td>
+        <td className={this.determineCreditRowSize(artworkData)}>Collection of the Leonard & Bina Ellen Art Gallery. {'\xa0'} {artworkData.credit}</td>
 
         <th>Medium</th>
         <td>{artworkData.medium}</td>
