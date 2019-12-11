@@ -18,7 +18,6 @@ class ArtworkSwiper extends Component {
                 {this.props.link.map((image) => {
                     console.log('images', image);
                     return <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + image} alt=""></img>
-
                 }
 
                 )
