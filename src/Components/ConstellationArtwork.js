@@ -88,7 +88,7 @@ class ConstellationArtwork extends Component {
 
   removeWork = (access_num) => {
     this.props.removeWorkFromConstellation(access_num);
-  }
+  } 
 
   render() {  
     const artworkData = window.allWorks[this.props.access_num];

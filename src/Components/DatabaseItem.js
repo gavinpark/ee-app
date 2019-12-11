@@ -43,7 +43,7 @@ class DatabaseItem extends Component {
           )
         }
   
-        if (artwork.similarityScore ===2){
+        if (artwork.similarityScore ===2){ 
         return (
           <div className={`${isRelatedToHoveredKeywordClassName} description`}
           onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
