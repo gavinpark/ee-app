@@ -5,12 +5,19 @@ import '../App.css';
 
 
 class ArtworkSwiper extends Component {
+    
     getSwiper() {
+            const params = {
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+              },
+            }
         if (this.props.link.length >= 2) {
             {
                 return (this.props.link.map((image) => {
                     console.log('images', image);
-                    return <Swiper><img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + image} alt=""></img></Swiper>
+                    return <Swiper {...params}><img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + image} alt=""></img></Swiper>
 
                 })
 
@@ -23,7 +30,6 @@ class ArtworkSwiper extends Component {
         }
     }
     render() {
-        // TODO: PASS PARAMS AND MAP INTO SWIPER
         return (
             <div className="infoPanelImage">
 
