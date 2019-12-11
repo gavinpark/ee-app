@@ -16,12 +16,8 @@ class ArtworkSwiper extends Component {
         if (this.props.link.length >= 2) {
             return (<Swiper {...params}>
                 {this.props.link.map((image) => {
-                    console.log('images', image);
                     return <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + image} alt=""></img>
-                }
-
-                )
-                }</Swiper>)
+                })}</Swiper>)
         } else {
             return (
                 <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + this.props.link[0]} alt=""></img>
@@ -31,9 +27,7 @@ class ArtworkSwiper extends Component {
     render() {
         return (
             <div className="infoPanelImage">
-
                 {this.getSwiper()}
-
             </div >
         );
     }
