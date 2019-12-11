@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import '../App.css';
 import { toggleCopyright, toggleDetailPanel } from '../redux/modules/ui';
 import CopyrightWindow from './CopyrightWindow.js';
-import { Link } from 'react-router-dom';
 import ArtworkSwiper from './ArtworkSwiper'
 
 
@@ -127,19 +126,23 @@ class ArtworkInfoPanel extends Component {
       )
     } 
   }
+
 render() {
   // here is how you would get the
   // data for the 'current active work'
   // (don't forget to pass the correct props into this component)
   // const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex]];
-  const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex].accessNum]
+  const artworkData = window.allWorks[this.props.openedArtwork];
   const emptiesArray = new Array(135);
   const empties = emptiesArray.fill('', 0, 135);
   const emptyGrid = empties.map((empty) => { return <div className='infoPanelDivDesktop'>{empty}</div> });
 
-  console.log("artwork data|||||||:", artworkData);
   return (
     <div className="databaseInfo">
+
+
+        <ArtworkSwiper link={artworkData.link} {...this.prop}/>
+
 
       {emptyGrid}
       {this.hasRights(artworkData)}
@@ -209,6 +212,7 @@ const mapStateToProps = (state) => {
     isDetailPanelOpen: state._ui.isDetailPanelOpen,
     activeWorkIndex: state._ui.activeWorkIndex,
     selectedWorks: state._ui.selectedWorks,
+    openedArtwork: state._ui.openedArtwork,
   };
 };
 
