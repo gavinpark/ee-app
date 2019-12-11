@@ -1,6 +1,10 @@
+import * as _ from 'lodash';
+
 import allWorks from './all_items.json';
 
 import allWords from './all_words.json';
+
+import EssayData from '../../data/EssayData';
 
 window.allWorks = allWorks;
 window.allWords = allWords;
@@ -12,14 +16,18 @@ export default function reducer(state = {
   isWelcomeOpen: true,
   isLandingOpen: true,
   isCopyrightOpen: true,
-  isEssayOpen: false,
   selectedWorks: [], //string[],
   selectedKeywords: {}, // { [keyword]: { worksInConstellationWithKeyword: [] } }
   relatedWorks: [], // { similarityScore: number, access_num: string }[]
   activeWorkIndex: 0, // (index in selectedWorks array)
   activeKeywords: [], // TODO: DO WE NEED THIS?
   isDetailPanelOpen: false,
-  essayWindows: [], //string[]
+  essayWindows: EssayData.map((essay) => {
+    return {
+      ...essay,
+      displayed: false,
+    }
+  }),
   haveCopyrightWindowsBeenViewed: false,
   highestZIndex: 1,
 }, action = {}) {
@@ -44,11 +52,18 @@ export default function reducer(state = {
         ...state,
         isCopyrightOpen: !state.isCopyrightOpen,
       }
-    case 'TOGGLE_ESSAY':
-      return{
-        ...state,
-        isEssayOpen: !state.isEssayOpen,
-      }
+    case 'OPEN_ESSAY':
+        const newState = _.cloneDeep(state);
+        newState.essayWindows[action.index].displayed = true;
+      return {
+        ...newState,
+      };
+    case 'CLOSE_ESSAY':
+        const newStateAfterEssayClose = _.cloneDeep(state);
+        newStateAfterEssayClose.essayWindows[action.index].displayed = false;
+      return {
+        ...newStateAfterEssayClose,
+      };
     case 'TOGGLE_DETAIL_PANEL':
       return {
         ...state,
@@ -116,11 +131,21 @@ export const toggleCopyright = () => {
     type: 'TOGGLE_COPYRIGHT',
   };
 };
-export const toggleEssaySegment = () => {
+
+export const openEssaySegment = (index) => {
   return {
-    type: 'TOGGLE_ESSAY',
+    type: 'OPEN_ESSAY',
+    index,
   };
 };
+
+export const closeEssaySegment = (index) => {
+  return {
+    type: 'CLOSE_ESSAY',
+    index,
+  };
+};
+
 export const toggleDetailPanel = () => {
   return {
     type: 'TOGGLE_DETAIL_PANEL',

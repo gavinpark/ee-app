@@ -1,16 +1,23 @@
 import React, { Component } from 'react';
+import * as _ from 'lodash';
 import { connect } from 'react-redux';
 // import Data from '.././data/data.js';
 import EssayData from '.././data/EssayData.js';
 import DatabaseItem from './DatabaseItem';
 import EssayButton from './EssayButton';
 import '../App.css';
-import { addWorkToConstellation, shuffle, toggleEssaySegment } from '../redux/modules/ui';
+import { addWorkToConstellation, shuffle } from '../redux/modules/ui';
 
 // new fieldnames are 
 // access_num,access_date,artist,title,date,keywords,subject,color,medium,description,object_name,technique,have_rights,rights_holder,credit,object_rights,birthdate,deathdate,note,link,references,source,status,acquisition_mode
 
 class DatabasePanel extends Component {
+
+  shouldComponentUpdate(nextProps, nextState) {
+    const isUpdated = !_.isEqual(nextProps.relatedWorks, this.props.relatedWorks);
+    return isUpdated;
+  }
+
   render() {
     const databaseItemsArray = this.props.relatedWorks.map((work) => {
       return {
@@ -19,13 +26,13 @@ class DatabasePanel extends Component {
       }
     });
 
-    const essayArray = EssayData.map((essay) => {
+    const essayArray = EssayData.map((essay, index) => {
       return {
         type: 'essay',
         data: essay,
+        index,
       }
     });
-    // const essayArray = [];
 
     const finalArray = shuffle([...databaseItemsArray, ...essayArray]);
 
@@ -41,8 +48,7 @@ class DatabasePanel extends Component {
           if (obj.type === 'essay'){
             const essay = obj.data;
            
-            console.log ('essay data',essay);
-            return <EssayButton essay={essay} {...this.props}> </EssayButton>
+            return <EssayButton essay={essay} index={obj.index} {...this.props}> </EssayButton>
           }
         })}
 
@@ -63,5 +69,5 @@ const mapStateToProps = (state) => {
 
 // TODO: add action to actually select a new artwork
 export default connect(mapStateToProps, {
-  addWorkToConstellation, toggleEssaySegment,
+  addWorkToConstellation,
 })(DatabasePanel);

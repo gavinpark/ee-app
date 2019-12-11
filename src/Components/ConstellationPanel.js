@@ -6,12 +6,11 @@ import EssayWindow from './EssayWindow';
 import DescriptionWindow from './DescriptionWindow';
 import ConstellationKeyword from './ConstellationKeyword';
 import '../App.css';
-import { toggleWelcome, toggleEssaySegment } from '../redux/modules/ui';
+import { toggleWelcome, closeEssaySegment } from '../redux/modules/ui';
 
 class ConstellationPanel extends Component {
   renderConstellationArtworks() {
     return this.props.selectedWorks.map((work) => {
-      console.log("hello", window.allWorks[work]);
       if (window.allWorks[work].have_rights === 'Oui'){
         return (<div><ConstellationArtwork access_num={work} have_rights={this.props.have_rights} activeWorkIndex={this.props.activeWorkIndex} /></div>)
       }
@@ -19,9 +18,15 @@ class ConstellationPanel extends Component {
     });
   }
 
-  renderConstellationKeywords(){
+  renderConstellationKeywords() {
     return Object.keys(this.props.selectedKeywords).map((keyword) => {
       return <div><ConstellationKeyword keyword={keyword} /></div>
+    })
+  }
+
+  renderEssayWindows() {
+    return this.props.essayWindows.map((essay, index) => {
+      return <EssayWindow {...essay} closeEssaySegment={this.props.closeEssaySegment} index={index} />
     })
   }
 
@@ -31,7 +36,7 @@ class ConstellationPanel extends Component {
     return (
       <div className="constellationPanel">
         {this.props.isWelcomeOpen && <div><WelcomeWindow toggleWelcome={this.props.toggleWelcome} /></div>}
-        {this.props.isEssayOpen && <div><EssayWindow toggleEssaySegment={this.props.toggleEssaySegment} /></div>}
+        {this.renderEssayWindows()}
         {this.renderConstellationArtworks()}
         {this.renderConstellationKeywords()}
       </div>
@@ -45,10 +50,11 @@ const mapStateToProps = (state) => {
     activeWorkIndex: state._ui.activeWorkIndex,
     selectedWorks: state._ui.selectedWorks,
     selectedKeywords: state._ui.selectedKeywords,
+    essayWindows: state._ui.essayWindows,
   };
 };
 
 export default connect(mapStateToProps, {
   toggleWelcome,
-  toggleEssaySegment,
+  closeEssaySegment 
 })(ConstellationPanel);

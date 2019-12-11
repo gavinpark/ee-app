@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import '../App.css';
+import { openEssaySegment } from '../redux/modules/ui';
 
 class EssayButton extends Component {
   
@@ -7,10 +9,12 @@ class EssayButton extends Component {
   
         return (
           <div className='essayButton'
-          onClick={this.props.toggleEssaySegment}
+          onClick={() => {this.props.openEssaySegment(this.props.index)}}
           >{this.props.essay.essayHeader}</div>
         )
     }
 }
 
-export default EssayButton;
+export default connect(() => { return {} }, {
+  openEssaySegment
+})(EssayButton);

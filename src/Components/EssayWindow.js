@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleLanguage, toggleEssaySegment } from '../redux/modules/ui';
+import { toggleLanguage, closeEssaySegment } from '../redux/modules/ui';
 
 // TODO be able to remember language state when opening multiple windows
 
@@ -28,7 +28,7 @@ class EssayWindow extends Component {
                         className="objectExitButton"
                         src={require(".././images/buttons/exit_Button.svg")}
                         alt=""
-                        onClick={this.props.toggleEssaySegment}
+                        onClick={() => {this.props.closeEssaySegment(this.props.index)} }
                     ></img>
                     <div className="essayBodyBox">
                         <div className="essayBody">{this.props.essay}</div>
@@ -49,7 +49,7 @@ class EssayWindow extends Component {
                     className="objectExitButton"
                     src={require(".././images/buttons/exit_Button.svg")}
                     alt=""
-                    onClick={this.props.toggleEssaySegment}
+                    onClick={() => {this.props.closeEssaySegment(this.props.index)} }
                 ></img>
                 <div className="essayBodyBox">
                     <div className="essayBody">{this.props.essay}</div>
@@ -59,6 +59,10 @@ class EssayWindow extends Component {
         )
     }
     render() {
+        console.log(' rendering essay window' + this.props.index);
+        if (this.props.displayed === false) {
+            return null;
+        }
         return (
             <Rnd
                 className="essayContainer"
@@ -89,6 +93,6 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-    toggleEssaySegment,
+    closeEssaySegment,
     toggleLanguage,
 })(EssayWindow);

@@ -14,7 +14,6 @@ class ArtworkInfoPanel extends Component {
     // (don't forget to pass the correct props into this component)
     // const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex]];
     const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex]]
-    console.log("artwork data:", artworkData);
     return (
       <div className="databaseInfo">
 
