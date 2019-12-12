@@ -11,7 +11,7 @@ window.allWords = allWords;
 
 export default function reducer(state = {
   // this is all the states
-  isFrench: true,
+  isFrench: true, 
   isCreditsOpen: false,
   isWelcomeOpen: true,
   isLandingOpen: true,
@@ -67,6 +67,11 @@ export default function reducer(state = {
       return {
         ...newStateAfterEssayClose,
       };
+    case 'TOGGLE_CONSTELLATION_TEXT':
+      return {
+        ...state,
+        isConstellationTextOpen: !state.isConstellationTextOpen,
+      }
     case 'TOGGLE_DETAIL_PANEL':
       return {
         ...state,
@@ -244,7 +249,11 @@ export const toggleCopyright = () => {
     type: 'TOGGLE_COPYRIGHT',
   };
 };
-
+export const toggleConstellationText = () => {
+  return {
+    type: 'TOGGLE_CONSTELLATION_TEXT',
+  };
+};
 export const openEssaySegment = (index) => {
   return {
     type: 'OPEN_ESSAY',

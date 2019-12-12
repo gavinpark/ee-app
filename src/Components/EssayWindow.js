@@ -4,9 +4,16 @@ import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleLanguage, closeEssaySegment, increaseHighestZIndex  } from '../redux/modules/ui';
+import { closeEssaySegment, increaseHighestZIndex } from '../redux/modules/ui';
+// toggleLanguage
 
-// TODO be able to remember language state when opening multiple windows
+
+// *** TO RE-AD LANGUAGE FEAT: 
+// 1. Uncomment toggleLanguage in import, and mapStatetoProps
+// 2. Uncomment getLanguage() and replace html inside rnd render with call to function
+// 3. I did not comment out anything in ui.js..so that should be fine
+// 4. Double check that everywhere is turned back on: Welcome Window, Constellation Text Window, Copyright Window and Essay Window
+// 5. look out for props in essay to make sure its pulling from the right spot
 
 class EssayWindow extends Component {
     constructor(props) {
@@ -55,56 +62,58 @@ class EssayWindow extends Component {
             randomY,
         });
     }
-    getLanguage() {
-        if (this.props.isFrench) { 
-            console.log('Essay information', this.props.essay)
-            console.log('is this getting the header?', this.props.essayHeader)
-            return (
-                <div>
-                    <div className="essayHeaderBox">
-                        <div className="essayHeader">{this.props.essayHeader}</div>
-                    </div>
-                    <div>
-                        <div className="objectENButton">EN</div>
-                        <div className="objectFRButton greyOut" onClick={this.props.toggleLanguage}>FR</div>
-                    </div>
+    // getLanguage() {
+    //     if (this.props.isFrench) { 
+    //         console.log('Essay information', this.props.essay)
+    //         console.log('is this getting the header?', this.props.essayHeader)
+    //         return (
+    //             <div>
+    //                 <div className="essayHeaderBox">
+    //                     <div className="essayHeader">{this.props.essayHeader}</div>
+    //                 </div>
+    //                 <div>
+    //                     <div className="objectENButton">EN</div>
+    //                     <div className="objectFRButton greyOut" onClick={this.props.toggleLanguage}>FR</div>
+    //                 </div>
 
-                    <img
-                        className="objectExitButton"
-                        src={require(".././images/buttons/exit_Button.svg")}
-                        alt=""
-                        onClick={() => {this.props.closeEssaySegment(this.props.index)} }
-                    ></img>
-                    <div className="essayBodyBox">
-                        <div className="essayBody">{this.props.essay}</div>
-                    </div>
-                </div>
-            )
-        } return (
-            <div>
-                <div className="essayHeaderBox">
-                    <div className="essayHeader">{this.props.essay}</div>
-                </div>
-                <div>
-                    <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
-                    <div className="objectFRButton">FR</div>
-                </div>
+    //                 <img
+    //                     className="objectExitButton"
+    //                     src={require(".././images/buttons/exit_Button.svg")}
+    //                     alt=""
+    //                     onClick={() => {this.props.closeEssaySegment(this.props.index)} }
+    //                 ></img>
+    //                 <div className="essayBodyBox">
+    //                     <div className="essayBody">{this.props.essay}</div>
+    //                 </div>
+    //             </div>
+    //         )
+    //     } return (
+    //         <div>
+    //             <div className="essayHeaderBox">
+    //                 <div className="essayHeader">{this.props.essay}</div>
+    //             </div>
+    //             <div>
+    //                 <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
+    //                 <div className="objectFRButton">FR</div>
+    //             </div>
 
-                <img
-                    className="objectExitButton"
-                    src={require(".././images/buttons/exit_Button.svg")}
-                    alt=""
-                    onClick={() => {this.props.closeEssaySegment(this.props.index)} }
-                ></img>
-                <div className="essayBodyBox">
-                    <div className="essayBody">{this.props.essay}</div>
+    //             <img
+    //                 className="objectExitButton"
+    //                 src={require(".././images/buttons/exit_Button.svg")}
+    //                 alt=""
+    //                 onClick={() => {this.props.closeEssaySegment(this.props.index)} }
+    //             ></img>
+    //             <div className="essayBodyBox">
+    //                 <div className="essayBody">{this.props.essay}</div>
 
-                </div>
-            </div>
-        )
-    }
+    //             </div>
+    //         </div>
+    //     )
+    // }
     render() {
         console.log(' rendering essay window' + this.props.index);
+        console.log('Essay information', this.props.essay)
+        console.log('is this getting the header?', this.props.essayHeader)
         if (this.props.displayed === false) {
             return null;
         }
@@ -122,7 +131,22 @@ class EssayWindow extends Component {
             // style={{overflow: "scroll"}}
             >
                 <div onClick={this.bringItemToHighestZIndex}>
-                    {this.getLanguage()}
+                    {/* {this.getLanguage()} */}
+
+                    <div className="essayHeaderBox">
+                        <div className="essayHeader">{this.props.essayHeader}</div>
+                    </div>
+                   
+                    <img
+                        className="objectExitButton"
+                        src={require(".././images/buttons/exit_Button.svg")}
+                        alt=""
+                        onClick={() => { this.props.closeEssaySegment(this.props.index) }}
+                    ></img>
+                    <div className="essayBodyBox">
+                        <div className="essayBody">{this.props.essayText}</div>
+
+                    </div>
                 </div>
             </Rnd>
 
@@ -132,7 +156,7 @@ class EssayWindow extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        isFrench: state._ui.isFrench,
+        // isFrench: state._ui.isFrench,
         isEssayOpen: state._ui.isEssayOpen,
         highestZIndex: state._ui.highestZIndex
     };
@@ -140,6 +164,6 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
     closeEssaySegment,
-    toggleLanguage,
+    // toggleLanguage,
     increaseHighestZIndex,
 })(EssayWindow);
