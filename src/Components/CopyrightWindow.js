@@ -78,7 +78,7 @@ class CopyrightWindow extends Component {
                 <div>
                     {/* {this.getLanguage()} */}
                     <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[1].essayHeader}</div>
+                        <div className="essayHeader">{EssayData[6].essayHeader}</div>
                     </div>
 
                     <img
@@ -88,7 +88,14 @@ class CopyrightWindow extends Component {
                         onClick={this.props.toggleCopyright}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[1].essayText}</div>
+                        <div className="essayBody">
+                        <i>{EssayData[6].disclaimer}</i>
+                        <br/>
+                        __________
+                        <br/>
+                        <br/>
+                        {EssayData[6].essayText}
+                        </div>
 
                     </div>
                 </div>

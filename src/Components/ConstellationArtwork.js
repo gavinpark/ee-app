@@ -111,12 +111,12 @@ class ConstellationArtwork extends Component {
           onMouseOver={this.handleMouseOver}
           onMouseOut={this.handleMouseOff}
         >
-          <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
+          <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img>
           <img
               className="objectMoreButton"
               src={require(".././images/buttons/more_Button.svg")}
               alt=""
-              onClick={() => {this.openArtworkInfoPanel(artworkData.access_num, artworkData.link[0])}}
+              onClick={() => {this.openArtworkInfoPanel(artworkData.access_num, artworkData.link)}}
           ></img>
           <img
             className="objectExitButton"

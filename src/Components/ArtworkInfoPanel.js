@@ -7,200 +7,222 @@ import ArtworkSwiper from './ArtworkSwiper'
 
 
 class ArtworkInfoPanel extends Component {
-  determineTitleRowSize(artworkData){
-    if(artworkData.title.length > 300){
-      return("span4-row")
+  determineTitleRowSize(artworkData) {
+    if (artworkData.title.length > 300) {
+      return ("span4-row")
     }
-    if((artworkData.title.length > 201) && (artworkData.title.length < 300)){
+    if ((artworkData.title.length > 201) && (artworkData.title.length < 300)) {
       return ("span3-row")
     }
-    if((artworkData.title.length > 80) && (artworkData.title.length < 200)){
-      return("span2-row")
+    if ((artworkData.title.length > 80) && (artworkData.title.length < 200)) {
+      return ("span2-row")
     }
-    else{
-      return("")
-    }
-  }
-  
-  determineCreditRowSize(artworkData){
-    if(artworkData.credit.length > 300){
-      return("span4-row")
-    }
-    if((artworkData.credit.length > 201) && (artworkData.credit.length < 300)){
-      return ("span3-row")
-    }
-    if((artworkData.credit.length > 80) && (artworkData.credit.length < 200)){
-      return("span2-row")
-    }
-    else{
+    else {
       return ("")
     }
   }
 
-  determineKeyRowSize(artworkData){
-    if(artworkData.keywords.length > 300){
-      return("span4-row")
+  determineCreditRowSize(artworkData) {
+    if (artworkData.credit.length > 244) {
+      return ("span4-row")
     }
-    if((artworkData.keywords.length > 201) && (artworkData.keywords.length < 300)){
+    if ((artworkData.credit.length > 144) && (artworkData.credit.length < 243)) {
       return ("span3-row")
     }
-    if((artworkData.keywords.length > 80) && (artworkData.keywords.length < 200)){
-      return("span2-row")
+    if ((artworkData.credit.length > 23) && (artworkData.credit.length < 143)) {
+      return ("span2-row")
     }
-    else{
-      return("")
-    }
-  }
-  determineSubjectRowSize(artworkData){
-    if(artworkData.subject.length > 300){
-      return("span4-row")
-    }
-    if((artworkData.subject.length > 201) && (artworkData.subject.length < 300)){
-      return ("span3-row")
-    }
-    if((artworkData.subject.length > 80) && (artworkData.subject.length < 200)){
-      return("span2-row")
-    }
-    else{
-      return("")
-    }
-  }
-  determineRefRowSize(artworkData){
-    if(artworkData.references.length > 300){
-      return("span4-row")
-    }
-    if((artworkData.references.length > 201) && (artworkData.references.length < 300)){
-      return ("span3-row")
-    }
-    if((artworkData.references.length > 80) && (artworkData.references.length < 200)){
-      return("span2-row")
-    }
-    else{
-      return("span2-row")
+    else {
+      return ("")
     }
   }
 
-  determineHeight(artworkData){
-    if(artworkData.height === "") {
-      return ("")
+  determineKeyRowSize(artworkData) {
+    if (artworkData.keywords.length > 300) {
+      return ("span4-row")
     }
-    else{
-      return(artworkData.height + "cm")
+    if ((artworkData.keywords.length > 201) && (artworkData.keywords.length < 300)) {
+      return ("span3-row")
+    }
+    if ((artworkData.keywords.length > 80) && (artworkData.keywords.length < 200)) {
+      return ("span2-row")
+    }
+    else {
+      return ("")
     }
   }
-  determineLength(artworkData){
-    if(artworkData.length === "") {
+  determineSubjectRowSize(artworkData) {
+    if (artworkData.subject.length > 300) {
+      return ("span4-row")
+    }
+    if ((artworkData.subject.length > 201) && (artworkData.subject.length < 300)) {
+      return ("span3-row")
+    }
+    if ((artworkData.subject.length > 80) && (artworkData.subject.length < 200)) {
+      return ("span2-row")
+    }
+    else {
       return ("")
     }
-    else{
-      return('\xa0' + "x" + '\xa0' + artworkData.length + "cm")
+  }
+  determineDescRowSize(artworkData) {
+    if (artworkData.description.length > 241) {
+      return ("span4-row")
+    }
+    if ((artworkData.description.length > 141) && (artworkData.description.length < 240)) {
+      return ("span3-row")
+    }
+    if ((artworkData.description.length > 60) && (artworkData.description.length < 140)) {
+      return ("span2-row")
+    }
+    else {
+      return ("")
+    }
+  }
+  determineRefRowSize(artworkData) {
+    if (artworkData.references.length > 300) {
+      return ("span4-row")
+    }
+    if ((artworkData.references.length > 201) && (artworkData.references.length < 300)) {
+      return ("span3-row")
+    }
+    if ((artworkData.references.length > 80) && (artworkData.references.length < 200)) {
+      return ("span2-row")
+    }
+    else {
+      return ("span2-row")
     }
   }
 
-  determineWidth(artworkData){
-    if(artworkData.width === "") {
+  determineHeight(artworkData) {
+    if (artworkData.height === "") {
       return ("")
     }
-    else{
-      return('\xa0' + "x" + '\xa0' + artworkData.width + "cm")
+    else {
+      return (artworkData.height + "cm")
+    }
+  }
+  determineLength(artworkData) {
+    if (artworkData.length === "") {
+      return ("")
+    }
+    else {
+      return ('\xa0' + "x" + '\xa0' + artworkData.length + "cm")
     }
   }
 
-  determineDepth(artworkData){
-    if(artworkData.depth === "") {
+  determineWidth(artworkData) {
+    if (artworkData.width === "") {
       return ("")
     }
-    else{
-      return('\xa0' + "x" + '\xa0' + artworkData.depth + "cm")
+    else {
+      return ('\xa0' + "x" + '\xa0' + artworkData.width + "cm")
+    }
+  }
+
+  determineDepth(artworkData) {
+    if (artworkData.depth === "") {
+      return ("")
+    }
+    else {
+      return ('\xa0' + "x" + '\xa0' + artworkData.depth + "cm")
     }
   }
 
   hasRights(artworkData) {
     if (artworkData.have_rights === "Oui") {
-      return (<ArtworkSwiper link={artworkData.link} {...this.props}/>)
+      return (<ArtworkSwiper link={artworkData.link} {...this.props} />)
 
     }
     else {
-      return(
-      "")
-    } 
+      return (
+        "")
+    }
+  }
+  getMedium(artworkData) {
+    if(artworkData.medium && artworkData.support){
+      return (artworkData.medium + ' on ' + artworkData.support)
+    }
+    if(artworkData.medium && artworkData.support === ''){
+      return (artworkData.medium)
+    }
   }
 
-render() {
-  // here is how you would get the
-  // data for the 'current active work'
-  // (don't forget to pass the correct props into this component)
-  // const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex]];
-  const artworkData = window.allWorks[this.props.openedArtwork];
-  
-  const emptiesArray = new Array(135);
-  const empties = emptiesArray.fill('', 0, 135);
-  const emptyGrid = empties.map((empty) => { return <div className='infoPanelDivDesktop'>{empty}</div> });
+  render() {
+    // here is how you would get the
+    // data for the 'current active work'
+    // (don't forget to pass the correct props into this component)
+    // const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex]];
+    const artworkData = window.allWorks[this.props.openedArtwork];
 
-  return (
-    <div className="databaseInfo">
-      {/* <ArtworkSwiper link={artworkData.link} {...this.props}/> */}
-      {this.hasRights(artworkData)}
+    const emptiesArray = new Array(135);
+    const empties = emptiesArray.fill('', 0, 135);
+    const emptyGrid = empties.map((empty) => { return <div className='infoPanelDivDesktop'>{empty}</div> });
 
-      {emptyGrid}
-      
-      <table>
+    return (
+      <div className="databaseInfo">
+        {/* <ArtworkSwiper link={artworkData.link} {...this.props}/> */}
+        {this.hasRights(artworkData)}
 
-        <th>Artist</th>
-        <td>{artworkData.artist}</td>
+        {emptyGrid}
 
-        <th className={this.determineTitleRowSize(artworkData)}>Title</th>
-        <td className={this.determineTitleRowSize(artworkData)}>{artworkData.title}</td>
+        <table>
 
-        <th>Date of Production</th>
-        <td>{artworkData.date}</td>
+          <th>Artist</th>
+          <td>{artworkData.artist}</td>
 
-        <th>Accession Number </th>
-        <td>{artworkData.access_num}</td>
+          <th className={this.determineTitleRowSize(artworkData)}>Title</th>
+          <td className={this.determineTitleRowSize(artworkData)}>{artworkData.title}</td>
 
-        <th>Accession Date</th>
-        <td>{artworkData.access_date}</td>
+          <th>Date of Production</th>
+          <td>{artworkData.date}</td>
 
-        <th>Dimensions</th>
-        <td>{this.determineHeight(artworkData)}{this.determineLength(artworkData)}{this.determineWidth(artworkData)}{this.determineDepth(artworkData)}</td>
+          <th>Accession Number </th>
+          <td>{artworkData.access_num}</td>
 
-        <th>Status</th>
-        <td>{artworkData.status}</td>
+          <th>Accession Date</th>
+          <td>{artworkData.access_date}</td>
 
-        <th className={this.determineCreditRowSize(artworkData)}>Credit</th>
-        <td className={this.determineCreditRowSize(artworkData)}>Collection of the Leonard & Bina Ellen Art Gallery. {'\xa0'} {artworkData.credit}</td>
+          <th>Dimensions</th>
+          <td>{this.determineHeight(artworkData)}{this.determineLength(artworkData)}{this.determineWidth(artworkData)}{this.determineDepth(artworkData)}</td>
 
-        <th>Medium</th>
-        <td>{artworkData.medium}</td>
+          <th>Status</th>
+          <td>{artworkData.status}</td>
 
-        <th>Description</th>
-        <td>{artworkData.description}</td>
-  
+          <th className={this.determineCreditRowSize(artworkData)}>Credit</th>
+          <td className={this.determineCreditRowSize(artworkData)}>Collection of the Leonard & Bina Ellen Art Gallery. {'\n'} {artworkData.credit}{'\n'}<br/>Photo:{'\xa0'}{artworkData.photographer}</td>
 
-        <th className={this.determineKeyRowSize(artworkData)}>Keywords</th>
-        <td className={this.determineKeyRowSize(artworkData)}>{artworkData.keywords}</td>
+          <th>Medium</th>
+          <td>{this.getMedium(artworkData)}</td>
 
-        <th className={this.determineSubjectRowSize(artworkData)}>Subject</th>
-        <td className={this.determineSubjectRowSize(artworkData)}>{artworkData.subject}</td>
-
-        <th className={this.determineRefRowSize(artworkData)}>References</th>
-        <td className={this.determineRefRowSize(artworkData)}>{artworkData.references}</td>
+          <th>Description</th>
+          <td>{artworkData.description}</td>
 
 
-      </table>
+          <th className={this.determineKeyRowSize(artworkData)}>Keywords</th>
+          <td className={this.determineKeyRowSize(artworkData)}>{artworkData.keywords}</td>
+
+          <th className={this.determineSubjectRowSize(artworkData)}>Subject</th>
+          <td className={this.determineSubjectRowSize(artworkData)}>{artworkData.subject}</td>
+
+          <th className={this.determineRefRowSize(artworkData)}>References</th>
+          <td className={this.determineRefRowSize(artworkData)}>{artworkData.references}</td>
 
 
-      {this.props.isCopyrightOpen && <CopyrightWindow toggleCopyright={this.props.toggleCopyright} />}
-      <div className="copyrightButton" onClick={this.props.toggleCopyright}> © </div>
+        </table>
 
-      <div className="infoExitBox">
-        <img className="infoExitSvg" onClick={this.props.toggleDetailPanel} src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img>
+
+        {this.props.isCopyrightOpen && <CopyrightWindow toggleCopyright={this.props.toggleCopyright} />}
+        <div className="copyrightButton" onClick={this.props.toggleCopyright}> © </div>
+
+        <div className="infoExitBox">
+          <img className="infoExitSvg" onClick={this.props.toggleDetailPanel} src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img>
+        </div>
+
       </div>
+    );
 
-    </div>
-  );
-
-}
+  }
 }
 const mapStateToProps = (state) => {
   return {

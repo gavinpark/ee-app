@@ -18,27 +18,27 @@ class DatabaseItem extends Component {
           return (
               <div className={`${isRelatedToHoveredKeywordClassName} twoTags`} 
               onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-              ><img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
+              ><img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img> </div>
           )
         }
         if (artwork.similarityScore === 3){
           return(
             <div className={`${isRelatedToHoveredKeywordClassName} threeTags`} 
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-            ><img draggable="false" className ="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
+            ><img draggable="false" className ="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img> </div>
           )
         }
         if (artwork.similarityScore >= 4){
           return(
             <div className="fourTags"
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-            ><img draggable="false" className ={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
+            ><img draggable="false" className ={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img> </div>
           )
         }
           return(
             <div
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-            ><img draggable="false" key={artworkData.access_num, artwork.similarityScore} className={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
+            ><img draggable="false" key={artworkData.access_num, artwork.similarityScore} className={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link} alt=""></img>
             </div>
           )
         }
