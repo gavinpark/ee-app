@@ -21,7 +21,7 @@ class ConstellationPanel extends Component {
       this.setState({
         constBoxVisibile: true
       })
-    }, 30000)
+    }, 10000)
   }
   renderConstellationArtworks() {
     return this.props.selectedWorks.map((work) => {
@@ -35,7 +35,7 @@ class ConstellationPanel extends Component {
           activeWorkIndex={this.props.activeWorkIndex}
           similarityScore={work.similarityScore}
           isRelatedToHoveredKeyword={work.isRelatedToHoveredKeyword}
-          /></div>)
+        /></div>)
       }
       return (<div><DescriptionWindow access_num={work.accessNum} have_rights={this.props.have_rights} subject={this.props.subject} activeWorkIndex={this.props.activeWorkIndex} /></div>)
     });
@@ -49,25 +49,32 @@ class ConstellationPanel extends Component {
       /></div>
     })
   }
-  
+  renderWelcomeWindow() {
+    if (this.props.isWelcomeOpen) {
+      const getWelcome = this.props.essayWindows[0];
+      return <WelcomeWindow {...getWelcome} closeEssaySegment={this.props.closeEssaySegment}/>
+    }
+  }
+  renderConstellationTextWindow() {
+    if (this.state.constBoxVisibile === true) {
+        const getConstellation = this.props.essayWindows[3]
+        return (
+          <div><ConstellationTextWindow {...getConstellation} closeEssaySegment={this.props.closeEssaySegment}/></div>
+        )
+    }
+  }
   renderEssayWindows() {
     return this.props.essayWindows.map((essay, index) => {
       return <EssayWindow {...essay} closeEssaySegment={this.props.closeEssaySegment} index={index} />
     })
-  }
-  renderConstellationTextWindow() {
-    if (this.state.constBoxVisibile === true) {
-      return (
-        <div><ConstellationTextWindow toggleConstellationText={this.props.toggleConstellationText}/></div>
-      )
-    }
   }
   render() {
     // https://reactjs.org/docs/conditional-rendering.html
     // search for &&
     return (
       <div className="constellationPanel">
-        {this.props.isWelcomeOpen && <div><WelcomeWindow toggleWelcome={this.props.toggleWelcome} /></div>}
+        {/* {this.props.isWelcomeOpen && <div><WelcomeWindow toggleWelcome={this.props.toggleWelcome} /></div>} */}
+        {this.renderWelcomeWindow()}
         {this.renderEssayWindows()}
         {this.renderConstellationArtworks()}
         {this.renderConstellationKeywords()}
@@ -92,5 +99,5 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
   toggleWelcome,
   closeEssaySegment,
-  toggleConstellationText 
+  toggleConstellationText
 })(ConstellationPanel);

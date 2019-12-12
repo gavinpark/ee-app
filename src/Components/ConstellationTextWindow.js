@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleConstellationText, increaseHighestZIndex } from '../redux/modules/ui';
+import { closeEssaySegment, toggleConstellationText, increaseHighestZIndex } from '../redux/modules/ui';
 // toggleLanguage, 
 
 
@@ -91,18 +91,21 @@ class ConstellationTextWindow extends Component {
                 <div onClick={this.bringItemToHighestZIndex}>
                     {/* {this.getLanguage()} */}
                     <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[2].essayHeader}</div>
+                        <div className="essayHeader">{this.props.essayHeader}</div>
                     </div>
 
                     <img
                         className="objectExitButton"
                         src={require(".././images/buttons/exit_Button.svg")}
                         alt=""
-                        onClick={this.props.toggleConstellationText}
+                        onClick={() => { this.props.closeEssaySegment(this.props.index) }}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[2].essayText}</div>
-
+                        <div className="essayBody">{this.props.essayText}</div>
+                        <div className="downloadBox">View Full Text</div>
+                    </div>
+                    <div className="essayFootnoteBox">
+                        {this.props.footnote}
                     </div>
                 </div>
             </Rnd>
@@ -113,12 +116,14 @@ class ConstellationTextWindow extends Component {
 const mapStateToProps = (state) => {
     return {
         // isFrench: state._ui.isFrench,
+        isEssayOpen: state._ui.isEssayOpen,
         highestZIndex: state._ui.highestZIndex,
         isConstellationTextOpen: state._ui.isConstellationTextOpen
     };
 };
 
 export default connect(mapStateToProps, {
+    closeEssaySegment,
     // toggleLanguage, 
     increaseHighestZIndex, toggleConstellationText
 })(ConstellationTextWindow);

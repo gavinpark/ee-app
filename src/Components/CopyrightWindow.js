@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleCopyright } from '../redux/modules/ui';
+import { closeEssaySegment, toggleCopyright } from '../redux/modules/ui';
 // toggleLanguage, 
 
 // *** TO RE-AD LANGUAGE FEAT: 
@@ -78,18 +78,21 @@ class CopyrightWindow extends Component {
                 <div>
                     {/* {this.getLanguage()} */}
                     <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[1].essayHeader}</div>
+                        <div className="essayHeader">{this.props.essayHeader}</div>
                     </div>
 
                     <img
                         className="objectExitButton"
                         src={require(".././images/buttons/exit_Button.svg")}
                         alt=""
-                        onClick={this.props.toggleCopyright}
+                        onClick={() => { this.props.closeEssaySegment(this.props.index) }}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[1].essayText}</div>
-
+                        <div className="essayBody">{this.props.essayText}</div>
+                        <div className="downloadBox">View Full Text</div>
+                    </div>
+                    <div className="essayFootnoteBox">
+                        {this.props.footnote}
                     </div>
                 </div>
             </Rnd>
@@ -101,10 +104,12 @@ class CopyrightWindow extends Component {
 const mapStateToProps = (state) => {
     return {
         // isFrench: state._ui.isFrench
+        isEssayOpen: state._ui.isEssayOpen,
     };
 };
 
 export default connect(mapStateToProps, {
     // toggleLanguage, 
     toggleCopyright,
+    closeEssaySegment,
 })(CopyrightWindow);

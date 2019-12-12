@@ -42,7 +42,6 @@ class Landing extends Component {
     const mappedArtworks = this.props.relatedWorks.map(artwork => {
       const artworkData = window.allWorks[artwork.access_num];
       const { similarityScore } = artwork;
-      console.log(similarityScore);
       if (similarityScore === 1) {
         countOfExistingBlocks += 1;
       } else if (similarityScore === 2) {

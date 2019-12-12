@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { increaseHighestZIndex } from '../redux/modules/ui';
+import { closeEssaySegment, increaseHighestZIndex } from '../redux/modules/ui';
 // toggleLanguage, 
 
 // *** TO RE-AD LANGUAGE FEAT: 
@@ -103,21 +103,21 @@ class WelcomeWindow extends Component {
                 <div onClick={this.bringItemToHighestZIndex}>
                     {/* {this.getLanguage()} */}
                     <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[0].essayHeader}</div>
+                        <div className="essayHeader">{this.props.essayHeader}</div>
                     </div>
 
                     <img
                         className="objectExitButton"
                         src={require(".././images/buttons/exit_Button.svg")}
                         alt=""
-                        onClick={this.props.toggleWelcome}
+                        onClick={() => { this.props.closeEssaySegment(this.props.index) }}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[0].essayText}</div>
+                        <div className="essayBody">{this.props.essayText}</div>
 
                     </div>
                     <div className="essayFootnoteBox">
-                        <div className="footnoteEnd">{EssayData[0].footnote}</div>
+                        <div className="footnoteEnd">{this.props.footnote}</div>
                     </div>
                 </div>
             </Rnd>
@@ -129,10 +129,12 @@ const mapStateToProps = (state) => {
     return {
         // isFrench: state._ui.isFrench,
         highestZIndex: state._ui.highestZIndex,
+        isEssayOpen: state._ui.isEssayOpen,
     };
 };
 
 export default connect(mapStateToProps, {
     // toggleLanguage, 
+    closeEssaySegment,
     increaseHighestZIndex
 })(WelcomeWindow);
