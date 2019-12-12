@@ -376,7 +376,7 @@ th, td {
 }
 
 .essayFootnoteBox {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100px;
   background: white;
@@ -393,6 +393,7 @@ th, td {
   padding: 48px 12px 12px 12px;
   overflow: scroll;
   vertical-align: bottom;
+  bottom: 0;
   }
 
 .downloadBox {

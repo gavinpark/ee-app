@@ -7,8 +7,8 @@ const EssayData = [
         // footnote: [{
         //     f1: "1 Rebecca Duclos and David K. Ross, “As Much As Possible Given The Time And Space Allotted,” Leonard & Bina Ellen Art Gallery, accessed April 10, 2019, https://bit.ly/2UVqHq7.",
         //     f2: "2 Ibid.",
-        // }],
-        footnote: "1 Rebecca Duclos and David K. Ross, “As Much As Possible Given The Time And Space Allotted,” Leonard & Bina Ellen Art Gallery, accessed April 10, 2019, https://bit.ly/2UVqHq7.",
+        //     }],
+        footnote: "Duclos and David K. Ross, “As Much As Possible Given The Time And Space Allotted,” Leonard & Bina Ellen Art Gallery, accessed April 10, 2019, https://bit.ly/2UVqHq7.",
         
         footnoteFR: "Lev Manovich, “Database as Symbolic Form,” Convergence 5, no. 2 (1999): 81.",
         
