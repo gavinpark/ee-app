@@ -77,7 +77,7 @@ class Landing extends Component {
     // TODO gavin: here or inside the findNextHighestMultiple, you need to add another multiple of 15
     // such that it will fill at least the screen height - you can use window.innerHeight to check
     const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberOfGridBlocks) - countOfExistingBlocks
-      + 135
+      + 120
       ;
     console.log('numToFillIn:', numToFillIn);
 
