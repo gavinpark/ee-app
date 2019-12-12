@@ -116,7 +116,6 @@ class WelcomeWindow extends Component {
                         <div className="essayBody">{EssayData[0].essayText}</div>
 
                     </div>
-                    <div className="downloadBox">Download Full Text</div>
                     <div className="essayFootnoteBox">
                         <div className="footnoteEnd">{EssayData[0].footnote}</div>
                     </div>

@@ -21,7 +21,7 @@ class ConstellationPanel extends Component {
       this.setState({
         constBoxVisibile: true
       })
-    }, 5000)
+    }, 15000)
   }
   renderConstellationArtworks() {
     return this.props.selectedWorks.map((work) => {
