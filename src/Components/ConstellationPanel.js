@@ -5,8 +5,9 @@ import WelcomeWindow from './WelcomeWindow';
 import EssayWindow from './EssayWindow';
 import DescriptionWindow from './DescriptionWindow';
 import ConstellationKeyword from './ConstellationKeyword';
+import ConstellationTextWindow from './ConstellationTextWindow';
 import '../App.css';
-import { toggleWelcome, closeEssaySegment } from '../redux/modules/ui';
+import { toggleWelcome, closeEssaySegment, toggleConstellationText } from '../redux/modules/ui';
 
 class ConstellationPanel extends Component {
   constructor(props) {
@@ -48,13 +49,19 @@ class ConstellationPanel extends Component {
       /></div>
     })
   }
-
+  
   renderEssayWindows() {
     return this.props.essayWindows.map((essay, index) => {
       return <EssayWindow {...essay} closeEssaySegment={this.props.closeEssaySegment} index={index} />
     })
   }
-
+  renderConstellationTextWindow() {
+    if (this.state.constBoxVisibile === true) {
+      return (
+        <div><ConstellationTextWindow toggleConstellationText={this.props.toggleConstellationText}/></div>
+      )
+    }
+  }
   render() {
     // https://reactjs.org/docs/conditional-rendering.html
     // search for &&
@@ -64,6 +71,7 @@ class ConstellationPanel extends Component {
         {this.renderEssayWindows()}
         {this.renderConstellationArtworks()}
         {this.renderConstellationKeywords()}
+        {this.props.isConstellationTextOpen && this.renderConstellationTextWindow()}
       </div>
     );
   }
@@ -77,10 +85,12 @@ const mapStateToProps = (state) => {
     selectedWorks: state._ui.selectedWorks,
     selectedKeywords: state._ui.selectedKeywords,
     essayWindows: state._ui.essayWindows,
+    isConstellationTextOpen: state._ui.isConstellationTextOpen
   };
 };
 
 export default connect(mapStateToProps, {
   toggleWelcome,
-  closeEssaySegment 
+  closeEssaySegment,
+  toggleConstellationText 
 })(ConstellationPanel);
