@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleLanguage, closeEssaySegment, increaseHighestZIndex  } from '../redux/modules/ui';
+import { toggleLanguage, closeEssaySegment, increaseHighestZIndex } from '../redux/modules/ui';
 
 // TODO be able to remember language state when opening multiple windows
 
 class EssayWindow extends Component {
 
- 
+
     constructor(props) {
         super(props);
         this.state = {
@@ -57,33 +57,43 @@ class EssayWindow extends Component {
             randomY,
         });
     }
+    getFootnotes() {
+        const notes = this.EssayData.footnote;
+        notes.map((note) => {
+            console.log('note', note);
+            return <div className="footnoteEnd">{note}</div>
+        })
+    }
     getLanguage() {
-        if (this.props.isFrench) { 
+        if (this.props.isFrench) {
             console.log('Essay information', this.props.essay)
             console.log('is this getting the header?', this.props.essayHeader)
             return (
                 <div>
-                    <div className="essayHeaderBox">
-                        <div className="essayHeader">{this.props.essayHeader}</div>
-                    </div>
-                    <div>
-                        <div className="objectENButton">EN</div>
-                        <div className="objectFRButton greyOut" onClick={this.props.toggleLanguage}>FR</div>
-                    </div>
+                <div className="essayHeaderBox">
+                    <div className="essayHeader">{this.props.essayHeader}</div>
+                </div>
+                <div>
+                    <div className="objectENButton">EN</div>
+                    <div className="objectFRButton greyOut" onClick={this.props.toggleLanguage}>FR</div>
+                </div>
 
-                    <img
-                        className="objectExitButton"
-                        src={require(".././images/buttons/exit_Button.svg")}
-                        alt=""
-                        onClick={() => {this.props.closeEssaySegment(this.props.index)} }
-                    ></img>
-                    <div className="essayBodyBox">
-                        <div className="essayBody">{this.props.essayText}</div>
+                <img
+                    className="objectExitButton"
+                    src={require(".././images/buttons/exit_Button.svg")}
+                    alt=""
+                    onClick={() => { this.props.closeEssaySegment(this.props.index) }}
+                ></img>
+                <div className="essayBodyBox">
+                    <div className="essayBody">{this.props.essayText}</div>
+                    <div className="downloadBox">Download Full Text</div>
+
+                </div>
+                <div className="essayFootnoteBox">
+                    <div className="footnoteEnd">
+                        {this.props.footnote}
                     </div>
-                    <div className="essayFootnoteBox">
-                        <div className="footnoteEnd">
-                    {this.props.footnote}
-                </div></div>
+                </div>
                 </div>
             )
         } return (
@@ -100,10 +110,11 @@ class EssayWindow extends Component {
                     className="objectExitButton"
                     src={require(".././images/buttons/exit_Button.svg")}
                     alt=""
-                    onClick={() => {this.props.closeEssaySegment(this.props.index)} }
+                    onClick={() => { this.props.closeEssaySegment(this.props.index) }}
                 ></img>
                 <div className="essayBodyBox">
                     <div className="essayBody">{this.props.essayTextFR}</div>
+                    <div className="downloadBox">Download Full Text</div>
                 </div>
                 <div className="essayFootnoteBox">
                     {this.props.footnoteFR}
@@ -123,7 +134,7 @@ class EssayWindow extends Component {
                     x: this.state.randomX,
                     y: this.state.randomY,
                     width: 500,
-                    height: 400
+                    height: 600
                 }}
                 enableResizing={null}
             // style={{overflow: "scroll"}}
