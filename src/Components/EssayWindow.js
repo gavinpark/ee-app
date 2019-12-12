@@ -57,14 +57,17 @@ class EssayWindow extends Component {
             randomY,
         });
     }
-    getFootnotes() {
-        const notes = this.EssayData.footnote;
-        notes.map((note) => {
-            console.log('note', note);
-            return <div className="footnoteEnd">{note}</div>
-        })
-    }
+    // getFootnotes() {
+    //     const notes = this.EssayData.footnote;
+    //     notes.map((note) => {
+    //         console.log('notes hi', notes);
+    //         return <div className="footnoteEnd">{note}</div>
+    //     })
+    // }
+
     getLanguage() {
+
+
         if (this.props.isFrench) {
             console.log('Essay information', this.props.essay)
             console.log('is this getting the header?', this.props.essayHeader)
@@ -86,13 +89,11 @@ class EssayWindow extends Component {
                 ></img>
                 <div className="essayBodyBox">
                     <div className="essayBody">{this.props.essayText}</div>
-                    <div className="downloadBox">Download Full Text</div>
+                    <div className="downloadBox">View Full Text</div>
 
                 </div>
                 <div className="essayFootnoteBox">
-                    <div className="footnoteEnd">
-                        {this.props.footnote}
-                    </div>
+                       {this.props.footnote}
                 </div>
                 </div>
             )
@@ -114,10 +115,12 @@ class EssayWindow extends Component {
                 ></img>
                 <div className="essayBodyBox">
                     <div className="essayBody">{this.props.essayTextFR}</div>
-                    <div className="downloadBox">Download Full Text</div>
+                    <div className="downloadBox">View Full Text</div>
                 </div>
                 <div className="essayFootnoteBox">
-                    {this.props.footnoteFR}
+                <div className="footnoteEnd">
+                       {this.props.footnote}
+                           </div>
                 </div>
             </div>
         )

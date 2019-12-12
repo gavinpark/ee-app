@@ -181,7 +181,7 @@
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: center;
   color: red;
-  font-size: 16pt;
+  font-size: 1rem;
   line-height: 52px;
   vertical-align: middle;
 }
@@ -376,30 +376,27 @@ th, td {
 }
 
 .essayFootnoteBox {
-  position: fixed;
-  width: 100%;
-  height: 100px;
+  position: absolute;
+  width: 90%;
+  height: auto;
   background: white;
   bottom: 0;
   text-align: bottom;
-  background: linear-gradient(to top,rgb(255, 255, 255) 60%,rgba(57,194,218,0));}
-
-  .footnoteEnd {
+  background: linear-gradient(to top,rgb(255, 255, 255) 80%,rgba(57,194,218,0));
   color: red;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  font-size: 9pt;
+  font-size: .7rem;
   font-weight: 400;
   text-align: left;
-  padding: 48px 12px 12px 12px;
-  overflow: scroll;
-  vertical-align: bottom;
-  bottom: 0;
+  padding: 48px 24px 24px 24px;
+ 
   }
+  
 
 .downloadBox {
   position: relative;
   width: 100%;
-  height: 150px;
+  height: 200px;
   line-height: 150px;
   padding-bottom: 50px;
   vertical-align: middle;
