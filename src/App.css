@@ -330,6 +330,8 @@ th, td {
 /* ESSAY WINDOW */
 
 .essayContainer{
+  width: 400px;
+  height: 500px;
   position: relative;
   left: 175px;
   border: 2px solid red;

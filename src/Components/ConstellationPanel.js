@@ -55,14 +55,6 @@ class ConstellationPanel extends Component {
     })
   }
 
-  renderWelcomeWindow (){
-    return this.props.essayWindows.map((essay, index) => {
-      return <EssayWindow {...essay} openEssaySegment={this.props.openEssaySegment} index={index} />
-    }
-    )
-  }
- 
-
   render() {
     // https://reactjs.org/docs/conditional-rendering.html
     // search for &&
