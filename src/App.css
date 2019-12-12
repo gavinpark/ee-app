@@ -95,6 +95,7 @@
   -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
+  background-color: white;
 }
 
 /* LANDING PAGE */
@@ -463,15 +464,10 @@ th, td {
 		.bottom { bottom: 0; }
 
 
-.isRelatedToHoveredKeyword {
+.isRelated {
   opacity: 100%;
 }
-.isRelatedToHoveredArtwork {
-  opacity: 100%;
+.isNotRelated{
+  opacity: 40%
 }
-.isNOTrelatedToHoveredKeyword{
-  opacity: 20%
-}
-.isNOTrelatedToHoveredArtwork{
-  opacity: 20%
-}
+

@@ -92,7 +92,7 @@ class ConstellationArtwork extends Component {
 
   render() {  
     const artworkData = window.allWorks[this.props.access_num];
-    const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : 'isNOTrelatedToHoveredKeyword';
+    const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword ? 'isRelated' : 'isNotRelated';
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
         className="collectionObject"

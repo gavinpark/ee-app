@@ -9,7 +9,7 @@ class DatabaseItem extends Component {
   render() {
     const { artworkData, artwork } = this.props;
     const isRelatedToHoveredKeyword = window.allWorks[artworkData.access_num].final_words.includes(this.props.hoveredKeyword);
-    const isRelatedToHoveredKeywordClassName = isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : 'isNOTrelatedToHoveredKeyword';
+    const isRelatedToHoveredKeywordClassName = isRelatedToHoveredKeyword ? 'isRelated' : 'isNotRelated';
       if (artworkData.have_rights === 'Oui') {
         if (artwork.similarityScore === 2) {
           return (
