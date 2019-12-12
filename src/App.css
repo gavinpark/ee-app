@@ -377,6 +377,7 @@ th, td {
   text-align: left;
   padding: 12px;
   overflow: scroll;
+  margin-bottom: 80px;
 }
 
 .essayFootnoteBox {
