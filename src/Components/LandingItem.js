@@ -49,9 +49,14 @@ class LandingItem extends Component {
         <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description twoTags'>{artworkData.subject}</div>
       )
     }
-    if (artwork.similarityScore >=2){
+    if (artwork.similarityScore ===3){
       return (
         <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description threeTags'>{artworkData.subject}</div>
+      )
+    }
+    if (artwork.similarityScore >=4){
+      return (
+        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description FourTags'>{artworkData.subject}</div>
       )
     }
     return (
