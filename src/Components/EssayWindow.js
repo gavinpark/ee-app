@@ -16,6 +16,8 @@ import { closeEssaySegment, increaseHighestZIndex } from '../redux/modules/ui';
 // 5. look out for props in essay to make sure its pulling from the right spot
 
 class EssayWindow extends Component {
+
+
     constructor(props) {
         super(props);
         this.state = {
@@ -125,7 +127,7 @@ class EssayWindow extends Component {
                     x: this.state.randomX,
                     y: this.state.randomY,
                     width: 500,
-                    height: 400
+                    height: 600
                 }}
                 enableResizing={null}
             // style={{overflow: "scroll"}}
@@ -136,7 +138,7 @@ class EssayWindow extends Component {
                     <div className="essayHeaderBox">
                         <div className="essayHeader">{this.props.essayHeader}</div>
                     </div>
-                   
+
                     <img
                         className="objectExitButton"
                         src={require(".././images/buttons/exit_Button.svg")}
@@ -145,7 +147,10 @@ class EssayWindow extends Component {
                     ></img>
                     <div className="essayBodyBox">
                         <div className="essayBody">{this.props.essayText}</div>
-
+                        <div className="downloadBox">View Full Text</div>
+                    </div>
+                    <div className="essayFootnoteBox">
+                        {this.props.footnote}
                     </div>
                 </div>
             </Rnd>

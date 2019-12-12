@@ -83,7 +83,7 @@ class ConstellationTextWindow extends Component {
                     x: 300,
                     y: 350,
                     width: 500,
-                    height: 400
+                    height: 600
                 }}
                 enableResizing={null}
             // style={{overflow: "scroll"}}

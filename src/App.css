@@ -183,7 +183,7 @@
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: center;
   color: red;
-  font-size: 16pt;
+  font-size: 1rem;
   line-height: 52px;
   vertical-align: middle;
 }
@@ -332,12 +332,15 @@ th, td {
 /* ESSAY WINDOW */
 
 .essayContainer{
+  width: 400px;
+  height: 500px;
   position: relative;
   left: 175px;
   border: 2px solid red;
   background: white;
   z-index: 2;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .essayHeaderBox{
   position: absolute;
@@ -350,7 +353,7 @@ th, td {
   height: 50px;
   color: red;
   font-family: Avara, sans-serif;
-  font-size: 16pt;
+  font-size: 1rem;
   text-align: left;
   padding-left: 12px;
   line-height: 55px;
@@ -358,9 +361,9 @@ th, td {
 }
 
 .essayBodyBox{
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 310px;
+  height: 510px;
   bottom: 0;
   top: 70px;
   overflow: scroll;
@@ -369,7 +372,7 @@ th, td {
 .essayBody {
   color: red;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  font-size: 16pt;
+  font-size: 1rem;
   font-weight: 400;
   text-align: left;
   padding: 12px;
@@ -378,34 +381,36 @@ th, td {
 
 .essayFootnoteBox {
   position: absolute;
-  width: 100%;
-  height: 100px;
+  width: 90%;
+  height: auto;
   background: white;
   bottom: 0;
   text-align: bottom;
-  background: linear-gradient(to top,rgb(255, 255, 255) 60%,rgba(57,194,218,0));}
-
-.footnoteEnd {
+  background: linear-gradient(to top,rgb(255, 255, 255) 80%,rgba(57,194,218,0));
   color: red;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  font-size: 9pt;
+  font-size: .7rem;
   font-weight: 400;
   text-align: left;
-  padding: 12px 12px 12px 12px;
-  overflow: scroll;
-  line-height: 120px;
-  vertical-align: bottom;
-}
+  padding: 48px 24px 24px 24px;
+ 
+  }
+  
 
 .downloadBox {
-  position: absolute;
-  background: blue;
+  position: relative;
   width: 100%;
-  position: absolute;
-  bottom: 0;
   height: 200px;
-  line-height: 200px;
+  line-height: 150px;
+  padding-bottom: 50px;
   vertical-align: middle;
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  color: red;
+  font-size: 1.06rem;
+  text-decoration: underline;
+  text-underline-position: under;
+  font-weight: 400;
+  text-align: center;
 }
 
 /* DESCRIPTION WINDOW */

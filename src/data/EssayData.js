@@ -55,7 +55,7 @@ const EssayData = [
         //     f1: "Jasmine E. Burns, “The Aura of Materiality: Digital Surrogacy and the Preservation of Photographic Archives,” Art Documentation: Journal of the Art Libraries Society of North America 36, no. 1 (2017), 2.",
         //     f2: "Ibid.",
         //     f3: " Ibid., 6.",
-        // }],
+        // }]
     },
     {
         essayHeader: "Limitations, Visibility and Access",
@@ -64,7 +64,7 @@ const EssayData = [
         // [{
         //     f1: "The gallery has digitally archived part of its collection through online databases such as The Canadian Heritage Information Network (CHIN), Artefacts Canada and the Société des musées québécois (SMQ), Info-Muse. The virtual exhibition Collecting: The Inflections of a Practice curated by Melanie Rainville additionally presents more than 250 works from the collection in connection with issues and limitations around collecting. See http://archive_ellengallery.concordia.ca/collectionner/en/ to learn about some important moments in the history of the Gallery and its collection. Collection | Dissemination. Retrieved from http://ellengallery.concordia.ca/collection/diffusion/?lang=en.",
         //     f2: " Annet Dekker, “Publishing and Exhibiting Online; Or, How to Create and Sustain a Performative Archive,” Audio Recording, November 16, 2017, https://afterall.org/2018/01/26/Annet_Dekker_Presentation.mp3.",
-        // }],
+        // }]
     },
     {
         essayHeader: "Copyright",
@@ -74,7 +74,7 @@ const EssayData = [
         //      f1: " Leonard & Bina Ellen Art Gallery Archive, “Lunch Time Talk: Janet Brooke,” Digital Video File, 2009.",
         //     f2: " Hito Steyerl, “In Defense of the Poor Image - Journal #10 November 2009 - e-Flux,” E-flux.com, 2009, https://www.e-flux.com/journal/10/61362/in-defense-of-the-poor-image/.",
         //     f3: " Burns, 6.",
-        // }],
+        // }]
     },
     {
         essayHeader: "Classification Systems and Bias",
@@ -82,7 +82,7 @@ const EssayData = [
         footnote: " 1 Mike Pepi, “Is a Database a Museum?,” Canadian Centre for Architecture (CCA, 2019), https://www.cca.qc.ca/en/articles/69294/is-a-database-a-museum.",
         // [{
         //     f1: " Mike Pepi, “Is a Database a Museum?,” Canadian Centre for Architecture (CCA, 2019), https://www.cca.qc.ca/en/articles/69294/is-a-database-a-museum.",
-        // }],
+        // }]
     },
     {
         essayHeader: "Residency Context",
@@ -94,7 +94,7 @@ const EssayData = [
         footnote: " 1 “Collection,” Leonard & Bina Ellen Art Gallery, 2014, http://ellengallery.concordia.ca/collection/?lang=en.",
         // [{
         //     f1: " “Collection,” Leonard & Bina Ellen Art Gallery, 2014, http://ellengallery.concordia.ca/collection/?lang=en.",
-        // }],
+        // }]
     },
 
 
