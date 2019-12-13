@@ -114,6 +114,7 @@ class WelcomeWindow extends Component {
                     ></img>
                     <div className="essayBodyBox">
                         <div className="essayBody">{EssayData[0].essayText}</div>
+                        <div className="downloadBox">View Full Text</div>
 
                     </div>
                     <div className="essayFootnoteBox">

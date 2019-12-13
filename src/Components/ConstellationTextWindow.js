@@ -102,7 +102,11 @@ class ConstellationTextWindow extends Component {
                     ></img>
                     <div className="essayBodyBox">
                         <div className="essayBody">{EssayData[3].essayText}</div>
+                        <div className="downloadBox">View Full Text</div>
 
+                    </div>
+                    <div className="essayFootnoteBox">
+                        {EssayData[3].footnote}
                     </div>
                 </div>
             </Rnd>
