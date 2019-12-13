@@ -12,7 +12,7 @@ class ConstellationArtwork extends Component {
     this.state = {
       randomX: -1,
       randomY: -1,
-      zIndex: 1,
+      zIndex: 2,
     }
   }
 
