@@ -7,7 +7,7 @@ import "../App.css";
 
 import { removeInitialArtwork } from "../redux/modules/ui";
 import { openMainPage } from "../redux/modules/ui";
-import { addWorkToConstellation } from "../redux/modules/ui";
+import { addWorkToConstellation, shuffle } from "../redux/modules/ui";
 
 // TODO - something needs to see how many spaces rows/cells are empty, take that number and create 'x' amount of empty spaces based on how many, then randomly scatter them within the array being returned.
 // window is 135 cells
@@ -67,23 +67,40 @@ class Landing extends Component {
     });
 
     // TODO: Gavin finish this if else for 'media query' based on windowWidth
-    let viewportNumberOfGridBlocks = 15;
+    let viewportNumberofColumnBlocks = 15;
     const windowWidth = window.innerWidth;
     if (windowWidth >= 1200) {
-      viewportNumberOfGridBlocks = 15
+      viewportNumberofColumnBlocks = 15
     } else if (windowWidth <= 1200 && windowWidth >= 900) {
-      viewportNumberOfGridBlocks = 9;
+      viewportNumberofColumnBlocks = 9;
+    } else if (windowWidth <= 900 && windowWidth >= 600) {
+      viewportNumberofColumnBlocks = 6;
+    } else if (windowWidth <= 600 && windowWidth >= 0){
+      viewportNumberofColumnBlocks = 3;
     }
     // TODO gavin: here or inside the findNextHighestMultiple, you need to add another multiple of 15
     // such that it will fill at least the screen height - you can use window.innerHeight to check
-    const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberOfGridBlocks) - countOfExistingBlocks
-      + 120
+    // come back to this 
+    let viewportNumberofRowBlocks = 9;
+    // const windowWidth = window.innerHeight;
+    // if (windowWidth >= 1200) {
+    //   viewportNumberofRowBlocks = 15
+    // } else if (windowWidth <= 1200 && windowWidth >= 900) {
+    //   viewportNumberofRowBlocks = 9;
+    // } else if (windowWidth <= 900 && windowWidth >= 600) {
+    //   viewportNumberofRowBlocks = 6;
+    // } else if (windowWidth <= 600 && windowWidth >= 0){
+    //   viewportNumberofRowBlocks = 3;
+    // }
+
+    const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks
       ;
     console.log('numToFillIn:', numToFillIn);
 
 
     const fillIns = generateEmpties(numToFillIn);
     console.log('fillIns', fillIns);
+
     return (
       <div className="databaseLanding">
         {mappedArtworks}
@@ -96,7 +113,6 @@ class Landing extends Component {
     if (this.props.relatedWorks.length === 0) {
       return <div className="databaseLanding">{generateEmpties(135)}</div>;
     }
-
     return this.renderGrid();
   }
 }
@@ -111,5 +127,6 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps, {
   removeInitialArtwork,
   openMainPage,
-  addWorkToConstellation
+  addWorkToConstellation, 
+  shuffle,
 })(Landing);
