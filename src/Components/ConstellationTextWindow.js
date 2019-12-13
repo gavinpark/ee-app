@@ -91,7 +91,7 @@ class ConstellationTextWindow extends Component {
                 <div onClick={this.bringItemToHighestZIndex}>
                     {/* {this.getLanguage()} */}
                     <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[2].essayHeader}</div>
+                        <div className="essayHeader">{EssayData[3].essayHeader}</div>
                     </div>
 
                     <img
@@ -101,7 +101,7 @@ class ConstellationTextWindow extends Component {
                         onClick={this.props.toggleConstellationText}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[2].essayText}</div>
+                        <div className="essayBody">{EssayData[3].essayText}</div>
 
                     </div>
                 </div>
