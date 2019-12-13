@@ -18,7 +18,7 @@ class WelcomeWindow extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            zIndex: 1,
+            zIndex: 3,
         }
     }
     componentDidMount() {
