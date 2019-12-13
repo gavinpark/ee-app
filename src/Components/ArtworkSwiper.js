@@ -20,7 +20,7 @@ class ArtworkSwiper extends Component {
                 })}</Swiper>)
         } else {
             return (
-                <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + this.props.link} alt=""></img>
+                <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + this.props.link[0]} alt=""></img>
             )
         }
     }

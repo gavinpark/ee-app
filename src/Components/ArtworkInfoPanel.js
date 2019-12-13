@@ -183,20 +183,20 @@ class ArtworkInfoPanel extends Component {
           <th>Accession Date</th>
           <td>{artworkData.access_date}</td>
 
-          <th>Dimensions</th>
+          <th >Dimensions</th>
           <td>{this.determineHeight(artworkData)}{this.determineLength(artworkData)}{this.determineWidth(artworkData)}{this.determineDepth(artworkData)}</td>
 
           <th>Status</th>
           <td>{artworkData.status}</td>
 
           <th className={this.determineCreditRowSize(artworkData)}>Credit</th>
-          <td className={this.determineCreditRowSize(artworkData)}>Collection of the Leonard & Bina Ellen Art Gallery. {'\n'} {artworkData.credit}{'\n'}<br/>Photo:{'\xa0'}{artworkData.photographer}</td>
+          <td className={this.determineCreditRowSize(artworkData)}>Collection of the Leonard & Bina Ellen Art Gallery. {'\n'} {artworkData.credit}{'\n'} Photo:{'\xa0'}{artworkData.photographer}</td>
 
           <th>Medium</th>
           <td>{this.getMedium(artworkData)}</td>
 
-          <th>Description</th>
-          <td>{artworkData.description}</td>
+          <th className={this.determineDescRowSize(artworkData)}>Description</th>
+          <td className={this.determineDescRowSize(artworkData)}>{artworkData.description}</td>
 
 
           <th className={this.determineKeyRowSize(artworkData)}>Keywords</th>
