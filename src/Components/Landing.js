@@ -17,7 +17,7 @@ const generateEmpties = (numberOfEmpties) => {
   const emptiesArray = new Array(numberOfEmpties);
   const empties = emptiesArray.fill("", 0, numberOfEmpties);
   return empties.map(empty => {
-    return <div className="description">{empty}</div>;
+    return <div className="description">{empty}  </div>;
   });
 }
 
@@ -28,6 +28,9 @@ const findNextHighestMultiple = (
   const smallerMultiple =
     Math.floor(numofArtworkBlocks / numOfBlocksInWidthOfViewport) *
     numOfBlocksInWidthOfViewport;
+  console.log('numofArtworkBlocks:', numofArtworkBlocks);
+  console.log('numOfBlocksInWidthOfViewport:', numOfBlocksInWidthOfViewport);
+  console.log('smaller multiple:', smallerMultiple);
   return smallerMultiple + numOfBlocksInWidthOfViewport;
 };
 
@@ -42,8 +45,9 @@ class Landing extends Component {
     const mappedArtworks = this.props.relatedWorks.map(artwork => {
       const artworkData = window.allWorks[artwork.access_num];
       const { similarityScore } = artwork;
-      console.log(similarityScore);
-      if (similarityScore === 1) {
+      if (similarityScore === 0) {
+        countOfExistingBlocks += 1;
+      } else if (similarityScore === 1) {
         countOfExistingBlocks += 1;
       } else if (similarityScore === 2) {
         countOfExistingBlocks += 4;
@@ -52,7 +56,7 @@ class Landing extends Component {
       } else {
         countOfExistingBlocks += 16;
       }
-
+      console.log('countOfExistingBlocks', countOfExistingBlocks);
       return (
         <LandingItem
           artworkData={artworkData}
@@ -61,7 +65,7 @@ class Landing extends Component {
         ></LandingItem>
       );
     });
-    
+
     // TODO: Gavin finish this if else for 'media query' based on windowWidth
     let viewportNumberOfGridBlocks = 15;
     const windowWidth = window.innerWidth;
@@ -72,8 +76,14 @@ class Landing extends Component {
     }
     // TODO gavin: here or inside the findNextHighestMultiple, you need to add another multiple of 15
     // such that it will fill at least the screen height - you can use window.innerHeight to check
-    const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberOfGridBlocks) - countOfExistingBlocks;
+    const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberOfGridBlocks) - countOfExistingBlocks
+      + 120
+      ;
+    console.log('numToFillIn:', numToFillIn);
+
+
     const fillIns = generateEmpties(numToFillIn);
+    console.log('fillIns', fillIns);
     return (
       <div className="databaseLanding">
         {mappedArtworks}

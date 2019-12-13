@@ -56,18 +56,19 @@
 .twoTags{
   grid-column-end: span 2;
   grid-row-end: span 2;
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .threeTags {
   grid-column-end: span 3;
   grid-row-end: span 3;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .fourTags {
   grid-column-end: span 4;
   grid-row-end: span 4;
+  font-size: 2rem;
 }
 
 .span2Row{
@@ -114,6 +115,7 @@
 .databaseLanding > div {
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
+  justify-items: unset;
 }
 
 /* MAIN INTERFACE */
