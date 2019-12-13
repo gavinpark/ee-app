@@ -96,7 +96,12 @@ class CopyrightWindow extends Component {
                         <br/>
                         {EssayData[6].essayText}
                         </div>
+                        <div className="downloadBox">View Full Text</div>
 
+
+                    </div>
+                    <div className="essayFootnoteBox">
+                        {EssayData[6].footnote}
                     </div>
                 </div>
             </Rnd>
