@@ -6,6 +6,9 @@
   font-weight: normal;
   font-style: normal;
 }
+*{
+  cursor: url(images/cursor/cursor_arrow01.png), auto;
+}
 
 /*GENERAL STYLING*/
 
@@ -18,7 +21,7 @@
   height: 100%;
   object-fit: cover;
   align-items: center;
-  cursor: pointer;
+  cursor: url(images/cursor/cursor_arrow01.png), auto;
 }
 
 .description {
@@ -32,7 +35,7 @@
   -ms-hyphens: auto;
   hyphens: auto;
   overflow: scroll;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .keyword {
@@ -110,11 +113,13 @@
   width: 100vw;
   height: 100vh; 
   overflow: scroll;
+
 }
 .databaseLanding > div {
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
   justify-items: unset;
+
 }
 
 /* MAIN INTERFACE */
@@ -493,5 +498,5 @@ th, td {
   bottom: 0;
   background-color: rgba(0,0,0,0.5); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  /* cursor: pointer; Add a pointer on hover */
 }
