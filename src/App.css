@@ -39,6 +39,7 @@
 
 .artworkImage, .description, .essayButton {  
   cursor: url(images/cursor/cursor_arrow_02.png), auto;
+
 }
 
 .keyword {
@@ -102,7 +103,7 @@
   -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
-  cursor: url(images/cursor/cursor_arrow_05.png), auto;  
+  cursor: url(images/cursor/cursor_arrow_09.png), auto;  
 
 }
 
@@ -124,6 +125,8 @@
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
   justify-items: unset;
+  cursor: url(images/cursor/cursor_arrow_02.png), auto  ;
+
 }
 
 /* MAIN INTERFACE */
