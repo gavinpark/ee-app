@@ -98,6 +98,7 @@ class ConstellationArtwork extends Component {
     };
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
+        className="collectionObject"
         default={{
           x: this.state.randomX,
           y: this.state.randomY,
@@ -110,13 +111,13 @@ class ConstellationArtwork extends Component {
           bottomRight: bottomRightStyles,
         }}
       >
-        <div className="collectionObject"
+        <div
           onClick={this.bringItemToHighestZIndex}
           className={isRelatedToHoveredKeywordClass}
           onMouseOver={this.handleMouseOver}
           onMouseOut={this.handleMouseOff}
         >
-          <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
+          <img draggable="false" className="artworkImage cursorMove" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
           <img
               className="objectMoreButton"
               src={require(".././images/buttons/more_Button.svg")}
@@ -129,6 +130,7 @@ class ConstellationArtwork extends Component {
             alt=""
             onClick={() => { this.removeWork(artworkData.access_num) }}
           ></img>
+          
         </div>
       </Rnd>
     );

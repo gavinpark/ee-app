@@ -99,14 +99,18 @@
 }
 
 /* FLOATING BOXES/BOX SHADOW? */
-.collectionObject, .essayContainer, .descriptionText{
+.collectionObject, .essayContainer, .descriptionText {
   -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
 
 }
+.cursorMove{
 
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+
+}
 .collectionObject{
   cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
 

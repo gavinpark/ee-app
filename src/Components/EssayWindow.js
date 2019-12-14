@@ -121,7 +121,7 @@ class EssayWindow extends Component {
         }
         return (
             <Rnd
-                className="essayContainer"
+                className="essayContainer cursorMove"
                 style={{ zIndex: this.state.zIndex }}
                 default={{
                     x: this.state.randomX,
