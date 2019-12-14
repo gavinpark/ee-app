@@ -93,6 +93,9 @@ class ConstellationArtwork extends Component {
   render() {  
     const artworkData = window.allWorks[this.props.access_num];
     const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : '';
+    const bottomRightStyles = {
+      cursor: '',
+    };
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
         className="collectionObject"
@@ -104,6 +107,9 @@ class ConstellationArtwork extends Component {
         style={{ zIndex: this.state.zIndex }}
         lockAspectRatio={true}
         minWidth={100}
+        resizeHandleStyles={{
+          bottomRight: bottomRightStyles,
+        }}
       >
         <div
           onClick={this.bringItemToHighestZIndex}

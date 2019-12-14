@@ -238,6 +238,25 @@
 /* .copyrightButton p{
   margin: 29.33%;
 } */
+
+/* .draggableLeft{
+  left: 0;
+  cursor: url(images/cursor/cursor_arrow_04.png), auto;
+
+} */
+
+.draggableRight{
+  cursor: url(images/cursor/cursor_arrow_03.png), auto;
+
+}
+
+/* .draggableLeft, .draggableRight {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 50%;
+} */
+
 .databaseInfo {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
