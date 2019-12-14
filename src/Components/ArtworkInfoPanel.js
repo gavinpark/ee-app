@@ -140,14 +140,22 @@ class ArtworkInfoPanel extends Component {
     }
   }
   getMedium(artworkData) {
-    if(artworkData.medium && artworkData.support){
+    if (artworkData.medium && artworkData.support) {
       return (artworkData.medium + ' on ' + artworkData.support)
     }
-    if(artworkData.medium && artworkData.support === ''){
+    if (artworkData.medium && artworkData.support === '') {
       return (artworkData.medium)
     }
   }
+  getCredit(artworkData) {
+    if (artworkData.credit === '') {
+      return ("Collection of the Leonard & Bina Ellen Art Gallery. Please contact the gallery for full credit. All rights reserved.")
 
+    } 
+    else {
+      return ("Collection of the Leonard & Bina Ellen Art Gallery." + '\n' + artworkData.credit + '\n' + "Photo:" + '\xa0' + artworkData.photographer)
+    }
+  }
   render() {
     // here is how you would get the
     // data for the 'current active work'
@@ -190,7 +198,7 @@ class ArtworkInfoPanel extends Component {
           <td>{artworkData.status}</td>
 
           <th className={this.determineCreditRowSize(artworkData)}>Credit</th>
-          <td className={this.determineCreditRowSize(artworkData)}>Collection of the Leonard & Bina Ellen Art Gallery. {'\n'} {artworkData.credit}{'\n'} Photo:{'\xa0'}{artworkData.photographer}</td>
+          <td className={this.determineCreditRowSize(artworkData)}>{this.getCredit(artworkData)}</td>
 
           <th>Medium</th>
           <td>{this.getMedium(artworkData)}</td>

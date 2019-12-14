@@ -67,7 +67,7 @@ class ConstellationPanel extends Component {
     // search for &&
     return (
       <div className="constellationPanel">
-        {this.props.isWelcomeOpen && <div><WelcomeWindow toggleWelcome={this.props.toggleWelcome} /></div>}
+        {this.props.isWelcomeOpen && <div><WelcomeWindow toggleWelcome={this.props.toggleWelcome}/></div>}
         {this.renderEssayWindows()}
         {this.renderConstellationArtworks()}
         {this.renderConstellationKeywords()}

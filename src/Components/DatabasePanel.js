@@ -32,7 +32,7 @@ class DatabasePanel extends Component {
         index,
       }
     });
-
+    
     const finalArray = shuffle([...databaseItemsArray, ...essayArray]);
 
     return (

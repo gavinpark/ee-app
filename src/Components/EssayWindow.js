@@ -146,9 +146,21 @@ class EssayWindow extends Component {
                         onClick={() => { this.props.closeEssaySegment(this.props.index) }}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{this.props.essayText}</div>
-                        <div className="downloadBox">View Full Text</div>
+                        <div className="essayBody">
+                            {this.props.essayText[0]}
+                            <br />
+                            <br />
+                            {this.props.essayText[1]}
+                            <br />
+                            <br />
+                            {this.props.essayText[2]}
+                            <br />
+                            <br />
+                            {this.props.essayText[3]}
+                            <div className="downloadBox">View Full Text</div>
+                        </div>
                     </div>
+
                     <div className="essayFootnoteBox">
                         {this.props.footnote}
                     </div>

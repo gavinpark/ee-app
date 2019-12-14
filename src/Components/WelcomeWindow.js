@@ -113,8 +113,19 @@ class WelcomeWindow extends Component {
                         onClick={this.props.toggleWelcome}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[0].essayText}</div>
-                        <div className="downloadBox">View Full Text</div>
+                    <div className="essayBody">
+                            {EssayData[0].essayText[0]}
+                            <br />
+                            <br />
+                            {EssayData[0].essayText[1]}
+                            <br />
+                            <br />
+                            {EssayData[0].essayText[2]}
+                            <br />
+                            <br />
+                            {EssayData[0].essayText[3]}
+                            <div className="downloadBox">View Full Text</div>
+                        </div>
 
                     </div>
                     <div className="essayFootnoteBox">

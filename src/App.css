@@ -6,6 +6,9 @@
   font-weight: normal;
   font-style: normal;
 }
+:root {
+  --swiper-theme-color: red !important;
+}
 
 /*GENERAL STYLING*/
 

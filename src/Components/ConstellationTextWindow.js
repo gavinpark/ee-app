@@ -101,9 +101,19 @@ class ConstellationTextWindow extends Component {
                         onClick={this.props.toggleConstellationText}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">{EssayData[3].essayText}</div>
-                        <div className="downloadBox">View Full Text</div>
-
+                    <div className="essayBody">
+                            {EssayData[3].essayText[0]}
+                            <br />
+                            <br />
+                            {EssayData[3].essayText[1]}
+                            <br />
+                            <br />
+                            {EssayData[3].essayText[2]}
+                            <br />
+                            <br />
+                            {EssayData[3].essayText[3]}
+                            <div className="downloadBox">View Full Text</div>
+                        </div>
                     </div>
                     <div className="essayFootnoteBox">
                         {EssayData[3].footnote}

@@ -89,20 +89,29 @@ class CopyrightWindow extends Component {
                     ></img>
                     <div className="essayBodyBox">
                         <div className="essayBody">
-                        <i>{EssayData[6].disclaimer}</i>
-                        <br/>
-                        __________
-                        <br/>
-                        <br/>
-                        {EssayData[6].essayText}
+                            <i>{EssayData[6].disclaimer}</i>
+                            <br />
+                            __________
+                        <br />
+                            <br />
+                            {EssayData[6].essayText[0]}
+                            <br />
+                            <br />
+                            {EssayData[6].essayText[1]}
+                            <br />
+                            <br />
+                            {EssayData[6].essayText[2]}
+                            <br />
+                            <br />
+                            {EssayData[6].essayText[3]}
+                            <div className="downloadBox">View Full Text</div>
+
                         </div>
-                        <div className="downloadBox">View Full Text</div>
-
-
+                        
                     </div>
                     <div className="essayFootnoteBox">
-                        {EssayData[6].footnote}
-                    </div>
+                            {EssayData[6].footnote}
+                        </div>
                 </div>
             </Rnd>
 
