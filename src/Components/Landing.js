@@ -92,11 +92,7 @@ class Landing extends Component {
     // } else if (windowWidth <= 600 && windowWidth >= 0){
     //   viewportNumberofRowBlocks = 3;
     // }
-    const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks
-      ;
-    console.log('numToFillIn:', numToFillIn);
-
-// make if statment here to see IF count of existing blocks = <135, use numToFillIn + 135-countofExisting Blocks, else create another one that adds numToFillIn +60 (safeguard)
+    const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks;
     const fillIns = generateEmpties(numToFillIn);
     console.log('fillIns', fillIns);
 
