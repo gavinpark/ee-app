@@ -21,7 +21,6 @@
   height: 100%;
   object-fit: cover;
   align-items: center;
-  cursor: url(images/cursor/cursor_arrow_02.png), auto;
 }
 
 .description {
@@ -35,9 +34,10 @@
   -ms-hyphens: auto;
   hyphens: auto;
   overflow: scroll;
-  cursor: url(images/cursor/cursor_arrow_02.png), auto;
+}
 
-  /* cursor: pointer; */
+.artworkImage, .description, .essayButton {  
+  cursor: url(images/cursor/cursor_arrow_02.png), auto;
 }
 
 .keyword {
@@ -101,7 +101,7 @@
   -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
-  cursor: url(images/cursor/cursor_arrow_04.png), auto !important;
+  cursor: url(images/cursor/cursor_arrow_04.png), auto, !important;  
 
 }
 
@@ -123,7 +123,6 @@
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
   justify-items: unset;
-
 }
 
 /* MAIN INTERFACE */

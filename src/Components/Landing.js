@@ -17,7 +17,7 @@ const generateEmpties = (numberOfEmpties) => {
   const emptiesArray = new Array(numberOfEmpties);
   const empties = emptiesArray.fill("", 0, numberOfEmpties);
   return empties.map(empty => {
-    return <div className="description">{empty}  </div>;
+    return <div>{empty}</div>;
   });
 }
 
