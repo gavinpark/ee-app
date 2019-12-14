@@ -7,7 +7,7 @@
   font-style: normal;
 }
 *{
-  cursor: url(images/cursor/cursor_arrow01.png), auto;
+  cursor: url(images/cursor/cursor_arrow_01.png), auto;
 }
 
 /*GENERAL STYLING*/
@@ -21,7 +21,7 @@
   height: 100%;
   object-fit: cover;
   align-items: center;
-  cursor: url(images/cursor/cursor_arrow01.png), auto;
+  cursor: url(images/cursor/cursor_arrow_02.png), auto;
 }
 
 .description {
@@ -35,6 +35,8 @@
   -ms-hyphens: auto;
   hyphens: auto;
   overflow: scroll;
+  cursor: url(images/cursor/cursor_arrow_02.png), auto;
+
   /* cursor: pointer; */
 }
 
@@ -99,6 +101,8 @@
   -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
+  cursor: url(images/cursor/cursor_arrow_04.png), auto !important;
+
 }
 
 /* LANDING PAGE */
