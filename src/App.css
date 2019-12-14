@@ -37,7 +37,7 @@
 
 }
 
-.artworkImage, .description, .essayButton {  
+ .artworkImage, .description, .essayButton {  
   cursor: url(images/cursor/cursor_arrow_02.png), auto;
 
 }
@@ -103,10 +103,14 @@
   -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
-  cursor: url(images/cursor/cursor_arrow_09.png), auto;  
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
 
 }
 
+.collectionObject{
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+
+}
 /* LANDING PAGE */
 
 .databaseLanding {
@@ -125,7 +129,6 @@
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
   justify-items: unset;
-  cursor: url(images/cursor/cursor_arrow_02.png), auto  ;
 
 }
 
@@ -374,6 +377,8 @@ th, td {
   z-index: 2;
   overflow-y: scroll;
   overflow-x: hidden;
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+
 }
 .essayHeaderBox{
   position: absolute;
@@ -400,6 +405,8 @@ th, td {
   bottom: 0;
   top: 70px;
   overflow: scroll;
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+
 }
 
 .essayBody {
