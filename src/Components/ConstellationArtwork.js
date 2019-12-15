@@ -94,7 +94,7 @@ class ConstellationArtwork extends Component {
     const artworkData = window.allWorks[this.props.access_num];
     const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : '';
     const bottomRightStyles = {
-      cursor: 'src={require(.././images/cursor/cursor_arrow_07)}',
+      cursor: 'pointer',
     };
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
