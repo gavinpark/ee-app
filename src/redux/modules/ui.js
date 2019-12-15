@@ -49,6 +49,7 @@ export default function reducer(state = {
       return {
         ...state,
         isWelcomeOpen: !state.isWelcomeOpen,
+        highestZIndex: state.highestZIndex + 1,
       };
     case 'TOGGLE_COPYRIGHT':
       return {
@@ -60,6 +61,7 @@ export default function reducer(state = {
         newOpenState.essayWindows[action.index].displayed = true;
       return {
         ...newOpenState,
+        highestZIndex: state.highestZIndex + 1,
       };
     case 'CLOSE_ESSAY':
         const newStateAfterEssayClose = _.cloneDeep(state);
@@ -71,6 +73,7 @@ export default function reducer(state = {
       return {
         ...state,
         isConstellationTextOpen: !state.isConstellationTextOpen,
+        highestZIndex: state.highestZIndex + 1,
       }
     case 'TOGGLE_DETAIL_PANEL':
       return {
@@ -107,6 +110,7 @@ export default function reducer(state = {
         const newSelectedArtworksAfterSelect = [...state.selectedWorks, {
           accessNum: action.selectedKey,
           similarityScore: action.similarityScore || 1,
+          highestZIndex: state.highestZIndex + 1
         }];
         return {
           ...state,
@@ -315,7 +319,7 @@ export const addWorkToConstellation = (selectedKey, similarityScore) => {
     type: 'SELECT_NEW_ARTWORK',
     selectedKey: selectedKey,
     relatedArtworks,
-    similarityScore
+    similarityScore,
   }
 }
 

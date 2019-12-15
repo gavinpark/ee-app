@@ -19,7 +19,7 @@ class ConstellationTextWindow extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            zIndex: 2,
+            zIndex: 1,
         }
     }
     bringItemToHighestZIndex = () => {

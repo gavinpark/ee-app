@@ -11,7 +11,7 @@ class ConstellationKeyword extends Component {
         this.state = {
           randomX: null,
           randomY: null,
-          zIndex: 1,
+          zIndex: 0,
         }
       }
       componentDidMount() {

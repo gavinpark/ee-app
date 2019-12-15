@@ -132,11 +132,13 @@ class ArtworkInfoPanel extends Component {
   hasRights(artworkData) {
     if (artworkData.have_rights === "Oui") {
       return (<ArtworkSwiper link={artworkData.link} {...this.props} />)
-
     }
-    else {
-      return (
-        "")
+    if(artworkData.have_rights === "Non" || artworkData.have_rights === ""){
+      if(this.props.isCopyrightOpen){
+        return("")
+      }else{
+        return(<CopyrightWindow toggleCopyright={this.props.toggleCopyright} />)
+      }
     }
   }
   getMedium(artworkData) {
