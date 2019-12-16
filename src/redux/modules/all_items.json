@@ -550,7 +550,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "000_12_01-000_12_48.jpg", "000_12_01-000_12_48(détail.1).jpg", "000_12_01-000_12_48(détail.2).jpg"
+        "link": [ "000_12_01-000_12_48.jpg", "000_12_01-000_12_48(detail.1).jpg", "000_12_01-000_12_48(detail.2).jpg"
         ],
         "photographer": "Richard-Max Tremblay",
         "final_words": [
@@ -72172,7 +72172,7 @@
         "length": "",
         "depth": "47",
         "status": "actif",
-        "link": [ "994_30(vue de face).jpg", "994_30(vue du côté g.).jpg"
+        "link": [ "994_30(vue de face).jpg", "994_30(vue du cote g.).jpg"
         ],
         "photographer": "Richard-Max Tremblay",
         "final_words": [

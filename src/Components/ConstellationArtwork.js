@@ -93,6 +93,9 @@ class ConstellationArtwork extends Component {
   render() {  
     const artworkData = window.allWorks[this.props.access_num];
     const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : '';
+    // const bottomRightStyles = {
+    //   cursor: 'pointer',
+    // };
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
         className="collectionObject"
@@ -104,6 +107,9 @@ class ConstellationArtwork extends Component {
         style={{ zIndex: this.state.zIndex }}
         lockAspectRatio={true}
         minWidth={100}
+        // resizeHandleStyles={{
+        //   bottomRight: bottomRightStyles,
+        // }}
       >
         <div
           onClick={this.bringItemToHighestZIndex}
@@ -111,7 +117,7 @@ class ConstellationArtwork extends Component {
           onMouseOver={this.handleMouseOver}
           onMouseOut={this.handleMouseOff}
         >
-          <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
+          <img draggable="false" className="artworkImage cursorMove" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
           <img
               className="objectMoreButton"
               src={require(".././images/buttons/more_Button.svg")}
@@ -124,6 +130,7 @@ class ConstellationArtwork extends Component {
             alt=""
             onClick={() => { this.removeWork(artworkData.access_num) }}
           ></img>
+          
         </div>
       </Rnd>
     );
