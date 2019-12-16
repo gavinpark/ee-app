@@ -29,7 +29,7 @@ class DescriptionWindow extends Component {
     }
     getRandomXPosition() {
         var min = 0;
-        var x = document.getElementsByClassName('constellationPanel')[0].offsetHeight;
+        var x = document.getElementsByClassName('constellationPanel')[0].offsetHeight - 200;
         var randomX = Math.floor(Math.random() * (x - min)) + min;
         // return randomX;
         this.setState({
@@ -38,7 +38,7 @@ class DescriptionWindow extends Component {
     }
     getRandomYPosition() {
         var min = 0;
-        var y = document.getElementsByClassName('constellationPanel')[0].offsetWidth;
+        var y = document.getElementsByClassName('constellationPanel')[0].offsetWidth - 200;
         var randomY = Math.floor(Math.random() * (y - min)) + min;
 
         // return randomY;

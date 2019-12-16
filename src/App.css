@@ -344,7 +344,7 @@ th, td {
   left: 175px;
   border: 2px solid red;
   background: white;
-  z-index: 2;
+  /* z-index: 2; */
   overflow-y: scroll;
   overflow-x: hidden;
 }
