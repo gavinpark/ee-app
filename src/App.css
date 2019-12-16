@@ -9,11 +9,13 @@
 :root {
   --swiper-theme-color: red !important;
 }
+*{
+  cursor: url(images/cursor/cursor_arrow_01.png), auto;
+}
 
 /*GENERAL STYLING*/
 
 .artworkImage {
-  /* background-color: red; */
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -21,7 +23,7 @@
   height: 100%;
   object-fit: cover;
   align-items: center;
-  cursor: pointer;
+
 }
 
 .description {
@@ -35,7 +37,12 @@
   -ms-hyphens: auto;
   hyphens: auto;
   overflow: scroll;
-  cursor: pointer;
+
+}
+
+ .artworkImage, .description, .essayButton {  
+  cursor: url(images/cursor/cursor_arrow_02.png), auto;
+
 }
 
 .keyword {
@@ -96,12 +103,22 @@
 }
 
 /* FLOATING BOXES/BOX SHADOW? */
-.collectionObject, .essayContainer, .descriptionText{
+.collectionObject, .essayContainer, .descriptionText {
   -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
-}
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
 
+}
+.cursorMove{
+
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+
+}
+.collectionObject{
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+
+}
 /* LANDING PAGE */
 
 .databaseLanding {
@@ -114,11 +131,13 @@
   width: 100vw;
   height: 100vh; 
   overflow: scroll;
+
 }
 .databaseLanding > div {
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
   justify-items: unset;
+
 }
 
 /* MAIN INTERFACE */
@@ -233,6 +252,25 @@
 /* .copyrightButton p{
   margin: 29.33%;
 } */
+
+/* .draggableLeft{
+  left: 0;
+  cursor: url(images/cursor/cursor_arrow_04.png), auto;
+
+} */
+
+.draggableRight{
+  cursor: url(images/cursor/cursor_arrow_03.png), auto;
+
+}
+
+/* .draggableLeft, .draggableRight {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 50%;
+} */
+
 .databaseInfo {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
@@ -347,6 +385,8 @@ th, td {
   /* z-index: 2; */
   overflow-y: scroll;
   overflow-x: hidden;
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+
 }
 .essayHeaderBox{
   position: absolute;
@@ -373,6 +413,8 @@ th, td {
   bottom: 0;
   top: 70px;
   overflow: scroll;
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+
 }
 
 .essayBody {
@@ -498,5 +540,5 @@ th, td {
   bottom: 0;
   background-color: rgba(0,0,0,0.5); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  /* cursor: pointer; Add a pointer on hover */
 }
