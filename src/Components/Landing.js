@@ -94,12 +94,21 @@ class Landing extends Component {
     // }
     const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks;
     const fillIns = generateEmpties(numToFillIn);
+    console.log('numToFillIn', numToFillIn);
     console.log('fillIns', fillIns);
+    console.log('mappedArtworks', mappedArtworks);
+    
+    const bufferFillIns = generateEmpties(45);
+
+    const newArray = shuffle([...mappedArtworks, ...fillIns]);
+    
+
 
     return (
       <div className="databaseLanding">
-        {mappedArtworks}
-        {fillIns}
+        {/* {mappedArtworks} */}
+        {newArray}
+        {bufferFillIns}
       </div>
     );
   };

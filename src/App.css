@@ -127,11 +127,9 @@
   grid-auto-rows: 11.11%;
   grid-auto-flow: dense;
 
-  /* margin-top: -2px; */
   width: 100vw;
   height: 100vh; 
   overflow: scroll;
-
 }
 .databaseLanding > div {
   border: 2px solid red;
