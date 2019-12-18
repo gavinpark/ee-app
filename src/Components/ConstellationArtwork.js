@@ -94,7 +94,7 @@ class ConstellationArtwork extends Component {
     const artworkData = window.allWorks[this.props.access_num];
     const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : '';
     const bottomRightStyles = {
-      cursor: 'pointer',
+      cursor: '.none',
     };
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
@@ -107,10 +107,13 @@ class ConstellationArtwork extends Component {
         style={{ zIndex: this.state.zIndex }}
         lockAspectRatio={true}
         minWidth={100}
-        resizeHandleStyles={{
+        resizeHandleclasses={{
           bottomRight: bottomRightStyles,
         }}
+        
       >
+                  <div className="bottomRight"></div>
+
         <div
           onClick={this.bringItemToHighestZIndex}
           className={isRelatedToHoveredKeywordClass}

@@ -38,7 +38,7 @@
 }
 
  .artworkImage, .description, .essayButton {  
-  cursor: url(images/cursor/cursor_arrow_02.png), auto;
+  cursor: url(images/cursor/cursor_arrow_02.png) 25 0, auto;
 
 }
 
@@ -103,17 +103,27 @@
   -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
-  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+  cursor: url(images/cursor/cursor_arrow_09.png) 12 12, auto !important;  
 
 }
 .cursorMove{
 
-  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+  cursor: url(images/cursor/cursor_arrow_09.png) 12 12, auto !important;  
 
 }
 .collectionObject{
-  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+  cursor: url(images/cursor/cursor_arrow_09.png) 12 12, auto !important;  
 
+}
+
+.bottomRight {
+  background-color: violet;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  cursor: url(images/cursor/cursor_arrow_05.png) 12 12, auto !important;  
 }
 /* LANDING PAGE */
 
