@@ -11,7 +11,9 @@ class DatabaseItem extends Component {
 
     const { artworkData, artwork } = this.props;
     const isRelatedToHoveredKeyword = window.allWorks[artworkData.access_num].final_words.includes(this.props.hoveredKeyword);
-    const isRelatedToHoveredKeywordClassName = isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : 'isNOTrelatedToHoveredKeyword';
+    const isRelatedToHoveredKeywordClassName = isRelatedToHoveredKeyword
+    ? 'isRelatedToHoveredKeyword' :
+    this.props.hoveredKeyword ? 'isNotRelatedToHoveredKeyword' : '';
     // const isRelatedToHoveredKeywordID = isRelatedToHoveredKeyword ? '' : 'overlay';
       if (artworkData.have_rights === 'Oui') {
         if (artwork.similarityScore === 2) {

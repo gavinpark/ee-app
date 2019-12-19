@@ -28,9 +28,9 @@ const findNextHighestMultiple = (
   const smallerMultiple =
     Math.floor(numofArtworkBlocks / numOfBlocksInWidthOfViewport) *
     numOfBlocksInWidthOfViewport;
-  console.log('numofArtworkBlocks:', numofArtworkBlocks);
-  console.log('numOfBlocksInWidthOfViewport:', numOfBlocksInWidthOfViewport);
-  console.log('smaller multiple:', smallerMultiple);
+  // console.log('numofArtworkBlocks:', numofArtworkBlocks);
+  // console.log('numOfBlocksInWidthOfViewport:', numOfBlocksInWidthOfViewport);
+  // console.log('smaller multiple:', smallerMultiple);
   return smallerMultiple + numOfBlocksInWidthOfViewport;
 };
 
@@ -56,7 +56,7 @@ class Landing extends Component {
       } else {
         countOfExistingBlocks += 16;
       }
-      console.log('countOfExistingBlocks', countOfExistingBlocks);
+      // console.log('countOfExistingBlocks', countOfExistingBlocks);
       return (
         <LandingItem
           artworkData={artworkData}
@@ -94,7 +94,7 @@ class Landing extends Component {
     // }
     const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks;
     const fillIns = generateEmpties(numToFillIn);
-    console.log('fillIns', fillIns);
+    // console.log('fillIns', fillIns);
 
     return (
       <div className="databaseLanding">

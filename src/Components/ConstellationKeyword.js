@@ -55,7 +55,9 @@ class ConstellationKeyword extends Component {
       }
     render() {
       const word = this.props.keyword;
-      const isRelatedToHoveredArtworkClass = this.props.isRelatedToHoveredArtwork ? 'isRelatedToHoveredArtwork' : '';
+      const isRelatedToHoveredArtworkClass = this.props.isRelatedToHoveredArtwork
+      ? 'isRelatedToHoveredArtwork' :
+      this.props.isArtworkHovered ? 'isNotRelatedToHoveredArtwork' : '';
         return (
             <Rnd
                 enableResizing={null}
@@ -79,6 +81,7 @@ class ConstellationKeyword extends Component {
 const mapStateToProps = (state) => {
   return {
       highestZIndex: state._ui.highestZIndex,
+      isArtworkHovered: state._ui.isArtworkHovered,
   };
 };
 

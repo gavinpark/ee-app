@@ -92,7 +92,9 @@ class ConstellationArtwork extends Component {
 
   render() {  
     const artworkData = window.allWorks[this.props.access_num];
-    const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : '';
+    const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword
+    ? 'isRelatedToHoveredKeyword' :
+    this.props.hoveredKeyword ? 'isNotRelatedToHoveredKeyword' : '';
     // const bottomRightStyles = {
     //   cursor: 'pointer',
     // };
@@ -142,6 +144,7 @@ const mapStateToProps = (state) => {
     relatedWorks: state._ui.relatedWorks,
     isDetailPanelOpen: state._ui.isDetailPanelOpen,
     highestZIndex: state._ui.highestZIndex,
+    hoveredKeyword: state._ui.hoveredKeyword,
   };
 };
 

@@ -24,6 +24,7 @@ export default function reducer(state = {
   activeWorkIndex: 0, // (index in selectedWorks array)
   activeKeywords: [], // TODO: DO WE NEED THIS?
   hoveredKeyword: null,
+  isArtworkHovered: false,
   isDetailPanelOpen: false,
   essayWindows: EssayData.map((essay) => {
     return {
@@ -212,6 +213,7 @@ export default function reducer(state = {
       });
       return {
         ...state,
+        isArtworkHovered: true,
         selectedKeywords: newState,
       };
     case 'OFF_HOVER_ARTWORK':
@@ -222,6 +224,7 @@ export default function reducer(state = {
       });
       return {
         ...state,
+        isArtworkHovered: false,
         selectedKeywords: newOffHoverState,
       };
     default:
@@ -295,6 +298,9 @@ function findRandomWorkHelper() {
   const keys = Object.keys(allWorks);
   const selectedKey = keys[Math.floor(Math.random() * keys.length)];
   const relatedArtworks = findRelatedWork(selectedKey);
+  if (relatedArtworks.length < 1) {
+    return findRandomWorkHelper();
+  }
   return {
     selectedKey,
     relatedArtworks,
@@ -389,13 +395,18 @@ const findRelatedWork = (accessNum) => {
 }
 
 const filterRelatedWorksToRemoveAlreadyInConstellation = (selectedWorks, relatedWorks) => {
+  // console.log('selectedWorks', selectedWorks)
+  // console.log('relatedWorks', relatedWorks)
   return relatedWorks.filter((related) => {
-    const isIn = selectedWorks.reduce((selected) => {
-      if (selected === related) {
-        return true
+    let isIn = false;
+    for (let index = 0; index < selectedWorks.length; index++) {
+      const selected = selectedWorks[index];
+
+      if (selected.accessNum === related.access_num) {
+        isIn = true;
+        break;
       }
-      return false
-    }, false)
+    }
     return !isIn;
   });
 }

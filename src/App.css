@@ -519,15 +519,17 @@ th, td {
 
 .isRelatedToHoveredKeyword {
   opacity: 100%;
+  box-shadow: 5px 10px;
+}
+.isNotRelatedToHoveredKeyword {
+  opacity: 10%;
 }
 .isRelatedToHoveredArtwork {
   opacity: 100%;
+  box-shadow: 5px 10px;
 }
-.isNOTrelatedToHoveredKeyword{
-  opacity: 100%
-}
-.isNOTrelatedToHoveredArtwork{
-  opacity: 100%
+.isNotRelatedToHoveredArtwork {
+  opacity: 50%;
 }
 #overlay {
   position: fixed; /* Sit on top of the page content */

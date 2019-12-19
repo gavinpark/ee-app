@@ -113,9 +113,6 @@ class EssayWindow extends Component {
     //     )
     // }
     render() {
-        console.log(' rendering essay window' + this.props.index);
-        console.log('Essay information', this.props.essay)
-        console.log('is this getting the header?', this.props.essayHeader)
         if (this.props.displayed === false) {
             return null;
         }
