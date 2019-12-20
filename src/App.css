@@ -23,7 +23,6 @@
   height: 100%;
   object-fit: cover;
   align-items: center;
-
 }
 
 .description {
@@ -107,7 +106,9 @@
   -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
-  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;
+  background-color: white;
+  
 
 }
 .cursorMove{
@@ -519,17 +520,17 @@ th, td {
 
 .isRelatedToHoveredKeyword {
   opacity: 100%;
-  box-shadow: 5px 10px;
+  /* box-shadow: 5px 10px; */
 }
 .isNotRelatedToHoveredKeyword {
   opacity: 10%;
 }
 .isRelatedToHoveredArtwork {
   opacity: 100%;
-  box-shadow: 5px 10px;
+  /* box-shadow: 5px 10px; */
 }
 .isNotRelatedToHoveredArtwork {
-  opacity: 50%;
+  opacity: 10%;
 }
 #overlay {
   position: fixed; /* Sit on top of the page content */

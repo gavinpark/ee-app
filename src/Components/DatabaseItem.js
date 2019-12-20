@@ -32,13 +32,13 @@ class DatabaseItem extends Component {
         }
         if (artwork.similarityScore >= 4){
           return(
-            <div className="fourTags"
+            <div className={`${isRelatedToHoveredKeywordClassName} fourTags`}
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
             ><img draggable="false" className ={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
           )
         }
           return(
-            <div
+            <div className= {`${isRelatedToHoveredKeywordClassName}`}
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
             ><img draggable="false" key={artworkData.access_num, artwork.similarityScore} className={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
             </div>
