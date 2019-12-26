@@ -91,12 +91,8 @@ class Landing extends Component {
     // }
     const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks;
     const fillIns = generateEmpties(numToFillIn);
-<<<<<<< HEAD
-    // console.log('fillIns', fillIns);
-=======
     const bufferFillIns = generateEmpties(45);
     const newArray = shuffle([...mappedArtworks, ...fillIns]);
->>>>>>> feat-landing-shuffle
 
     return (
       <div className="databaseLanding">
