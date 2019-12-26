@@ -9,10 +9,6 @@ import { removeInitialArtwork } from "../redux/modules/ui";
 import { openMainPage } from "../redux/modules/ui";
 import { addWorkToConstellation, shuffle } from "../redux/modules/ui";
 
-// TODO - something needs to see how many spaces rows/cells are empty, take that number and create 'x' amount of empty spaces based on how many, then randomly scatter them within the array being returned.
-// window is 135 cells
-// alternative would be to just have a background colour? fill the empty space with red? lets think about this...
-
 const generateEmpties = (numberOfEmpties) => {
   const emptiesArray = new Array(numberOfEmpties);
   const empties = emptiesArray.fill("", 0, numberOfEmpties);
@@ -69,6 +65,7 @@ class Landing extends Component {
     // TODO: Gavin finish this if else for 'media query' based on windowWidth
     let viewportNumberofColumnBlocks = 15;
     const windowWidth = window.innerWidth;
+    
     if (windowWidth >= 1200) {
       viewportNumberofColumnBlocks = 15
     } else if (windowWidth <= 1200 && windowWidth >= 900) {
@@ -94,12 +91,17 @@ class Landing extends Component {
     // }
     const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks;
     const fillIns = generateEmpties(numToFillIn);
+<<<<<<< HEAD
     // console.log('fillIns', fillIns);
+=======
+    const bufferFillIns = generateEmpties(45);
+    const newArray = shuffle([...mappedArtworks, ...fillIns]);
+>>>>>>> feat-landing-shuffle
 
     return (
       <div className="databaseLanding">
-        {mappedArtworks}
-        {fillIns}
+        {newArray}
+        {bufferFillIns}
       </div>
     );
   };
