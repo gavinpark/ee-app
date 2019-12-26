@@ -8,13 +8,13 @@ import ArtworkSwiper from './ArtworkSwiper'
 
 class ArtworkInfoPanel extends Component {
   determineTitleRowSize(artworkData) {
-    if (artworkData.title.length > 300) {
+    if (artworkData.title.length > 160) {
       return ("span4-row")
     }
-    if ((artworkData.title.length > 201) && (artworkData.title.length < 300)) {
+    if ((artworkData.title.length > 81) && (artworkData.title.length < 160)) {
       return ("span3-row")
     }
-    if ((artworkData.title.length > 80) && (artworkData.title.length < 200)) {
+    if ((artworkData.title.length > 40) && (artworkData.title.length < 80)) {
       return ("span2-row")
     }
     else {
@@ -23,13 +23,25 @@ class ArtworkInfoPanel extends Component {
   }
 
   determineCreditRowSize(artworkData) {
-    if (artworkData.credit.length > 244) {
+    if (artworkData.credit.length > 100) {
       return ("span4-row")
     }
-    if ((artworkData.credit.length > 144) && (artworkData.credit.length < 243)) {
+    if ((artworkData.credit.length > 23) && (artworkData.credit.length < 100)) {
+      return ("span2-row")
+    }
+    else {
+      return ("span2-row")
+    }
+  }
+
+  determineMedRowSize(artworkData) {
+    if (artworkData.medium.length > 160) {
+      return ("span4-row")
+    }
+    if ((artworkData.medium.length > 81) && (artworkData.medium.length < 160)) {
       return ("span3-row")
     }
-    if ((artworkData.credit.length > 23) && (artworkData.credit.length < 143)) {
+    if ((artworkData.medium.length > 30) && (artworkData.medium.length < 80)) {
       return ("span2-row")
     }
     else {
@@ -38,13 +50,13 @@ class ArtworkInfoPanel extends Component {
   }
 
   determineKeyRowSize(artworkData) {
-    if (artworkData.keywords.length > 300) {
+    if (artworkData.keywords.length > 140) {
       return ("span4-row")
     }
-    if ((artworkData.keywords.length > 201) && (artworkData.keywords.length < 300)) {
+    if ((artworkData.keywords.length > 71) && (artworkData.keywords.length < 140)) {
       return ("span3-row")
     }
-    if ((artworkData.keywords.length > 80) && (artworkData.keywords.length < 200)) {
+    if ((artworkData.keywords.length > 35) && (artworkData.keywords.length < 70)) {
       return ("span2-row")
     }
     else {
@@ -52,13 +64,13 @@ class ArtworkInfoPanel extends Component {
     }
   }
   determineSubjectRowSize(artworkData) {
-    if (artworkData.subject.length > 300) {
+    if (artworkData.subject.length > 160) {
       return ("span4-row")
     }
-    if ((artworkData.subject.length > 201) && (artworkData.subject.length < 300)) {
+    if ((artworkData.subject.length > 81) && (artworkData.subject.length < 160)) {
       return ("span3-row")
     }
-    if ((artworkData.subject.length > 80) && (artworkData.subject.length < 200)) {
+    if ((artworkData.subject.length > 40) && (artworkData.subject.length < 80)) {
       return ("span2-row")
     }
     else {
@@ -66,13 +78,13 @@ class ArtworkInfoPanel extends Component {
     }
   }
   determineDescRowSize(artworkData) {
-    if (artworkData.description.length > 241) {
+    if (artworkData.description.length > 161) {
       return ("span4-row")
     }
-    if ((artworkData.description.length > 141) && (artworkData.description.length < 240)) {
+    if ((artworkData.description.length > 81) && (artworkData.description.length < 160)) {
       return ("span3-row")
     }
-    if ((artworkData.description.length > 60) && (artworkData.description.length < 140)) {
+    if ((artworkData.description.length > 35) && (artworkData.description.length < 80)) {
       return ("span2-row")
     }
     else {
@@ -80,13 +92,13 @@ class ArtworkInfoPanel extends Component {
     }
   }
   determineRefRowSize(artworkData) {
-    if (artworkData.references.length > 300) {
+    if (artworkData.references.length > 161) {
       return ("span4-row")
     }
-    if ((artworkData.references.length > 201) && (artworkData.references.length < 300)) {
+    if ((artworkData.references.length > 81) && (artworkData.references.length < 160)) {
       return ("span3-row")
     }
-    if ((artworkData.references.length > 80) && (artworkData.references.length < 200)) {
+    if ((artworkData.references.length > 40) && (artworkData.references.length < 80)) {
       return ("span2-row")
     }
     else {
@@ -205,8 +217,8 @@ class ArtworkInfoPanel extends Component {
           <th className={this.determineCreditRowSize(artworkData)}>Credit</th>
           <td className={this.determineCreditRowSize(artworkData)}>{this.getCredit(artworkData)}</td>
 
-          <th>Medium</th>
-          <td>{this.getMedium(artworkData)}</td>
+          <th className={this.determineMedRowSize(artworkData)}>Medium</th>
+          <td className={this.determineMedRowSize(artworkData)}>{this.getMedium(artworkData)}</td>
 
           <th className={this.determineDescRowSize(artworkData)}>Description</th>
           <td className={this.determineDescRowSize(artworkData)}>{artworkData.description}</td>
