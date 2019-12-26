@@ -52,7 +52,7 @@ class Landing extends Component {
       } else {
         countOfExistingBlocks += 16;
       }
-      // console.log('countOfExistingBlocks', countOfExistingBlocks);
+      console.log('countOfExistingBlocks', countOfExistingBlocks);
       return (
         <LandingItem
           artworkData={artworkData}
@@ -65,7 +65,6 @@ class Landing extends Component {
     // TODO: Gavin finish this if else for 'media query' based on windowWidth
     let viewportNumberofColumnBlocks = 15;
     const windowWidth = window.innerWidth;
-    
     if (windowWidth >= 1200) {
       viewportNumberofColumnBlocks = 15
     } else if (windowWidth <= 1200 && windowWidth >= 900) {
@@ -75,6 +74,8 @@ class Landing extends Component {
     } else if (windowWidth <= 600 && windowWidth >= 0){
       viewportNumberofColumnBlocks = 3;
     }
+    console.log ('viewportNumberofColumnBlocks', viewportNumberofColumnBlocks);
+
     // TODO gavin: here or inside the findNextHighestMultiple, you need to add another multiple of 15
     // such that it will fill at least the screen height - you can use window.innerHeight to check
     // come back to this 
