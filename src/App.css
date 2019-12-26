@@ -118,11 +118,11 @@
 
 .bottomRight {
   background-color: violet;
-  width: 20px;
+  /* width: 20px;
   height: 20px;
   position: absolute;
   bottom: -5px;
-  right: -5px;
+  right: -5px; */
   cursor: url(images/cursor/cursor_arrow_05.png) 12 12, auto !important;  
 }
 /* LANDING PAGE */

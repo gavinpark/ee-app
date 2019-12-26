@@ -93,8 +93,11 @@ class ConstellationArtwork extends Component {
   render() {  
     const artworkData = window.allWorks[this.props.access_num];
     const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword ? 'isRelatedToHoveredKeyword' : '';
-    const bottomRightStyles = {
-      cursor: '.none',
+    // const bottomRightStyles = {
+    //   cursor: url(images/cursor/cursor_arrow_05.png),
+    // };
+    const removeCursor = {
+      cursor: 'none',
     };
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
@@ -107,8 +110,15 @@ class ConstellationArtwork extends Component {
         style={{ zIndex: this.state.zIndex }}
         lockAspectRatio={true}
         minWidth={100}
-        resizeHandleclasses={{
-          bottomRight: bottomRightStyles,
+
+        resizeHandleStyles={{
+          // bottomRight: bottomRightStyles,
+          top: removeCursor,
+          topRight: removeCursor,
+          topLeft: removeCursor, 
+          right: removeCursor,
+          left: removeCursor, 
+          bottom: removeCursor, 
         }}
         
       >
