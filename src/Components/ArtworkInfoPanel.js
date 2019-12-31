@@ -102,7 +102,7 @@ class ArtworkInfoPanel extends Component {
       return ("span2-row")
     }
     else {
-      return ("span2-row")
+      return ("")
     }
   }
 

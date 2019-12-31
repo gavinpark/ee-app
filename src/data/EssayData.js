@@ -187,6 +187,48 @@ const EssayData = [
         ]
     },
 
+    {
+        essayHeader: "Credits & Acknowledgments",
+        essayText: {
+            subHead1: "Concept, research, text and design",   
+            subField1: "Gavin Park and Kristina Vannan",
+
+            subHead2: "Translator",
+            subField2: "Catherine Barnabé",
+
+            subHead3: "Editor",
+            subField3: "Ed Janzen",
+
+            subHead4: "Web development assistance",
+            subHead4FR: "Aide au développement web",
+            subField4: "Conan Lai",
+
+            subHead5: "Consultation",
+            subField5: "Christopher Moore, Sabine Rosenberg",
+
+            subField6: "We wish first and foremost recognize that this project would not have been possible without the generous donation of Reesa Greenberg toward establishing this residency program. Additionally, we would like to extend our appreciation to the Leonard & Bina Ellen Art Gallery for initiating and facilitating this unique opportunity to engage with the Gallery’s exhibition history through the Expanding Exhibitions residency. We especially would like to acknowledge the close collaboration and guidance of the Gallery staff, with special thanks to Michèle Thériault (Director), Robin Simpson (Public Programs and Art Education), and Julia Eilers Smith (Max Stern Curator). We also wish to thank the Department of Design and Computation Arts, the Department of Art History, and Concordia University for their support and collaboration. Finally, we would like to pay tribute through this work to the curators of the exhibition that inspired it—Rebecca Duclos and David K. Ross—and to thank them for their enthusiastic involvement in this endeavour.  - Gavin Park & Kristina Vannan",
+
+
+         },
+        essayHeaderFR: "Remerciements et remerciements",
+        essayTextFR: {
+            subField1FR: "Conceptualisation, recherche, rédaction et conception graphique",
+            subField1: "Gavin Park and Kristina Vannan",
+
+            subHead2FR: "Traduction",
+            subField2: "Catherine Barnabé",
+
+            subHead3FR: "Révision",
+            subField3: "Ed Janzen",
+
+            subHead4FR: "Aide au développement web",
+            subField4: "Conan Lai",
+
+            subField6FR: "We wish first and foremost recognize that this project would not have been possible without the generous donation of Reesa Greenberg toward establishing this residency program. Additionally, we would like to extend our appreciation to the Leonard & Bina Ellen Art Gallery for initiating and facilitating this unique opportunity to engage with the Gallery’s exhibition history through the Expanding Exhibitions residency. We especially would like to acknowledge the close collaboration and guidance of the Gallery staff, with special thanks to Michèle Thériault (Director), Robin Simpson (Public Programs and Art Education), and Julia Eilers Smith (Max Stern Curator). We also wish to thank the Department of Design and Computation Arts, the Department of Art History, and Concordia University for their support and collaboration. Finally, we would like to pay tribute through this work to the curators of the exhibition that inspired it—Rebecca Duclos and David K. Ross—and to thank them for their enthusiastic involvement in this endeavour.  - Gavin Park & Kristina Vannan",
+        },
+        
+    },
+
 
 ]
 

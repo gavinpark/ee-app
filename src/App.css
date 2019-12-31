@@ -342,6 +342,14 @@ th{
 td{
   grid-column-end: span 4;
 }
+.panelHeader{
+grid-column-end: span 2;
+}
+
+.panelData{
+  grid-column-end: span 4;
+  }
+
 .span2-row{
   grid-row-end: span 2;
   }
@@ -350,7 +358,6 @@ td{
   }
   .span4-row{
     grid-row-end: span 4;
-    overflow: scroll;
   }
 
 
