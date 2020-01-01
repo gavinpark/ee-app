@@ -51,11 +51,11 @@ class ConstellationArtwork extends Component {
     });
   }
 
-  renderArtworkInfoPanel() {
-    return <div>
-      <ArtworkInfoPanel artworkData={this.props.artworkData}/>
-    </div>
-  }
+  // renderArtworkInfoPanel() {
+  //   return <div>
+  //     <ArtworkInfoPanel artworkData={this.props.artworkData}/>
+  //   </div>
+  // }
 
   openArtworkInfoPanel(access_num){
     

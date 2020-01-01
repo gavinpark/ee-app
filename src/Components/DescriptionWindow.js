@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation } from '../redux/modules/ui';
+import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork } from '../redux/modules/ui';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 class DescriptionWindow extends Component {
@@ -18,7 +17,6 @@ class DescriptionWindow extends Component {
     componentDidMount() {
         this.getRandomXPosition();
         this.getRandomYPosition();
-        // this.movezIndexToTop();
     }
     bringItemToHighestZIndex = () => {
         const nextHighestZindex = this.props.highestZIndex + 1;
@@ -46,49 +44,68 @@ class DescriptionWindow extends Component {
             randomY,
         });
     }
+    // renderArtworkInfoPanel() {
+    //     return <div>
+    //       <ArtworkInfoPanel artworkData={this.props.artworkData}/>
+    //     </div>
+    //   }
     openArtworkInfoPanel(access_num) {
         this.props.toggleDetailPanel(access_num);
     }
+    handleMouseOver = () => {
+        this.props.onHoverArtwork(this.props.access_num);
+    }
+
+    handleMouseOff = () => {
+        this.props.offHoverArtwork();
+    }
     removeWork = (access_num) => {
         this.props.removeWorkFromConstellation(access_num);
-      } 
+    }
 
     // artworkData.subject
     render() {
         const artworkData = window.allWorks[this.props.access_num];
-
+        const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword
+            ? 'isRelatedToHoveredKeyword' :
+            this.props.hoveredKeyword ? 'isNotRelatedToHoveredKeyword' : '';
         const subject = artworkData.subject;
         // const subject = window.allWorks[this.props.access_num].subject;
+
         return this.state.randomX > -1 && this.state.randomY > -1 && (
 
 
             <Rnd className="descriptionWindow"
-                onClick={this.bringItemToHighestZIndex}
                 style={{ zIndex: this.state.zIndex }}
                 enableResizing={null}
                 default={{
                     x: this.state.randomX,
                     y: this.state.randomY,
                     width: 200,
-
-
                 }}
             >
+                <div
+                    onClick={this.bringItemToHighestZIndex}
+                    className={isRelatedToHoveredKeywordClass}
+                    onMouseOver={this.handleMouseOver}
+                    onMouseOut={this.handleMouseOff}
+                >
+                    <div className="descriptionText">{subject}</div>
 
-                <div className="descriptionText">{subject}</div>
+                    <div className="descriptionHeaderBox">
+                        <img
+                            className="objectMoreButton"
+                            src={require(".././images/buttons/more_Button.svg")}
+                            alt=""
+                            onClick={() => { this.openArtworkInfoPanel(artworkData.access_num) }}
+                        ></img>
+                        <img className="objectExitButton"
+                            src={require(".././images/buttons/exit_Button.svg")}
+                            alt=""
+                            onClick={() => { this.removeWork(artworkData.access_num) }}
+                        ></img></div>
+                </div>
 
-                <div className="descriptionHeaderBox">
-                    <img
-                        className="objectMoreButton"
-                        src={require(".././images/buttons/more_Button.svg")}
-                        alt=""
-                        onClick={() => { this.openArtworkInfoPanel(artworkData.access_num) }}
-                    ></img>
-                    <img className="objectExitButton"
-                        src={require(".././images/buttons/exit_Button.svg")}
-                        alt=""
-                        onClick={() => { this.removeWork(artworkData.access_num) }}
-                    ></img></div>
 
             </Rnd>
         )
@@ -101,11 +118,13 @@ class DescriptionWindow extends Component {
 
 const mapStateToProps = (state) => {
     return {
+        relatedWorks: state._ui.relatedWorks,
         isDetailPanelOpen: state._ui.isDetailPanelOpen,
-        highestZIndex: state._ui.highestZIndex
+        highestZIndex: state._ui.highestZIndex,
+        hoveredKeyword: state._ui.hoveredKeyword
     };
 };
 
 export default connect(mapStateToProps, {
-    toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation,
+    toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork
 })(DescriptionWindow);

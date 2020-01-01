@@ -37,7 +37,7 @@ class ConstellationPanel extends Component {
           isRelatedToHoveredKeyword={work.isRelatedToHoveredKeyword}
           /></div>)
       }
-      return (<div><DescriptionWindow access_num={work.accessNum} have_rights={this.props.have_rights} subject={this.props.subject} activeWorkIndex={this.props.activeWorkIndex} /></div>)
+      return (<div><DescriptionWindow access_num={work.accessNum} have_rights={this.props.have_rights} subject={this.props.subject} activeWorkIndex={this.props.activeWorkIndex} isRelatedToHoveredKeyword={work.isRelatedToHoveredKeyword}/></div>)
     });
   }
 
