@@ -10,7 +10,6 @@ class MainInterface extends Component {
     render() {
         return (
             <div className="mainContainer">
-                
                 <div >
                     <ConstellationPanel />
                 </div>

@@ -103,11 +103,11 @@
 
 /* FLOATING BOXES/BOX SHADOW? */
 .collectionObject, .essayContainer, .descriptionText {
-  -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
-  -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
-  box-shadow: 8px 8px 18px -2px rgb(61, 61, 61);
+  -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
+  -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
+  box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
   cursor: url(images/cursor/cursor_arrow_09.png), auto !important;
-  background-color: white;
+  background-color: white !important;
   
 
 }
@@ -342,6 +342,14 @@ th{
 td{
   grid-column-end: span 4;
 }
+th:nth-child(21){
+  color: white;
+    background-color: red;
+}
+td:nth-child(22){
+  color: white;
+    background-color: red;
+}
 .panelHeader{
 grid-column-end: span 2;
 }
@@ -471,14 +479,11 @@ th, td {
 /* DESCRIPTION WINDOW */
 
 .descriptionWindow{
-  /* border: 2px solid red; */
-  background: white;
+  background-color: white;
   position: relative;
   min-width: 200px;
-
- 
-  
 }
+
 .descriptionHeaderBox{
   position: absolute;
   height: 50px;
@@ -489,7 +494,7 @@ th, td {
 }
 .descriptionText{
   position: absolute;
-  background: white;
+  /* background: white; */
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   border: 2px solid red;
   color:  red;

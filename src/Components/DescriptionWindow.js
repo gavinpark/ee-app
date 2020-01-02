@@ -75,7 +75,8 @@ class DescriptionWindow extends Component {
         return this.state.randomX > -1 && this.state.randomY > -1 && (
 
 
-            <Rnd className="descriptionWindow"
+            <Rnd 
+                className="descriptionWindow"
                 style={{ zIndex: this.state.zIndex }}
                 enableResizing={null}
                 default={{
