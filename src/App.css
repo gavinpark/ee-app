@@ -511,12 +511,12 @@ th, td {
   height: 50px;
   margin: -2px;
   width: 228px;
-  
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+
   
 }
 .descriptionText{
   position: absolute;
-  /* background: white; */
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   border: 2px solid red;
   color:  red;
@@ -525,7 +525,6 @@ th, td {
   text-align: left;
   padding: 50px 12px 12px 12px;
   width: 200px;
-  
 
 }
 
