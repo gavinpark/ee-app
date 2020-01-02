@@ -10,11 +10,6 @@
          grid-area: 3 / 1 / 17 / 5;
         }
 
-        .threeTags, .fourTags{
-          grid-column-end: span 3;
-          grid-row-end: span 3;
-        }
-
         .copyrightButton{
           grid-area: 1 / 8 / 3 / 9;
         }  
