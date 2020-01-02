@@ -92,5 +92,5 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
   toggleWelcome,
   closeEssaySegment,
-  toggleConstellationText 
+  toggleConstellationText, 
 })(ConstellationPanel);
