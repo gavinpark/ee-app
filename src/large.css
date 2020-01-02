@@ -10,11 +10,6 @@
          grid-area: 3 / 1 / 17 / 5;
         }
 
-        .threeTags, .fourTags{
-          grid-column-end: span 3;
-          grid-row-end: span 3;
-        }
-
         .copyrightButton{
           grid-area: 1 / 8 / 3 / 9;
         }  
@@ -86,15 +81,6 @@
         .copyrightButton{
           grid-area: 1 / 5 / 3 / 6;
         }  
-        .twoTags{
-          grid-column-end: span 2;
-          grid-row-end: span 2;
-        }
-     
-        .threeTags, .fourTags{
-          grid-column-end: span 3;
-          grid-row-end: span 3;
-        }
         .infoExitBox {
           grid-column: 6;
         }

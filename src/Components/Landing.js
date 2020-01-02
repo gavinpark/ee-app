@@ -19,22 +19,18 @@ const generateEmpties = (numberOfEmpties) => {
 
 const findNextHighestMultiple = (
   numofArtworkBlocks,
-  numOfBlocksInWidthOfViewport
+  numOfBlocksInViewport
 ) => {
   const smallerMultiple =
-    Math.floor(numofArtworkBlocks / numOfBlocksInWidthOfViewport) *
-    numOfBlocksInWidthOfViewport;
-  // console.log('numofArtworkBlocks:', numofArtworkBlocks);
-  // console.log('numOfBlocksInWidthOfViewport:', numOfBlocksInWidthOfViewport);
-  // console.log('smaller multiple:', smallerMultiple);
-  return smallerMultiple + numOfBlocksInWidthOfViewport;
+    Math.floor(numofArtworkBlocks / numOfBlocksInViewport) *
+    numOfBlocksInViewport;
+  console.log('numofArtworkBlocks:', numofArtworkBlocks);
+  console.log('numOfBlocksInViewport:', numOfBlocksInViewport);
+  console.log('smallerMultiple:', smallerMultiple);
+  return smallerMultiple + numOfBlocksInViewport;
 };
 
 class Landing extends Component {
-  // map over all the relatedWorks and calculate the 'total real estate taken up in terms of actual
-  // grid units, this way you can determine how many blank spaces to add based on the viewport width
-  // you can do this on componentDidMount but you'll need to add an event listener for when user/
-  // resizes window.
 
   renderGrid = () => {
     let countOfExistingBlocks = 0;
@@ -64,36 +60,32 @@ class Landing extends Component {
 
     // TODO: Gavin finish this if else for 'media query' based on windowWidth
     let viewportNumberofColumnBlocks = 15;
+    let numBufferFillIns = 45;
     const windowWidth = window.innerWidth;
     if (windowWidth >= 1200) {
-      viewportNumberofColumnBlocks = 15
+      viewportNumberofColumnBlocks = 15;
+      numBufferFillIns = 45;
     } else if (windowWidth <= 1200 && windowWidth >= 900) {
       viewportNumberofColumnBlocks = 9;
+      numBufferFillIns = 27;
     } else if (windowWidth <= 900 && windowWidth >= 600) {
       viewportNumberofColumnBlocks = 6;
+      numBufferFillIns = 18;
     } else if (windowWidth <= 600 && windowWidth >= 0){
       viewportNumberofColumnBlocks = 3;
+      numBufferFillIns = 12;
     }
-    console.log ('viewportNumberofColumnBlocks', viewportNumberofColumnBlocks);
-
-    // TODO gavin: here or inside the findNextHighestMultiple, you need to add another multiple of 15
-    // such that it will fill at least the screen height - you can use window.innerHeight to check
-    // come back to this 
+  
     let viewportNumberofRowBlocks = 9;
-    // const windowWidth = window.innerHeight;
-    // if (windowWidth >= 1200) {
-    //   viewportNumberofRowBlocks = 15
-    // } else if (windowWidth <= 1200 && windowWidth >= 900) {
-    //   viewportNumberofRowBlocks = 9;
-    // } else if (windowWidth <= 900 && windowWidth >= 600) {
-    //   viewportNumberofRowBlocks = 6;
-    // } else if (windowWidth <= 600 && windowWidth >= 0){
-    //   viewportNumberofRowBlocks = 3;
-    // }
+
     const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks;
     const fillIns = generateEmpties(numToFillIn);
-    const bufferFillIns = generateEmpties(45);
     const newArray = shuffle([...mappedArtworks, ...fillIns]);
+    const bufferFillIns = generateEmpties(numBufferFillIns);
+    
+console.log('numBufferFillIns', numBufferFillIns);
+console.log('BufferFillIns', bufferFillIns);
+console.log('numToFillIn', numToFillIn);
 
     return (
       <div className="databaseLanding">
@@ -103,7 +95,6 @@ class Landing extends Component {
     );
   };
   render() {
-    // if there are no artworks, then fill the screen with an empty grid (viewport has 135 squares (9x15)):
     if (this.props.relatedWorks.length === 0) {
       return <div className="databaseLanding">{generateEmpties(135)}</div>;
     }
