@@ -410,6 +410,8 @@ th, td {
   padding-left: 12px;
   line-height: 55px;
   vertical-align: middle;
+  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+
 }
 
 .essayBodyBox{
