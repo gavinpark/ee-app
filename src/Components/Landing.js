@@ -26,7 +26,7 @@ const findNextHighestMultiple = (
     numOfBlocksInViewport;
   console.log('numofArtworkBlocks:', numofArtworkBlocks);
   console.log('numOfBlocksInViewport:', numOfBlocksInViewport);
-  console.log('smaller multiple:', smallerMultiple);
+  console.log('smallerMultiple:', smallerMultiple);
   return smallerMultiple + numOfBlocksInViewport;
 };
 
