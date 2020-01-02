@@ -53,13 +53,43 @@
 }
 
 .essayButton{
-  overflow: scroll;
-  color: white;
-  background-color: rgb(255, 204, 204);
+  position: relative;
+  overflow: hidden;
+  color: white !important;  
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  text-align: left;
-  padding: 12px;
-  font-size: 16px;
+  text-align: center;
+  padding: 12px 6px 12px 6px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.essayButtonDesc {
+  display: none;
+}
+
+.essayButton:hover {
+  background-color: red;
+}
+.essayButton:hover .essayButtonDesc{
+  display: flex;
+}
+
+.essayButton:hover .circleButton{
+  display: none;
+}
+
+.circleButton {
+  position: absolute;
+  border: 2px solid red;
+  border-radius: 100%;
+  width: 85%;
+  height: 85%;
+
 }
 
 .twoTags{
@@ -172,16 +202,6 @@
 .databasePanel > div {
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
-}
-
-.essayButton {
-  color: white !important;
-  font-size: 12px;
-  text-align: center;
-  padding: 12px 6px 12px 6px;
-}
-.essayButton:hover {
-  background-color: red;
 }
 
 .objectMoreButton{

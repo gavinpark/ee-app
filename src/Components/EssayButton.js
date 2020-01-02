@@ -10,7 +10,11 @@ class EssayButton extends Component {
         return (
           <div className='essayButton'
           onClick={() => {this.props.openEssaySegment(this.props.index)}}
-          >{this.props.essay.essayHeader}</div>
+          >
+            <div className="circleButton"></div>
+            <div className="essayButtonDesc">{this.props.essay.essayHeader}</div>
+            
+            </div>
         )
     }
 }
