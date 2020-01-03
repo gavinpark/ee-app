@@ -385,9 +385,6 @@ td:nth-child(24){
   color: black;
 }
 
-.keywordBlack {
-  color: black;
-}
 .panelHeader{
 grid-column-end: span 2;
 }
