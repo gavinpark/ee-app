@@ -12,6 +12,10 @@
 *{
   cursor: url(images/cursor/cursor_arrow_01.png), auto;
 }
+/* SCROLLBAR */
+::-webkit-scrollbar{
+  display: none;
+}
 
 /*GENERAL STYLING*/
 
@@ -37,6 +41,9 @@
   hyphens: auto;
   overflow: scroll;
 
+}
+.description::-webkit-scrollbar {
+  display: none;
 }
 
  .artworkImage, .description, .essayButton {  
@@ -89,7 +96,6 @@
   border-radius: 50%;
   width: 75%;
   height: 75%;
-
 }
 
 .twoTags{
@@ -121,14 +127,6 @@
 .infoPanelDivDesktop2, .infoPanelDivTablet, .infoPanelDivMobile{
   display: none;
   grid-row-end: span 2;
-}
-
-
-
-
-/* SCROLLBAR */
-::-webkit-scrollbar{
-  display: none;
 }
 
 /* FLOATING BOXES/BOX SHADOW? */
@@ -191,7 +189,7 @@
   margin-right: -2px;
   margin-top: -2px;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: overlay;
   width: 33.33%;
   height: 100vh;
   position: fixed;
@@ -202,6 +200,24 @@
 .databasePanel > div {
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
+}
+
+.databasePanel::-webkit-scrollbar {
+display: flex;
+width: 1em;
+}
+
+.databasePanel::-webkit-scrollbar-thumb {
+  background: red;
+}
+.databasePanel::-webkit-scrollbar-track {
+  display: none;
+  background: transparent;
+  background-color: transparent;
+}
+.databasePanel::-webkit-scrollbar-track-piece {
+  background: transparent;
+  background-color: transparent;
 }
 
 .objectMoreButton{
