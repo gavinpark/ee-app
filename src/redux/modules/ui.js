@@ -13,11 +13,11 @@ export default function reducer(state = {
   // this is all the states
   isFrench: true, 
   isCreditsOpen: false,
-  isWelcomeOpen: true,
+  // isWelcomeOpen: true,
   isLandingOpen: true,
   isCopyrightOpen: true,
   openedArtwork: null,
-  isConstellationTextOpen: true,
+  // isConstellationTextOpen: true,
   selectedWorks: [], //{ accessNum, similarityScore }[],
   selectedKeywords: {}, // { [keyword]: { worksInConstellationWithKeyword: [] } }
   relatedWorks: [], // { similarityScore: number, access_num: string }[]
@@ -46,12 +46,12 @@ export default function reducer(state = {
         ...state,
         isCreditsOpen: !state.isCreditsOpen,
       };
-    case 'TOGGLE_WELCOME':
-      return {
-        ...state,
-        isWelcomeOpen: !state.isWelcomeOpen,
-        highestZIndex: state.highestZIndex + 1,
-      };
+    // case 'TOGGLE_WELCOME':
+    //   return {
+    //     ...state,
+    //     isWelcomeOpen: !state.isWelcomeOpen,
+    //     highestZIndex: state.highestZIndex + 1,
+    //   };
     case 'TOGGLE_COPYRIGHT':
       return {
         ...state,
@@ -70,12 +70,12 @@ export default function reducer(state = {
       return {
         ...newStateAfterEssayClose,
       };
-    case 'TOGGLE_CONSTELLATION_TEXT':
-      return {
-        ...state,
-        isConstellationTextOpen: !state.isConstellationTextOpen,
-        highestZIndex: state.highestZIndex + 1,
-      }
+    // case 'TOGGLE_CONSTELLATION_TEXT':
+    //   return {
+    //     ...state,
+    //     isConstellationTextOpen: !state.isConstellationTextOpen,
+    //     highestZIndex: state.highestZIndex + 1,
+    //   }
     case 'TOGGLE_DETAIL_PANEL':
       return {
         ...state,
@@ -246,21 +246,21 @@ export const toggleCredits = () => {
   };
 };
 
-export const toggleWelcome = () => {
-  return {
-    type: 'TOGGLE_WELCOME',
-  };
-};
+// export const toggleWelcome = () => {
+//   return {
+//     type: 'TOGGLE_WELCOME',
+//   };
+// };
 export const toggleCopyright = () => {
   return {
     type: 'TOGGLE_COPYRIGHT',
   };
 };
-export const toggleConstellationText = () => {
-  return {
-    type: 'TOGGLE_CONSTELLATION_TEXT',
-  };
-};
+// export const toggleConstellationText = () => {
+//   return {
+//     type: 'TOGGLE_CONSTELLATION_TEXT',
+//   };
+// };
 export const openEssaySegment = (index) => {
   return {
     type: 'OPEN_ESSAY',

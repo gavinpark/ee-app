@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import EssayData from '.././data/EssayData.js';
 import '../App.css';
@@ -172,12 +171,12 @@ const mapStateToProps = (state) => {
     return {
         // isFrench: state._ui.isFrench,
         isEssayOpen: state._ui.isEssayOpen,
-        highestZIndex: state._ui.highestZIndex
+        highestZIndex: state._ui.highestZIndex,
     };
 };
 
 export default connect(mapStateToProps, {
     closeEssaySegment,
     // toggleLanguage,
-    increaseHighestZIndex,
+    increaseHighestZIndex
 })(EssayWindow);
