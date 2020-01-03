@@ -378,13 +378,15 @@ th{
 td{
   grid-column-end: span 4;
 }
-th:nth-child(21){
-  color: white;
-    background-color: red;
-}
 td:nth-child(22){
-  color: white;
-    background-color: red;
+  color: black;
+}
+td:nth-child(24){
+  color: black;
+}
+
+.keywordBlack {
+  color: black;
 }
 .panelHeader{
 grid-column-end: span 2;

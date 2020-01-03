@@ -223,7 +223,6 @@ class ArtworkInfoPanel extends Component {
           <th className={this.determineDescRowSize(artworkData)}>Description</th>
           <td className={this.determineDescRowSize(artworkData)}>{artworkData.description}</td>
 
-
           <th className={this.determineKeyRowSize(artworkData)}>Keywords</th>
           <td className={this.determineKeyRowSize(artworkData)}>{artworkData.keywords}</td>
 
