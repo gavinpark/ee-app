@@ -94,8 +94,8 @@
   position: absolute;
   border: 2px solid red;
   border-radius: 50%;
-  width: 75%;
-  height: 75%;
+  width: 6vh;
+  height: 6vh;
 }
 
 .twoTags{
@@ -202,7 +202,7 @@
   margin: -1px -1px -1px -1px;
 }
 
-.databasePanel::-webkit-scrollbar {
+/* .databasePanel::-webkit-scrollbar {
 display: flex;
 width: 1em;
 }
@@ -218,7 +218,7 @@ width: 1em;
 .databasePanel::-webkit-scrollbar-track-piece {
   background: transparent;
   background-color: transparent;
-}
+} */
 
 .objectMoreButton{
   width: 50px;
