@@ -7,12 +7,17 @@ import { Rnd } from "react-rnd";
 import { increaseHighestZIndex } from '../redux/modules/ui';
 // toggleLanguage, 
 
+// ! ! ! ! ! ! ! ! ! ! DELETE THIS COMPONENT - NOT IN USE ! ! ! ! ! ! ! ! ! ! 
+
+
 // *** TO RE-AD LANGUAGE FEAT: 
 // 1. Uncomment toggleLanguage in import, and mapStatetoProps
 // 2. Uncomment getLanguage() and replace html inside rnd render with call to function
 // 3. I did not comment out anything in ui.js..so that should be fine
 // 4. Double check that everywhere is turned back on: Welcome Window, Constellation Text Window, Copyright Window and Essay Window
 // 5. look out for props in essay to make sure its pulling from the right spot
+
+
 
 class WelcomeWindow extends Component {
     constructor(props) {

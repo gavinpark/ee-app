@@ -7,6 +7,7 @@ import { Rnd } from "react-rnd";
 import { toggleConstellationText, increaseHighestZIndex } from '../redux/modules/ui';
 // toggleLanguage, 
 
+// ! ! ! ! ! ! ! ! ! ! DELETE THIS COMPONENT - NOT IN USE ! ! ! ! ! ! ! ! ! ! 
 
 // *** TO RE-AD LANGUAGE FEAT: 
 // 1. Uncomment toggleLanguage in import, and mapStatetoProps

@@ -7,6 +7,9 @@ import ArtworkSwiper from './ArtworkSwiper'
 
 
 class ArtworkInfoPanel extends Component {
+  // componentDidMount(){
+  //   return(this.props.isCopyrightOpen === true)
+  // }
   determineTitleRowSize(artworkData) {
     if (artworkData.title.length > 160) {
       return ("span4-row")
@@ -145,15 +148,9 @@ class ArtworkInfoPanel extends Component {
     if (artworkData.have_rights === "Oui") {
       return (<ArtworkSwiper link={artworkData.link} {...this.props} />)
     }
-    // else{
-    //   return("")
-    // }
     if(artworkData.have_rights === "Non" || artworkData.have_rights === ""){
-      if(this.props.isCopyrightOpen){
-        return("")
-      }else{
-        return(<CopyrightWindow toggleCopyright={this.props.toggleCopyright} />)
-      }
+      
+      // return(<CopyrightWindow toggleCopyright={this.props.toggleCopyright} />)
     }
   }
   getMedium(artworkData) {
@@ -174,10 +171,7 @@ class ArtworkInfoPanel extends Component {
     }
   }
   render() {
-    // here is how you would get the
-    // data for the 'current active work'
-    // (don't forget to pass the correct props into this component)
-    // const artworkData = window.allWorks[this.props.selectedWorks[this.props.activeWorkIndex]];
+
     const artworkData = window.allWorks[this.props.openedArtwork];
 
     const emptiesArray = new Array(135);
@@ -186,7 +180,7 @@ class ArtworkInfoPanel extends Component {
 
     return (
       <div className="databaseInfo">
-        {/* <ArtworkSwiper link={artworkData.link} {...this.props}/> */}
+
         {this.hasRights(artworkData)}
 
         {emptyGrid}
@@ -250,17 +244,15 @@ class ArtworkInfoPanel extends Component {
 }
 const mapStateToProps = (state) => {
   return {
-    // haveCopyrightWindowsBeenViewed: state._ui.haveCopyrightWindowsBeenViewed,
     isCopyrightOpen: state._ui.isCopyrightOpen,
     isDetailPanelOpen: state._ui.isDetailPanelOpen,
     activeWorkIndex: state._ui.activeWorkIndex,
     selectedWorks: state._ui.selectedWorks,
-    openedArtwork: state._ui.openedArtwork,
+    openedArtwork: state._ui.openedArtwork
   };
 };
 
 export default connect(mapStateToProps, {
-  // closeCopyrightWindow,
   toggleCopyright,
   toggleDetailPanel
 })(ArtworkInfoPanel);

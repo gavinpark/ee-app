@@ -57,6 +57,7 @@ class DatabasePanel extends Component {
 
   }
 
+
 const mapStateToProps = (state) => {
   return {
     relatedWorks: state._ui.relatedWorks,
