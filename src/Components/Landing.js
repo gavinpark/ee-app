@@ -61,6 +61,7 @@ class Landing extends Component {
     // TODO: Gavin finish this if else for 'media query' based on windowWidth
     let viewportNumberofColumnBlocks = 15;
     let numBufferFillIns = 45;
+    let viewportNumberofRowBlocks = 9;
     const windowWidth = window.innerWidth;
     if (windowWidth >= 1200) {
       viewportNumberofColumnBlocks = 15;
@@ -70,13 +71,14 @@ class Landing extends Component {
       numBufferFillIns = 27;
     } else if (windowWidth <= 900 && windowWidth >= 600) {
       viewportNumberofColumnBlocks = 6;
-      numBufferFillIns = 18;
+      viewportNumberofRowBlocks = 6;
+      numBufferFillIns = 24;
     } else if (windowWidth <= 600 && windowWidth >= 0){
       viewportNumberofColumnBlocks = 3;
-      numBufferFillIns = 12;
+      numBufferFillIns = 15;
     }
   
-    let viewportNumberofRowBlocks = 9;
+    
 
     const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks;
     const fillIns = generateEmpties(numToFillIn);

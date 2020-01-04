@@ -69,7 +69,6 @@
 
         td{
           grid-column-end: span 3;
-
         }
 
         .infoPanelImage {
@@ -81,15 +80,7 @@
         .copyrightButton{
           grid-area: 1 / 5 / 3 / 6;
         }  
-        .twoTags{
-          grid-column-end: span 2;
-          grid-row-end: span 2;
-        }
-     
-        .threeTags, .fourTags{
-          grid-column-end: span 3;
-          grid-row-end: span 3;
-        }
+
         .infoExitBox {
           grid-column: 6;
         }
@@ -141,15 +132,11 @@
       .copyrightButton{
         grid-area: 4 / 5 / 7 / 7;
       }  
-      .twoTags{
-        grid-column-end: span 1;
-        grid-row-end: span 1;
-      }
    
-      .threeTags, .fourTags{
+      /* .threeTags, .fourTags{
         grid-column-end: span 2;
         grid-row-end: span 2;
-      }
+      } */
       .infoExitBox {
         grid-column: 5;
         grid-column-end: span 2;
