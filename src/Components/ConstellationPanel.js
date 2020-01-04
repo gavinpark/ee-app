@@ -5,7 +5,7 @@ import EssayWindow from './EssayWindow';
 import DescriptionWindow from './DescriptionWindow';
 import ConstellationKeyword from './ConstellationKeyword';
 import '../App.css';
-import {closeEssaySegment, openEssaySegment } from '../redux/modules/ui';
+import {closeEssaySegment, openEssaySegment, toggleDetailPanel } from '../redux/modules/ui';
 
 class ConstellationPanel extends Component {
   constructor(props) {
@@ -70,10 +70,12 @@ const mapStateToProps = (state) => {
     selectedWorks: state._ui.selectedWorks,
     selectedKeywords: state._ui.selectedKeywords,
     essayWindows: state._ui.essayWindows,
+    isDetailPanelOpen: state._ui.isDetailPanelOpen
   };
 };
 
 export default connect(mapStateToProps, {
   closeEssaySegment,
   openEssaySegment,
+  toggleDetailPanel
 })(ConstellationPanel);

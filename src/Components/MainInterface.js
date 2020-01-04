@@ -4,6 +4,7 @@ import ConstellationPanel from './ConstellationPanel';
 import DatabasePanel from './DatabasePanel';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
+
 // TODO: add redux function for artworkinforpanelopen true/false; pass props to component
 
 class MainInterface extends Component {
@@ -16,6 +17,7 @@ class MainInterface extends Component {
                 <div >
                     <DatabasePanel />
                 </div>
+                
                 {this.props.isDetailPanelOpen && <ArtworkInfoPanel />}
             </div>
         );
