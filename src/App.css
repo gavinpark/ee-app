@@ -134,18 +134,18 @@
   -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
-  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;
+  cursor: url(images/cursor/cursor_arrow_09.png), 10 12, auto !important;
   background-color: white !important;
   
 
 }
 .cursorMove{
 
-  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+  cursor: url(images/cursor/cursor_arrow_09.png), 10 12, auto !important;  
 
 }
 .collectionObject{
-  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+  cursor: url(images/cursor/cursor_arrow_09.png), 10 12, auto !important;  
 
 }
 /* LANDING PAGE */
