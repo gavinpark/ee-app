@@ -18,15 +18,39 @@ const generateEmpties = (numberOfEmpties) => {
   });
 }
 
-class DatabasePanel extends Component {
+const findNextHighestMultiple = (
+  numofArtworkBlocks, 
+  numOfBlocksInViewport
+) => {
+  const smallerMultiple =
+  Math.floor(numofArtworkBlocks / numOfBlocksInViewport) *
+  numOfBlocksInViewport;
+  console.log('DATABASE numOfBlocksInViewport:', numOfBlocksInViewport);
+  console.log('DATABASE smallerMultiple:', smallerMultiple);
+  return smallerMultiple + numOfBlocksInViewport;
+};
 
+class DatabasePanel extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     const isUpdated = !_.isEqual(nextProps.relatedWorks, this.props.relatedWorks);
     return isUpdated;
   }
 
   render() {
+
+    let countOfExistingBlocks = 0;
     const databaseItemsArray = this.props.relatedWorks.map((work) => {
+      const artworkData = window.allWorks[work.access_num];
+      const { similarityScore } = work;
+      if (similarityScore === 0) {
+        countOfExistingBlocks += 1;
+      } else if (similarityScore === 1) {
+        countOfExistingBlocks +=1;
+      } else if (similarityScore === 2) {
+        countOfExistingBlocks +=3;
+      } else {
+        countOfExistingBlocks += 9
+      }
       return {
         type: 'work',
         data: work
@@ -41,27 +65,33 @@ class DatabasePanel extends Component {
       }
     });
 
-    const finalArray = shuffle([...databaseItemsArray, ...essayArray]);
     let viewportNumberofColumnBlocks = 5;
-    let numBufferFillIns = 45;
+    let numBufferFillIns = 25;
+    let viewportNumberofRowBlocks = 9
     const windowWidth = window.innerWidth;
     if (windowWidth >= 1200) {
       viewportNumberofColumnBlocks = 5;
-      numBufferFillIns = 45;
+      numBufferFillIns = 25;
     } else if (windowWidth <= 1200 && windowWidth >= 900) {
       viewportNumberofColumnBlocks = 3;
-      numBufferFillIns = 27;
+      numBufferFillIns = 15;
     } else if (windowWidth <= 900 && windowWidth >= 600) {
       viewportNumberofColumnBlocks = 3;
+      viewportNumberofRowBlocks = 9;
       numBufferFillIns = 18;
     } else if (windowWidth <= 600 && windowWidth >= 0) {
       viewportNumberofColumnBlocks = 2;
+      viewportNumberofRowBlocks = 10;
       numBufferFillIns = 6;
     }
+
+    const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks;
+    const fillIns = generateEmpties(numToFillIn);
+    const finalArray = shuffle([...databaseItemsArray, ...essayArray]);
     const bufferFillIns = generateEmpties(numBufferFillIns);
-    console.log('DATABASEnumBufferFillIns', numBufferFillIns);
-    console.log('DATABASEBufferFillIns', bufferFillIns);
-    console.log('DATABASEviewportNumberofColumnBlocks', viewportNumberofColumnBlocks);
+    console.log('DATABASE CountOfExistingBlocks', countOfExistingBlocks);
+    console.log('DATABASE numBufferFillIns', numBufferFillIns);
+    console.log('DATABASE numToFillIn', numToFillIn);
 
     return (
       <div className="databasePanel">
@@ -78,13 +108,11 @@ class DatabasePanel extends Component {
             return <EssayButton essay={essay} index={obj.index} {...this.props}> </EssayButton>
           }
         })}
+        {fillIns}
         {bufferFillIns}
-
       </div>
     );
   }
-
-
 }
 
 const mapStateToProps = (state) => {

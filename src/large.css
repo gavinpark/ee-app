@@ -132,11 +132,15 @@
       .copyrightButton{
         grid-area: 4 / 5 / 7 / 7;
       }  
+      .twoTags{
+        grid-column-end: span 1;
+        grid-row-end: span 1;
+      }
    
-      /* .threeTags, .fourTags{
+      .threeTags, .fourTags{
         grid-column-end: span 2;
         grid-row-end: span 2;
-      } */
+      }
       .infoExitBox {
         grid-column: 5;
         grid-column-end: span 2;

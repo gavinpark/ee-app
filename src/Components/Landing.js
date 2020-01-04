@@ -73,22 +73,22 @@ class Landing extends Component {
       viewportNumberofColumnBlocks = 6;
       viewportNumberofRowBlocks = 6;
       numBufferFillIns = 24;
-    } else if (windowWidth <= 600 && windowWidth >= 0){
+    } else if (windowWidth <= 600 && windowWidth >= 0) {
       viewportNumberofColumnBlocks = 3;
       numBufferFillIns = 15;
     }
-  
-    
+
+
 
     const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks;
     const fillIns = generateEmpties(numToFillIn);
     const newArray = shuffle([...mappedArtworks, ...fillIns]);
     const bufferFillIns = generateEmpties(numBufferFillIns);
-    
-console.log('numBufferFillIns', numBufferFillIns);
-console.log('BufferFillIns', bufferFillIns);
-console.log('numToFillIn', numToFillIn);
-console.log('viewportNumberofColumnBlocks', viewportNumberofColumnBlocks);
+
+    console.log('numBufferFillIns', numBufferFillIns);
+    console.log('BufferFillIns', bufferFillIns);
+    console.log('numToFillIn', numToFillIn);
+    console.log('viewportNumberofColumnBlocks', viewportNumberofColumnBlocks);
 
 
     return (
@@ -116,6 +116,6 @@ const mapStateToProps = state => {
 export default connect(mapStateToProps, {
   removeInitialArtwork,
   openMainPage,
-  addWorkToConstellation, 
+  addWorkToConstellation,
   shuffle,
 })(Landing);
