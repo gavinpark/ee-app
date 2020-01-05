@@ -19,7 +19,7 @@
         }
 
         table{
-          grid-area: 3 / 5 / 19 / 10;
+          grid-area: 3 / 5 / 17 / 10;
 
           grid-template-columns: repeat(5, 1fr);
           grid-template-rows: repeat(12, minmax(1fr, auto));
