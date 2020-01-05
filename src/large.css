@@ -114,10 +114,6 @@
         grid-area: 10 / 1 / 19 / 7;
       }
 
-      th, td{
-        font-size: .9rem;
-      }
-
       .infoPanelDivDesktop{
         grid-row-end: span 3;
         grid-column-end: span 2;
