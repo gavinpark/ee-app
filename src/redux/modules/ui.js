@@ -15,7 +15,7 @@ export default function reducer(state = {
   isCreditsOpen: false,
   // isWelcomeOpen: true,
   isLandingOpen: true,
-  isCopyrightOpen: true,
+  isCopyrightOpen: false,
   openedArtwork: null,
   // isConstellationTextOpen: true,
   selectedWorks: [], //{ accessNum, similarityScore }[],
@@ -77,10 +77,25 @@ export default function reducer(state = {
     //     highestZIndex: state.highestZIndex + 1,
     //   }
     case 'TOGGLE_DETAIL_PANEL':
-      return {
+    // console.log(action.copyright)
+    // This logic needs to be done in the toggle detail panel function and not the action
+
+    // if(allWorks[action.access_num].have_rights === "Non" || allWorks[action.access_num].have_rights === ""){
+    //   copyright = true
+    // } else {
+    //   copyright = false
+    // }
+    // console.log(action.copyright, "action copyright?");
+    return {
         ...state,
         isDetailPanelOpen: !state.isDetailPanelOpen,
         openedArtwork: action.access_num,
+        isCopyrightOpen: true
+      };
+    case 'OPEN_COPYRIGHT':
+      return {
+        ...state,
+        isCopyrightOpen: action.copyright
       };
     case 'CLOSE_COPYRIGHT_WINDOW':
       return {
@@ -276,11 +291,31 @@ export const closeEssaySegment = (index) => {
 };
 
 export const toggleDetailPanel = (access_num) => {
+  // console.log(access_num, "looking for to detail");
+  // let copyright;
+  // if(allWorks[access_num].have_rights === "Non" || allWorks[access_num].have_rights === ""){
+  //     copyright = true
+  //   } else {
+  //     copyright = false
+  //   }
+  // console.log(access_num, "why is this undefined on close")'
+  // console.log("copyright in toggle function", copyright)
   return {
     type: 'TOGGLE_DETAIL_PANEL',
     access_num,
   };
 };
+
+export const openCopyright = (rights) => {
+  let copyright = false
+  if(rights === "Non" || rights === ""){
+    copyright = true
+  }
+  return {
+    type: 'OPEN_COPYRIGHT',
+    copyright,
+  };
+}
 
 export const closeCopyrightWindow = () => {
   return {

@@ -6,10 +6,7 @@ import CopyrightWindow from './CopyrightWindow.js';
 import ArtworkSwiper from './ArtworkSwiper'
 
 
-class ArtworkInfoPanel extends Component {
-  // componentDidMount(){
-  //   return(this.props.isCopyrightOpen === true)
-  // }
+class ArtworkInfoPanel extends Component {  
   determineTitleRowSize(artworkData) {
     if (artworkData.title.length > 160) {
       return ("span4-row")
@@ -147,10 +144,8 @@ class ArtworkInfoPanel extends Component {
   hasRights(artworkData) {
     if (artworkData.have_rights === "Oui") {
       return (<ArtworkSwiper link={artworkData.link} {...this.props} />)
-    }
-    if(artworkData.have_rights === "Non" || artworkData.have_rights === ""){
-      
-      // return(<CopyrightWindow toggleCopyright={this.props.toggleCopyright} />)
+    }else{
+      return null
     }
   }
   getMedium(artworkData) {
@@ -170,6 +165,7 @@ class ArtworkInfoPanel extends Component {
       return ("Collection of the Leonard & Bina Ellen Art Gallery." + '\n' + artworkData.credit + '\n' + "Photo:" + '\xa0' + artworkData.photographer)
     }
   }
+
   render() {
 
     const artworkData = window.allWorks[this.props.openedArtwork];
@@ -177,6 +173,7 @@ class ArtworkInfoPanel extends Component {
     const emptiesArray = new Array(135);
     const empties = emptiesArray.fill('', 0, 135);
     const emptyGrid = empties.map((empty) => { return <div className='infoPanelDivDesktop'>{empty}</div> });
+    const rights = artworkData.have_rights;
 
     return (
       <div className="databaseInfo">
@@ -231,6 +228,7 @@ class ArtworkInfoPanel extends Component {
 
 
         {this.props.isCopyrightOpen && <CopyrightWindow toggleCopyright={this.props.toggleCopyright} />}
+
         <div className="copyrightButton" onClick={this.props.toggleCopyright}> © </div>
 
         <div className="infoExitBox">

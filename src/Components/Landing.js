@@ -24,9 +24,9 @@ const findNextHighestMultiple = (
   const smallerMultiple =
     Math.floor(numofArtworkBlocks / numOfBlocksInViewport) *
     numOfBlocksInViewport;
-  console.log('numofArtworkBlocks:', numofArtworkBlocks);
-  console.log('numOfBlocksInViewport:', numOfBlocksInViewport);
-  console.log('smallerMultiple:', smallerMultiple);
+  // console.log('numofArtworkBlocks:', numofArtworkBlocks);
+  // console.log('numOfBlocksInViewport:', numOfBlocksInViewport);
+  // console.log('smallerMultiple:', smallerMultiple);
   return smallerMultiple + numOfBlocksInViewport;
 };
 
@@ -48,7 +48,7 @@ class Landing extends Component {
       } else {
         countOfExistingBlocks += 16;
       }
-      console.log('countOfExistingBlocks', countOfExistingBlocks);
+      // console.log('countOfExistingBlocks', countOfExistingBlocks);
       return (
         <LandingItem
           artworkData={artworkData}
@@ -83,9 +83,9 @@ class Landing extends Component {
     const newArray = shuffle([...mappedArtworks, ...fillIns]);
     const bufferFillIns = generateEmpties(numBufferFillIns);
     
-console.log('numBufferFillIns', numBufferFillIns);
-console.log('BufferFillIns', bufferFillIns);
-console.log('numToFillIn', numToFillIn);
+// console.log('numBufferFillIns', numBufferFillIns);
+// console.log('BufferFillIns', bufferFillIns);
+// console.log('numToFillIn', numToFillIn);
 
     return (
       <div className="databaseLanding">

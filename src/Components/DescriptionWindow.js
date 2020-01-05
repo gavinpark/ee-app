@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork } from '../redux/modules/ui';
+import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork, openCopyright } from '../redux/modules/ui';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 class DescriptionWindow extends Component {
@@ -49,8 +49,10 @@ class DescriptionWindow extends Component {
     //       <ArtworkInfoPanel artworkData={this.props.artworkData}/>
     //     </div>
     //   }
-    openArtworkInfoPanel(access_num) {
+    openArtworkInfoPanel(access_num, rights) {
+
         this.props.toggleDetailPanel(access_num);
+        this.props.openCopyright(rights)
     }
     handleMouseOver = () => {
         this.props.onHoverArtwork(this.props.access_num);
@@ -98,7 +100,7 @@ class DescriptionWindow extends Component {
                             className="objectMoreButton"
                             src={require(".././images/buttons/more_Button.svg")}
                             alt=""
-                            onClick={() => { this.openArtworkInfoPanel(artworkData.access_num) }}
+                            onClick={() => { this.openArtworkInfoPanel(artworkData.access_num, artworkData.have_rights) }}
                         ></img>
                         <img className="objectExitButton"
                             src={require(".././images/buttons/exit_Button.svg")}
@@ -127,5 +129,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-    toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork
+    toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork, openCopyright
 })(DescriptionWindow);

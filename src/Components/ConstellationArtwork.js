@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Rnd } from "react-rnd";
 import '../App.css';
-import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork } from '../redux/modules/ui';
+import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork, openCopyright } from '../redux/modules/ui';
 import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 
@@ -57,9 +57,9 @@ class ConstellationArtwork extends Component {
   //   </div>
   // }
 
-  openArtworkInfoPanel(access_num){
-    
+  openArtworkInfoPanel(access_num, rights){
     this.props.toggleDetailPanel(access_num);
+    this.props.openCopyright(rights);
   }
 
   getArtworkVariableWidth(){
@@ -124,7 +124,8 @@ class ConstellationArtwork extends Component {
               className="objectMoreButton"
               src={require(".././images/buttons/more_Button.svg")}
               alt=""
-              onClick={() => {this.openArtworkInfoPanel(artworkData.access_num, artworkData.link[0])}}
+              onClick={() => {this.openArtworkInfoPanel(artworkData.access_num, artworkData.have_rights)}}
+              // onClick={() => {this.openArtworkInfoPanel(artworkData.access_num)}}
           ></img>
           <img
             className="objectExitButton"
@@ -149,5 +150,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-  toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork
+  toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork, openCopyright
 })(ConstellationArtwork);
