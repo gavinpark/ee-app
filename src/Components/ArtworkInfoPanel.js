@@ -8,13 +8,13 @@ import ArtworkSwiper from './ArtworkSwiper'
 
 class ArtworkInfoPanel extends Component {  
   determineTitleRowSize(artworkData) {
-    if (artworkData.title.length > 160) {
+    if (artworkData.title.length > 240) {
       return ("span4-row")
     }
-    if ((artworkData.title.length > 81) && (artworkData.title.length < 160)) {
+    if ((artworkData.title.length > 160) && (artworkData.title.length < 240)) {
       return ("span3-row")
     }
-    if ((artworkData.title.length > 40) && (artworkData.title.length < 80)) {
+    if ((artworkData.title.length > 80) && (artworkData.title.length < 160)) {
       return ("span2-row")
     }
     else {
@@ -35,13 +35,13 @@ class ArtworkInfoPanel extends Component {
   }
 
   determineMedRowSize(artworkData) {
-    if (artworkData.medium.length > 160) {
+    if (artworkData.medium.length > 180) {
       return ("span4-row")
     }
-    if ((artworkData.medium.length > 81) && (artworkData.medium.length < 160)) {
+    if ((artworkData.medium.length > 120) && (artworkData.medium.length < 180)) {
       return ("span3-row")
     }
-    if ((artworkData.medium.length > 30) && (artworkData.medium.length < 80)) {
+    if ((artworkData.medium.length > 60) && (artworkData.medium.length < 120)) {
       return ("span2-row")
     }
     else {
@@ -50,13 +50,13 @@ class ArtworkInfoPanel extends Component {
   }
 
   determineKeyRowSize(artworkData) {
-    if (artworkData.keywords.length > 140) {
+    if (artworkData.keywords.length > 240) {
       return ("span4-row")
     }
-    if ((artworkData.keywords.length > 71) && (artworkData.keywords.length < 140)) {
+    if ((artworkData.keywords.length > 160) && (artworkData.keywords.length < 240)) {
       return ("span3-row")
     }
-    if ((artworkData.keywords.length > 35) && (artworkData.keywords.length < 70)) {
+    if ((artworkData.keywords.length > 80) && (artworkData.keywords.length < 160)) {
       return ("span2-row")
     }
     else {
@@ -64,13 +64,13 @@ class ArtworkInfoPanel extends Component {
     }
   }
   determineSubjectRowSize(artworkData) {
-    if (artworkData.subject.length > 160) {
+    if (artworkData.subject.length > 240) {
       return ("span4-row")
     }
-    if ((artworkData.subject.length > 81) && (artworkData.subject.length < 160)) {
+    if ((artworkData.subject.length > 160) && (artworkData.subject.length < 240)) {
       return ("span3-row")
     }
-    if ((artworkData.subject.length > 40) && (artworkData.subject.length < 80)) {
+    if ((artworkData.subject.length > 80) && (artworkData.subject.length < 160)) {
       return ("span2-row")
     }
     else {
@@ -78,13 +78,13 @@ class ArtworkInfoPanel extends Component {
     }
   }
   determineDescRowSize(artworkData) {
-    if (artworkData.description.length > 161) {
+    if (artworkData.description.length > 240) {
       return ("span4-row")
     }
-    if ((artworkData.description.length > 81) && (artworkData.description.length < 160)) {
+    if ((artworkData.description.length > 160) && (artworkData.description.length < 240)) {
       return ("span3-row")
     }
-    if ((artworkData.description.length > 35) && (artworkData.description.length < 80)) {
+    if ((artworkData.description.length > 80) && (artworkData.description.length < 160)) {
       return ("span2-row")
     }
     else {
@@ -92,13 +92,13 @@ class ArtworkInfoPanel extends Component {
     }
   }
   determineRefRowSize(artworkData) {
-    if (artworkData.references.length > 161) {
+    if (artworkData.references.length > 240) {
       return ("span4-row")
     }
-    if ((artworkData.references.length > 81) && (artworkData.references.length < 160)) {
+    if ((artworkData.references.length > 160) && (artworkData.references.length < 240)) {
       return ("span3-row")
     }
-    if ((artworkData.references.length > 40) && (artworkData.references.length < 80)) {
+    if ((artworkData.references.length > 80) && (artworkData.references.length < 160)) {
       return ("span2-row")
     }
     else {
