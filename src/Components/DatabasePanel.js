@@ -25,8 +25,6 @@ const findNextHighestMultiple = (
   const smallerMultiple =
     Math.floor(numofArtworkBlocks / numOfBlocksInViewport) *
     numOfBlocksInViewport;
-  // console.log('DATABASE numOfBlocksInViewport:', numOfBlocksInViewport);
-  // console.log('DATABASE smallerMultiple:', smallerMultiple);
   return smallerMultiple + numOfBlocksInViewport;
 };
 
@@ -89,14 +87,7 @@ class DatabasePanel extends Component {
     const fillIns = generateEmpties(numToFillIn);
     const finalArray = shuffle([...databaseItemsArray, ...essayArray, ...fillIns]);
     const bufferFillIns = generateEmpties(numBufferFillIns);
-    // console.log('DATABASE CountOfExistingBlocks', countOfExistingBlocks);
-    // console.log('DATABASE numBufferFillIns', numBufferFillIns);
-    // console.log('DATABASE numToFillIn', numToFillIn);
-
-    //     return (
-    //     <EssayButton essay={essay} index={obj.index} {...this.props}> </EssayButton>
-    //   }
-    // })}
+  
     return (
       <div className="databasePanel">
 
