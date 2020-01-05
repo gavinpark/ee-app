@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Rnd } from "react-rnd";
 import '../App.css';
 import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork, openCopyright } from '../redux/modules/ui';
-import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 
 class ConstellationArtwork extends Component {

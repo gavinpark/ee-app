@@ -173,7 +173,7 @@ class ArtworkInfoPanel extends Component {
     const emptiesArray = new Array(135);
     const empties = emptiesArray.fill('', 0, 135);
     const emptyGrid = empties.map((empty) => { return <div className='infoPanelDivDesktop'>{empty}</div> });
-    const rights = artworkData.have_rights;
+    // const rights = artworkData.have_rights;
 
     return (
       <div className="databaseInfo">

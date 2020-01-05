@@ -84,19 +84,12 @@ class Landing extends Component {
     const fillIns = generateEmpties(numToFillIn);
     const newArray = shuffle([...mappedArtworks, ...fillIns]);
     const bufferFillIns = generateEmpties(numBufferFillIns);
-<<<<<<< HEAD
-    
-// console.log('numBufferFillIns', numBufferFillIns);
-// console.log('BufferFillIns', bufferFillIns);
-// console.log('numToFillIn', numToFillIn);
-=======
 
-    console.log('numBufferFillIns', numBufferFillIns);
-    console.log('BufferFillIns', bufferFillIns);
-    console.log('numToFillIn', numToFillIn);
-    console.log('viewportNumberofColumnBlocks', viewportNumberofColumnBlocks);
+    // console.log('numBufferFillIns', numBufferFillIns);
+    // console.log('BufferFillIns', bufferFillIns);
+    // console.log('numToFillIn', numToFillIn);
+    // console.log('viewportNumberofColumnBlocks', viewportNumberofColumnBlocks);
 
->>>>>>> dac459397c181c3b81e89f83708aebe10a2bf3bb
 
     return (
       <div className="databaseLanding">

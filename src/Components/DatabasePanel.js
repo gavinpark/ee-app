@@ -19,14 +19,14 @@ const generateEmpties = (numberOfEmpties) => {
 }
 
 const findNextHighestMultiple = (
-  numofArtworkBlocks, 
+  numofArtworkBlocks,
   numOfBlocksInViewport
 ) => {
   const smallerMultiple =
-  Math.floor(numofArtworkBlocks / numOfBlocksInViewport) *
-  numOfBlocksInViewport;
-  console.log('DATABASE numOfBlocksInViewport:', numOfBlocksInViewport);
-  console.log('DATABASE smallerMultiple:', smallerMultiple);
+    Math.floor(numofArtworkBlocks / numOfBlocksInViewport) *
+    numOfBlocksInViewport;
+  // console.log('DATABASE numOfBlocksInViewport:', numOfBlocksInViewport);
+  // console.log('DATABASE smallerMultiple:', smallerMultiple);
   return smallerMultiple + numOfBlocksInViewport;
 };
 
@@ -45,9 +45,9 @@ class DatabasePanel extends Component {
       if (similarityScore === 0) {
         countOfExistingBlocks += 1;
       } else if (similarityScore === 1) {
-        countOfExistingBlocks +=1;
+        countOfExistingBlocks += 1;
       } else if (similarityScore === 2) {
-        countOfExistingBlocks +=4;
+        countOfExistingBlocks += 4;
       } else {
         countOfExistingBlocks += 4
       }
@@ -89,13 +89,16 @@ class DatabasePanel extends Component {
     const fillIns = generateEmpties(numToFillIn);
     const finalArray = shuffle([...databaseItemsArray, ...essayArray, ...fillIns]);
     const bufferFillIns = generateEmpties(numBufferFillIns);
-    console.log('DATABASE CountOfExistingBlocks', countOfExistingBlocks);
-    console.log('DATABASE numBufferFillIns', numBufferFillIns);
-    console.log('DATABASE numToFillIn', numToFillIn);
+    // console.log('DATABASE CountOfExistingBlocks', countOfExistingBlocks);
+    // console.log('DATABASE numBufferFillIns', numBufferFillIns);
+    // console.log('DATABASE numToFillIn', numToFillIn);
 
-              return <EssayButton essay={essay} index={obj.index} {...this.props}> </EssayButton>
-            }
-          })}
+    //     return (
+    //     <EssayButton essay={essay} index={obj.index} {...this.props}> </EssayButton>
+    //   }
+    // })}
+    return (
+      <div className="databasePanel">
 
         {finalArray.map((obj) => {
           if (obj.type === 'work') {

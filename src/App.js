@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter} from 'react-router-dom';
 import Landing from './Components/Landing.js';
 import './App.css';
 import './small.css';
@@ -17,7 +17,7 @@ class App extends Component {
     this.props.findRandomArtWork();
   }
   render() {
-    const leftPanel = this.props.isLandingOpen ? <Landing /> : <MainInterface />
+    // const leftPanel = this.props.isLandingOpen ? <Landing /> : <MainInterface />
     return (
       <div>
 

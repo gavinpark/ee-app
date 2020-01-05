@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from "react-rnd";
 import { toggleDetailPanel, increaseHighestZIndex, removeWorkFromConstellation, onHoverArtwork, offHoverArtwork, openCopyright } from '../redux/modules/ui';
-import ArtworkInfoPanel from './ArtworkInfoPanel';
 
 class DescriptionWindow extends Component {
     constructor(props) {
