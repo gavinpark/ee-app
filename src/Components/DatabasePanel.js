@@ -47,9 +47,9 @@ class DatabasePanel extends Component {
       } else if (similarityScore === 1) {
         countOfExistingBlocks +=1;
       } else if (similarityScore === 2) {
-        countOfExistingBlocks +=3;
+        countOfExistingBlocks +=4;
       } else {
-        countOfExistingBlocks += 9
+        countOfExistingBlocks += 4
       }
       return {
         type: 'work',
@@ -66,28 +66,28 @@ class DatabasePanel extends Component {
     });
 
     let viewportNumberofColumnBlocks = 5;
-    let numBufferFillIns = 25;
+    let numBufferFillIns = 15;
     let viewportNumberofRowBlocks = 9
     const windowWidth = window.innerWidth;
     if (windowWidth >= 1200) {
       viewportNumberofColumnBlocks = 5;
-      numBufferFillIns = 25;
+      numBufferFillIns = 14;
     } else if (windowWidth <= 1200 && windowWidth >= 900) {
       viewportNumberofColumnBlocks = 3;
-      numBufferFillIns = 15;
+      numBufferFillIns = 10;
     } else if (windowWidth <= 900 && windowWidth >= 600) {
       viewportNumberofColumnBlocks = 3;
-      viewportNumberofRowBlocks = 9;
-      numBufferFillIns = 18;
+      viewportNumberofRowBlocks = 6;
+      numBufferFillIns = 10;
     } else if (windowWidth <= 600 && windowWidth >= 0) {
       viewportNumberofColumnBlocks = 2;
       viewportNumberofRowBlocks = 10;
-      numBufferFillIns = 6;
+      numBufferFillIns = 5;
     }
 
     const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks;
     const fillIns = generateEmpties(numToFillIn);
-    const finalArray = shuffle([...databaseItemsArray, ...essayArray]);
+    const finalArray = shuffle([...databaseItemsArray, ...essayArray, ...fillIns]);
     const bufferFillIns = generateEmpties(numBufferFillIns);
     console.log('DATABASE CountOfExistingBlocks', countOfExistingBlocks);
     console.log('DATABASE numBufferFillIns', numBufferFillIns);
