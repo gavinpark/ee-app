@@ -21,14 +21,14 @@ class EssayWindow extends Component {
         this.state = {
             randomX: -1,
             randomY: -1,
-            zIndex: 1,
+            zIndex: 2,
         }
     }
 
     componentDidMount() {
         this.getRandomXPosition();
         this.getRandomYPosition();
-        // this.movezIndexToTop();
+        this.bringItemToHighestZIndex();
     }
 
     bringItemToHighestZIndex = () => {
@@ -121,8 +121,8 @@ class EssayWindow extends Component {
                 default={{
                     x: this.state.randomX,
                     y: this.state.randomY,
-                    width: 500,
-                    height: 600
+                    width: 400,
+                    height: 500
                 }}
                 enableResizing={null}
             // style={{overflow: "scroll"}}
@@ -161,7 +161,6 @@ class EssayWindow extends Component {
                     </div>
                 </div>
             </Rnd>
-
         );
 
     }

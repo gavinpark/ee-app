@@ -13,11 +13,9 @@ export default function reducer(state = {
   // this is all the states
   isFrench: true, 
   isCreditsOpen: false,
-  // isWelcomeOpen: true,
   isLandingOpen: true,
   isCopyrightOpen: false,
   openedArtwork: null,
-  // isConstellationTextOpen: true,
   selectedWorks: [], //{ accessNum, similarityScore }[],
   selectedKeywords: {}, // { [keyword]: { worksInConstellationWithKeyword: [] } }
   relatedWorks: [], // { similarityScore: number, access_num: string }[]
@@ -46,12 +44,6 @@ export default function reducer(state = {
         ...state,
         isCreditsOpen: !state.isCreditsOpen,
       };
-    // case 'TOGGLE_WELCOME':
-    //   return {
-    //     ...state,
-    //     isWelcomeOpen: !state.isWelcomeOpen,
-    //     highestZIndex: state.highestZIndex + 1,
-    //   };
     case 'TOGGLE_COPYRIGHT':
       return {
         ...state,
@@ -70,22 +62,13 @@ export default function reducer(state = {
       return {
         ...newStateAfterEssayClose,
       };
-    // case 'TOGGLE_CONSTELLATION_TEXT':
-    //   return {
-    //     ...state,
-    //     isConstellationTextOpen: !state.isConstellationTextOpen,
-    //     highestZIndex: state.highestZIndex + 1,
-    //   }
-    case 'TOGGLE_DETAIL_PANEL':
-    // console.log(action.copyright)
-    // This logic needs to be done in the toggle detail panel function and not the action
 
+    case 'TOGGLE_DETAIL_PANEL':
     // if(allWorks[action.access_num].have_rights === "Non" || allWorks[action.access_num].have_rights === ""){
     //   copyright = true
     // } else {
     //   copyright = false
     // }
-    // console.log(action.copyright, "action copyright?");
     return {
         ...state,
         isDetailPanelOpen: !state.isDetailPanelOpen,
@@ -261,21 +244,12 @@ export const toggleCredits = () => {
   };
 };
 
-// export const toggleWelcome = () => {
-//   return {
-//     type: 'TOGGLE_WELCOME',
-//   };
-// };
 export const toggleCopyright = () => {
   return {
     type: 'TOGGLE_COPYRIGHT',
   };
 };
-// export const toggleConstellationText = () => {
-//   return {
-//     type: 'TOGGLE_CONSTELLATION_TEXT',
-//   };
-// };
+
 export const openEssaySegment = (index) => {
   return {
     type: 'OPEN_ESSAY',
@@ -291,15 +265,12 @@ export const closeEssaySegment = (index) => {
 };
 
 export const toggleDetailPanel = (access_num) => {
-  // console.log(access_num, "looking for to detail");
   // let copyright;
   // if(allWorks[access_num].have_rights === "Non" || allWorks[access_num].have_rights === ""){
   //     copyright = true
   //   } else {
   //     copyright = false
   //   }
-  // console.log(access_num, "why is this undefined on close")'
-  // console.log("copyright in toggle function", copyright)
   return {
     type: 'TOGGLE_DETAIL_PANEL',
     access_num,
@@ -430,8 +401,6 @@ const findRelatedWork = (accessNum) => {
 }
 
 const filterRelatedWorksToRemoveAlreadyInConstellation = (selectedWorks, relatedWorks) => {
-  // console.log('selectedWorks', selectedWorks)
-  // console.log('relatedWorks', relatedWorks)
   return relatedWorks.filter((related) => {
     let isIn = false;
     for (let index = 0; index < selectedWorks.length; index++) {

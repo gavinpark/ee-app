@@ -68,8 +68,8 @@ class CopyrightWindow extends Component {
                 default={{
                     x: 150,
                     y: 150,
-                    width: 500,
-                    height: 600
+                    width: 400,
+                    height: 500
                 }}
                 enableResizing={null}
             // style={{overflow: "scroll"}}

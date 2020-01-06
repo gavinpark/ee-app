@@ -18,6 +18,7 @@ class ConstellationArtwork extends Component {
   componentDidMount() { 
     this.getRandomXPosition();
     this.getRandomYPosition();
+    this.bringItemToHighestZIndex();
   }
 
   bringItemToHighestZIndex = () => {

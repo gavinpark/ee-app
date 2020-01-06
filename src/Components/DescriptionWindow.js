@@ -16,6 +16,7 @@ class DescriptionWindow extends Component {
     componentDidMount() {
         this.getRandomXPosition();
         this.getRandomYPosition();
+        this.bringItemToHighestZIndex();
     }
     bringItemToHighestZIndex = () => {
         const nextHighestZindex = this.props.highestZIndex + 1;
