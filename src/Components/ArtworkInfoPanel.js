@@ -23,10 +23,13 @@ class ArtworkInfoPanel extends Component {
   }
 
   determineCreditRowSize(artworkData) {
-    if (artworkData.credit.length > 45) {
+    if (artworkData.credit.length > 160) {
       return ("span4-row")
     }
-    if ((artworkData.credit.length > 20) && (artworkData.credit.length < 40)) {
+    if ((artworkData.credit.length > 120) && (artworkData.credit.length < 160)) {
+      return ("span3-row")
+    }
+    if ((artworkData.credit.length > 40) && (artworkData.credit.length < 80)) {
       return ("span2-row")
     }
     else {
