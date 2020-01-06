@@ -10,7 +10,7 @@
   --swiper-theme-color: red !important;
 }
 *{
-  cursor: url(images/cursor/cursor_arrow_01.png), auto;
+  /* cursor: url(images/cursor/cursor_arrow_01.png), auto; */
 }
 /* SCROLLBAR */
 ::-webkit-scrollbar{
@@ -46,10 +46,10 @@
   display: none;
 }
 
- .artworkImage, .description, .essayButton {  
+ /* .artworkImage, .description, .essayButton {  
   cursor: url(images/cursor/cursor_arrow_02.png), auto;
 
-}
+} */
 
 .keyword {
   color: black;
@@ -134,12 +134,12 @@
   -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
-  cursor: url(images/cursor/cursor_arrow_09.png), 10 12, auto !important;
+  /* cursor: url(images/cursor/cursor_arrow_09.png), 10 12, auto !important; */
   background-color: white !important;
   
 
 }
-.cursorMove{
+/* .cursorMove{
 
   cursor: url(images/cursor/cursor_arrow_09.png), 10 12, auto !important;  
 
@@ -147,7 +147,7 @@
 .collectionObject{
   cursor: url(images/cursor/cursor_arrow_09.png), 10 12, auto !important;  
 
-}
+} */
 /* LANDING PAGE */
 
 .databaseLanding {
@@ -226,6 +226,7 @@ width: 1em;
   position: absolute;
   top: 0;
   left: 0;
+  cursor: pointer;
 }
 
 .objectExitButton{
@@ -233,6 +234,15 @@ width: 1em;
   height: 50px;
   position: absolute;
   top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.objectExpand {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
   right: 0;
 }
 .objectENButton, .objectFRButton{
@@ -246,6 +256,7 @@ width: 1em;
   font-size: 1rem;
   line-height: 52px;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .objectFRButton{
@@ -294,10 +305,10 @@ width: 1em;
 
 } */
 
-.draggableRight{
+/* .draggableRight{
   cursor: url(images/cursor/cursor_arrow_03.png), auto;
 
-}
+} */
 
 /* .draggableLeft, .draggableRight {
   position: fixed;
@@ -432,9 +443,9 @@ th, td {
   border: 2px solid red;
   background: white;
   /* z-index: 2; */
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
-  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+  /* cursor: url(images/cursor/cursor_arrow_09.png), auto !important;   */
 
 }
 .essayHeaderBox{
@@ -453,7 +464,7 @@ th, td {
   padding-left: 12px;
   line-height: 55px;
   vertical-align: middle;
-  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+  /* cursor: url(images/cursor/cursor_arrow_09.png), auto !important;   */
 
 }
 
@@ -464,7 +475,7 @@ th, td {
   bottom: 0;
   top: 70px;
   overflow: scroll;
-  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+  /* cursor: url(images/cursor/cursor_arrow_09.png), auto !important;   */
 
 }
 
@@ -526,7 +537,7 @@ th, td {
   height: 50px;
   margin: -2px;
   width: 228px;
-  cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+  /* cursor: url(images/cursor/cursor_arrow_09.png), auto !important;   */
 
   
 }

@@ -98,6 +98,9 @@ class ConstellationArtwork extends Component {
     // const bottomRightStyles = {
     //   cursor: 'pointer',
     // };
+    const removeCursor = {
+      cursor: 'none',
+    };
     return this.state.randomX > -1 && this.state.randomY > -1 && (
       <Rnd
         className="collectionObject"
@@ -109,9 +112,13 @@ class ConstellationArtwork extends Component {
         style={{ zIndex: this.state.zIndex }}
         lockAspectRatio={true}
         minWidth={100}
-        // resizeHandleStyles={{
-        //   bottomRight: bottomRightStyles,
-        // }}
+        resizeHandleStyles={{
+          top: removeCursor,
+          topRight: removeCursor,
+          topLeft: removeCursor, 
+          right: removeCursor,
+          left: removeCursor, 
+          bottom: removeCursor,        }}
       >
         <div
           onClick={this.bringItemToHighestZIndex}
@@ -132,6 +139,10 @@ class ConstellationArtwork extends Component {
             src={require(".././images/buttons/exit_Button.svg")}
             alt=""
             onClick={() => { this.removeWork(artworkData.access_num) }}
+          ></img>
+          <img
+          className="objectExpand"
+          src={require(".././images/buttons/expand_Button.svg")}
           ></img>
           
         </div>
