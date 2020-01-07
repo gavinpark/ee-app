@@ -64,7 +64,7 @@ class CopyrightWindow extends Component {
 
         return (
             <Rnd
-                className="essayContainer"
+                className="essayContainer draggable"
                 default={{
                     x: 150,
                     y: 150,
@@ -76,19 +76,19 @@ class CopyrightWindow extends Component {
             >
                 <div>
                     {/* {this.getLanguage()} */}
-                    <div className="essayHeaderBox">
-                        <div className="essayHeader">{EssayData[6].essayHeader}</div>
+                    <div className="essayHeaderBox draggable">
+                        <div className="essayHeader draggable">{EssayData[6].essayHeader}</div>
                     </div>
 
                     <img
-                        className="objectExitButton"
+                        className="objectExitButton cursorPoint"
                         src={require(".././images/buttons/exit_Button.svg")}
                         alt=""
                         onClick={this.props.toggleCopyright}
                     ></img>
-                    <div className="essayBodyBox">
-                        <div className="essayBody">
-                            <i>{EssayData[6].disclaimer}</i>
+                    <div className="essayBodyBox draggable">
+                        <div className="essayBody draggable">
+                            <i className="draggable">{EssayData[6].disclaimer}</i>
                             <br />
                             __________
                         <br />
@@ -103,7 +103,7 @@ class CopyrightWindow extends Component {
                             <br />
                             <br />
                             {EssayData[6].essayText[3]}
-                            <div className="downloadBox">View Full Text</div>
+                            <div className="downloadBox cursorPoint">View Full Text</div>
 
                         </div>
                         
