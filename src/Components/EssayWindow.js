@@ -14,8 +14,6 @@ import { closeEssaySegment, increaseHighestZIndex } from '../redux/modules/ui';
 // 5. look out for props in essay to make sure its pulling from the right spot
 
 class EssayWindow extends Component {
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -61,6 +59,50 @@ class EssayWindow extends Component {
         this.setState({
             randomY,
         });
+    }
+
+    getBodyText() {
+        if (this.props.index === 10) {
+            return (
+                <div className="essayBody">
+                    <table>
+                        <th>Concept, research, text, and design</th>
+                        <td>Gavin Park and Kristina Vannan</td>
+
+                        <th>Translator</th>
+                        <td>Catherine Barnabé</td>
+
+                        <th>Editor</th>
+                        <td>Ed Janzen</td>
+
+                        <th>Web development assistance</th>
+                        <td>Conan Lai</td>
+
+                        <th>Consultation</th>
+                        <td>Christopher Moore, Sabine Rosenberg</td>
+                    </table>
+                    {this.props.essayText[0]}
+                    <br />
+                    <br />
+                    {this.props.essayText[1]}
+                </div>
+            )
+        }
+        return (
+            <div className="essayBody">
+                {this.props.essayText[0]}
+                <br />
+                <br />
+                {this.props.essayText[1]}
+                <br />
+                <br />
+                {this.props.essayText[2]}
+                <br />
+                <br />
+                {this.props.essayText[3]}
+                <div className="downloadBox">View Full Text</div>
+            </div>
+        )
     }
     // getLanguage() {
     //     if (this.props.isFrench) { 
@@ -141,19 +183,7 @@ class EssayWindow extends Component {
                         onClick={() => { this.props.closeEssaySegment(this.props.index) }}
                     ></img>
                     <div className="essayBodyBox">
-                        <div className="essayBody">
-                            {this.props.essayText[0]}
-                            <br />
-                            <br />
-                            {this.props.essayText[1]}
-                            <br />
-                            <br />
-                            {this.props.essayText[2]}
-                            <br />
-                            <br />
-                            {this.props.essayText[3]}
-                            <div className="downloadBox">View Full Text</div>
-                        </div>
+                        {this.getBodyText()}
                     </div>
 
                     <div className="essayFootnoteBox">
@@ -162,7 +192,6 @@ class EssayWindow extends Component {
                 </div>
             </Rnd>
         );
-
     }
 }
 const mapStateToProps = (state) => {
