@@ -124,7 +124,6 @@
   grid-row-end: span 2;
 }
 
-
 .infoPanelDivDesktop{
   grid-row-end: span 2;
 }
@@ -139,8 +138,6 @@
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
   background-color: white !important;
-  
-
 }
 
 /* LANDING PAGE */
@@ -221,7 +218,6 @@ width: 1em;
   position: absolute;
   top: 0;
   left: 0;
-  cursor: pointer;
 }
 
 .objectExitButton{
@@ -230,7 +226,6 @@ width: 1em;
   position: absolute;
   top: 0;
   right: 0;
-  cursor: pointer;
 }
 
 .objectExpand {
@@ -251,7 +246,6 @@ width: 1em;
   font-size: 1rem;
   line-height: 52px;
   vertical-align: middle;
-  cursor: pointer;
 }
 
 .objectFRButton{
@@ -284,8 +278,8 @@ width: 1em;
   position: absolute;
   width: 50%;
   height: 50%;
-  /* margin: 25% 25% 25% 25%; */
 }
+
 .infoExitButton img{
   height: 100%;
   width: 100%;
@@ -334,7 +328,6 @@ width: 1em;
   /* height:auto; */
   object-fit: contain;
 }
-
 
 .copyrightButton{
   color: red;
@@ -396,8 +389,6 @@ grid-column-end: span 2;
   .span4-row{
     grid-row-end: span 4;
   }
-
-
 
 th, td {
   padding: 6px 12px 6px 12px;
@@ -485,9 +476,7 @@ th, td {
   font-weight: 400;
   text-align: left;
   padding: 48px 24px 24px 24px;
- 
   }
-  
 
 .downloadBox {
   position: relative;
