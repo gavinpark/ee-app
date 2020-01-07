@@ -95,9 +95,6 @@ class ConstellationArtwork extends Component {
     const isRelatedToHoveredKeywordClass = this.props.isRelatedToHoveredKeyword
     ? 'isRelatedToHoveredKeyword' :
     this.props.hoveredKeyword ? 'isNotRelatedToHoveredKeyword' : '';
-    // const bottomRightStyles = {
-    //   cursor: 'pointer',
-    // };
     const removeCursor = {
       cursor: 'none',
     };
@@ -126,16 +123,16 @@ class ConstellationArtwork extends Component {
           onMouseOver={this.handleMouseOver}
           onMouseOut={this.handleMouseOff}
         >
-          <img draggable="false" className="artworkImage cursorMove" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
+          <img draggable="false" className="artworkImage draggable" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
           <img
-              className="objectMoreButton"
+              className="objectMoreButton cursorPoint"
               src={require(".././images/buttons/more_Button.svg")}
               alt=""
               onClick={() => {this.openArtworkInfoPanel(artworkData.access_num, artworkData.have_rights)}}
               // onClick={() => {this.openArtworkInfoPanel(artworkData.access_num)}}
           ></img>
           <img
-            className="objectExitButton"
+            className="objectExitButton cursorPoint"
             src={require(".././images/buttons/exit_Button.svg")}
             alt=""
             onClick={() => { this.removeWork(artworkData.access_num) }}

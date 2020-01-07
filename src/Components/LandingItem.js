@@ -17,7 +17,7 @@ class LandingItem extends Component {
           <div
             className="twoTags"
             onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
-           ><img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img></div>
+           ><img draggable="false" className="artworkImage cursorPoint" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img></div>
         )
       }
       if (artwork.similarityScore === 3) {
@@ -25,7 +25,7 @@ class LandingItem extends Component {
           <div
             className="threeTags"
             onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
-          ><img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
+          ><img draggable="false" className="artworkImage cursorPoint" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
         )
       }
       if (artwork.similarityScore >= 4) {
@@ -33,34 +33,34 @@ class LandingItem extends Component {
           <div
             className="fourTags"
             onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
-          ><img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
+          ><img draggable="false" className="artworkImage cursorPoint" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
         )
       }
       return (
         <div
           onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
         >
-          <img draggable="false" key={artworkData.access_num} className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
+          <img draggable="false" key={artworkData.access_num} className="artworkImage cursorPoint" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
         </div>
       )
     }
     if (artwork.similarityScore===2){
       return (
-        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description twoTags'>{artworkData.subject}</div>
+        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description twoTags cursorPoint'>{artworkData.subject}</div>
       )
     }
     if (artwork.similarityScore ===3){
       return (
-        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description threeTags'>{artworkData.subject}</div>
+        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description threeTags cursorPoint'>{artworkData.subject}</div>
       )
     }
     if (artwork.similarityScore >=4){
       return (
-        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description fourTags'>{artworkData.subject}</div>
+        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description fourTags cursorPoint'>{artworkData.subject}</div>
       )
     }
     return (
-      <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description'>{artworkData.subject}</div>
+      <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description cursorPoint'>{artworkData.subject}</div>
     )
   }
 }

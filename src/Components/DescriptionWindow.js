@@ -78,7 +78,7 @@ class DescriptionWindow extends Component {
 
 
             <Rnd 
-                className="descriptionWindow"
+                className="descriptionWindow draggable"
                 style={{ zIndex: this.state.zIndex }}
                 enableResizing={null}
                 default={{
@@ -93,16 +93,16 @@ class DescriptionWindow extends Component {
                     onMouseOver={this.handleMouseOver}
                     onMouseOut={this.handleMouseOff}
                 >
-                    <div className="descriptionText">{subject}</div>
+                    <div className="descriptionText draggable">{subject}</div>
 
-                    <div className="descriptionHeaderBox">
+                    <div className="descriptionHeaderBox draggable">
                         <img
-                            className="objectMoreButton"
+                            className="objectMoreButton cursorPoint"
                             src={require(".././images/buttons/more_Button.svg")}
                             alt=""
                             onClick={() => { this.openArtworkInfoPanel(artworkData.access_num, artworkData.have_rights) }}
                         ></img>
-                        <img className="objectExitButton"
+                        <img className="objectExitButton cursorPoint"
                             src={require(".././images/buttons/exit_Button.svg")}
                             alt=""
                             onClick={() => { this.removeWork(artworkData.access_num) }}

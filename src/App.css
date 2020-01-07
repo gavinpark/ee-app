@@ -9,9 +9,19 @@
 :root {
   --swiper-theme-color: red !important;
 }
+/*CURSORS*/
 *{
-  /* cursor: url(images/cursor/cursor_arrow_01.png), auto; */
+  cursor: url(images/cursor/small_arrow_01.svg), auto;
 }
+
+.cursorPoint {
+  cursor: url(images/cursor/small_arrow_02.svg), auto !important;
+}
+
+.draggable {
+  cursor: url(images/cursor/small_arrow_move.svg), auto !important;
+}
+
 /* SCROLLBAR */
 ::-webkit-scrollbar{
   display: none;
@@ -40,16 +50,10 @@
   -ms-hyphens: auto;
   hyphens: auto;
   overflow: scroll;
-
 }
 .description::-webkit-scrollbar {
   display: none;
 }
-
- /* .artworkImage, .description, .essayButton {  
-  cursor: url(images/cursor/cursor_arrow_02.png), auto;
-
-} */
 
 .keyword {
   color: black;
@@ -134,20 +138,11 @@
   -webkit-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
   -moz-box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
   box-shadow: 8px 8px 18px -2px rgb(61, 61, 61)!important;
-  /* cursor: url(images/cursor/cursor_arrow_09.png), 10 12, auto !important; */
   background-color: white !important;
   
 
 }
-/* .cursorMove{
 
-  cursor: url(images/cursor/cursor_arrow_09.png), 10 12, auto !important;  
-
-}
-.collectionObject{
-  cursor: url(images/cursor/cursor_arrow_09.png), 10 12, auto !important;  
-
-} */
 /* LANDING PAGE */
 
 .databaseLanding {
@@ -299,17 +294,6 @@ width: 1em;
   margin: 29.33%;
 } */
 
-/* .draggableLeft{
-  left: 0;
-  cursor: url(images/cursor/cursor_arrow_04.png), auto;
-
-} */
-
-/* .draggableRight{
-  cursor: url(images/cursor/cursor_arrow_03.png), auto;
-
-} */
-
 /* .draggableLeft, .draggableRight {
   position: fixed;
   bottom: 0;
@@ -376,7 +360,6 @@ table{
   overflow-x: hidden;
   overflow-y: scroll;
 }
-
 
 tr{
  grid-column-end: span 6; 
@@ -445,9 +428,8 @@ th, td {
   /* z-index: 2; */
   overflow-y: hidden;
   overflow-x: hidden;
-  /* cursor: url(images/cursor/cursor_arrow_09.png), auto !important;   */
-
 }
+
 .essayHeaderBox{
   position: absolute;
   height: 50px;
@@ -455,6 +437,7 @@ th, td {
   border: 2px solid red;
   margin: -2px;
 }
+
 .essayHeader{
   height: 50px;
   color: red;
@@ -464,7 +447,6 @@ th, td {
   padding-left: 12px;
   line-height: 55px;
   vertical-align: middle;
-  /* cursor: url(images/cursor/cursor_arrow_09.png), auto !important;   */
 
 }
 
@@ -475,7 +457,6 @@ th, td {
   bottom: 0;
   top: 70px;
   overflow: scroll;
-  /* cursor: url(images/cursor/cursor_arrow_09.png), auto !important;   */
 
 }
 
@@ -537,8 +518,6 @@ th, td {
   height: 50px;
   margin: -2px;
   width: 228px;
-  /* cursor: url(images/cursor/cursor_arrow_09.png), auto !important;   */
-
   
 }
 .descriptionText{

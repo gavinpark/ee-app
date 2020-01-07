@@ -69,7 +69,7 @@ class ConstellationKeyword extends Component {
           }}
         >
           <div
-            className={`${isRelatedToHoveredArtworkClass} keyword`}
+            className={`${isRelatedToHoveredArtworkClass} keyword draggable`}
             key={word}
             onClick={this.bringItemToHighestZIndex}
             onMouseOver={this.handleMouseOver}

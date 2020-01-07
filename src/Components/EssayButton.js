@@ -8,7 +8,7 @@ class EssayButton extends Component {
   render() {
   
         return (
-          <div className='essayButton'
+          <div className='essayButton cursorPoint'
           onClick={() => {this.props.openEssaySegment(this.props.index)}}
           >
             <div className="circleButton"></div>

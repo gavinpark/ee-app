@@ -20,7 +20,7 @@ class DatabaseItem extends Component {
           return (
               <div className={`${isRelatedToHoveredKeywordClassName} twoTags`} 
               onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-              ><img draggable="false" className={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
+              ><img draggable="false" className={`${isRelatedToHoveredKeywordClassName} artworkImage cursorPoint`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
           )
         }
         // if (artwork.similarityScore >= 3){
@@ -34,14 +34,14 @@ class DatabaseItem extends Component {
           return(
             <div className= {`${isRelatedToHoveredKeywordClassName}`}
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-            ><img draggable="false" key={artworkData.access_num, artwork.similarityScore} className={`${isRelatedToHoveredKeywordClassName} artworkImage`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
+            ><img draggable="false" key={artworkData.access_num, artwork.similarityScore} className={`${isRelatedToHoveredKeywordClassName} artworkImage cursorPoint`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
             </div>
           )
         }
   
         if (artwork.similarityScore >=2){ 
         return (
-          <div className={`${isRelatedToHoveredKeywordClassName} description twoTags`}
+          <div className={`${isRelatedToHoveredKeywordClassName} description twoTags cursorPoint`}
           onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
           >{artworkData.subject}</div>
         )
@@ -55,7 +55,7 @@ class DatabaseItem extends Component {
       // }
      
       return (
-        <div className={`${isRelatedToHoveredKeywordClassName} description`}
+        <div className={`${isRelatedToHoveredKeywordClassName} description cursorPoint`}
         onClick={() => {this.props.addWorkToConstellation(artworkData.access_num)}}
         >{artworkData.subject}</div>
       )

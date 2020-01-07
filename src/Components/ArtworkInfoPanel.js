@@ -232,10 +232,10 @@ class ArtworkInfoPanel extends Component {
 
         {this.props.isCopyrightOpen && <CopyrightWindow toggleCopyright={this.props.toggleCopyright} />}
 
-        <div className="copyrightButton" onClick={this.props.toggleCopyright}> © </div>
+        <div className="copyrightButton cursorPoint" onClick={this.props.toggleCopyright}> © </div>
 
-        <div className="infoExitBox">
-          <img className="infoExitSvg" onClick={this.props.toggleDetailPanel} src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img>
+        <div className="infoExitBox cursorPoint">
+          <img className="infoExitSvg cursorPoint" onClick={this.props.toggleDetailPanel} src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img>
         </div>
 
       </div>

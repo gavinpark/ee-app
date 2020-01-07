@@ -116,7 +116,7 @@ class EssayWindow extends Component {
         }
         return (
             <Rnd
-                className="essayContainer cursorMove"
+                className="essayContainer draggable"
                 style={{ zIndex: this.state.zIndex }}
                 default={{
                     x: this.state.randomX,
@@ -130,18 +130,18 @@ class EssayWindow extends Component {
                 <div onClick={this.bringItemToHighestZIndex}>
                     {/* {this.getLanguage()} */}
 
-                    <div className="essayHeaderBox">
-                        <div className="essayHeader">{this.props.essayHeader}</div>
+                    <div className="essayHeaderBox draggable">
+                        <div className="essayHeader draggable">{this.props.essayHeader}</div>
                     </div>
 
                     <img
-                        className="objectExitButton"
+                        className="objectExitButton cursorPoint"
                         src={require(".././images/buttons/exit_Button.svg")}
                         alt=""
                         onClick={() => { this.props.closeEssaySegment(this.props.index) }}
                     ></img>
-                    <div className="essayBodyBox">
-                        <div className="essayBody">
+                    <div className="essayBodyBox draggable">
+                        <div className="essayBody draggable">
                             {this.props.essayText[0]}
                             <br />
                             <br />
@@ -152,7 +152,7 @@ class EssayWindow extends Component {
                             <br />
                             <br />
                             {this.props.essayText[3]}
-                            <div className="downloadBox">View Full Text</div>
+                            <div className="downloadBox cursorPoint">View Full Text</div>
                         </div>
                     </div>
 
