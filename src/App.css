@@ -435,8 +435,20 @@ th, td {
   overflow-y: hidden;
   overflow-x: hidden;
   cursor: url(images/cursor/cursor_arrow_09.png), auto !important;  
+}
+
+.essayContainerMobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 66.66vh;
+  border: 2px solid red;
+  background: white;
+  z-index: 100000;
 
 }
+
 .essayHeaderBox{
   position: absolute;
   height: 50px;
@@ -444,6 +456,7 @@ th, td {
   border: 2px solid red;
   margin: -2px;
 }
+
 .essayHeader{
   height: 50px;
   color: red;

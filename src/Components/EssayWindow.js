@@ -115,6 +115,7 @@ class EssayWindow extends Component {
             return null;
         }
         return (
+            <fragment>
             <Rnd
                 className="essayContainer cursorMove"
                 style={{ zIndex: this.state.zIndex }}
@@ -161,8 +162,45 @@ class EssayWindow extends Component {
                     </div>
                 </div>
             </Rnd>
-        );
+            
+            <div className="essayContainerMobile">
+                <div onClick={this.bringItemToHighestZIndex}>
+                    {/* {this.getLanguage()} */}
 
+                    <div className="essayHeaderBox">
+                        <div className="essayHeader">{this.props.essayHeader}</div>
+                    </div>
+
+                    <img
+                        className="objectExitButton"
+                        src={require(".././images/buttons/exit_Button.svg")}
+                        alt=""
+                        onClick={() => { this.props.closeEssaySegment(this.props.index) }}
+                    ></img>
+                    <div className="essayBodyBox">
+                        <div className="essayBody">
+                            {this.props.essayText[0]}
+                            <br />
+                            <br />
+                            {this.props.essayText[1]}
+                            <br />
+                            <br />
+                            {this.props.essayText[2]}
+                            <br />
+                            <br />
+                            {this.props.essayText[3]}
+                            <div className="downloadBox">View Full Text</div>
+                        </div>
+                    </div>
+
+                    <div className="essayFootnoteBox">
+                        {this.props.footnote}
+                    </div>
+                </div>
+
+            </div>
+            </fragment>
+        );
     }
 }
 const mapStateToProps = (state) => {
