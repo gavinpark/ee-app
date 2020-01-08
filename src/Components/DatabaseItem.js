@@ -23,13 +23,6 @@ class DatabaseItem extends Component {
               ><img draggable="false" className={`${isRelatedToHoveredKeywordClassName} artworkImage cursorPoint`} src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
           )
         }
-        // if (artwork.similarityScore >= 3){
-        //   return(
-        //     <div className={`${isRelatedToHoveredKeywordClassName} threeTags`} 
-        //     onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-        //     ><img draggable="false" className ="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img> </div>
-        //   )
-        // }
 
           return(
             <div className= {`${isRelatedToHoveredKeywordClassName}`}
@@ -43,21 +36,16 @@ class DatabaseItem extends Component {
         return (
           <div className={`${isRelatedToHoveredKeywordClassName} description twoTags cursorPoint`}
           onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-          >{artworkData.subject}</div>
+          >{artworkData.subject}
+          <div className="whiteOverlay"></div> </div>
         )
       }
-      // if (artwork.similarityScore >=3){
-      //   return (
-      //     <div className='description threeTags'
-      //     onClick={() => {this.props.addWorkToConstellation(artworkData.access_num)}}
-      //     >{artworkData.subject}</div>
-      //   )
-      // }
      
       return (
         <div className={`${isRelatedToHoveredKeywordClassName} description cursorPoint`}
         onClick={() => {this.props.addWorkToConstellation(artworkData.access_num)}}
-        >{artworkData.subject}</div>
+        >{artworkData.subject}
+        <div className="whiteOverlay"></div> </div>
       )
     }
     

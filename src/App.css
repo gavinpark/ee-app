@@ -23,9 +23,9 @@
 }
 
 /* SCROLLBAR */
-::-webkit-scrollbar{
+/* ::-webkit-scrollbar{
   display: none;
-}
+} */
 a {
   display: block;
   position: absolute;
@@ -46,11 +46,12 @@ a {
 }
 
 .description {
-  
+  position: relative;
   color: red;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  padding: 8px 6px 8px 6px;
-  font-size: 11pt;
+  padding: 8px 8px 0px 8px;
+  font-size: .9rem;
+  line-height: 1.12rem;
   text-align: left;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -59,6 +60,15 @@ a {
 }
 .description::-webkit-scrollbar {
   display: none;
+}
+
+.whiteOverlay{
+  position: sticky;
+  height: 26px;
+  width: 100%;
+  bottom: -2px !important;
+  background: linear-gradient(to top,rgb(255, 255, 255) 25%,rgba(57,194,0,0));
+
 }
 
 .keyword {
@@ -76,7 +86,8 @@ a {
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: center;
   padding: 12px 6px 12px 6px;
-  font-size: 12px;
+  font-size: .9rem;
+  line-height: 1.12rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,19 +122,22 @@ a {
 .twoTags{
   grid-column-end: span 2;
   grid-row-end: span 2;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
 }
 
 .threeTags {
   grid-column-end: span 3;
   grid-row-end: span 3;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  line-height: 2.2rem;
 }
 
 .fourTags {
   grid-column-end: span 4;
   grid-row-end: span 4;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  line-height: 2.7rem;
 }
 
 .span2Row{
@@ -294,13 +308,6 @@ width: 1em;
   margin: 29.33%;
 } */
 
-/* .draggableLeft, .draggableRight {
-  position: fixed;
-  bottom: 0;
-  height: 50px;
-  width: 50%;
-} */
-
 .databaseInfo {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
@@ -439,12 +446,11 @@ th, td {
   height: 50px;
   color: red;
   font-family: Avara, sans-serif;
-  font-size: 1rem;
+  font-size: 1.05rem;
   text-align: left;
   padding-left: 12px;
   line-height: 55px;
   vertical-align: middle;
-
 }
 
 .essayBodyBox{
@@ -454,13 +460,13 @@ th, td {
   bottom: 0;
   top: 70px;
   overflow: scroll;
-
 }
 
 .essayBody {
   color: red;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: .9rem;
+  line-height: 1.2rem;
   font-weight: 400;
   text-align: left;
   padding: 12px;
@@ -471,18 +477,21 @@ th, td {
 .essayFootnoteBox {
   position: absolute;
   width: 90%;
-  height: auto;
+  height: 50px;
+  overflow: scroll;
   background: white;
   bottom: 0;
   text-align: bottom;
-  background: linear-gradient(to top,rgb(255, 255, 255) 80%,rgba(57,194,218,0));
-  color: red;
+  background: white;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
+  color: red;
   font-size: .7rem;
+  line-height: .8rem;
   font-weight: 400;
   text-align: left;
-  padding: 48px 24px 24px 24px;
-  }
+  padding: 12px 24px 0px 36px;
+  border-top: 2px solid red;
+}
 
 .downloadBox {
   position: relative;
@@ -513,19 +522,19 @@ th, td {
   height: 50px;
   margin: -2px;
   width: 228px;
-  
 }
+
 .descriptionText{
   position: absolute;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   border: 2px solid red;
   color:  red;
-  font-size: 16pt;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
   font-weight: 400;
   text-align: left;
   padding: 50px 12px 12px 12px;
   width: 200px;
-
 }
 
 /* BODY BORDER  */

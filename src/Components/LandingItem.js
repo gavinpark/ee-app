@@ -46,21 +46,29 @@ class LandingItem extends Component {
     }
     if (artwork.similarityScore===2){
       return (
-        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description twoTags cursorPoint'>{artworkData.subject}</div>
+        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description twoTags cursorPoint'>{artworkData.subject}
+        <div className="whiteOverlay"></div> 
+        </div>
       )
     }
     if (artwork.similarityScore ===3){
       return (
-        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description threeTags cursorPoint'>{artworkData.subject}</div>
+        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description threeTags cursorPoint'>{artworkData.subject}
+        <div className="whiteOverlay"></div> 
+        </div>
       )
     }
     if (artwork.similarityScore >=4){
       return (
-        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description fourTags cursorPoint'>{artworkData.subject}</div>
+        <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description fourTags cursorPoint'>{artworkData.subject}
+        <div className="whiteOverlay"></div> 
+        </div>
       )
     }
     return (
-      <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description cursorPoint'>{artworkData.subject}</div>
+      <div onClick={() => {this.enterMainPage(artworkData.access_num)}} className='description cursorPoint'>{artworkData.subject}
+      <div className="whiteOverlay"></div> 
+      </div>
     )
   }
 }

@@ -152,17 +152,31 @@ class EssayWindow extends Component {
                             <br />
                             <br />
                             {this.props.essayText[3]}
-                            <a 
+                            <a
                                 className="downloadBox cursorPoint"
                                 href=".././essay/EDC_Essay.pdf"
                                 target="_blank">
                                 View Full Text </a>
                             {/* <div className="downloadBox cursorPoint">View Full Text</div> */}
+                            
                         </div>
                     </div>
 
                     <div className="essayFootnoteBox">
-                        {this.props.footnote}
+                        {this.props.footnote[0]}
+                        <br />
+                        {this.props.footnote[1]}
+                        <br />
+                        {this.props.footnote[2]}
+                        <br />
+                        {this.props.footnote[3]}
+                        <br />
+                        {this.props.footnote[4]}
+                        <br />
+                        {this.props.footnote[5]}
+                        <br />
+                        {this.props.footnote[6]}
+                        <div className="whiteOverlay"></div>
                     </div>
                 </div>
             </Rnd>
