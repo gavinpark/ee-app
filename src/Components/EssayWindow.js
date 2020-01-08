@@ -152,7 +152,12 @@ class EssayWindow extends Component {
                             <br />
                             <br />
                             {this.props.essayText[3]}
-                            <div className="downloadBox cursorPoint">View Full Text</div>
+                            <a 
+                                className="downloadBox cursorPoint"
+                                href=".././essay/EDC_Essay.pdf"
+                                target="_blank">
+                                View Full Text </a>
+                            {/* <div className="downloadBox cursorPoint">View Full Text</div> */}
                         </div>
                     </div>
 
