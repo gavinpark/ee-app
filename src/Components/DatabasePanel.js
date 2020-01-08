@@ -7,9 +7,6 @@ import EssayButton from './EssayButton';
 import '../App.css';
 import { addWorkToConstellation, shuffle, toggleDetailPanel } from '../redux/modules/ui';
 
-// new fieldnames are 
-// access_num,access_date,artist,title,date,keywords,subject,color,medium,description,object_name,technique,have_rights,rights_holder,credit,object_rights,birthdate,deathdate,note,link,references,source,status,acquisition_mode
-
 const generateEmpties = (numberOfEmpties) => {
   const emptiesArray = new Array(numberOfEmpties);
   const empties = emptiesArray.fill("", 0, numberOfEmpties);
