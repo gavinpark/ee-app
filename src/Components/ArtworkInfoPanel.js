@@ -185,7 +185,7 @@ class ArtworkInfoPanel extends Component {
 
         {emptyGrid}
 
-        <table>
+        <table className="artworkInfoTable">
 
           <th>Artist</th>
           <td>{artworkData.artist}</td>

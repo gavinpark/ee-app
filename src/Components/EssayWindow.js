@@ -65,22 +65,25 @@ class EssayWindow extends Component {
         if (this.props.index === 10) {
             return (
                 <div className="essayBody">
-                    <table>
-                        <th>Concept, research, text, and design</th>
-                        <td>Gavin Park and Kristina Vannan</td>
+                    <table className="creditTable">
+                        <th className="creditTH">Concept, research, text, and design</th>
+                        <td className="creditTD">Gavin Park and Kristina Vannan</td>
 
-                        <th>Translator</th>
-                        <td>Catherine Barnabé</td>
+                        <th className="creditTH">Translator</th>
+                        <td className="creditTD">Catherine Barnabé</td>
 
-                        <th>Editor</th>
-                        <td>Ed Janzen</td>
+                        <th className="creditTH">Editor</th>
+                        <td className="creditTD">Ed Janzen</td>
 
-                        <th>Web development assistance</th>
-                        <td>Conan Lai</td>
+                        <th className="creditTH">Web development assistance</th>
+                        <td className="creditTD">Conan Lai</td>
 
-                        <th>Consultation</th>
-                        <td>Christopher Moore, Sabine Rosenberg</td>
+                        <th className="creditTH">Consultation</th>
+                        <td className="creditTD">Christopher Moore, Sabine Rosenberg</td>
                     </table>
+                    __________
+                    <br />
+                    <br />
                     {this.props.essayText[0]}
                     <br />
                     <br />
