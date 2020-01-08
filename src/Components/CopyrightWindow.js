@@ -77,7 +77,7 @@ class CopyrightWindow extends Component {
                 <div>
                     {/* {this.getLanguage()} */}
                     <div className="essayHeaderBox draggable">
-                        <div className="essayHeader draggable">{EssayData[6].essayHeader}</div>
+                        <h1 className="essayHeader draggable">{EssayData[6].essayHeader}</h1>
                     </div>
 
                     <img
@@ -88,21 +88,22 @@ class CopyrightWindow extends Component {
                     ></img>
                     <div className="essayBodyBox draggable">
                         <div className="essayBody draggable">
-                            <i className="draggable">{EssayData[6].disclaimer}</i>
+                            <p><i className="draggable">{EssayData[6].disclaimer}</i></p>
                             <br />
                             __________
                         <br />
+                        <br />
+                            <p>{EssayData[6].essayText[0]}</p>
+                            
                             <br />
-                            {EssayData[6].essayText[0]}
+                            <p>{EssayData[6].essayText[1]}</p>
+                            
                             <br />
+                            <p>{EssayData[6].essayText[2]}</p>
+                            
                             <br />
-                            {EssayData[6].essayText[1]}
-                            <br />
-                            <br />
-                            {EssayData[6].essayText[2]}
-                            <br />
-                            <br />
-                            {EssayData[6].essayText[3]}
+                            <p>{EssayData[6].essayText[3]}</p>
+                            
                             <a 
                                 className="downloadBox cursorPoint"
                                 href=".././essay/EDC_Essay.pdf"
@@ -113,8 +114,9 @@ class CopyrightWindow extends Component {
                         
                     </div>
                     <div className="essayFootnoteBox">
-                            {EssayData[6].footnote}
-                        </div>
+                        <p>{EssayData[6].footnote}</p>
+                        <div className="whiteOverlay"></div>
+                    </div>
                 </div>
             </Rnd>
 

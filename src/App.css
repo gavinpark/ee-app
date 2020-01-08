@@ -9,6 +9,12 @@
 :root {
   --swiper-theme-color: red !important;
 }
+
+/* BODY TEXT */
+h1, p{
+  margin: 0;
+}
+
 /*CURSORS*/
 *{
   cursor: url(images/cursor/small_arrow_01.svg), auto ;
@@ -473,14 +479,14 @@ th, td {
   line-height: 1.2rem;
   font-weight: 400;
   text-align: left;
-  padding: 12px;
+  padding: 0px 12px 0px 12px;
   overflow: scroll;
   margin-bottom: 80px;
 }
 
 .essayFootnoteBox {
   position: absolute;
-  width: 90%;
+  width: 100%;
   height: 50px;
   overflow: scroll;
   background: white;
@@ -493,8 +499,11 @@ th, td {
   line-height: .8rem;
   font-weight: 400;
   text-align: left;
-  padding: 12px 24px 0px 36px;
+  /* padding: 12px 24px 0px 36px; */
   border-top: 2px solid red;
+}
+.essayFootnoteBox p{
+  padding: 12px;
 }
 
 .downloadBox {

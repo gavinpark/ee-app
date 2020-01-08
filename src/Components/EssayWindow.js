@@ -10,8 +10,9 @@ import { closeEssaySegment, increaseHighestZIndex } from '../redux/modules/ui';
 // 1. Uncomment toggleLanguage in import, and mapStatetoProps
 // 2. Uncomment getLanguage() and replace html inside rnd render with call to function
 // 3. I did not comment out anything in ui.js..so that should be fine
-// 4. Double check that everywhere is turned back on: Welcome Window, Constellation Text Window, Copyright Window and Essay Window
+// 4. Double check that everywhere is turned back on: Copyright Window and Essay Window
 // 5. look out for props in essay to make sure its pulling from the right spot
+// 6. make sure the html stucture reflects the most recent one (the code that is commented out is old and needs to be updated)
 
 class EssayWindow extends Component {
 
@@ -66,6 +67,31 @@ class EssayWindow extends Component {
         this.setState({
             randomY,
         });
+    }
+    getFootnotes() {
+        if (!this.props.footnote) {
+            return null
+        } else {
+            return (
+                <div className="essayFootnoteBox" >
+                    {/* try to map footnotes? */}
+                    < p > {this.props.footnote[0]}</p>
+                    <br />
+                    <p>{this.props.footnote[1]}</p>
+                    <br />
+                    <p>{this.props.footnote[2]}</p>
+                    <br />
+                    <p>{this.props.footnote[3]}</p>
+                    <br />
+                    <p>{this.props.footnote[4]}</p>
+                    <br />
+                    <p>{this.props.footnote[5]}</p>
+                    <br />
+                    <p>{this.props.footnote[6]}</p>
+                    <div className="whiteOverlay"></div>
+                </div >
+            )
+        }
     }
     // getLanguage() {
     //     if (this.props.isFrench) { 
@@ -136,7 +162,7 @@ class EssayWindow extends Component {
                     {/* {this.getLanguage()} */}
 
                     <div className="essayHeaderBox draggable">
-                        <div className="essayHeader draggable">{this.props.essayHeader}</div>
+                        <h1 className="essayHeader draggable">{this.props.essayHeader}</h1>
                     </div>
 
                     <img
@@ -147,42 +173,23 @@ class EssayWindow extends Component {
                     ></img>
                     <div className="essayBodyBox draggable">
                         <div className="essayBody draggable">
-                            {this.props.essayText[0]}
+                            <p>{this.props.essayText[0]}</p>
                             <br />
+                            <p>{this.props.essayText[1]}</p>
                             <br />
-                            {this.props.essayText[1]}
+                            <p>{this.props.essayText[2]}</p>
                             <br />
-                            <br />
-                            {this.props.essayText[2]}
-                            <br />
-                            <br />
-                            {this.props.essayText[3]}
+                            <p>{this.props.essayText[3]}</p>
                             <a
                                 className="downloadBox cursorPoint"
                                 href=".././essay/EDC_Essay.pdf"
                                 target="_blank">
                                 View Full Text </a>
                             {/* <div className="downloadBox cursorPoint">View Full Text</div> */}
-                            
+
                         </div>
                     </div>
-
-                    <div className="essayFootnoteBox">
-                        {this.props.footnote[0]}
-                        <br />
-                        {this.props.footnote[1]}
-                        <br />
-                        {this.props.footnote[2]}
-                        <br />
-                        {this.props.footnote[3]}
-                        <br />
-                        {this.props.footnote[4]}
-                        <br />
-                        {this.props.footnote[5]}
-                        <br />
-                        {this.props.footnote[6]}
-                        <div className="whiteOverlay"></div>
-                    </div>
+                    {this.getFootnotes()}
                 </div>
             </Rnd>
         );
