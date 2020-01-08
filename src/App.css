@@ -11,7 +11,7 @@
 }
 /*CURSORS*/
 *{
-  cursor: url(images/cursor/small_arrow_01.svg), auto;
+  cursor: url(images/cursor/small_arrow_01.svg), auto ;
 }
 
 .cursorPoint {
