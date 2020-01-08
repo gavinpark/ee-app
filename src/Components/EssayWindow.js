@@ -75,19 +75,9 @@ class EssayWindow extends Component {
             return (
                 <div className="essayFootnoteBox" >
                     {/* try to map footnotes? */}
-                    < p > {this.props.footnote[0]}</p>
-                    <br />
-                    <p>{this.props.footnote[1]}</p>
-                    <br />
-                    <p>{this.props.footnote[2]}</p>
-                    <br />
-                    <p>{this.props.footnote[3]}</p>
-                    <br />
-                    <p>{this.props.footnote[4]}</p>
-                    <br />
-                    <p>{this.props.footnote[5]}</p>
-                    <br />
-                    <p>{this.props.footnote[6]}</p>
+                    {this.props.footnote.map(note => {
+                        return(<p>{note}</p>)
+                    })}
                     <div className="whiteOverlay"></div>
                 </div >
             )

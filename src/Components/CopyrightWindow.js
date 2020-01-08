@@ -90,8 +90,7 @@ class CopyrightWindow extends Component {
                         <div className="essayBody draggable">
                             <p><i className="draggable">{EssayData[6].disclaimer}</i></p>
                             <br />
-                            __________
-                        <br />
+                            <p>__________</p>
                         <br />
                             <p>{EssayData[6].essayText[0]}</p>
                             
@@ -114,7 +113,11 @@ class CopyrightWindow extends Component {
                         
                     </div>
                     <div className="essayFootnoteBox">
-                        <p>{EssayData[6].footnote}</p>
+                        <p>{EssayData[6].footnote[0]}</p>
+                       
+                        <p>{EssayData[6].footnote[1]}</p>
+                        
+                        <p>{EssayData[6].footnote[2]}</p>
                         <div className="whiteOverlay"></div>
                     </div>
                 </div>
