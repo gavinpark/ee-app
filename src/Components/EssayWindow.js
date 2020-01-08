@@ -28,7 +28,12 @@ class EssayWindow extends Component {
     componentDidMount() {
         this.getRandomXPosition();
         this.getRandomYPosition();
-        this.bringItemToHighestZIndex();
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.displayed === false && this.props.displayed === true) {
+            this.bringItemToHighestZIndex();
+        }
     }
 
     bringItemToHighestZIndex = () => {
@@ -186,8 +191,6 @@ class EssayWindow extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        // isFrench: state._ui.isFrench,
-        isEssayOpen: state._ui.isEssayOpen,
         highestZIndex: state._ui.highestZIndex,
     };
 };

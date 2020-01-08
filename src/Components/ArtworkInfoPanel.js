@@ -179,6 +179,7 @@ class ArtworkInfoPanel extends Component {
     // const rights = artworkData.have_rights;
 
     return (
+      <div style={{zIndex: 999, position: 'relative', background: 'white' }}>
       <div className="databaseInfo">
 
         {this.hasRights(artworkData)}
@@ -238,6 +239,7 @@ class ArtworkInfoPanel extends Component {
           <img className="infoExitSvg cursorPoint" onClick={this.props.toggleDetailPanel} src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img>
         </div>
 
+      </div>
       </div>
     );
 

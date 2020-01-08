@@ -308,6 +308,10 @@ width: 1em;
   margin: 29.33%;
 } */
 
+body {
+  overflow-y: hidden;
+}
+
 .databaseInfo {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
@@ -318,7 +322,7 @@ width: 1em;
   margin-right: -2px;
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 100vh;
+  height: 101vh;
   width: 100vw;
 }
 
