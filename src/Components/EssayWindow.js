@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from "react-rnd";
+import pdf from '../essay/EDC_Essay.pdf';
 import { closeEssaySegment, increaseHighestZIndex } from '../redux/modules/ui';
 // toggleLanguage
 
@@ -123,12 +124,13 @@ class EssayWindow extends Component {
                 <br />
                 <br />
                 {this.props.essayText[3]}
-                
-                <a 
-                                className="downloadBox cursorPoint"
-                                href=".././essay/EDC_Essay.pdf"
-                                target="_blank">
-                                View Full Text </a>
+
+                <a
+                    className="downloadBox cursorPoint"
+                    href={pdf}
+                    target="_blank">
+                    View Full Text 
+                    </a>
             </div>
         )
     }
@@ -237,7 +239,7 @@ class EssayWindow extends Component {
                         </div>
                         {this.getFootnotes()}
                     </div>
-            </div>
+                </div>
             </fragment >
         );
     }
@@ -251,5 +253,6 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
     closeEssaySegment,
     // toggleLanguage,
-    increaseHighestZIndex
+    increaseHighestZIndex,
+    pdf
 })(EssayWindow);
