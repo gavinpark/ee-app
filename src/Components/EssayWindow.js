@@ -15,8 +15,6 @@ import { closeEssaySegment, increaseHighestZIndex } from '../redux/modules/ui';
 // 6. make sure the html stucture reflects the most recent one (the code that is commented out is old and needs to be updated)
 
 class EssayWindow extends Component {
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -76,12 +74,58 @@ class EssayWindow extends Component {
                 <div className="essayFootnoteBox" >
                     {/* try to map footnotes? */}
                     {this.props.footnote.map(note => {
-                        return(<p>{note}</p>)
+                        return (<p>{note}</p>)
                     })}
                     <div className="whiteOverlay"></div>
                 </div >
             )
         }
+    }
+    getBodyText() {
+        if (this.props.index === 10) {
+            return (
+                <div className="essayBody">
+                    <table className="creditTable">
+                        <th className="creditTH">Concept, research, text, and design</th>
+                        <td className="creditTD">Gavin Park and Kristina Vannan</td>
+
+                        <th className="creditTH">Translator</th>
+                        <td className="creditTD">Catherine Barnabé</td>
+
+                        <th className="creditTH">Editor</th>
+                        <td className="creditTD">Ed Janzen</td>
+
+                        <th className="creditTH">Web development assistance</th>
+                        <td className="creditTD">Conan Lai</td>
+
+                        <th className="creditTH">Consultation</th>
+                        <td className="creditTD">Christopher Moore, Sabine Rosenberg</td>
+                    </table>
+                    __________
+                    <br />
+                    <br />
+                    <p>{this.props.essayText[0]}</p>
+                    <br />
+                    <br />
+                    <p>{this.props.essayText[1]}</p>
+                </div>
+            )
+        }
+        return (
+            <div className="essayBody">
+                {this.props.essayText[0]}
+                <br />
+                <br />
+                {this.props.essayText[1]}
+                <br />
+                <br />
+                {this.props.essayText[2]}
+                <br />
+                <br />
+                {this.props.essayText[3]}
+                <div className="downloadBox">View Full Text</div>
+            </div>
+        )
     }
     // getLanguage() {
     //     if (this.props.isFrench) { 
@@ -161,29 +205,14 @@ class EssayWindow extends Component {
                         alt=""
                         onClick={() => { this.props.closeEssaySegment(this.props.index) }}
                     ></img>
-                    <div className="essayBodyBox draggable">
-                        <div className="essayBody draggable">
-                            <p>{this.props.essayText[0]}</p>
-                            <br />
-                            <p>{this.props.essayText[1]}</p>
-                            <br />
-                            <p>{this.props.essayText[2]}</p>
-                            <br />
-                            <p>{this.props.essayText[3]}</p>
-                            <a
-                                className="downloadBox cursorPoint"
-                                href=".././essay/EDC_Essay.pdf"
-                                target="_blank">
-                                View Full Text </a>
-                            {/* <div className="downloadBox cursorPoint">View Full Text</div> */}
-
-                        </div>
+                    <div className="essayBodyBox">
+                        {this.getBodyText()}
                     </div>
                     {this.getFootnotes()}
                 </div>
-            </Rnd>
-        );
 
+            </Rnd >
+        );
     }
 }
 const mapStateToProps = (state) => {

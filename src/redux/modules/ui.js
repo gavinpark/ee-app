@@ -11,8 +11,7 @@ window.allWords = allWords;
 
 export default function reducer(state = {
   // this is all the states
-  isFrench: true, 
-  isCreditsOpen: false,
+  isFrench: true,
   isLandingOpen: true,
   isCopyrightOpen: false,
   openedArtwork: null,
@@ -38,11 +37,6 @@ export default function reducer(state = {
       return {
         ...state,
         isFrench: !state.isFrench,
-      };
-    case 'TOGGLE_CREDITS':
-      return {
-        ...state,
-        isCreditsOpen: !state.isCreditsOpen,
       };
     case 'TOGGLE_COPYRIGHT':
       return {
@@ -235,12 +229,6 @@ export default function reducer(state = {
 export const toggleLanguage = () => {
   return {
     type: 'TOGGLE_LANGUAGE',
-  };
-};
-
-export const toggleCredits = () => {
-  return {
-    type: 'TOGGLE_CREDITS',
   };
 };
 

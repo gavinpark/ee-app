@@ -365,7 +365,7 @@ body {
   align-items: center;
 }
 
-table{
+.artworkInfoTable{
   display: grid;
   grid-area: 3 / 8 / 17 / 14;
   
@@ -479,9 +479,33 @@ th, td {
   line-height: 1.2rem;
   font-weight: 400;
   text-align: left;
-  padding: 0px 12px 0px 12px;
+  padding: 0px 12px 100px 12px;
   overflow: scroll;
-  margin-bottom: 80px;
+
+}
+
+.creditTable{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-rows: repeat(5, auto) !important; 
+  font-size: .5rem !important;
+
+}
+
+.creditTH {
+  grid-column-end: span 1;
+  border: none;
+  font-size: 1rem;
+  padding: 0px 0px 20px 24px;
+}
+
+.creditTD{
+  grid-column-end: span 1;
+  border: none;
+  font-size: 1rem;
+  padding: 0px 0px 20px 24px;
+
 }
 
 .essayFootnoteBox {
