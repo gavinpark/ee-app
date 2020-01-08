@@ -7,11 +7,11 @@
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: red !important;
+  --swiper-theme-color: rgb(219, 207, 207) !important;
 }
 
 /* BODY TEXT */
-h1, p{
+h1, h2, h3, p{
   margin: 0;
 }
 

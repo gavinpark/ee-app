@@ -93,7 +93,9 @@ class DescriptionWindow extends Component {
                     onMouseOver={this.handleMouseOver}
                     onMouseOut={this.handleMouseOff}
                 >
-                    <div className="descriptionText draggable">{subject}</div>
+                    <div className="descriptionText draggable">
+                        <p>{subject}</p>
+                    </div>
 
                     <div className="descriptionHeaderBox draggable">
                         <img

@@ -78,18 +78,10 @@ class Landing extends Component {
       numBufferFillIns = 15;
     }
 
-
-
     const numToFillIn = findNextHighestMultiple(countOfExistingBlocks, viewportNumberofColumnBlocks * viewportNumberofRowBlocks) - countOfExistingBlocks;
     const fillIns = generateEmpties(numToFillIn);
     const newArray = shuffle([...mappedArtworks, ...fillIns]);
     const bufferFillIns = generateEmpties(numBufferFillIns);
-
-    // console.log('numBufferFillIns', numBufferFillIns);
-    // console.log('BufferFillIns', bufferFillIns);
-    // console.log('numToFillIn', numToFillIn);
-    // console.log('viewportNumberofColumnBlocks', viewportNumberofColumnBlocks);
-
 
     return (
       <div className="databaseLanding">

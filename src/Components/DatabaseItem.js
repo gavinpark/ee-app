@@ -35,17 +35,18 @@ class DatabaseItem extends Component {
         if (artwork.similarityScore >=2){ 
         return (
           <div className={`${isRelatedToHoveredKeywordClassName} description twoTags cursorPoint`}
-          onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-          >{artworkData.subject}
+          onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}>
+            <p>{artworkData.subject}</p>
           <div className="whiteOverlay"></div> </div>
         )
       }
      
       return (
         <div className={`${isRelatedToHoveredKeywordClassName} description cursorPoint`}
-        onClick={() => {this.props.addWorkToConstellation(artworkData.access_num)}}
-        >{artworkData.subject}
-        <div className="whiteOverlay"></div> </div>
+        onClick={() => {this.props.addWorkToConstellation(artworkData.access_num)}}>
+          <p>{artworkData.subject}</p>
+        <div className="whiteOverlay"></div> 
+        </div>
       )
     }
     
