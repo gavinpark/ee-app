@@ -18,7 +18,7 @@
           grid-column: 9;
         }
 
-        table{
+        .artworkInfoTable{
           grid-area: 3 / 5 / 17 / 10;
 
           grid-template-columns: repeat(5, 1fr);
@@ -62,7 +62,7 @@
           height: 66.66%;
         }
 
-        table{
+        .artworkInfoTable{
           grid-area: 9 / 2 / 19 / 7;
           grid-template-columns: repeat(5, 1fr);
         }
@@ -110,7 +110,7 @@
         height: 66.66%;
       }
 
-      table{
+      .artworkInfoTable{
         grid-area: 10 / 1 / 19 / 7;
       }
 

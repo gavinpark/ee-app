@@ -378,11 +378,11 @@ width: 1em;
 }
 
 
-/* tr{
+tr{
  grid-column-end: span 6; 
  display: grid;
  grid-template-columns: repeat(6, 1fr);
-} */
+}
 th{
   grid-column-end: span 2;
 }
