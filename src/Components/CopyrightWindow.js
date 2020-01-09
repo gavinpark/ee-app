@@ -68,13 +68,11 @@ class CopyrightWindow extends Component {
                 <Rnd
                     className="essayContainer draggable"
                     default={{
-                        x: 150,
-                        y: 150,
                         width: 400,
                         height: 500
                     }}
-                    enableResizing={null}
 
+                    enableResizing={null}
                 >
                     <div>
                         {/* {this.getLanguage()} */}
