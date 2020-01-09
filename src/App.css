@@ -485,10 +485,9 @@ th, td {
   width: 400px;
   height: 500px;
   position: relative;
-  left: 175px;
+  /* left: 175px; */
   border: 2px solid red;
   background: white;
-  /* z-index: 2; */
   overflow-y: hidden;
   overflow-x: hidden;
 }

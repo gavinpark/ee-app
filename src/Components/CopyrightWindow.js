@@ -15,21 +15,6 @@ import { toggleCopyright } from '../redux/modules/ui';
 
 class CopyrightWindow extends Component {
 
-    // getCopyrightSize () {
-    //     const windowWidth = window.innerWidth;
-    //     var copyrightWidth;
-    //     var copyrightHeight;
-    //     if (windowWidth <= 600 && windowWidth >= 0) {
-    //         copyrightWidth = 100%;
-    //         copyrightHeight = 100%;
-    //       }
-    //       else {
-    //           copyrightWidth = 400;
-    //           copyrightHeight = 500
-    //       }
-    // }
-
-
     // getLanguage() {
     //     if (this.props.isFrench) {
     //         return (
@@ -89,7 +74,7 @@ class CopyrightWindow extends Component {
                         height: 500
                     }}
                     enableResizing={null}
-                // style={{overflow: "scroll"}}
+
                 >
                     <div>
                         {/* {this.getLanguage()} */}
