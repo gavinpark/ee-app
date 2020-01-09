@@ -155,11 +155,16 @@
       }
 
       .essayContainer {
-        display: none;
+        display: none !important;
       }
 
       .essayContainerMobile {
         display: block;
       }
+
+      .copyrightContainerMobile {
+        display: block;
+      }
+      
         
     }
