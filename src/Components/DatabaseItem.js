@@ -37,7 +37,8 @@ class DatabaseItem extends Component {
           <div className={`${isRelatedToHoveredKeywordClassName} description twoTags cursorPoint`}
           onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}>
             <p>{artworkData.subject}</p>
-          <div className="whiteOverlay"></div> </div>
+          <div className="whiteOverlay"></div> 
+          </div>
         )
       }
      
