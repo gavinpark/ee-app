@@ -14,6 +14,22 @@ import { toggleCopyright } from '../redux/modules/ui';
 // 5. look out for props in essay to make sure its pulling from the right spot
 
 class CopyrightWindow extends Component {
+
+    // getCopyrightSize () {
+    //     const windowWidth = window.innerWidth;
+    //     var copyrightWidth;
+    //     var copyrightHeight;
+    //     if (windowWidth <= 600 && windowWidth >= 0) {
+    //         copyrightWidth = 100%;
+    //         copyrightHeight = 100%;
+    //       }
+    //       else {
+    //           copyrightWidth = 400;
+    //           copyrightHeight = 500
+    //       }
+    // }
+
+
     // getLanguage() {
     //     if (this.props.isFrench) {
     //         return (
