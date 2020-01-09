@@ -72,7 +72,6 @@ class EssayWindow extends Component {
         } else {
             return (
                 <div className="essayFootnoteBox" >
-                    {/* try to map footnotes? */}
                     {this.props.footnote.map(note => {
                         return (<p>{note}</p>)
                     })}
@@ -101,7 +100,7 @@ class EssayWindow extends Component {
                         <th className="creditTH">Consultation</th>
                         <td className="creditTD">Christopher Moore, Sabine Rosenberg</td>
                     </table>
-                    __________
+                    <p>__________</p>
                     <br />
                     <br />
                     <p>{this.props.essayText[0]}</p>

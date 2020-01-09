@@ -1,4 +1,4 @@
-
+/* smaller screens/horizontal ipad */
 @media (min-width: 900px) and (max-width: 1200px) {
         .databaseLanding, .databaseInfo{
           grid-template-columns: repeat(9, 1fr);
@@ -9,7 +9,6 @@
         .infoPanelImage{
          grid-area: 3 / 1 / 17 / 5;
         }
-
         .copyrightButton{
           grid-area: 1 / 8 / 3 / 9;
         }  
@@ -38,7 +37,7 @@
           grid-column-end: span 3;
         }
     }
-
+/* vertical ipad */
 @media (min-width: 600px) and (max-width: 900px) {
         .databaseLanding {
           grid-template-columns: repeat(6, 1fr);
@@ -52,7 +51,11 @@
             grid-template-rows: repeat(3, 33.33%);
             grid-auto-columns: 16.66%;
             grid-auto-flow: column;
-            overflow: scroll;
+            overflow: auto;
+            padding-right: 0;
+        }
+        .databasePanel::-webkit-scrollbar{
+          display:none;
         }
         .databaseInfo {
           grid-template-columns: repeat(6,1fr);
@@ -84,7 +87,7 @@
           grid-column: 6;
         }
     }
-
+/* cellphones */
 @media (min-width: 0px) and (max-width: 600px) {
         .databaseInfo {
           grid-template-columns: repeat(6,1fr);
@@ -103,8 +106,13 @@
           grid-template-rows: repeat(2, 50%);
           grid-auto-columns: 33.33%;
           grid-auto-flow: column;
-          overflow: scroll;
+          overflow: auto;
+          padding-right: 0;
       }
+      .databasePanel::-webkit-scrollbar{
+        display:none;
+      }
+      
       .constellationPanel {
         width: 100%;
         height: 66.66%;

@@ -14,6 +14,10 @@
 h1, h2, h3, p{
   margin: 0;
 }
+/* SCROLLBAR */
+body::-webkit-scrollbar{
+  display: none;
+}
 
 /*CURSORS*/
 *{
@@ -27,11 +31,6 @@ h1, h2, h3, p{
 .draggable {
   cursor: url(images/cursor/small_arrow_move.svg), auto !important;
 }
-
-/* SCROLLBAR */
-/* ::-webkit-scrollbar{
-  display: none;
-} */
 a {
   display: block;
   position: absolute;
@@ -72,9 +71,8 @@ a {
   position: sticky;
   height: 26px;
   width: 100%;
-  bottom: -2px !important;
+  bottom: 1px !important;
   background: linear-gradient(to top,rgb(255, 255, 255) 25%,rgba(57,194,0,0));
-
 }
 
 .keyword {
@@ -88,18 +86,20 @@ a {
 .essayButton{
   position: relative;
   overflow: hidden;
-  color: white !important;  
-  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   text-align: center;
   padding: 12px 6px 12px 6px;
-  font-size: .9rem;
-  line-height: 1.12rem;
   display: flex;
   justify-content: center;
   align-items: center;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+}
+.essayButton p{
+  font-size: .9rem;
+  line-height: 1.12rem;
+  color: white !important;  
+  font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
 }
 
 .essayButtonDesc {
@@ -182,7 +182,9 @@ a {
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
   justify-items: unset;
-
+}
+.databaseLanding::-webkit-scrollbar{
+  display: none;
 }
 
 /* MAIN INTERFACE */
@@ -196,15 +198,17 @@ a {
   background: transparent;
   overflow: scroll;
 }
+.constellationPanel::-webkit-scrollbar{
+  display: none;
+}
 
 .databasePanel {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: 11.11%;
   grid-auto-flow: dense;
-  
   border: 1px solid red;
-  margin-right: -2px;
+  padding-right: 18px;
   margin-top: -2px;
   overflow-x: hidden;
   overflow-y: overlay;
@@ -220,23 +224,42 @@ a {
   margin: -1px -1px -1px -1px;
 }
 
-/* .databasePanel::-webkit-scrollbar {
-display: flex;
-width: 1em;
+/* DB PANEL SCROLLBAR */
+.databasePanel::-webkit-scrollbar {
+  width: 19px;
+  height: 19px;
+  display:block;
 }
-
+.databasePanel::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
 .databasePanel::-webkit-scrollbar-thumb {
-  background: red;
+  background: #f3a4a4;
+  border: 2px solid #ff2600;
+  border-right: none;
+  border-radius: 0px;
+}
+.databasePanel::-webkit-scrollbar-thumb:hover {
+  background: #ff2600;
+}
+.databasePanel::-webkit-scrollbar-thumb:active {
+  background: #ff2600;
 }
 .databasePanel::-webkit-scrollbar-track {
-  display: none;
-  background: transparent;
-  background-color: transparent;
+  background: #ffffff;
+  border-left: 2px solid #ff2600;
+  border-radius: 0px;
 }
-.databasePanel::-webkit-scrollbar-track-piece {
+.databasePanel::-webkit-scrollbar-track:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-track:active {
+  background: #ffffff;
+}
+::-webkit-scrollbar-corner {
   background: transparent;
-  background-color: transparent;
-} */
+}
 
 .objectMoreButton{
   width: 50px;
@@ -347,6 +370,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+.infoPanelImage::-webkit-scrollbar{
+  display: none;
+}
+
 .infoPanelImage .artworkImage{
   /* height:auto; */
   object-fit: contain;
@@ -375,6 +402,9 @@ body {
 
   overflow-x: hidden;
   overflow-y: scroll;
+}
+.artworkInfoTable::-webkit-scrollbar{
+  display: none;
 }
 
 tr{
@@ -471,6 +501,9 @@ th, td {
   top: 70px;
   overflow: scroll;
 }
+.essayBodyBox::-webkit-scrollbar {
+  display: none;
+}
 
 .essayBody {
   color: red;
@@ -496,15 +529,19 @@ th, td {
 .creditTH {
   grid-column-end: span 1;
   border: none;
-  font-size: 1rem;
-  padding: 0px 0px 20px 24px;
+  font-size: .9rem;
+  line-height: 1.2rem;
+  font-weight: 400;
+  padding: 10px 24px 10px 0px;
 }
 
 .creditTD{
   grid-column-end: span 1;
   border: none;
-  font-size: 1rem;
-  padding: 0px 0px 20px 24px;
+  font-size: .9rem;
+  line-height: 1.2rem;
+  font-weight: 400;
+  padding: 10px 0px 10px 24px;
 
 }
 
