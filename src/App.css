@@ -351,7 +351,7 @@ body {
   margin-right: -2px;
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 101vh;
+  height: 100vh;
   width: 100vw;
 }
 
@@ -396,9 +396,8 @@ body {
   display: grid;
   grid-area: 3 / 8 / 17 / 14;
   
-  /* TODO - PLAY WITH ROW MINMAX TO FIT  */
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(16, 5.56vh); 
+  grid-template-rows: repeat(14, 5.56vh); 
 
   overflow-x: hidden;
   overflow-y: scroll;
@@ -414,6 +413,7 @@ tr{
 }
 th{
   grid-column-end: span 2;
+  grid-column-start: 1;
 }
 td{
   grid-column-end: span 4;
@@ -424,14 +424,6 @@ td:nth-child(22){
 td:nth-child(24){
   color: black;
 }
-
-.panelHeader{
-grid-column-end: span 2;
-}
-
-.panelData{
-  grid-column-end: span 4;
-  }
 
 .span2-row{
   grid-row-end: span 2;
@@ -445,8 +437,6 @@ grid-column-end: span 2;
 
 th, td {
   padding: 6px 12px 6px 12px;
-  /* padding: .595vh; */
-  /* padding: 12px; */
   text-align: left;
   border: 2px solid red;
   margin: -1px -1px -1px -1px;
