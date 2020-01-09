@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from "react-rnd";
+import pdf from '../essay/EDC_Essay.pdf';
 import { closeEssaySegment, increaseHighestZIndex } from '../redux/modules/ui';
 // toggleLanguage
 
@@ -122,7 +123,13 @@ class EssayWindow extends Component {
                 <br />
                 <br />
                 {this.props.essayText[3]}
-                <div className="downloadBox">View Full Text</div>
+
+                <a
+                    className="downloadBox cursorPoint"
+                    href={pdf}
+                    target="_blank">
+                    View Full Text 
+                    </a>
             </div>
         )
     }
@@ -179,38 +186,60 @@ class EssayWindow extends Component {
             return null;
         }
         return (
-            <Rnd
-                className="essayContainer draggable"
-                style={{ zIndex: this.state.zIndex }}
-                default={{
-                    x: this.state.randomX,
-                    y: this.state.randomY,
-                    width: 400,
-                    height: 500
-                }}
-                enableResizing={null}
-            // style={{overflow: "scroll"}}
-            >
-                <div onClick={this.bringItemToHighestZIndex}>
-                    {/* {this.getLanguage()} */}
+            <fragment>
+                <Rnd
+                    className="essayContainer draggable"
+                    style={{ zIndex: this.state.zIndex }}
+                    default={{
+                        x: this.state.randomX,
+                        y: this.state.randomY,
+                        width: 400,
+                        height: 500
+                    }}
+                    enableResizing={null}
+                // style={{overflow: "scroll"}}
+                >
+                    <div onClick={this.bringItemToHighestZIndex}>
+                        {/* {this.getLanguage()} */}
 
-                    <div className="essayHeaderBox draggable">
-                        <h1 className="essayHeader draggable">{this.props.essayHeader}</h1>
+                        <div className="essayHeaderBox draggable">
+                            <h1 className="essayHeader draggable">{this.props.essayHeader}</h1>
+                        </div>
+
+                        <img
+                            className="objectExitButton cursorPoint"
+                            src={require(".././images/buttons/exit_Button.svg")}
+                            alt=""
+                            onClick={() => { this.props.closeEssaySegment(this.props.index) }}
+                        ></img>
+                        <div className="essayBodyBox">
+                            {this.getBodyText()}
+                        </div>
+                        {this.getFootnotes()}
                     </div>
 
-                    <img
-                        className="objectExitButton cursorPoint"
-                        src={require(".././images/buttons/exit_Button.svg")}
-                        alt=""
-                        onClick={() => { this.props.closeEssaySegment(this.props.index) }}
-                    ></img>
-                    <div className="essayBodyBox">
-                        {this.getBodyText()}
+                </Rnd >
+
+                <div className="essayContainerMobile">
+                    <div onClick={this.bringItemToHighestZIndex}>
+                        {/* {this.getLanguage()} */}
+                        <div className="essayHeaderBox draggable">
+                            <h1 className="essayHeader draggable">{this.props.essayHeader}</h1>
+                        </div>
+
+                        <img
+                            className="objectExitButton cursorPoint"
+                            src={require(".././images/buttons/exit_Button.svg")}
+                            alt=""
+                            onClick={() => { this.props.closeEssaySegment(this.props.index) }}
+                        ></img>
+                        <div className="essayBodyBox">
+                            {this.getBodyText()}
+                        </div>
+                        {this.getFootnotes()}
                     </div>
-                    {this.getFootnotes()}
                 </div>
-
-            </Rnd >
+            </fragment >
         );
     }
 }
@@ -223,5 +252,6 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
     closeEssaySegment,
     // toggleLanguage,
-    increaseHighestZIndex
+    increaseHighestZIndex,
+    pdf
 })(EssayWindow);

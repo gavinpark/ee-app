@@ -474,6 +474,19 @@ th, td {
   overflow-x: hidden;
 }
 
+.essayContainerMobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 66.66vh;
+  border: 2px solid red;
+  background: white;
+  z-index: 100000;
+
+}
+
 .essayHeaderBox{
   position: absolute;
   height: 50px;
@@ -494,7 +507,7 @@ th, td {
 }
 
 .essayBodyBox{
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 510px;
   bottom: 0;
@@ -568,7 +581,6 @@ th, td {
 }
 
 .downloadBox {
-  position: relative;
   width: 100%;
   height: 200px;
   line-height: 150px;
