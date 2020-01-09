@@ -62,10 +62,12 @@ a {
   -ms-hyphens: auto;
   hyphens: auto;
   overflow: scroll;
+  scrollbar-width: none;
 }
 .description::-webkit-scrollbar {
   display: none;
 }
+
 .whiteOverlay{
   position: sticky; 
   position: -webkit-sticky;
@@ -190,6 +192,7 @@ a {
   width: 100vw;
   height: 100vh; 
   overflow: scroll;
+  scrollbar-width: none;
 }
 .databaseLanding > div {
   border: 2px solid red;
@@ -210,6 +213,7 @@ a {
   height: 100vh;
   background: transparent;
   overflow: scroll;
+  scrollbar-width: none;
 }
 .constellationPanel::-webkit-scrollbar{
   display: none;
@@ -382,6 +386,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  scrollbar-width: none;
 }
 .infoPanelImage::-webkit-scrollbar{
   display: none;
@@ -415,6 +420,7 @@ body {
 
   overflow-x: hidden;
   overflow-y: scroll;
+  scrollbar-width: none;
 }
 .artworkInfoTable::-webkit-scrollbar{
   display: none;
@@ -526,6 +532,7 @@ th, td {
   bottom: 0;
   top: 70px;
   overflow: scroll;
+  scrollbar-width: none;
 }
 .essayBodyBox::-webkit-scrollbar {
   display: none;
@@ -588,6 +595,7 @@ th, td {
   text-align: left;
   /* padding: 12px 24px 0px 36px; */
   border-top: 2px solid red;
+  scrollbar-width: none;
 }
 .essayFootnoteBox p{
   padding: 12px 12px 0px 12px;
