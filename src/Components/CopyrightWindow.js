@@ -79,66 +79,117 @@ class CopyrightWindow extends Component {
     render() {
 
         return (
-            <Rnd
-                className="essayContainer draggable"
-                default={{
-                    x: 150,
-                    y: 150,
-                    width: 400,
-                    height: 500
-                }}
-                enableResizing={null}
-            // style={{overflow: "scroll"}}
-            >
-                <div>
-                    {/* {this.getLanguage()} */}
-                    <div className="essayHeaderBox draggable">
-                        <h1 className="essayHeader draggable">{EssayData[6].essayHeader}</h1>
-                    </div>
+            <fragment>
+                <Rnd
+                    className="essayContainer draggable"
+                    default={{
+                        x: 150,
+                        y: 150,
+                        width: 400,
+                        height: 500
+                    }}
+                    enableResizing={null}
+                // style={{overflow: "scroll"}}
+                >
+                    <div>
+                        {/* {this.getLanguage()} */}
+                        <div className="essayHeaderBox draggable">
+                            <h1 className="essayHeader draggable">{EssayData[6].essayHeader}</h1>
+                        </div>
 
-                    <img
-                        className="objectExitButton cursorPoint"
-                        src={require(".././images/buttons/exit_Button.svg")}
-                        alt=""
-                        onClick={this.props.toggleCopyright}
-                    ></img>
-                    <div className="essayBodyBox draggable">
-                        <div className="essayBody draggable">
-                            <p><i className="draggable">{EssayData[6].disclaimer}</i></p>
-                            <br />
-                            <p>__________</p>
-                        <br />
-                            <p>{EssayData[6].essayText[0]}</p>
-                            
-                            <br />
-                            <p>{EssayData[6].essayText[1]}</p>
-                            
-                            <br />
-                            <p>{EssayData[6].essayText[2]}</p>
-                            
-                            <br />
-                            <p>{EssayData[6].essayText[3]}</p>
-                            
-                            <a 
-                                className="downloadBox cursorPoint"
-                                href=".././essay/EDC_Essay.pdf"
-                                target="_blank">
-                                View Full Text </a>
+                        <img
+                            className="objectExitButton cursorPoint"
+                            src={require(".././images/buttons/exit_Button.svg")}
+                            alt=""
+                            onClick={this.props.toggleCopyright}
+                        ></img>
+                        <div className="copyrightBodyBox draggable">
+                            <div className="essayBody draggable">
+                                <p><i className="draggable">{EssayData[6].disclaimer}</i></p>
+                                <br />
+                                <p>__________</p>
+                                <br />
+                                <p>{EssayData[6].essayText[0]}</p>
+
+                                <br />
+                                <p>{EssayData[6].essayText[1]}</p>
+
+                                <br />
+                                <p>{EssayData[6].essayText[2]}</p>
+
+                                <br />
+                                <p>{EssayData[6].essayText[3]}</p>
+
+                                <a
+                                    className="downloadBox cursorPoint"
+                                    href=".././essay/EDC_Essay.pdf"
+                                    target="_blank">
+                                    View Full Text </a>
+
+                            </div>
 
                         </div>
-                        
+                        <div className="essayFootnoteBox">
+                            <p>{EssayData[6].footnote[0]}</p>
+
+                            <p>{EssayData[6].footnote[1]}</p>
+
+                            <p>{EssayData[6].footnote[2]}</p>
+                            <div className="whiteOverlay"></div>
+                        </div>
                     </div>
-                    <div className="essayFootnoteBox">
-                        <p>{EssayData[6].footnote[0]}</p>
-                       
-                        <p>{EssayData[6].footnote[1]}</p>
-                        
-                        <p>{EssayData[6].footnote[2]}</p>
-                        <div className="whiteOverlay"></div>
+                </Rnd>
+                <div
+                    className="copyrightContainerMobile">
+                    <div>
+                        {/* {this.getLanguage()} */}
+                        <div className="essayHeaderBox draggable">
+                            <h1 className="essayHeader draggable">{EssayData[6].essayHeader}</h1>
+                        </div>
+
+                        <img
+                            className="objectExitButton cursorPoint"
+                            src={require(".././images/buttons/exit_Button.svg")}
+                            alt=""
+                            onClick={this.props.toggleCopyright}
+                        ></img>
+                        <div className="essayBodyBox draggable">
+                            <div className="essayBody draggable">
+                                <p><i className="draggable">{EssayData[6].disclaimer}</i></p>
+                                <br />
+                                <p>__________</p>
+                                <br />
+                                <p>{EssayData[6].essayText[0]}</p>
+
+                                <br />
+                                <p>{EssayData[6].essayText[1]}</p>
+
+                                <br />
+                                <p>{EssayData[6].essayText[2]}</p>
+
+                                <br />
+                                <p>{EssayData[6].essayText[3]}</p>
+
+                                <a
+                                    className="downloadBox cursorPoint"
+                                    href=".././essay/EDC_Essay.pdf"
+                                    target="_blank">
+                                    View Full Text </a>
+
+                            </div>
+
+                        </div>
+                        <div className="essayFootnoteBox">
+                            <p>{EssayData[6].footnote[0]}</p>
+
+                            <p>{EssayData[6].footnote[1]}</p>
+
+                            <p>{EssayData[6].footnote[2]}</p>
+                            <div className="whiteOverlay"></div>
+                        </div>
                     </div>
                 </div>
-            </Rnd>
-
+            </fragment>
         );
 
     }

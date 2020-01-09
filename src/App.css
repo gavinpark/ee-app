@@ -500,6 +500,27 @@ th, td {
 
 }
 
+.copyrightContainerMobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50vh;
+  border: 2px solid red;
+  background: white;
+  z-index: 100000;
+}
+.copyrightBodyBox{
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  bottom: 0;
+  top: 70px;
+  overflow: scroll;
+}
+
+
 .essayHeaderBox{
   position: absolute;
   height: 50px;
@@ -522,7 +543,6 @@ th, td {
 .essayBodyBox{
   position: absolute;
   width: 100%;
-  height: 510px;
   bottom: 0;
   top: 70px;
   overflow: scroll;
