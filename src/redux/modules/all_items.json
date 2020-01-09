@@ -550,7 +550,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "000_12_01-000_12_48.jpg", "000_12_01-000_12_48(detail.1).jpg", "000_12_01-000_12_48(detail.2).jpg"
+        "link": [ "000_12_01-000_12_48.jpg", "000_12_01-000_12_48_detail_1.jpg", "000_12_01-000_12_48_detail_2.jpg"
         ],
         "photographer": "Richard-Max Tremblay",
         "final_words": [
@@ -2915,7 +2915,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "011_03.jpg"
+        "link": [ "011_03.jpg","011_03_a.jpg", "011_03_b.jpg", "011_03_c.jpg", "011_03_d.jpg", "011_03_e.jpg", "011_03_f.jpg", "011_03_g.jpg", "011_03_h.jpg"
         ],
         "photographer": "Vox",
         "final_words": [
@@ -4225,7 +4225,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "013.10-A.jpg"
+        "link": [ "013_10-A.jpg"
         ],
         "photographer": "Alana Riley",
         "final_words": [
@@ -4535,7 +4535,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "017.01.jpg"
+        "link": [ "017_01.jpg"
         ],
         "photographer": "Suzy Lake",
         "final_words": []
@@ -4566,7 +4566,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "017.02.01.jpg"
+        "link": [ "017_02_01.jpg"
         ],
         "photographer": "Suzy Lake",
         "final_words": []
@@ -4597,7 +4597,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "017.02.02.jpg"
+        "link": [ "017_02_02.jpg"
         ],
         "photographer": "Suzy Lake",
         "final_words": []
@@ -4628,7 +4628,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "017.02.03.jpg"
+        "link": [ "017_02_03.jpg"
         ],
         "photographer": "Suzy Lake",
         "final_words": []
@@ -4659,7 +4659,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "017.02.04.jpg"
+        "link": [ "017_02_04.jpg"
         ],
         "photographer": "Suzy Lake",
         "final_words": []
@@ -4690,7 +4690,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "017.03.jpg"
+        "link": [ "017_03.jpg"
         ],
         "photographer": "Ian Wallace",
         "final_words": []
@@ -4721,7 +4721,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "017.04a.jpg"
+        "link": [ "017_04a.jpg"
         ],
         "photographer": "Jo-Anne Balcaen",
         "final_words": []
@@ -4752,7 +4752,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "017.05.jpg"
+        "link": [ "017_05.jpg"
         ],
         "photographer": "Aurélien Mole",
         "final_words": []
@@ -4783,7 +4783,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "017.06a.jpg"
+        "link": [ "017_06a.jpg", "017_06b.jpg", "017_06c.jpg", "017_06d.jpg"
         ],
         "photographer": "Moyra Davey",
         "final_words": []
@@ -4814,7 +4814,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "017.07.jpg"
+        "link": [ "017_07_01.jpg", "017_07_02.jpg", "017_07_03.jpg", "017_07_04.jpg" 
         ],
         "photographer": "Isabelle Pauwels",
         "final_words": []
@@ -4845,7 +4845,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "017.08.jpg"
+        "link": [ "017_08.jpg"
         ],
         "photographer": "",
         "final_words": []
@@ -6627,7 +6627,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "963.45.jpg"
+        "link": [ "963_45.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -19213,7 +19213,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "973.18.jpg"
+        "link": [ "973_18.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -19255,7 +19255,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "973.19.jpg"
+        "link": [ "973_19.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -24191,7 +24191,7 @@
         "length": "",
         "depth": "9.7",
         "status": "actif",
-        "link": [ "978_39_2-5.jpg"
+        "link": [ "978_39_2_5.jpg"
         ],
         "photographer": "Paul Smith",
         "final_words": []
@@ -26449,7 +26449,7 @@
         "length": "",
         "depth": "9.9",
         "status": "actif",
-        "link": [ "979_62_2-4.jpg"
+        "link": [ "979_62_2_4.jpg"
         ],
         "photographer": "Paul Smith",
         "final_words": []
@@ -37453,7 +37453,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "987_01(1-8).jpg"
+        "link": [ "987_01_1-8.jpg"
         ],
         "photographer": "Richard-Max Tremblay",
         "final_words": [
@@ -41248,7 +41248,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.06.jpg"
+        "link": [ "989_06.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -41975,7 +41975,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.08.18.jpg"
+        "link": [ "989_08_18.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -42255,7 +42255,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.08.26.jpg"
+        "link": [ "989_08_26.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -43790,7 +43790,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.10.01 a.jpg", "989.10.01 b.jpg"
+        "link": [ "989_10_01_a.jpg", "989_10_01_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -43834,7 +43834,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.10.02 a.jpg", "989.10.02 b.jpg"
+        "link": [ "989_10_02_a.jpg", "989_10_02_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -43868,7 +43868,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.10.03 a.jpg", "989.10.03 b.jpg"
+        "link": [ "989_10_03_a.jpg", "989_10_03_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -43903,7 +43903,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.10.04 a.jpg", "989.10.04 b.jpg"
+        "link": [ "989_10_04_a.jpg", "989_10_04_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -43941,7 +43941,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.10.05 a.jpg", "989.10.05 b.jpg"
+        "link": [ "989_10_05_a.jpg", "989_10_05_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -43978,7 +43978,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.10.06 a.jpg", "989.10.06 b.jpg"
+        "link": [ "989_10_06_a.jpg", "989_10_06_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -44021,7 +44021,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.10.07 a.jpg", "989.10.07 b.jpg"
+        "link": [ "989_10_07_a.jpg", "989_10_07_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -44060,7 +44060,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.10.08 a.jpg", "989.10.08 b.jpg"
+        "link": [ "989_10_08_a.jpg", "989_10_08_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -44144,7 +44144,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.10.10 a.jpg", "989.10.10 b.jpg"
+        "link": [ "989_10_10_a.jpg", "989_10_10_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -44184,7 +44184,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.10.11 a.jpg", "989.10.11 b.jpg"
+        "link": [ "989_10_11_a.jpg", "989_10_11_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -44224,7 +44224,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.10.12 a.jpg", "989.10.12 b.jpg"
+        "link": [ "989_10_12_a.jpg", "989_10_12_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -44264,7 +44264,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.10.13 a.jpg", "989.10.13 b.jpg"
+        "link": [ "989_10_13_a.jpg", "989_10_13_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -45084,7 +45084,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.11.10.jpg"
+        "link": [ "989_11_10.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -46726,7 +46726,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.11.56.jpg"
+        "link": [ "989_11_56.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -46952,7 +46952,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.11.62.jpg"
+        "link": [ "989_11_62.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -48178,7 +48178,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.12.09.jpg"
+        "link": [ "989_12_09.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -48574,7 +48574,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.124.jpg"
+        "link": [ "989_124.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -50445,7 +50445,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.14.08.jpg"
+        "link": [ "989_14_08.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -54776,7 +54776,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.01.jpg"
+        "link": [ "989_18_01.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -54812,7 +54812,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.02 a.jpg", "989.18.02 b.jpg"
+        "link": [ "989_18_02_a.jpg", "989_18_02_b.jpg"
         ],
         "photographer": "",
         "final_words": [
@@ -54847,7 +54847,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.03 a.jpg", "989.18.03 b.jpg"
+        "link": [ "989_18_03_a.jpg", "989_18_03_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -54882,7 +54882,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.04 a.jpg", "989.18.04 b.jpg"
+        "link": [ "989_18_04_a.jpg", "989_18_04_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -54917,7 +54917,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.05 a.jpg", "989.18.05 b.jpg"
+        "link": [ "989_18_05_a.jpg", "989_18_05_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -54952,7 +54952,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.06 a.jpg", "989.18.06 b.jpg"
+        "link": [ "989_18_06_a.jpg", "989_18_06_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -54986,7 +54986,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.07 a.jpg", "989.18.07 b.jpg"
+        "link": [ "989_18_07_a.jpg", "989_18_07_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55020,7 +55020,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.08 a.jpg", "989.18.08 b.jpg"
+        "link": [ "989_18_08_a.jpg", "989_18_08_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55054,7 +55054,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.09 a.jpg", "989.18.09 b.jpg"
+        "link": [ "989_18_09_a.jpg", "989_18_09_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55088,7 +55088,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.10 a.jpg", "989.18.10 b.jpg"
+        "link": [ "989_18_10_a.jpg", "989_18_10_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55156,7 +55156,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.12 a.jpg", "989.18.12 b.jpg"
+        "link": [ "989_18_12_a.jpg", "989_18_12_b.jpg"
         ],
         "photographer": "",
         "final_words": [
@@ -55190,7 +55190,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.13 a.jpg", "989.18.13 b.jpg"
+        "link": [ "989_18_13_a.jpg", "989_18_13_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55226,7 +55226,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.14 a.jpg", "989.18.14 b.jpg"
+        "link": [ "989_18_14_a.jpg", "989_18_14_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55265,7 +55265,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.15 a.jpg", "989.18.15 b.jpg"
+        "link": [ "989_18_15_a.jpg", "989_18_15_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55302,7 +55302,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.16 a.jpg", "989.18.16 b.jpg"
+        "link": [ "989_18_16_a.jpg", "989_18_16_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55338,7 +55338,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.17 a.jpg", "989.18.17 b.jpg"
+        "link": [ "989_18_17_a.jpg", "989_18_17_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55372,7 +55372,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.18 a.jpg", "989.18.18 b.jpg"
+        "link": [ "989_18_18_a.jpg", "989_18_18_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55405,7 +55405,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.19 a.jpg", "989.18.19 b.jpg"
+        "link": [ "989_18_19_a.jpg", "989_18_19_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55442,7 +55442,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.20 a.jpg", "989.18.20 b.jpg"
+        "link": [ "989_18_20_a.jpg", "989_18_20_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55477,7 +55477,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.18.21 a.jpg", "989.18.21 b.jpg"
+        "link": [ "989_18_21_a.jpg", "989_18_21_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55619,7 +55619,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.183.jpg"
+        "link": [ "989_183.jpg"
         ],
         "photographer": "",
         "final_words": [
@@ -55892,7 +55892,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.01.jpg"
+        "link": [ "989_19_01.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55926,7 +55926,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.02.jpg"
+        "link": [ "989_19_02.jpg"
         ],
         "photographer": "Paul Lithermand",
         "final_words": [
@@ -55962,7 +55962,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.03.jpg"
+        "link": [ "989_19_03.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -55996,7 +55996,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.04.jpg"
+        "link": [ "989_19_04.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56029,7 +56029,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.05.jpg"
+        "link": [ "989_19_05.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56062,7 +56062,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.06.jpg"
+        "link": [ "989_19_06.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56095,7 +56095,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.07.jpg"
+        "link": [ "989_19_07.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56129,7 +56129,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.08.jpg"
+        "link": [ "989_19_08.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56165,7 +56165,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.09.jpg"
+        "link": [ "989_19_09.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56198,7 +56198,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.10.jpg"
+        "link": [ "989_19_10.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56234,7 +56234,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.11.jpg"
+        "link": [ "989_19_11.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56268,7 +56268,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.12.jpg"
+        "link": [ "989_19_12.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56302,7 +56302,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.13.jpg"
+        "link": [ "989_19_13.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56336,7 +56336,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.14.jpg"
+        "link": [ "989_19_14.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56373,7 +56373,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.15.jpg"
+        "link": [ "989_19_15.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56407,7 +56407,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.16.jpg"
+        "link": [ "989_19_16.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56443,7 +56443,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.17.jpg"
+        "link": [ "989_19_17.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56479,7 +56479,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.18.jpg"
+        "link": [ "989_19_18.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56515,7 +56515,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.19.jpg"
+        "link": [ "989_19_19.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56553,7 +56553,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.20 a.jpg", "989.19.20 b.jpg"
+        "link": [ "989_19_20_a.jpg", "989_19_20_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56589,7 +56589,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.21 a.jpg", "989.19.21 b.jpg"
+        "link": [ "989_19_21_a.jpg", "989_19_21_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56624,7 +56624,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.22.jpg"
+        "link": [ "989_19_22.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56659,7 +56659,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.23.jpg"
+        "link": [ "989_19_23.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56694,7 +56694,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.24.jpg"
+        "link": [ "989_19_24.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56732,7 +56732,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.25.jpg"
+        "link": [ "989_19_25.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56770,7 +56770,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.26.jpg"
+        "link": [ "989_19_26.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -56808,7 +56808,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.19.27 a.jpg"
+        "link": [ "989_19_27_a.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57194,7 +57194,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.00.00.jpg"
+        "link": [ "989_20_00_00.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57227,7 +57227,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.01.jpg"
+        "link": [ "989_20_01.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57261,7 +57261,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.02.jpg"
+        "link": [ "989_20_02.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57295,7 +57295,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.03.jpg"
+        "link": [ "989_20_03.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": []
@@ -57361,7 +57361,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.05.jpg"
+        "link": [ "989_20_05.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57396,7 +57396,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.06.jpg"
+        "link": [ "989_20.06.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57466,7 +57466,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.08.jpg"
+        "link": [ "989_20_08.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57500,7 +57500,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.09.jpg"
+        "link": [ "989_20_09.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57534,7 +57534,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.10.jpg"
+        "link": [ "989_20_10.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57569,7 +57569,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.11.jpg"
+        "link": [ "989_20_11.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57604,7 +57604,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.12.jpg"
+        "link": [ "989_20_12.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57637,7 +57637,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.13.jpg"
+        "link": [ "989_20_13.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57671,7 +57671,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.14.jpg"
+        "link": [ "989_20_14.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57705,7 +57705,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.15.jpg"
+        "link": [ "989_20_15.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57739,7 +57739,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.16.jpg"
+        "link": [ "989_20_16.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57775,7 +57775,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.17.jpg"
+        "link": [ "989_20_17.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57809,7 +57809,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.18.jpg"
+        "link": [ "989_20_18.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57843,7 +57843,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.19.jpg"
+        "link": [ "989_20_19.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57876,7 +57876,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.20.jpg"
+        "link": [ "989_20_20.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57911,7 +57911,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.21.jpg"
+        "link": [ "989_20_21.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57946,7 +57946,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.22.jpg"
+        "link": [ "989_20_22.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -57981,7 +57981,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.23.jpg"
+        "link": [ "989_20_23.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58014,7 +58014,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.24.jpg"
+        "link": [ "989_20_24.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58051,7 +58051,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.25.jpg"
+        "link": [ "989_20_25.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58089,7 +58089,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.26.jpg"
+        "link": [ "989_20_26.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58124,7 +58124,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.27.jpg"
+        "link": [ "989_20_27.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58159,7 +58159,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.28.jpg"
+        "link": [ "989_20_28.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": []
@@ -58190,7 +58190,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.29.jpg"
+        "link": [ "989_20_29.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58230,7 +58230,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.30.jpg"
+        "link": [ "989_20_30.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58266,7 +58266,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.31.jpg"
+        "link": [ "989_20_31.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58301,7 +58301,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.32.jpg"
+        "link": [ "989_20_32.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58335,7 +58335,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.33.jpg"
+        "link": [ "989_20_33.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58371,7 +58371,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.34.jpg"
+        "link": [ "989_20_34.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58405,7 +58405,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.35.jpg"
+        "link": [ "989_20_35.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58476,7 +58476,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.37.jpg"
+        "link": [ "989_20_37.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58512,7 +58512,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.38.jpg"
+        "link": [ "989_20_38.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58549,7 +58549,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.39.jpg"
+        "link": [ "989_20_39.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58587,7 +58587,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.40.jpg"
+        "link": [ "989_20_40.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58623,7 +58623,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.41.jpg"
+        "link": [ "989_20_41.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58657,7 +58657,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.42.jpg"
+        "link": [ "989_20_42.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58695,7 +58695,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.43.jpg"
+        "link": [ "989_20_43.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58729,7 +58729,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.44.jpg"
+        "link": [ "989_20_44.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58763,7 +58763,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.45.jpg"
+        "link": [ "989_20_45.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58796,7 +58796,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.46.jpg"
+        "link": [ "989_20_46.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58831,7 +58831,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.47.jpg"
+        "link": [ "989_20_47.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58864,7 +58864,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.48.jpg"
+        "link": [ "989_20_48.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58899,7 +58899,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.49.jpg"
+        "link": [ "989_20_49.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58934,7 +58934,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.50.jpg"
+        "link": [ "989_20_50.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -58969,7 +58969,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.51.jpg"
+        "link": [ "989_20_51.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59005,7 +59005,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.52.jpg"
+        "link": [ "989_20_52.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59039,7 +59039,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.53.jpg"
+        "link": [ "989_20_53.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59075,7 +59075,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.54.jpg"
+        "link": [ "989_20_54.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59109,7 +59109,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.55.jpg"
+        "link": [ "989_20_55.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59143,7 +59143,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.56.jpg"
+        "link": [ "989_20_56.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59177,7 +59177,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.57 a-b.jpg"
+        "link": [ "989_20_57_a_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59211,7 +59211,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.58.jpg"
+        "link": [ "989_20_58.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": []
@@ -59242,7 +59242,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.59.jpg"
+        "link": [ "989_20_59.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59276,7 +59276,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.60 a-b.jpg"
+        "link": [ "989_20_60_a_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59310,7 +59310,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.61.jpg"
+        "link": [ "989_20_61.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59345,7 +59345,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.62.jpg"
+        "link": [ "989_20_62.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59381,7 +59381,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.63.jpg"
+        "link": [ "989_20_63.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59415,7 +59415,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.64.jpg"
+        "link": [ "989_20_64.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59489,7 +59489,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.66.jpg"
+        "link": [ "989_20_66.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -59522,7 +59522,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.67.jpg"
+        "link": [ "989_20_67.jpg"
         ],
         "photographer": "",
         "final_words": [
@@ -59556,7 +59556,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.20.68.jpg"
+        "link": [ "989_20_68.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -60040,7 +60040,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.21.13.jpg"
+        "link": [ "989_21_13.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -60559,7 +60559,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.00 a.jpg"
+        "link": [ "989_22_00_a.jpg", "989_22_00_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -60592,7 +60592,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.01-02.jpg"
+        "link": [ "989_22_01_02.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -60658,7 +60658,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.03.jpg"
+        "link": [ "989_22_03.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -60692,7 +60692,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.04-05.jpg"
+        "link": [ "989_22_04_05.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -60727,7 +60727,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.04-05.jpg"
+        "link": [ "989_22_04_05.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -60761,7 +60761,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.06.jpg"
+        "link": [ "989_22_06.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -60795,7 +60795,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.07.jpg"
+        "link": [ "989_22_07.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -60830,7 +60830,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.08.jpg"
+        "link": [ "989_22_08.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -60864,7 +60864,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.09.jpg"
+        "link": [ "989_22_09.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -60899,7 +60899,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.10.jpg"
+        "link": [ "989_22_10.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -60936,7 +60936,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.11.jpg"
+        "link": [ "989_22_11.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61007,7 +61007,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.13.jpg"
+        "link": [ "989_22_13.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61077,7 +61077,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.15.jpg"
+        "link": [ "989_22_15.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61112,7 +61112,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.16 a.jpg", "989.22.16 b.jpg"
+        "link": [ "989_22_16_a.jpg", "989_22_16_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61149,7 +61149,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.17.jpg"
+        "link": [ "989_22_17.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61186,7 +61186,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.18.jpg"
+        "link": [ "989_22_18.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61222,7 +61222,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.19.jpg"
+        "link": [ "989_22_19.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61257,7 +61257,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.20.jpg"
+        "link": [ "989_22_20.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61291,7 +61291,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.21.jpg"
+        "link": [ "989_22_21.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61325,7 +61325,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.22.jpg"
+        "link": [ "989_22_22.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61359,7 +61359,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.23.jpg"
+        "link": [ "989_22_23.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61393,7 +61393,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.24.jpg"
+        "link": [ "989_22_24.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61427,7 +61427,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.25.jpg"
+        "link": [ "989_22_25.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61462,7 +61462,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.26.jpg"
+        "link": [ "989_22_26.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61496,7 +61496,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.27.jpg"
+        "link": [ "989_22_27.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61565,7 +61565,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.29.jpg"
+        "link": [ "989_22_29.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61601,7 +61601,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.30.jpg"
+        "link": [ "989_22_30.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61637,7 +61637,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.31.jpg"
+        "link": [ "989_22_31.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61674,7 +61674,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.32 a.jpg", "989.22.32 b.jpg"
+        "link": [ "989_22_32_a.jpg", "989_22_32_b.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61710,7 +61710,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.33.jpg"
+        "link": [ "989_22_33.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -61744,7 +61744,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.22.34.jpg"
+        "link": [ "989_22_34.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -66056,7 +66056,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.34.jpg"
+        "link": [ "989_34.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -68002,7 +68002,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "989.90.jpg"
+        "link": [ "989_90.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -70270,7 +70270,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "993_01.jpg", "993_01(détail).jpg"
+        "link": [ "993_01.jpg", "993_01_detail.jpg"
         ],
         "photographer": "Richard-Max Tremblay",
         "final_words": []
@@ -72172,7 +72172,7 @@
         "length": "",
         "depth": "47",
         "status": "actif",
-        "link": [ "994_30(vue de face).jpg", "994_30(vue du cote g.).jpg"
+        "link": [ "994_30_vuedeface.jpg", "994_30_vueducoteg.jpg"
         ],
         "photographer": "Richard-Max Tremblay",
         "final_words": [
@@ -74264,7 +74264,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "997_05 a-b.jpg"
+        "link": [ "997_05_a_b.jpg"
         ],
         "photographer": "Richard-Max Tremblay",
         "final_words": [
@@ -74306,7 +74306,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "997_06 a-b.jpg"
+        "link": [ "997_06_a_b.jpg"
         ],
         "photographer": "Richard-Max Tremblay",
         "final_words": [
@@ -75686,7 +75686,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "997.44.jpg"
+        "link": [ "997_44.jpg"
         ],
         "photographer": "Paul Litherland",
         "final_words": [
@@ -75730,7 +75730,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "997.45.jpg"
+        "link": [ "997_45.jpg"
         ],
         "photographer": "",
         "final_words": [
@@ -80109,7 +80109,7 @@
         "length": "",
         "depth": "",
         "status": "actif",
-        "link": [ "999_04 a-b.jpg"
+        "link": [ "999_04_a_b.jpg"
         ],
         "photographer": "Richard-Max Tremblay",
         "final_words": [
