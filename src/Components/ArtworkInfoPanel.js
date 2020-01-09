@@ -18,7 +18,7 @@ class ArtworkInfoPanel extends Component {
       return ("span2-row")
     }
     else {
-      return ("")
+      return ("span1-row")
     }
   }
 
@@ -48,7 +48,7 @@ class ArtworkInfoPanel extends Component {
       return ("span2-row")
     }
     else {
-      return ("")
+      return ("span1-row")
     }
   }
 
@@ -63,7 +63,7 @@ class ArtworkInfoPanel extends Component {
       return ("span2-row")
     }
     else {
-      return ("")
+      return ("span1-row")
     }
   }
   determineSubjectRowSize(artworkData) {
@@ -77,7 +77,7 @@ class ArtworkInfoPanel extends Component {
       return ("span2-row")
     }
     else {
-      return ("")
+      return ("span1-row")
     }
   }
   determineDescRowSize(artworkData) {
@@ -91,7 +91,7 @@ class ArtworkInfoPanel extends Component {
       return ("span2-row")
     }
     else {
-      return ("")
+      return ("span1-row")
     }
   }
   determineRefRowSize(artworkData) {
@@ -105,7 +105,7 @@ class ArtworkInfoPanel extends Component {
       return ("span2-row")
     }
     else {
-      return ("")
+      return ("span1-row")
     }
   }
 
@@ -188,26 +188,26 @@ class ArtworkInfoPanel extends Component {
 
         <table className="artworkInfoTable">
 
-          <th>Artist</th>
-          <td>{artworkData.artist}</td>
+          <th className="span1-row">Artist</th>
+          <td className="span1-row">{artworkData.artist}</td>
 
           <th className={this.determineTitleRowSize(artworkData)}>Title</th>
           <td className={this.determineTitleRowSize(artworkData)}>{artworkData.title}</td>
 
-          <th>Date of Production</th>
-          <td>{artworkData.date}</td>
+          <th className="span1-row">Date of Production</th>
+          <td className="span1-row">{artworkData.date}</td>
 
-          <th>Accession Number </th>
-          <td>{artworkData.access_num}</td>
+          <th className="span1-row">Accession Number </th>
+          <td className="span1-row">{artworkData.access_num}</td>
 
-          <th>Accession Date</th>
-          <td>{artworkData.access_date}</td>
+          <th className="span1-row">Accession Date</th>
+          <td className="span1-row">{artworkData.access_date}</td>
 
-          <th >Dimensions</th>
+          <th className="span1-row">Dimensions</th>
           <td>{this.determineHeight(artworkData)}{this.determineLength(artworkData)}{this.determineWidth(artworkData)}{this.determineDepth(artworkData)}</td>
 
           <th>Status</th>
-          <td>{artworkData.status}</td>
+          <td className="span1-row">{artworkData.status}</td>
 
           <th className={this.determineCreditRowSize(artworkData)}>Credit</th>
           <td className={this.determineCreditRowSize(artworkData)}>{this.getCredit(artworkData)}</td>
