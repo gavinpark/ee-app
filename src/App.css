@@ -424,9 +424,6 @@ td:nth-child(22){
 td:nth-child(24){
   color: black;
 }
-.span1-row{
-  grid-row-end: span 1;
-}
 .span2-row{
   grid-row-end: span 2;
   }
