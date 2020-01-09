@@ -166,5 +166,13 @@
         display: block;
       }
       
+      .essayBodyBox {
+        width: 88%;
+        height: 45%;
+      }
+      .copyrightBodyBox {
+        height: 28%;
+        width: 88%;
+      }
         
     }

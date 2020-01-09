@@ -136,7 +136,7 @@ class CopyrightWindow extends Component {
                             alt=""
                             onClick={this.props.toggleCopyright}
                         ></img>
-                        <div className="essayBodyBox draggable">
+                        <div className="copyrightBodyBox draggable">
                             <div className="essayBody draggable">
                                 <p><i className="draggable">{EssayData[6].disclaimer}</i></p>
                                 <br />
