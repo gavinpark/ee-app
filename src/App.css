@@ -546,26 +546,30 @@ th, td {
 }
 
 .essayBodyBox{
-  position: absolute;
-  width: 100%;
+  position: fixed;
+  width: 350px;
+  height: 320px;
   bottom: 0;
   top: 70px;
   overflow: scroll;
-  scrollbar-width: none;
+  scrollbar-width: none !important;
+  padding: 12px;
+  
+
 }
 .essayBodyBox::-webkit-scrollbar {
-  display: none;
+  display: none !important;
 }
 
 .essayBody {
+  position: absolute;
   color: red;
   font-family: neue-haas-grotesk-text, Helvetica, sans-serif;
   font-size: .9rem;
   line-height: 1.2rem;
   font-weight: 400;
   text-align: left;
-  padding: 0px 12px 100px 12px;
-  overflow: scroll;
+  padding: 0px;
 
 }
 
