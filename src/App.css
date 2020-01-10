@@ -693,17 +693,10 @@ th, td {
 		.bottom { bottom: 0; }
 
 
-.isRelatedToHoveredKeyword {
+.isRelatedToHoveredKeyword, .isRelatedToHoveredArtwork {
   opacity: 100%;
   /* box-shadow: 5px 10px; */
 }
-.isNotRelatedToHoveredKeyword {
-  opacity: 30%;
-}
-.isRelatedToHoveredArtwork {
-  opacity: 100%;
-  /* box-shadow: 5px 10px; */
-}
-.isNotRelatedToHoveredArtwork {
+.isNotRelatedToHoveredKeyword, .isNotRelatedToHoveredArtwork {
   opacity: 30%;
 }
