@@ -123,23 +123,23 @@ class ConstellationArtwork extends Component {
           onMouseOver={this.handleMouseOver}
           onMouseOut={this.handleMouseOff}
         >
-          <img draggable="false" className="artworkImage draggable" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
+          <img draggable="false" className="artworkImage draggable" src={'http://ellengallery.concordia.ca/establishing-a-database-connection/images/' + artworkData.link[0]} alt=""></img>
           <img
               className="objectMoreButton cursorPoint"
-              src="http://ellengallery.concordia.ca/resi/static/media/more_Button.svg"
+              src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/more_Button.svg"
               alt=""
               onClick={() => {this.openArtworkInfoPanel(artworkData.access_num, artworkData.have_rights)}}
               // onClick={() => {this.openArtworkInfoPanel(artworkData.access_num)}}
           ></img>
           <img
             className="objectExitButton cursorPoint"
-            src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.svg"
+            src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
             alt=""
             onClick={() => { this.removeWork(artworkData.access_num) }}
           ></img>
           <img
           className="objectExpand"
-          src="http://ellengallery.concordia.ca/resi/static/media/expand_Button.svg"
+          src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/expand_Button.svg"
           ></img>
           
         </div>

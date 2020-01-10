@@ -100,12 +100,12 @@ class DescriptionWindow extends Component {
                     <div className="descriptionHeaderBox draggable">
                         <img
                             className="objectMoreButton cursorPoint"
-                            src="http://ellengallery.concordia.ca/resi/static/media/more_Button.svg"
+                            src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/more_Button.svg"
                             alt=""
                             onClick={() => { this.openArtworkInfoPanel(artworkData.access_num, artworkData.have_rights) }}
                         ></img>
                         <img className="objectExitButton cursorPoint"
-                            src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.svg"
+                            src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
                             alt=""
                             onClick={() => { this.removeWork(artworkData.access_num) }}
                         ></img></div>
