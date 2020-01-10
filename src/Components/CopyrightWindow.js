@@ -29,7 +29,7 @@ class CopyrightWindow extends Component {
 
     //                 <img
     //                     className="objectExitButton"
-    //                     src={require(".././images/buttons/exit_Button.svg")}
+    //                     src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.8e03be3e.svg"
     //                     alt=""
     //                     onClick={this.props.toggleCopyright}
     //                 ></img>
@@ -50,7 +50,7 @@ class CopyrightWindow extends Component {
 
     //             <img
     //                 className="objectExitButton"
-    //                 src={require(".././images/buttons/exit_Button.svg")}
+    //                 src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.8e03be3e.svg"
     //                 alt=""
     //                 onClick={this.props.toggleCopyright}
     //             ></img>
@@ -82,7 +82,7 @@ class CopyrightWindow extends Component {
 
                         <img
                             className="objectExitButton cursorPoint"
-                            src={require(".././images/buttons/exit_Button.svg")}
+                            src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.8e03be3e.svg"
                             alt=""
                             onClick={this.props.toggleCopyright}
                         ></img>
@@ -105,7 +105,7 @@ class CopyrightWindow extends Component {
 
                                 <a
                                     className="downloadBox cursorPoint"
-                                    href=".././essay/EDC_Essay.pdf"
+                                    href="http://ellengallery.concordia.ca//resi/static/media/EDC_Essay.7cbb1f36.pdf"
                                     target="_blank">
                                     View Full Text </a>
 
@@ -132,7 +132,7 @@ class CopyrightWindow extends Component {
 
                         <img
                             className="objectExitButton cursorPoint"
-                            src={require(".././images/buttons/exit_Button.svg")}
+                            src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.8e03be3e.svg"
                             alt=""
                             onClick={this.props.toggleCopyright}
                         ></img>
@@ -155,7 +155,7 @@ class CopyrightWindow extends Component {
 
                                 <a
                                     className="downloadBox cursorPoint"
-                                    href=".././essay/EDC_Essay.pdf"
+                                    href="http://ellengallery.concordia.ca//resi/static/media/EDC_Essay.7cbb1f36.pdf"
                                     target="_blank">
                                     View Full Text </a>
 

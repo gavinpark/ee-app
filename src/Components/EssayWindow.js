@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import pdf from '../essay/EDC_Essay.pdf';
+// import pdf from '../essay/EDC_Essay.pdf';
 import { closeEssaySegment, increaseHighestZIndex } from '../redux/modules/ui';
 // toggleLanguage
 
@@ -126,7 +126,7 @@ class EssayWindow extends Component {
 
                 <a
                     className="downloadBox cursorPoint"
-                    href={pdf}
+                    href="http://ellengallery.concordia.ca//resi/static/media/EDC_Essay.7cbb1f36.pdf"
                     target="_blank">
                     View Full Text 
                     </a>
@@ -149,7 +149,7 @@ class EssayWindow extends Component {
 
     //                 <img
     //                     className="objectExitButton"
-    //                     src={require(".././images/buttons/exit_Button.svg")}
+    //                     src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.8e03be3e.svg"}
     //                     alt=""
     //                     onClick={() => {this.props.closeEssaySegment(this.props.index)} }
     //                 ></img>
@@ -170,7 +170,7 @@ class EssayWindow extends Component {
 
     //             <img
     //                 className="objectExitButton"
-    //                 src={require(".././images/buttons/exit_Button.svg")}
+    //                 src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.8e03be3e.svg"
     //                 alt=""
     //                 onClick={() => {this.props.closeEssaySegment(this.props.index)} }
     //             ></img>
@@ -208,7 +208,7 @@ class EssayWindow extends Component {
 
                         <img
                             className="objectExitButton cursorPoint"
-                            src={require(".././images/buttons/exit_Button.svg")}
+                            src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.8e03be3e.svg"
                             alt=""
                             onClick={() => { this.props.closeEssaySegment(this.props.index) }}
                         ></img>
@@ -229,7 +229,7 @@ class EssayWindow extends Component {
 
                         <img
                             className="objectExitButton cursorPoint"
-                            src={require(".././images/buttons/exit_Button.svg")}
+                            src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.8e03be3e.svg"
                             alt=""
                             onClick={() => { this.props.closeEssaySegment(this.props.index) }}
                         ></img>
@@ -253,5 +253,5 @@ export default connect(mapStateToProps, {
     closeEssaySegment,
     // toggleLanguage,
     increaseHighestZIndex,
-    pdf
+    
 })(EssayWindow);

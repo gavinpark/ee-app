@@ -236,7 +236,7 @@ class ArtworkInfoPanel extends Component {
         <div className="copyrightButton cursorPoint" onClick={this.props.toggleCopyright}> © </div>
 
         <div className="infoExitBox cursorPoint">
-          <img className="infoExitSvg cursorPoint" onClick={this.props.toggleDetailPanel} src={require(".././images/buttons/info_Exit_Button.svg")} alt=""></img>
+          <img className="infoExitSvg cursorPoint" onClick={this.props.toggleDetailPanel} src="http://ellengallery.concordia.ca//resi/static/media/info_Exit_Button.40ee6840.svg" alt=""></img>
         </div>
 
       </div>

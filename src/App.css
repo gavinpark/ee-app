@@ -2,7 +2,7 @@
  
 @font-face {
   font-family:'Avara';
-  src: url('./fonts/Avara-Bold_web.woff2') format('woff2');
+  src: url('/resi/static/media/Avara-Bold_web.2d7006bf.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -21,15 +21,15 @@ body::-webkit-scrollbar{
 
 /*CURSORS*/
 *{
-  cursor: url(images/cursor/small_arrow_01.svg), auto ;
+  cursor: url("http://ellengallery.concordia.ca/resi/static/media/small_arrow_01.01d9ce22.svg"), auto ;
 }
 
 .cursorPoint {
-  cursor: url(images/cursor/small_arrow_02.svg), auto !important;
+  cursor: url("http://ellengallery.concordia.ca//resi/static/media/small_arrow_02.c6fe69ba.svg"), auto !important;
 }
 
 .draggable {
-  cursor: url(images/cursor/small_arrow_move.svg), auto !important;
+  cursor: url("http://ellengallery.concordia.ca//resi/static/media/small_arrow_move.3b10c6ea.svg"), auto !important;
 }
 a {
   display: block;
