@@ -623,12 +623,14 @@ th, td {
   text-align: left;
   /* padding: 12px 24px 0px 36px; */
   border-top: 2px solid red;
-  scrollbar-width: none;
+  scrollbar-width: none !important;
 }
 .essayFootnoteBox p{
   padding: 12px 12px 0px 12px;
 }
-
+.essayFootnoteBox::-webkit-scrollbar{
+  display: none;
+}
 .downloadBox {
   width: 100%;
   height: 100px;
