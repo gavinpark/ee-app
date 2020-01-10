@@ -20,14 +20,14 @@ class DatabaseItem extends Component {
           return (
               <div className={`${isRelatedToHoveredKeywordClassName} twoTags`} 
               onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-              ><object draggable="false" className={`${isRelatedToHoveredKeywordClassName} artworkImage cursorPoint`} data={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></object> </div>
+              ><object draggable="false" className={`${isRelatedToHoveredKeywordClassName} artworkImage cursorPoint`} data={'http://ellengallery.concordia.ca/establishing-a-database-connection/images/' + artworkData.link[0]} alt=""></object> </div>
           )
         }
 
           return(
             <div className= {`${isRelatedToHoveredKeywordClassName}`}
             onClick={() => {this.addWorkToConstellation(artworkData.access_num, artwork.similarityScore)}}
-            ><object draggable="false" key={artworkData.access_num, artwork.similarityScore} className={`${isRelatedToHoveredKeywordClassName} artworkImage cursorPoint`} data={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></object>
+            ><object draggable="false" key={artworkData.access_num, artwork.similarityScore} className={`${isRelatedToHoveredKeywordClassName} artworkImage cursorPoint`} data={'http://ellengallery.concordia.ca/establishing-a-database-connection/images/' + artworkData.link[0]} alt=""></object>
             </div>
           )
         }

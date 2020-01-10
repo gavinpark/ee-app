@@ -17,7 +17,7 @@ class LandingItem extends Component {
           <div
             className="twoTags"
             onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
-           ><object draggable="false" className="artworkImage cursorPoint" data={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></object></div>
+           ><object draggable="false" className="artworkImage cursorPoint" data={'http://ellengallery.concordia.ca/establishing-a-database-connection/images/' + artworkData.link[0]} alt=""></object></div>
         )
       }
       if (artwork.similarityScore === 3) {
@@ -25,7 +25,7 @@ class LandingItem extends Component {
           <div
             className="threeTags"
             onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
-          ><object draggable="false" className="artworkImage cursorPoint" data={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></object> </div>
+          ><object draggable="false" className="artworkImage cursorPoint" data={'http://ellengallery.concordia.ca/establishing-a-database-connection/images/' + artworkData.link[0]} alt=""></object> </div>
         )
       }
       if (artwork.similarityScore >= 4) {
@@ -33,14 +33,14 @@ class LandingItem extends Component {
           <div
             className="fourTags"
             onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
-          ><object draggable="false" className="artworkImage cursorPoint" data={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></object> </div>
+          ><object draggable="false" className="artworkImage cursorPoint" data={'http://ellengallery.concordia.ca/establishing-a-database-connection/images/' + artworkData.link[0]} alt=""></object> </div>
         )
       }
       return (
         <div
           onClick={() => {this.enterMainPage(artworkData.access_num,  artwork.similarityScore)}}
         >
-          <object draggable="false" key={artworkData.access_num} className="artworkImage cursorPoint" data={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></object>
+          <object draggable="false" key={artworkData.access_num} className="artworkImage cursorPoint" data={'http://ellengallery.concordia.ca/establishing-a-database-connection/images/' + artworkData.link[0]} alt=""></object>
         </div>
       )
     }

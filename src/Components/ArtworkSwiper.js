@@ -16,11 +16,11 @@ class ArtworkSwiper extends Component {
         if (this.props.link.length >= 2) {
             return (<Swiper {...params}>
                 {this.props.link.map((image) => {
-                    return <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + image} alt=""></img>
+                    return <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/establishing-a-database-connection/images/' + image} alt=""></img>
                 })}</Swiper>)
         } else {
             return (
-                <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/resi/images/' + this.props.link[0]} alt=""></img>
+                <img draggable="false" className="artworkImage" src={'http://ellengallery.concordia.ca/establishing-a-database-connection/images/' + this.props.link[0]} alt=""></img>
             )
         }
     }

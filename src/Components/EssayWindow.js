@@ -125,7 +125,7 @@ class EssayWindow extends Component {
 
                 <a
                     className="downloadBox cursorPoint"
-                    href="http://ellengallery.concordia.ca//resi/static/media/EDC_Essay.pdf"
+                    href="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/EDC_Essay.pdf"
                     target="_blank">
                     View Full Text 
                     </a>
@@ -148,7 +148,7 @@ class EssayWindow extends Component {
 
     //                 <img
     //                     className="objectExitButton"
-    //                     src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.svg"}
+    //                     src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"}
     //                     alt=""
     //                     onClick={() => {this.props.closeEssaySegment(this.props.index)} }
     //                 ></img>
@@ -169,7 +169,7 @@ class EssayWindow extends Component {
 
     //             <img
     //                 className="objectExitButton"
-    //                 src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.svg"
+    //                 src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
     //                 alt=""
     //                 onClick={() => {this.props.closeEssaySegment(this.props.index)} }
     //             ></img>
@@ -207,7 +207,7 @@ class EssayWindow extends Component {
 
                         <img
                             className="objectExitButton cursorPoint"
-                            src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.svg"
+                            src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
                             alt=""
                             onClick={() => { this.props.closeEssaySegment(this.props.index) }}
                         ></img>
@@ -228,7 +228,7 @@ class EssayWindow extends Component {
 
                         <img
                             className="objectExitButton cursorPoint"
-                            src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.svg"
+                            src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
                             alt=""
                             onClick={() => { this.props.closeEssaySegment(this.props.index) }}
                         ></img>
