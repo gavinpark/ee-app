@@ -126,20 +126,20 @@ class ConstellationArtwork extends Component {
           <img draggable="false" className="artworkImage draggable" src={'http://ellengallery.concordia.ca/resi/images/' + artworkData.link[0]} alt=""></img>
           <img
               className="objectMoreButton cursorPoint"
-              src="http://ellengallery.concordia.ca/resi/static/media/more_Button.089f51d3.svg"
+              src="http://ellengallery.concordia.ca/resi/static/media/more_Button.svg"
               alt=""
               onClick={() => {this.openArtworkInfoPanel(artworkData.access_num, artworkData.have_rights)}}
               // onClick={() => {this.openArtworkInfoPanel(artworkData.access_num)}}
           ></img>
           <img
             className="objectExitButton cursorPoint"
-            src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.8e03be3e.svg"
+            src="http://ellengallery.concordia.ca/resi/static/media/exit_Button.svg"
             alt=""
             onClick={() => { this.removeWork(artworkData.access_num) }}
           ></img>
           <img
           className="objectExpand"
-          src="http://ellengallery.concordia.ca/resi/static/media/expand_Button.7524fd02.svg"
+          src="http://ellengallery.concordia.ca/resi/static/media/expand_Button.svg"
           ></img>
           
         </div>
