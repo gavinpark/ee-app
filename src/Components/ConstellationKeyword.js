@@ -72,6 +72,8 @@ class ConstellationKeyword extends Component {
             className={`${isRelatedToHoveredArtworkClass}`}
             key={word}
             onClick={this.bringItemToHighestZIndex}
+            onTouchStart={this.handleMouseOver}
+            onTouchCancel={this.handleMouseOff}
             onMouseOver={this.handleMouseOver}
             onMouseOut={this.handleMouseOff}>
             <p className="keyword draggable">{word}</p>

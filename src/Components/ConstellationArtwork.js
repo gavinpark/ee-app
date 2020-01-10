@@ -85,6 +85,9 @@ class ConstellationArtwork extends Component {
   handleMouseOff = () => {
     this.props.offHoverArtwork();
   }
+  handleClick = () => {
+  
+  }
 
   removeWork = (access_num) => {
     this.props.removeWorkFromConstellation(access_num);
@@ -119,6 +122,8 @@ class ConstellationArtwork extends Component {
       >
         <div
           onClick={this.bringItemToHighestZIndex}
+          onTouchStart={this.handleMouseOver}
+          onTouchCancel={this.handleMouseOff}
           className={isRelatedToHoveredKeywordClass}
           onMouseOver={this.handleMouseOver}
           onMouseOut={this.handleMouseOff}

@@ -77,7 +77,7 @@ class DescriptionWindow extends Component {
         return this.state.randomX > -1 && this.state.randomY > -1 && (
 
 
-            <Rnd 
+            <Rnd
                 className="descriptionWindow draggable"
                 style={{ zIndex: this.state.zIndex }}
                 enableResizing={null}
@@ -92,6 +92,8 @@ class DescriptionWindow extends Component {
                     className={isRelatedToHoveredKeywordClass}
                     onMouseOver={this.handleMouseOver}
                     onMouseOut={this.handleMouseOff}
+                    onTouchStart={this.handleMouseOver}
+                    onTouchCancel={this.handleMouseOff}
                 >
                     <div className="descriptionText draggable">
                         <p>{subject}</p>
