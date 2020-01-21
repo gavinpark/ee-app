@@ -18,7 +18,7 @@ class ConstellationPanel extends Component {
     this.props.openEssaySegment(0);
     setTimeout(() => {
       this.props.openEssaySegment(3);
-    }, 15000)
+    }, 60000)
   }
   renderConstellationArtworks() {
     return this.props.selectedWorks.map((work) => {
