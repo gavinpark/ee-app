@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../App.css';
 import { Rnd } from "react-rnd";
-import { closeEssaySegment, increaseHighestZIndex } from '../redux/modules/ui';
+import { closeEssaySegment, increaseHighestZIndex, toggleLanguage } from '../redux/modules/ui';
 // toggleLanguage
 
 
@@ -66,22 +66,76 @@ class EssayWindow extends Component {
             randomY,
         });
     }
-    getFootnotes() {
-        if (!this.props.footnote) {
-            return null
-        } else {
+    getLanguage() {
+        if (this.props.isFrench) {
             return (
-                <div className="essayFootnoteBox" >
-                    {this.props.footnote.map(note => {
-                        return (<p>{note}</p>)
-                    })}
-                    <div className="whiteOverlay"></div>
-                </div >
+                <div>
+                    <div className="essayHeaderBox">
+                        <div className="essayHeader">{this.props.essayHeaderFR}</div>
+                    </div>
+                    <div>
+                        <div className="objectENButton" onClick={this.props.toggleLanguage}>EN</div>
+                        <div className="objectFRButton greyOut">FR</div>
+                    </div>
+
+                    <img
+                        className="objectExitButton"
+                        src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
+                        alt=""
+                        onClick={() => { this.props.closeEssaySegment(this.props.index) }}
+                    ></img>
+                </div>
             )
-        }
+        } return (
+            <div>
+                <div className="essayHeaderBox">
+                    <div className="essayHeader">{this.props.essayHeader}</div>
+                </div>
+                <div>
+                    <div className="objectENButton greyOut">EN</div>
+                    <div className="objectFRButton" onClick={this.props.toggleLanguage}>FR</div>
+                </div>
+
+                <img
+                    className="objectExitButton"
+                    src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
+                    alt=""
+                    onClick={() => { this.props.closeEssaySegment(this.props.index) }}
+                ></img>
+            </div>
+        )
     }
     getBodyText() {
         if (this.props.index === 10) {
+            if (this.props.isFrench) {
+                return (
+                    <div className="essayBody">
+                        <table className="creditTable">
+                            <th className="creditTH">{this.props.tableHeadFR[0]}</th>
+                            <td className="creditTD">Gavin Park, Kristina Vannan</td>
+
+                            <th className="creditTH">{this.props.tableHeadFR[1]}</th>
+                            <td className="creditTD">Catherine Barnabé</td>
+
+                            <th className="creditTH">{this.props.tableHeadFR[2]}</th>
+                            <td className="creditTD">Ed Janzen</td>
+
+                            <th className="creditTH">{this.props.tableHeadFR[3]}</th>
+                            <td className="creditTD">Conan Lai</td>
+
+                            <th className="creditTH">{this.props.tableHeadFR[4]}</th>
+                            <td className="creditTD">Christopher Moore, Sabine Rosenberg</td>
+                        </table>
+                        <p>__________</p>
+                        <br />
+                        <br />
+                        <p>{this.props.essayTextFR[0]}</p>
+                        <br />
+                        <br />
+                        <p>{this.props.essayTextFR[1]}</p>
+                    </div>
+                )
+            }
             return (
                 <div className="essayBody">
                     <table className="creditTable">
@@ -110,6 +164,29 @@ class EssayWindow extends Component {
                 </div>
             )
         }
+        if (this.props.isFrench) {
+            return (
+                <div className="essayBody">
+                    {this.props.essayTextFR[0]}
+                    <br />
+                    <br />
+                    {this.props.essayTextFR[1]}
+                    <br />
+                    <br />
+                    {this.props.essayTextFR[2]}
+                    <br />
+                    <br />
+                    {this.props.essayTextFR[3]}
+
+                    <a
+                        className="downloadBox cursorPoint"
+                        href="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/EDC_Essay_FR.pdf"
+                        target="_blank">
+                        Afficher le texte complet
+                    </a>
+                </div>
+            )
+        }
         return (
             <div className="essayBody">
                 {this.props.essayText[0]}
@@ -127,59 +204,36 @@ class EssayWindow extends Component {
                     className="downloadBox cursorPoint"
                     href="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/EDC_Essay.pdf"
                     target="_blank">
-                    View Full Text 
-                    </a>
+                    View Full Text
+                </a>
             </div>
         )
     }
-    // getLanguage() {
-    //     if (this.props.isFrench) { 
-    //         console.log('Essay information', this.props.essay)
-    //         console.log('is this getting the header?', this.props.essayHeader)
-    //         return (
-    //             <div>
-    //                 <div className="essayHeaderBox">
-    //                     <div className="essayHeader">{this.props.essayHeader}</div>
-    //                 </div>
-    //                 <div>
-    //                     <div className="objectENButton">EN</div>
-    //                     <div className="objectFRButton greyOut" onClick={this.props.toggleLanguage}>FR</div>
-    //                 </div>
-
-    //                 <img
-    //                     className="objectExitButton"
-    //                     src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"}
-    //                     alt=""
-    //                     onClick={() => {this.props.closeEssaySegment(this.props.index)} }
-    //                 ></img>
-    //                 <div className="essayBodyBox">
-    //                     <div className="essayBody">{this.props.essay}</div>
-    //                 </div>
-    //             </div>
-    //         )
-    //     } return (
-    //         <div>
-    //             <div className="essayHeaderBox">
-    //                 <div className="essayHeader">{this.props.essay}</div>
-    //             </div>
-    //             <div>
-    //                 <div className="objectENButton greyOut" onClick={this.props.toggleLanguage}>EN</div>
-    //                 <div className="objectFRButton">FR</div>
-    //             </div>
-
-    //             <img
-    //                 className="objectExitButton"
-    //                 src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
-    //                 alt=""
-    //                 onClick={() => {this.props.closeEssaySegment(this.props.index)} }
-    //             ></img>
-    //             <div className="essayBodyBox">
-    //                 <div className="essayBody">{this.props.essay}</div>
-
-    //             </div>
-    //         </div>
-    //     )
-    // }
+    getFootnotes() {
+        if (!this.props.footnote) {
+            return null
+        } else {
+            if (this.props.isFrench) {
+                return (
+                    <div className="essayFootnoteBox" >
+                        {this.props.footnoteFR.map(note => {
+                            return (<p>{note}</p>)
+                        })}
+                        <div className="whiteOverlay"></div>
+                    </div >
+                )
+            } else {
+                return (
+                    <div className="essayFootnoteBox" >
+                        {this.props.footnote.map(note => {
+                            return (<p>{note}</p>)
+                        })}
+                        <div className="whiteOverlay"></div>
+                    </div >
+                )
+            }
+        }
+    }
     render() {
         if (this.props.displayed === false) {
             return null;
@@ -199,12 +253,7 @@ class EssayWindow extends Component {
                 // style={{overflow: "scroll"}}
                 >
                     <div onClick={this.bringItemToHighestZIndex}>
-                        {/* {this.getLanguage()} */}
-
-                        <div className="essayHeaderBox draggable">
-                            <h1 className="essayHeader draggable">{this.props.essayHeader}</h1>
-                        </div>
-
+                        {this.getLanguage()}
                         <img
                             className="objectExitButton cursorPoint"
                             src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
@@ -221,11 +270,7 @@ class EssayWindow extends Component {
 
                 <div className="essayContainerMobile">
                     <div onClick={this.bringItemToHighestZIndex}>
-                        {/* {this.getLanguage()} */}
-                        <div className="essayHeaderBox draggable">
-                            <h1 className="essayHeader draggable">{this.props.essayHeader}</h1>
-                        </div>
-
+                        {this.getLanguage()}
                         <img
                             className="objectExitButton cursorPoint"
                             src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
@@ -245,12 +290,13 @@ class EssayWindow extends Component {
 const mapStateToProps = (state) => {
     return {
         highestZIndex: state._ui.highestZIndex,
+        isFrench: state._ui.isFrench
     };
 };
 
 export default connect(mapStateToProps, {
     closeEssaySegment,
-    // toggleLanguage,
+    toggleLanguage,
     increaseHighestZIndex,
-    
+
 })(EssayWindow);

@@ -179,7 +179,7 @@ class CopyrightWindow extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        // isFrench: state._ui.isFrench
+        isFrench: state._ui.isFrench
     };
 };
 

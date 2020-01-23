@@ -11,7 +11,7 @@ window.allWords = allWords;
 
 export default function reducer(state = {
   // this is all the states
-  isFrench: true,
+  isFrench: false,
   isLandingOpen: true,
   isCopyrightOpen: false,
   openedArtwork: null,

@@ -254,6 +254,7 @@ const EssayData = [
         ],
         essayTextFR: [
             "Nous souhaitons d’abord et avant tout reconnaitre que ce projet n’aurait pas été possible sans le généreux don de Reesa Greenberg pour la réalisation de ce programme de résidence. De plus, nous souhaitons remercier la Galerie Leonard & Bina Ellen pour avoir mis en œuvre et facilité cette opportunité unique nous permettant de plonger dans l’histoire des expositions de la galerie à travers la résidence Déployer l’exposition. Nous souhaitons souligner spécialement la collaboration étroite et la supervision de l’équipe de la galerie, particulièrement Michèle Thériault (directrice), Robin Simpson (coordonnateur  des programmes publics et éducatifs) et Julia Eilers Smith (conservatrice de recherche). Nous souhaitons également remercier le département de design et d’arts numériques, le département d’histoire de l’art et l’Université Concordia pour leur soutien et collaboration. Finalement, nous voulons rendre hommage à travers ce travail aux commissaires de l’exposition qui l’a inspiré — Rebecca Duclos et David K. Ross —  et les remercier de leur engagement enthousiaste envers cette initiative.",
+            "- Gavin Park & Kristina Vannan"
         ]
 
     },
