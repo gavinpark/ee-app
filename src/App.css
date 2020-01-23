@@ -515,19 +515,31 @@ th, td {
 
 }
 
-.copyrightContainerMobile {
-  display: none;
+/* .copyrightContainer {
+  display: block;
+  width: 400px;
+  height: 500px;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 50vh;
+  border: 2px solid red;
+  background: white;
+  overflow-y: hidden;
+  overflow-x: hidden;
+} */
+
+.copyrightContainer {
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 400px;
+  height: 500px;
   border: 2px solid red;
   background: white;
   z-index: 100000;
 }
+
 .copyrightBodyBox{
-  position: fixed;
+  position: relative;
   width: 358px;
   height: 320px;
   bottom: 0;

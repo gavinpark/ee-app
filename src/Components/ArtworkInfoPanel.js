@@ -102,7 +102,7 @@ class ArtworkInfoPanel extends Component {
       return ("span3-row")
     }
     if ((artworkData.references.length > 80) && (artworkData.references.length < 160)) {
-      return ("")
+      return ("span2-row")
     }
     else {
       return ("")

@@ -162,6 +162,12 @@
         display: block;
       }
 
+      .copyrightContainer {
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 50vh;
+       } 
       .copyrightContainerMobile {
         display: block;
       }
@@ -171,7 +177,7 @@
         height: 45%;
       }
       .copyrightBodyBox {
-        height: 28%;
+        height: 29vh;
         width: 88%;
       }
         
