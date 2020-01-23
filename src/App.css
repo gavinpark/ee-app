@@ -202,6 +202,7 @@ a {
   width: 100vw;
   height: 100vh; 
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 .databaseLanding > div {
@@ -239,6 +240,7 @@ a {
   margin-top: -2px;
   overflow-x: hidden;
   overflow-y: overlay;
+  -webkit-overflow-scrolling: touch;
   width: 33.33%;
   height: 100vh;
   position: fixed;
@@ -320,8 +322,9 @@ a {
   text-align: center;
   color: red;
   font-size: 1rem;
-  line-height: 52px;
+  line-height: 1.5rem;
   vertical-align: middle;
+  padding: 12px 0 12px 0;
 }
 
 .objectFRButton{
@@ -430,6 +433,7 @@ body {
 
   overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 .artworkInfoTable::-webkit-scrollbar{
@@ -554,33 +558,35 @@ th, td {
 
 
 .essayHeaderBox{
-  position: absolute;
-  height: 50px;
+  /* position: absolute; */
+  height: auto;
   width: 100%;
   border: 2px solid red;
   margin: -2px;
 }
 
 .essayHeader{
-  height: 50px;
+  height: auto;
+  width: 60%;
   color: red;
   font-family: Avara, sans-serif;
   font-size: 1.05rem;
   text-align: left;
-  padding-left: 12px;
-  line-height: 55px;
+  padding: 12px;
+  line-height: 1.5rem;
   vertical-align: middle;
 }
 
 .essayBodyBox{
-  position: fixed;
+  position: relative;
   width: 358px;
   height: 320px;
   bottom: 0;
-  top: 70px;
+  /* top: 70px; */
   overflow: scroll;
   scrollbar-width: none !important;
-  padding: 12px;
+  padding: 0 12px 12px 12px;
+  margin-top: 12px;
   
 
 }

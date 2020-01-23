@@ -69,13 +69,13 @@ class EssayWindow extends Component {
     getLanguage() {
         if (this.props.isFrench) {
             return (
-                <div>
-                    <div className="essayHeaderBox">
-                        <div className="essayHeader">{this.props.essayHeaderFR}</div>
-                    </div>
+                // <div>
+                <div className="essayHeaderBox draggable">
+                        <div className="essayHeader draggable">{this.props.essayHeaderFR}</div>
+                    {/* </div> */}
                     <div>
-                        <div className="objectENButton" onClick={this.props.toggleLanguage}>EN</div>
-                        <div className="objectFRButton greyOut">FR</div>
+                        <div className="objectENButton greyOut cursorPoint" onClick={this.props.toggleLanguage}>EN</div>
+                        <div className="objectFRButton cursorPoint">FR</div>
                     </div>
 
                     <img
@@ -87,13 +87,13 @@ class EssayWindow extends Component {
                 </div>
             )
         } return (
-            <div>
-                <div className="essayHeaderBox">
-                    <div className="essayHeader">{this.props.essayHeader}</div>
-                </div>
+            // <div>
+            <div className="essayHeaderBox draggable">
+                    <div className="essayHeader draggable">{this.props.essayHeader}</div>
+                {/* </div> */}
                 <div>
-                    <div className="objectENButton greyOut">EN</div>
-                    <div className="objectFRButton" onClick={this.props.toggleLanguage}>FR</div>
+                    <div className="objectENButton cursorPoint">EN</div>
+                    <div className="objectFRButton greyOut cursorPoint" onClick={this.props.toggleLanguage}>FR</div>
                 </div>
 
                 <img
@@ -249,10 +249,12 @@ class EssayWindow extends Component {
                         width: 400,
                         height: 500
                     }}
+                    cancel={".essayBodyBox"}
                     enableResizing={null}
+                    onClick={this.bringItemToHighestZIndex}
                 // style={{overflow: "scroll"}}
                 >
-                    <div onClick={this.bringItemToHighestZIndex}>
+                    {/* <div > */}
                         {this.getLanguage()}
                         <img
                             className="objectExitButton cursorPoint"
@@ -264,12 +266,12 @@ class EssayWindow extends Component {
                             {this.getBodyText()}
                         </div>
                         {this.getFootnotes()}
-                    </div>
+                    {/* </div> */}
 
                 </Rnd >
 
-                <div className="essayContainerMobile">
-                    <div onClick={this.bringItemToHighestZIndex}>
+                <div className="essayContainerMobile" onClick={this.bringItemToHighestZIndex}>
+                    {/* <div > */}
                         {this.getLanguage()}
                         <img
                             className="objectExitButton cursorPoint"
@@ -282,7 +284,7 @@ class EssayWindow extends Component {
                         </div>
                         {this.getFootnotes()}
                     </div>
-                </div>
+                {/* </div> */}
             </fragment >
         );
     }
