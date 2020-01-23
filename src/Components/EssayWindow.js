@@ -249,7 +249,7 @@ class EssayWindow extends Component {
                         width: 400,
                         height: 500
                     }}
-                    cancel={".essayBodyBox"}
+                    cancel={".essayBodyBox, .essayFootnoteBox"}
                     enableResizing={null}
                     onClick={this.bringItemToHighestZIndex}
                 // style={{overflow: "scroll"}}
