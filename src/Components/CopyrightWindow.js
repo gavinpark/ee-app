@@ -16,10 +16,9 @@ class CopyrightWindow extends Component {
     getLanguage() {
         if (this.props.isFrench) {
             return (
-                // <div>
+                <div>
                     <div className="essayHeaderBox">
                         <h1 className="essayHeader">{EssayData[6].essayHeaderFR}</h1>
-                    {/* </div> */}
                     <div>
                         <div className="objectENButton greyOut cursorPoint" onClick={this.props.toggleLanguage}>EN</div>
                         <div className="objectFRButton cursorPoint">FR</div>
@@ -30,6 +29,7 @@ class CopyrightWindow extends Component {
                         alt=""
                         onClick={this.props.toggleCopyright}
                     ></img>
+                    </div>
                     <div className="copyrightBodyBox">
                         <div className="essayBody">
                             <p><i>{EssayData[6].disclaimerFR}</i></p>
