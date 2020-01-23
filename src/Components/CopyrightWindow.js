@@ -64,70 +64,12 @@ class CopyrightWindow extends Component {
     render() {
 
         return (
-            <fragment>
-                <Rnd
-                    className="essayContainer draggable"
-                    default={{
-                        width: 400,
-                        height: 500
-                    }}
-
-                    enableResizing={null}
-                >
-                    <div>
-                        {/* {this.getLanguage()} */}
-                        <div className="essayHeaderBox draggable">
-                            <h1 className="essayHeader draggable">{EssayData[6].essayHeader}</h1>
-                        </div>
-
-                        <img
-                            className="objectExitButton cursorPoint"
-                            src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
-                            alt=""
-                            onClick={this.props.toggleCopyright}
-                        ></img>
-                        <div className="copyrightBodyBox draggable">
-                            <div className="essayBody draggable">
-                                <p><i className="draggable">{EssayData[6].disclaimer}</i></p>
-                                <br />
-                                <p>__________</p>
-                                <br />
-                                <p>{EssayData[6].essayText[0]}</p>
-
-                                <br />
-                                <p>{EssayData[6].essayText[1]}</p>
-
-                                <br />
-                                <p>{EssayData[6].essayText[2]}</p>
-
-                                <br />
-                                <p>{EssayData[6].essayText[3]}</p>
-
-                                <a
-                                    className="downloadBox cursorPoint"
-                                    href="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/EDC_Essay.pdf"
-                                    target="_blank">
-                                    View Full Text </a>
-
-                            </div>
-
-                        </div>
-                        <div className="essayFootnoteBox">
-                            <p>{EssayData[6].footnote[0]}</p>
-
-                            <p>{EssayData[6].footnote[1]}</p>
-
-                            <p>{EssayData[6].footnote[2]}</p>
-                            <div className="whiteOverlay"></div>
-                        </div>
-                    </div>
-                </Rnd>
                 <div
-                    className="copyrightContainerMobile">
+                    className="copyrightContainer">
                     <div>
                         {/* {this.getLanguage()} */}
-                        <div className="essayHeaderBox draggable">
-                            <h1 className="essayHeader draggable">{EssayData[6].essayHeader}</h1>
+                        <div className="essayHeaderBox ">
+                            <h1 className="essayHeader ">{EssayData[6].essayHeader}</h1>
                         </div>
 
                         <img
@@ -136,9 +78,9 @@ class CopyrightWindow extends Component {
                             alt=""
                             onClick={this.props.toggleCopyright}
                         ></img>
-                        <div className="copyrightBodyBox draggable">
-                            <div className="essayBody draggable">
-                                <p><i className="draggable">{EssayData[6].disclaimer}</i></p>
+                        <div className="copyrightBodyBox">
+                            <div className="essayBody">
+                                <p><i>{EssayData[6].disclaimer}</i></p>
                                 <br />
                                 <p>__________</p>
                                 <br />
@@ -172,7 +114,7 @@ class CopyrightWindow extends Component {
                         </div>
                     </div>
                 </div>
-            </fragment>
+            // </fragment>
         );
 
     }
