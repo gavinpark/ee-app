@@ -545,12 +545,12 @@ th, td {
 .copyrightBodyBox{
   position: relative;
   width: 358px;
-  height: 320px;
+  height: 350px;
   bottom: 0;
-  top: 70px;
   overflow: scroll;
   scrollbar-width: none !important;
-  padding: 12px;
+  padding: 0 12px 12px 12px;
+  margin-top: 12px;
 }
 .copyrightBodyBox::-webkit-scrollbar {
   display: none !important;

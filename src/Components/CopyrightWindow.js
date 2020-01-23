@@ -69,9 +69,9 @@ class CopyrightWindow extends Component {
 
         } else {
             return (
-                // <div>
+                <div>
                     <div className="essayHeaderBox">
-                        <h1 className="essayHeader ">{EssayData[6].essayHeader}</h1>
+                        <h1 className="essayHeader">{EssayData[6].essayHeader}</h1>
                     {/* </div> */}
                     <div>
                         <div className="objectENButton cursorPoint">EN</div>
@@ -83,6 +83,7 @@ class CopyrightWindow extends Component {
                         alt=""
                         onClick={this.props.toggleCopyright}
                     ></img>
+                    </div>
                     <div className="copyrightBodyBox">
                         <div className="essayBody">
                             <p><i>{EssayData[6].disclaimer}</i></p>
