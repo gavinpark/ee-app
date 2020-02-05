@@ -49,8 +49,7 @@ class CopyrightWindow extends Component {
 
                             <a
                                 className="downloadBox cursorPoint"
-                                href="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/EDC_Essay.pdf"
-                                target="_blank">
+                                href="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/EDC_Essay_FR.pdf"                                target="_blank">
                                 Afficher le texte complet </a>
 
                         </div>
