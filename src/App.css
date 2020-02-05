@@ -587,6 +587,9 @@ th, td {
   scrollbar-width: none !important;
   padding: 0 12px 12px 12px;
   margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
   
 
 }
