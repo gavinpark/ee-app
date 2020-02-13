@@ -71,7 +71,7 @@ class EssayWindow extends Component {
             return (
                 // <div>
                 <div className="essayHeaderBox draggable">
-                        <div className="essayHeader draggable">{this.props.essayHeaderFR}</div>
+                    <div className="essayHeader draggable">{this.props.essayHeaderFR}</div>
                     {/* </div> */}
                     <div>
                         <div className="objectENButton greyOut cursorPoint" onClick={this.props.toggleLanguage}>EN</div>
@@ -89,7 +89,7 @@ class EssayWindow extends Component {
         } return (
             // <div>
             <div className="essayHeaderBox draggable">
-                    <div className="essayHeader draggable">{this.props.essayHeader}</div>
+                <div className="essayHeader draggable">{this.props.essayHeader}</div>
                 {/* </div> */}
                 <div>
                     <div className="objectENButton cursorPoint">EN</div>
@@ -177,13 +177,13 @@ class EssayWindow extends Component {
                     <br />
                     <br />
                     {this.props.essayTextFR[3]}
-
+                    <br />
                     <a
                         className="downloadBox cursorPoint"
-                        href="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/EDC_Essay_FR.pdf"
+                        href="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/EDC_Essay.pdf"
                         target="_blank">
                         Afficher le texte complet
-                    </a>
+                </a>
                 </div>
             )
         }
@@ -199,7 +199,7 @@ class EssayWindow extends Component {
                 <br />
                 <br />
                 {this.props.essayText[3]}
-
+                <br />
                 <a
                     className="downloadBox cursorPoint"
                     href="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/EDC_Essay.pdf"
@@ -255,35 +255,35 @@ class EssayWindow extends Component {
                 // style={{overflow: "scroll"}}
                 >
                     {/* <div > */}
-                        {this.getLanguage()}
-                        <img
-                            className="objectExitButton cursorPoint"
-                            src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
-                            alt=""
-                            onClick={() => { this.props.closeEssaySegment(this.props.index) }}
-                        ></img>
-                        <div className="essayBodyBox">
-                            {this.getBodyText()}
-                        </div>
-                        {this.getFootnotes()}
+                    {this.getLanguage()}
+                    <img
+                        className="objectExitButton cursorPoint"
+                        src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
+                        alt=""
+                        onClick={() => { this.props.closeEssaySegment(this.props.index) }}
+                    ></img>
+                    <div className="essayBodyBox">
+                        {this.getBodyText()}
+                    </div>
+                    {this.getFootnotes()}
                     {/* </div> */}
 
                 </Rnd >
 
                 <div className="essayContainerMobile" onClick={this.bringItemToHighestZIndex}>
                     {/* <div > */}
-                        {this.getLanguage()}
-                        <img
-                            className="objectExitButton cursorPoint"
-                            src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
-                            alt=""
-                            onClick={() => { this.props.closeEssaySegment(this.props.index) }}
-                        ></img>
-                        <div className="essayBodyBox">
-                            {this.getBodyText()}
-                        </div>
-                        {this.getFootnotes()}
+                    {this.getLanguage()}
+                    <img
+                        className="objectExitButton cursorPoint"
+                        src="http://ellengallery.concordia.ca/establishing-a-database-connection/static/media/exit_Button.svg"
+                        alt=""
+                        onClick={() => { this.props.closeEssaySegment(this.props.index) }}
+                    ></img>
+                    <div className="essayBodyBox">
+                        {this.getBodyText()}
                     </div>
+                    {this.getFootnotes()}
+                </div>
                 {/* </div> */}
             </fragment >
         );
